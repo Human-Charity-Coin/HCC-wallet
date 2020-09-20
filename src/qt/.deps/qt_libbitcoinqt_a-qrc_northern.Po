@@ -1,0 +1,1 @@
+qt/qt_libbitcoinqt_a-qrc_human-charity-coin.o: qt/qrc_human-charity-coin.cpp

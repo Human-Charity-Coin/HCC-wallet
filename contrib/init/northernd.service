@@ -1,0 +1,26 @@
+[Unit]
+Description=Human-Charity-Coin's distributed currency daemon
+After=network.target
+
+[Service]
+User=human-charity-coin
+Group=human-charity-coin
+
+Type=forking
+PIDFile=/var/lib/human-charity-coind/human-charity-coind.pid
+
+ExecStart=/usr/bin/human-charity-coind -daemon -pid=/var/lib/human-charity-coind/human-charity-coind.pid \
+          -conf=/etc/human-charity-coin/human-charity-coin.conf -datadir=/var/lib/human-charity-coind
+
+ExecStop=-/usr/bin/human-charity-coin-cli -conf=/etc/human-charity-coin/human-charity-coin.conf \
+         -datadir=/var/lib/human-charity-coind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
