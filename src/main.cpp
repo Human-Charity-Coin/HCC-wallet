@@ -1624,11 +1624,11 @@ int64_t GetBlockValue(int nHeight)
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
         if (nHeight < Params().LAST_POW_BLOCK() && nHeight > 0)
-            return 50000 * COIN;
+            return 5 * COIN;
     }
 
-    if (nHeight < Params().LAST_POW_BLOCK())
-        nSubsidy = 10000 * COIN;
+    if (nHeight == 0){
+        nSubsidy = 1000000 * COIN;
     else if (nHeight <= 30000)
         nSubsidy = 5 * COIN;
     else if (nHeight > 30000 && nHeight <= 200000)
@@ -1665,7 +1665,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         return 0;
 
     // Check if we reached coin supply
-    ret = blockValue * 0.85; // 85% of block reward
+    ret = blockValue * 0.80; // 80% of block reward
 
     return ret;
 }
