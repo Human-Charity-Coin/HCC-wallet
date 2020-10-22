@@ -42,13 +42,13 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x00"));
+    (0, uint256("0x000007b3b79e2e2283043d8aefe0548f037a4cea846d8ecdc32aaca583b2e7fd"));
 
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1603304760, // * UNIX timestamp of last checkpoint block
-    1000349,          // * total number of transactions between genesis and last checkpoint
+    0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -111,38 +111,12 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1603304760;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 21561793;
+        genesis.nNonce = 22360478;
 
         hashGenesisBlock = genesis.GetHash();
-      //  assert(hashGenesisBlock == uint256("0x000001e1a5a4257154c65b46fc732bfa637ba7a898525373ba32ec4aa79921dd"));
-    //    assert(genesis.hashMerkleRoot == uint256("0xd611ad6808864e0e9bd331f3ffa2298c9e13a54d9fe59a99ccb3a75db374b7c9"));
+        assert(hashGenesisBlock == uint256("0x000007b3b79e2e2283043d8aefe0548f037a4cea846d8ecdc32aaca583b2e7fd"));
+         assert(genesis.hashMerkleRoot == uint256("0xc538670d319594f00b36d09c8fb6b2dfe899d9c35b83f6660c7bbb4de108dab8"));
 
-    if(genesis.GetHash() != uint256("0x"))
-         {
-               printf("MSearching for genesis block...\n");
-               uint256 hashTarget;
-               hashTarget.SetCompact(genesis.nBits);
-               while(uint256(genesis.GetHash()) > uint256(hashTarget))
-               {
-                   ++genesis.nNonce;
-                   if (genesis.nNonce == 0)
-                   {
-                       printf("Mainnet NONCE WRAPPED, incrementing time");
-                       std::cout << std::string("Mainnet NONCE WRAPPED, incrementing time:\n");
-                       ++genesis.nTime;
-                   }
-                   if (genesis.nNonce % 10000 == 0)
-                   {
-                       printf("Mainnet: nonce %08u: hash = %s \n", genesis.nNonce, genesis.GetHash().ToString().c_str());
-                   }
-               }
-               printf("Mainnet block.nTime = %u \n", genesis.nTime);
-               printf("Mainnet block.nNonce = %u \n", genesis.nNonce);
-               printf("Genesis nBits: %08x\n", genesis.nBits);
-            //   printf("Genesis hashStateRoot = %s\n", genesis.hashStateRoot.ToString().c_str());
-               printf("Mainnet block.hashMerkleRoot: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-               printf("Mainnet block.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-         }
 
         // Human-Charity-Coin addresses start with 'H'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 40);
