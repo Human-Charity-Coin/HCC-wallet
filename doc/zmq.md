@@ -6,7 +6,7 @@ providing various message-oriented semantics such as publish/subscribe,
 request/reply, and push/pull.
 
 The Human-Charity-Coin Core daemon can be configured to act as a trusted "border
-router", implementing the human-charity-coin wire protocol and relay, making
+router", implementing the hcc wire protocol and relay, making
 consensus decisions, maintaining the local blockchain database,
 broadcasting locally generated transactions into the network, and
 providing a queryable RPC interface to interact on a polled basis for
@@ -45,7 +45,7 @@ operation.
 
 By default, the ZeroMQ feature is automatically compiled in if the
 necessary prerequisites are found.  To disable, use --disable-zmq
-during the *configure* step of building human-charity-coind:
+during the *configure* step of building hccd:
 
     $ ./configure --disable-zmq (other options)
 
@@ -68,8 +68,8 @@ address. The same address can be used in more than one notification.
 
 For instance:
 
-    $ human-charity-coind -zmqpubhashtx=tcp://127.0.0.1:28332 \
-               -zmqpubrawtx=ipc:///tmp/human-charity-coind.tx.raw
+    $ hccd -zmqpubhashtx=tcp://127.0.0.1:28332 \
+               -zmqpubrawtx=ipc:///tmp/hccd.tx.raw
 
 Each PUB notification has a topic and body, where the header
 corresponds to the notification type. For instance, for the
@@ -77,7 +77,7 @@ notification `-zmqpubhashtx` the topic is `hashtx` (no null
 terminator) and the body is the hexadecimal transaction hash (32
 bytes).
 
-These options can also be provided in human-charity-coin.conf.
+These options can also be provided in hcc.conf.
 
 ZeroMQ endpoint specifiers for TCP (and others) are documented in the
 [ZeroMQ API](http://api.zeromq.org/4-0:_start).
@@ -89,9 +89,9 @@ arriving. Please see `contrib/zmq/zmq_sub.py` for a working example.
 
 ## Remarks
 
-From the perspective of human-charity-coind, the ZeroMQ socket is write-only; PUB
+From the perspective of hccd, the ZeroMQ socket is write-only; PUB
 sockets don't even have a read function. Thus, there is no state
-introduced into human-charity-coind directly. Furthermore, no information is
+introduced into hccd directly. Furthermore, no information is
 broadcast that wasn't already received from the public P2P network.
 
 No authentication or authorization is done on connecting clients; it
@@ -104,5 +104,5 @@ retrieve the chain from the last known block to the new tip.
 
 There are several possibilities that ZMQ notification can get lost
 during transmission depending on the communication type your are
-using. human-charity-coind appends an up-counting sequence number to each
+using. hccd appends an up-counting sequence number to each
 notification which allows listeners to detect lost notifications.

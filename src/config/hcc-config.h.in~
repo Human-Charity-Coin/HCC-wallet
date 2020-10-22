@@ -1,4 +1,4 @@
-/* src/config/human-charity-coin-config.h.in.  Generated from configure.ac by autoheader.  */
+/* src/config/hcc-config.h.in.  Generated from configure.ac by autoheader.  */
 
 #ifndef HCC_CONFIG_H
 

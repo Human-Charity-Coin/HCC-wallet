@@ -1,4 +1,4 @@
-Source: human-charity-coin
+Source: hcc
 Section: utils
 Priority: optional
 Maintainer: Jonas Smedegaard <dr@jones.dk> ***TODO***
@@ -23,10 +23,10 @@ Build-Depends: debhelper,
  libprotobuf-dev, protobuf-compiler
 Standards-Version: 3.9.2
 Homepage: http://www.savebitcoin.io
-Vcs-Git: git://github.com/human-charity-coin/human-charity-coin.git
-Vcs-Browser: http://github.com/human-charity-coin/human-charity-coin
+Vcs-Git: git://github.com/hcc/hcc.git
+Vcs-Browser: http://github.com/hcc/hcc
 
-Package: human-charity-coind
+Package: hccd
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
@@ -39,10 +39,10 @@ Description: peer-to-peer network based digital currency - daemon
  Full transaction history is stored locally at each client.  This
  requires 1+ GB of space, slowly growing.
  .
- This package provides the daemon, human-charity-coind, and the CLI tool
- human-charity-coin-cli to interact with the daemon.
+ This package provides the daemon, hccd, and the CLI tool
+ hcc-cli to interact with the daemon.
 
-Package: human-charity-coin-qt
+Package: hcc-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI

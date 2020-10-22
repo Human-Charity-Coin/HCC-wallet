@@ -74,10 +74,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/human-charity-coin
-pkgincludedir = $(includedir)/human-charity-coin
-pkglibdir = $(libdir)/human-charity-coin
-pkglibexecdir = $(libexecdir)/human-charity-coin
+pkgdatadir = $(datadir)/hcc
+pkgincludedir = $(includedir)/hcc
+pkglibdir = $(libdir)/hcc
+pkglibexecdir = $(libexecdir)/hcc
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -91,7 +91,7 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
-host_triplet = i686-w64-mingw32
+host_triplet = x86_64-w64-mingw32
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/build-aux/m4/ax_boost_base.m4 \
@@ -124,7 +124,7 @@ DIST_COMMON = $(srcdir)/Makefile.am $(top_srcdir)/configure \
 am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno config.status.lineno
 mkinstalldirs = $(install_sh) -d
-CONFIG_HEADER = $(top_builddir)/src/config/human-charity-coin-config.h
+CONFIG_HEADER = $(top_builddir)/src/config/hcc-config.h
 CONFIG_CLEAN_FILES = share/setup.nsi share/qt/Info.plist \
 	src/test/buildenv.py qa/pull-tester/run-bitcoind-for-test.sh \
 	qa/pull-tester/tests-config.sh contrib/devtools/split-debug.sh
@@ -198,7 +198,7 @@ am__DIST_COMMON = $(srcdir)/Makefile.in \
 	$(top_srcdir)/qa/pull-tester/tests-config.sh.in \
 	$(top_srcdir)/share/qt/Info.plist.in \
 	$(top_srcdir)/share/setup.nsi.in \
-	$(top_srcdir)/src/config/human-charity-coin-config.h.in \
+	$(top_srcdir)/src/config/hcc-config.h.in \
 	$(top_srcdir)/src/test/buildenv.py.in COPYING INSTALL \
 	build-aux/compile build-aux/config.guess build-aux/config.sub \
 	build-aux/install-sh build-aux/ltmain.sh build-aux/missing
@@ -243,25 +243,25 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /root/Human-Charity-Coin/build-aux/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/dad/Downloads/HCC-wallet/build-aux/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
-AR = /usr/bin/i686-w64-mingw32-ar
-AUTOCONF = ${SHELL} /root/Human-Charity-Coin/build-aux/missing autoconf
-AUTOHEADER = ${SHELL} /root/Human-Charity-Coin/build-aux/missing autoheader
-AUTOMAKE = ${SHELL} /root/Human-Charity-Coin/build-aux/missing automake-1.15
-AWK = gawk
+AR = /usr/bin/x86_64-w64-mingw32-ar
+AUTOCONF = ${SHELL} /home/dad/Downloads/HCC-wallet/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /home/dad/Downloads/HCC-wallet/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /home/dad/Downloads/HCC-wallet/build-aux/missing automake-1.15
+AWK = mawk
 BDB_CPPFLAGS = 
 BDB_LIBS = -ldb_cxx-4.8
-BITCOIN_CLI_NAME = human-charity-coin-cli
-BITCOIN_DAEMON_NAME = human-charity-coind
-BITCOIN_GUI_NAME = human-charity-coin-qt
-BITCOIN_TX_NAME = human-charity-coin-tx
+BITCOIN_CLI_NAME = hcc-cli
+BITCOIN_DAEMON_NAME = hccd
+BITCOIN_GUI_NAME = hcc-qt
+BITCOIN_TX_NAME = hcc-tx
 BOOST_CHRONO_LIB = -lboost_chrono-mt-s
-BOOST_CPPFLAGS = -mthreads -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include
+BOOST_CPPFLAGS = -mthreads -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include
 BOOST_FILESYSTEM_LIB = -lboost_filesystem-mt-s
-BOOST_LDFLAGS = -L/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../lib
-BOOST_LIBS = -L/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../lib -lboost_system-mt-s -lboost_filesystem-mt-s -lboost_program_options-mt-s -lboost_thread_win32-mt-s -lboost_chrono-mt-s
+BOOST_LDFLAGS = -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib
+BOOST_LIBS = -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib -lboost_system-mt-s -lboost_filesystem-mt-s -lboost_program_options-mt-s -lboost_thread_win32-mt-s -lboost_chrono-mt-s
 BOOST_PROGRAM_OPTIONS_LIB = -lboost_program_options-mt-s
 BOOST_SYSTEM_LIB = -lboost_system-mt-s
 BOOST_THREAD_LIB = -lboost_thread_win32-mt-s
@@ -270,8 +270,8 @@ BREW =
 BUILD_QT = qt
 BUILD_TEST = test
 BUILD_TEST_QT = test
-CC = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/bin/ccache i686-w64-mingw32-gcc
-CCACHE = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/bin/ccache
+CC = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-gcc
+CCACHE = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/bin/ccache
 CCDEPMODE = depmode=gcc3
 CFLAGS = -pipe -O2 
 CLIENT_VERSION_BUILD = 0
@@ -281,19 +281,19 @@ CLIENT_VERSION_MINOR = 3
 CLIENT_VERSION_REVISION = 1
 COMPARISON_TOOL_REORG_TESTS = 0
 COPYRIGHT_YEAR = 2020
-CPP = i686-w64-mingw32-gcc -E
-CPPFILT = /usr/bin/i686-w64-mingw32-c++filt
-CPPFLAGS = -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include/  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -DHAVE_QT5
+CPP = x86_64-w64-mingw32-gcc -E
+CPPFILT = /usr/bin/x86_64-w64-mingw32-c++filt
+CPPFLAGS = -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -DHAVE_QT5
 CRYPTO_CFLAGS = 
 CRYPTO_LIBS = -lcrypto
-CXX = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/bin/ccache i686-w64-mingw32-g++
-CXXCPP = i686-w64-mingw32-g++ -E
+CXX = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-g++
+CXXCPP = x86_64-w64-mingw32-g++ -E
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -pipe -O2   -Wstack-protector -fstack-protector-all -fvisibility=hidden
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
-DLLTOOL = i686-w64-mingw32-dlltool
+DLLTOOL = x86_64-w64-mingw32-dlltool
 DSYMUTIL = 
 DUMPBIN = 
 ECHO_C = 
@@ -306,7 +306,7 @@ EVENT_PTHREADS_CFLAGS =
 EVENT_PTHREADS_LIBS = 
 EXEEXT = .exe
 FGREP = /bin/grep -F
-GCOV = /usr/bin/i686-w64-mingw32-gcov
+GCOV = /usr/bin/x86_64-w64-mingw32-gcov
 GENHTML = 
 GENISOIMAGE = 
 GIT = /usr/bin/git
@@ -320,11 +320,11 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-JAVA = /usr/bin/java
+JAVA = 
 JAVA_COMPARISON_TOOL = 
 LCOV = 
-LD = /usr/bin/i686-w64-mingw32-ld
-LDFLAGS = -L/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../lib  -Wl,--large-address-aware  -Wl,--dynamicbase -Wl,--nxcompat
+LD = /usr/bin/x86_64-w64-mingw32-ld
+LDFLAGS = -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib   -Wl,--dynamicbase -Wl,--nxcompat
 LEVELDB_CPPFLAGS = 
 LEVELDB_TARGET_FLAGS = TARGET_OS=OS_WINDOWS_CROSSCOMPILE
 LIBLEVELDB = 
@@ -335,49 +335,49 @@ LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIBTOOL_APP_LDFLAGS =  -all-static
 LIPO = 
 LN_S = ln -s
-LRELEASE = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/bin/lrelease
+LRELEASE = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/bin/lrelease
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
 LUPDATE = 
 MAINT = 
-MAKEINFO = ${SHELL} /root/Human-Charity-Coin/build-aux/missing makeinfo
+MAKEINFO = ${SHELL} /home/dad/Downloads/HCC-wallet/build-aux/missing makeinfo
 MAKENSIS = /usr/bin/makensis
 MANIFEST_TOOL = :
 MINIUPNPC_CPPFLAGS = -DSTATICLIB -DMINIUPNP_STATICLIB
 MINIUPNPC_LIBS = -lminiupnpc
 MKDIR_P = /bin/mkdir -p
-MOC = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/bin/moc
+MOC = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/bin/moc
 MOC_DEFS = -DHAVE_CONFIG_H -I$(srcdir)
-NM = i686-w64-mingw32-nm
+NM = x86_64-w64-mingw32-nm
 NMEDIT = 
-OBJCOPY = /usr/bin/i686-w64-mingw32-objcopy
-OBJCXX = i686-w64-mingw32-g++
+OBJCOPY = /usr/bin/x86_64-w64-mingw32-objcopy
+OBJCXX = x86_64-w64-mingw32-g++
 OBJCXXDEPMODE = depmode=gcc3
 OBJCXXFLAGS = -pipe -O2   -Wstack-protector -fstack-protector-all
-OBJDUMP = i686-w64-mingw32-objdump
+OBJDUMP = x86_64-w64-mingw32-objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = human-charity-coin
+PACKAGE = hcc
 PACKAGE_BUGREPORT = www.savebitcoin.io
 PACKAGE_NAME = Human-Charity-Coin Core
 PACKAGE_STRING = Human-Charity-Coin Core 3.3.1
-PACKAGE_TARNAME = human-charity-coin
+PACKAGE_TARNAME = hcc
 PACKAGE_URL = 
 PACKAGE_VERSION = 3.3.1
 PATH_SEPARATOR = :
 PKG_CONFIG = /usr/bin/pkg-config --static
-PKG_CONFIG_LIBDIR = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../lib/pkgconfig
-PKG_CONFIG_PATH = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../share/pkgconfig
+PKG_CONFIG_LIBDIR = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib/pkgconfig
+PKG_CONFIG_PATH = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../share/pkgconfig
 PORT = 
 PROTOBUF_CFLAGS = 
 PROTOBUF_LIBS = -lprotobuf
-PROTOC = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/bin/protoc
-PTHREAD_CC = i686-w64-mingw32-gcc
+PROTOC = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/bin/protoc
+PTHREAD_CC = x86_64-w64-mingw32-gcc
 PTHREAD_CFLAGS = 
 PTHREAD_LIBS = 
-PYTHON = /usr/local/bin/python3
-PYTHONPATH = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/lib/python/dist-packages:
+PYTHON = /usr/bin/python3
+PYTHONPATH = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/lib/python/dist-packages:
 QR_CFLAGS = 
 QR_LIBS = -lqrencode
 QTPLATFORM_CFLAGS = 
@@ -389,19 +389,19 @@ QTXCBQPA_LIBS =
 QT_CFLAGS = 
 QT_DBUS_CFLAGS = 
 QT_DBUS_INCLUDES = 
-QT_DBUS_LIBS = -lQt5DBus -L/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../lib
-QT_INCLUDES = -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include/QtCore -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include/QtGui -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include/QtWidgets -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include/QtNetwork -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include/QtTest -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include/QtDBus
+QT_DBUS_LIBS = -lQt5DBus -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib
+QT_INCLUDES = -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtCore -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtGui -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtTest -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtDBus
 QT_LDFLAGS =  -mwindows
-QT_LIBS = -lqwindows -lQt5Widgets -lQt5Network -lQt5Gui     -lQt5Core    -lqtharfbuzzng -lqtpcre -lqtpng -lz  -limm32  -L/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../lib -L/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../plugins/platforms
+QT_LIBS = -lqwindows -lQt5Widgets -lQt5Network -lQt5Gui     -lQt5Core    -lqtharfbuzzng -lqtpcre -lqtpng -lz  -limm32  -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../plugins/platforms
 QT_PIE_FLAGS = 
 QT_SELECT = qt5
 QT_TEST_CFLAGS = 
 QT_TEST_INCLUDES = 
-QT_TEST_LIBS = -lQt5Test -L/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../lib
-QT_TRANSLATION_DIR = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../translations
-RANLIB = /usr/bin/i686-w64-mingw32-ranlib
-RCC = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/bin/rcc
-READELF = /usr/bin/i686-w64-mingw32-readelf
+QT_TEST_LIBS = -lQt5Test -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib
+QT_TRANSLATION_DIR = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../translations
+RANLIB = /usr/bin/x86_64-w64-mingw32-ranlib
+RCC = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/bin/rcc
+READELF = /usr/bin/x86_64-w64-mingw32-readelf
 RELDFLAGS = -Wl,--exclude-libs,ALL
 RSVG_CONVERT = 
 SED = /bin/sed
@@ -409,26 +409,26 @@ SET_MAKE =
 SHELL = /bin/bash
 SSL_CFLAGS = 
 SSL_LIBS = -lssl
-STRIP = /usr/bin/i686-w64-mingw32-strip
+STRIP = /usr/bin/x86_64-w64-mingw32-strip
 TESTDEFS = 
 TIFFCP = 
-UIC = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/bin/uic
+UIC = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/bin/uic
 UNIVALUE_CFLAGS = -I$(srcdir)/univalue/include
 UNIVALUE_LIBS = univalue/libunivalue.la
 USE_QRCODE = 
 USE_UPNP = 
 VERSION = 3.3.1
-WINDOWS_BITS = 32
-WINDRES = /usr/bin/i686-w64-mingw32-windres
+WINDOWS_BITS = 64
+WINDRES = /usr/bin/x86_64-w64-mingw32-windres
 X11XCB_CFLAGS = 
 X11XCB_LIBS = 
 XGETTEXT = /usr/bin/xgettext
 ZMQ_CFLAGS =  -DZMQ_STATIC
 ZMQ_LIBS = -lzmq
-abs_builddir = /root/Human-Charity-Coin
-abs_srcdir = /root/Human-Charity-Coin
-abs_top_builddir = /root/Human-Charity-Coin
-abs_top_srcdir = /root/Human-Charity-Coin
+abs_builddir = /home/dad/Downloads/HCC-wallet
+abs_srcdir = /home/dad/Downloads/HCC-wallet
+abs_top_builddir = /home/dad/Downloads/HCC-wallet
+abs_top_srcdir = /home/dad/Downloads/HCC-wallet
 ac_ct_AR = 
 ac_ct_CC = 
 ac_ct_CXX = 
@@ -452,15 +452,15 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = i686-w64-mingw32
-host_alias = i686-w64-mingw32
-host_cpu = i686
+host = x86_64-w64-mingw32
+host_alias = x86_64-w64-mingw32
+host_cpu = x86_64
 host_os = mingw32
 host_vendor = w64
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /root/Human-Charity-Coin/build-aux/install-sh
+install_sh = ${SHELL} /home/dad/Downloads/HCC-wallet/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -516,9 +516,9 @@ OSX_PACKAGING = $(OSX_DEPLOY_SCRIPT) $(OSX_FANCY_PLIST) $(OSX_INSTALLER_ICONS) \
   $(top_srcdir)/contrib/macdeploy/detached-sig-create.sh
 
 COVERAGE_INFO = baseline_filtered_combined.info baseline.info block_test.info \
-  leveldb_baseline.info test_human-charity-coin_filtered.info total_coverage.info \
+  leveldb_baseline.info test_hcc_filtered.info total_coverage.info \
   baseline_filtered.info block_test_filtered.info \
-  leveldb_baseline_filtered.info test_human-charity-coin_coverage.info test_human-charity-coin.info
+  leveldb_baseline_filtered.info test_hcc_coverage.info test_hcc.info
 
 OSX_APP_BUILT = $(OSX_APP)/Contents/PkgInfo $(OSX_APP)/Contents/Resources/empty.lproj \
   $(OSX_APP)/Contents/Resources/bitcoin.icns $(OSX_APP)/Contents/Info.plist \
@@ -567,20 +567,20 @@ $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	$(am__cd) $(srcdir) && $(ACLOCAL) $(ACLOCAL_AMFLAGS)
 $(am__aclocal_m4_deps):
 
-src/config/human-charity-coin-config.h: src/config/stamp-h1
+src/config/hcc-config.h: src/config/stamp-h1
 	@test -f $@ || rm -f src/config/stamp-h1
 	@test -f $@ || $(MAKE) $(AM_MAKEFLAGS) src/config/stamp-h1
 
-src/config/stamp-h1: $(top_srcdir)/src/config/human-charity-coin-config.h.in $(top_builddir)/config.status
+src/config/stamp-h1: $(top_srcdir)/src/config/hcc-config.h.in $(top_builddir)/config.status
 	@rm -f src/config/stamp-h1
-	cd $(top_builddir) && $(SHELL) ./config.status src/config/human-charity-coin-config.h
-$(top_srcdir)/src/config/human-charity-coin-config.h.in:  $(am__configure_deps) 
+	cd $(top_builddir) && $(SHELL) ./config.status src/config/hcc-config.h
+$(top_srcdir)/src/config/hcc-config.h.in:  $(am__configure_deps) 
 	($(am__cd) $(top_srcdir) && $(AUTOHEADER))
 	rm -f src/config/stamp-h1
 	touch $@
 
 distclean-hdr:
-	-rm -f src/config/human-charity-coin-config.h src/config/stamp-h1
+	-rm -f src/config/hcc-config.h src/config/stamp-h1
 share/setup.nsi: $(top_builddir)/config.status $(top_srcdir)/share/setup.nsi.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
 share/qt/Info.plist: $(top_builddir)/config.status $(top_srcdir)/share/qt/Info.plist.in
@@ -1134,16 +1134,16 @@ $(BITCOIN_CLI_BIN): FORCE
 #baseline_filtered_combined.info: leveldb_baseline_filtered.info baseline_filtered.info
 #	$(LCOV) -a leveldb_baseline_filtered.info -a baseline_filtered.info -o $@
 
-#test_human-charity-coin.info: baseline_filtered_combined.info
+#test_hcc.info: baseline_filtered_combined.info
 #	$(MAKE) -C src/ check
-#	$(LCOV) -c -d $(abs_builddir)/src -t test_human-charity-coin -o $@
+#	$(LCOV) -c -d $(abs_builddir)/src -t test_hcc -o $@
 #	$(LCOV) -z -d $(abs_builddir)/src
 #	$(LCOV) -z -d $(abs_builddir)/src/leveldb
 
-#test_human-charity-coin_filtered.info: test_human-charity-coin.info
+#test_hcc_filtered.info: test_hcc.info
 #	$(LCOV) -r $< "/usr/include/*" -o $@
 
-#block_test.info: test_human-charity-coin_filtered.info
+#block_test.info: test_hcc_filtered.info
 #	$(MKDIR_P) qa/tmp
 #	-@TIMEOUT=15 qa/pull-tester/run-bitcoind-for-test.sh $(JAVA) -jar $(JAVA_COMPARISON_TOOL) qa/tmp/compTool 0
 #	$(LCOV) -c -d $(abs_builddir)/src --t BitcoinJBlockTest -o $@
@@ -1153,13 +1153,13 @@ $(BITCOIN_CLI_BIN): FORCE
 #block_test_filtered.info: block_test.info
 #	$(LCOV) -r $< "/usr/include/*" -o $@
 
-#test_human-charity-coin_coverage.info: baseline_filtered_combined.info test_human-charity-coin_filtered.info
-#	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_human-charity-coin_filtered.info -o $@
+#test_hcc_coverage.info: baseline_filtered_combined.info test_hcc_filtered.info
+#	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_hcc_filtered.info -o $@
 
-#total_coverage.info:  baseline_filtered_combined.info test_human-charity-coin_filtered.info block_test_filtered.info
-#	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_human-charity-coin_filtered.info -a block_test_filtered.info -o $@ | $(GREP) "\%" | $(AWK) '{ print substr($$3,2,50) "/" $$5 }' > coverage_percent.txt
+#total_coverage.info:  baseline_filtered_combined.info test_hcc_filtered.info block_test_filtered.info
+#	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_hcc_filtered.info -a block_test_filtered.info -o $@ | $(GREP) "\%" | $(AWK) '{ print substr($$3,2,50) "/" $$5 }' > coverage_percent.txt
 
-#test_human-charity-coin.coverage/.dirstamp:  test_human-charity-coin_coverage.info
+#test_hcc.coverage/.dirstamp:  test_hcc_coverage.info
 #	$(GENHTML) -s $< -o $(@D)
 #	@touch $@
 
@@ -1167,12 +1167,12 @@ $(BITCOIN_CLI_BIN): FORCE
 #	$(GENHTML) -s $< -o $(@D)
 #	@touch $@
 
-#cov: test_human-charity-coin.coverage/.dirstamp total.coverage/.dirstamp
+#cov: test_hcc.coverage/.dirstamp total.coverage/.dirstamp
 
 .INTERMEDIATE: $(COVERAGE_INFO)
 
 clean-local:
-	rm -rf test_human-charity-coin.coverage/ total.coverage/ $(OSX_APP)
+	rm -rf test_hcc.coverage/ total.coverage/ $(OSX_APP)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

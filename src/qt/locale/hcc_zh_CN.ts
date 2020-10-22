@@ -499,7 +499,7 @@
     </message>
     <message>
         <source>Show diagnostic information</source>
-        <translation>显示诊断调试信息</translation>
+        <translation>显示断调试信息</translation>
     </message>
     <message>
         <source>&amp;Debug console</source>
@@ -591,7 +591,7 @@
     </message>
     <message>
         <source>Tabs toolbar</source>
-        <translation>标签工具栏</translation>
+        <translation>标工具栏</translation>
     </message>
     <message>
         <source>Human-Charity-Coin Core</source>
@@ -602,8 +602,8 @@
         <translation>发送数字货币到HCC地址</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and human-charity-coin: URIs)</source>
-        <translation>请求支付（生成二维码和human-charity-coin：URIs）</translation>
+        <source>Request payments (generates QR codes and hcc: URIs)</source>
+        <translation>请求支付（生成二维码和hcc：URIs）</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -662,8 +662,8 @@
         <translation>打开主节点配置文件</translation>
     </message>
     <message>
-        <source>Open a human-charity-coin: URI or payment request</source>
-        <translation>打开human-charity-coin：URI或付款请求</translation>
+        <source>Open a hcc: URI or payment request</source>
+        <translation>打开hcc：URI或付款请求</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -1113,7 +1113,7 @@ Address: %4
     </message>
     <message>
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Human-Charity-Coin network.</source>
-        <translation>附加到付款请求的可选消息，将在请求打开时显示。&lt;br&gt; 注意：消息不会在付款时通过Human-Charity-Coin网络发送。</translation>
+        <translation>附加到付款请求的可选消息，将在请求打开时示。&lt;br&gt; 注意：消息不会在付款时通过Human-Charity-Coin网络发送。</translation>
     </message>
     <message>
         <source>&amp;Label:</source>
@@ -1248,8 +1248,8 @@ Address: %4
         <translation>消息:</translation>
     </message>
     <message>
-        <source>A message that was attached to the human-charity-coin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Human-Charity-Coin network.</source>
-        <translation>附加到human-charity-coin：URI的消息，该消息将与转账信息一起存储以供参考。 注意：此消息不会通过Human-Charity-Coin网络发送。</translation>
+        <source>A message that was attached to the hcc: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Human-Charity-Coin network.</source>
+        <translation>附加到hcc：URI的消息，该消息将与转账信息一起存储以供参考。 注意：此消息不会通过Human-Charity-Coin网络发送。</translation>
     </message>
     <message>
         <source>Enter a label for this address to add it to your address book</source>
@@ -1469,7 +1469,7 @@ Address: %4
     </message>
     </context>
 <context>
-    <name>human-charity-coin-core</name>
+    <name>hcc-core</name>
     <message>
         <source>Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)</source>
         <translation>在收到相关警报时执行命令，或者看到一个很长的分叉（cmd中的%s被消息替换）</translation>

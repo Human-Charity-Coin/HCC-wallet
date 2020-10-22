@@ -328,32 +328,32 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
         /* Human-Charity-Coin features */
-        {"human-charity-coin", "masternode", &masternode, true, true, false},
-        {"human-charity-coin", "listmasternodes", &listmasternodes, true, true, false},
-        {"human-charity-coin", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"human-charity-coin", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"human-charity-coin", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"human-charity-coin", "masternodedebug", &masternodedebug, true, true, false},
-        {"human-charity-coin", "startmasternode", &startmasternode, true, true, false},
-        {"human-charity-coin", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"human-charity-coin", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"human-charity-coin", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"human-charity-coin", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"human-charity-coin", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"human-charity-coin", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"human-charity-coin", "mnbudget", &mnbudget, true, true, false},
-        {"human-charity-coin", "preparebudget", &preparebudget, true, true, false},
-        {"human-charity-coin", "submitbudget", &submitbudget, true, true, false},
-        {"human-charity-coin", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"human-charity-coin", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"human-charity-coin", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"human-charity-coin", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"human-charity-coin", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"human-charity-coin", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"human-charity-coin", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"human-charity-coin", "checkbudgets", &checkbudgets, true, true, false},
-        {"human-charity-coin", "mnsync", &mnsync, true, true, false},
-        {"human-charity-coin", "spork", &spork, true, true, false},
+        {"hcc", "masternode", &masternode, true, true, false},
+        {"hcc", "listmasternodes", &listmasternodes, true, true, false},
+        {"hcc", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"hcc", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"hcc", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"hcc", "masternodedebug", &masternodedebug, true, true, false},
+        {"hcc", "startmasternode", &startmasternode, true, true, false},
+        {"hcc", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"hcc", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"hcc", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"hcc", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"hcc", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"hcc", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"hcc", "mnbudget", &mnbudget, true, true, false},
+        {"hcc", "preparebudget", &preparebudget, true, true, false},
+        {"hcc", "submitbudget", &submitbudget, true, true, false},
+        {"hcc", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"hcc", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"hcc", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"hcc", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"hcc", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"hcc", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"hcc", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"hcc", "checkbudgets", &checkbudgets, true, true, false},
+        {"hcc", "mnsync", &mnsync, true, true, false},
+        {"hcc", "spork", &spork, true, true, false},
 #ifdef ENABLE_WALLET
 
         /* Wallet */
@@ -1070,7 +1070,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> human-charity-coin-cli " + methodname + " " + args + "\n";
+    return "> hcc-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)

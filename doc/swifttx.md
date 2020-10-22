@@ -12,8 +12,8 @@ When a "Transaction Lock" occurs the hash of the related transaction is broadcas
 * `zmqpubhashtxlock`: publishes the transaction hash when locked via SwiftTX
 
 This mechanism has been integrated into Bitcore-Node-Human-Charity-Coin which allows for notification to be broadcast through Insight API in one of two ways:
-* WebSocket: [https://github.com/human-charity-coin/insight-api-human-charity-coin#web-socket-api](https://github.com/human-charity-coin/insight-api-human-charity-coin#web-socket-api)
-* API: [https://github.com/human-charity-coin/insight-api-human-charity-coin#swifttx-transactions](https://github.com/human-charity-coin/insight-api-human-charity-coin#swifttx-transactions)
+* WebSocket: [https://github.com/hcc/insight-api-hcc#web-socket-api](https://github.com/hcc/insight-api-hcc#web-socket-api)
+* API: [https://github.com/hcc/insight-api-hcc#swifttx-transactions](https://github.com/hcc/insight-api-hcc#swifttx-transactions)
 
 ####Command line option
 

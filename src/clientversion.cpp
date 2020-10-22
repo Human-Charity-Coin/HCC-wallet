@@ -10,7 +10,7 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both human-charity-coind and human-charity-coin-qt, to make it harder for attackers to
+ * for both hccd and hcc-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
 const std::string CLIENT_NAME("Human-Charity-Coin Core");

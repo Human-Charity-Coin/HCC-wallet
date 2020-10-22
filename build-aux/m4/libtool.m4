@@ -6613,7 +6613,7 @@ if test yes != "$_lt_caught_CXX_error"; then
 	    compiler_flags_filtered='`func_echo_all "$compiler_flags " | $SED -e "s%-brtl\\([[, ]]\\)%-berok\\1%g"`'
 	    if test svr4 != "$with_aix_soname"; then
 	      # This is similar to how AIX traditionally builds its shared
-	      # libraries. Need -bhccl late, we may have -brtl in LDFLAGS.
+	      # libraries. Need -bnortl late, we may have -brtl in LDFLAGS.
 	      _LT_TAGVAR(archive_expsym_cmds, $1)="$_LT_TAGVAR(archive_expsym_cmds, $1)"'~$CC '$shared_flag_aix' -o $output_objdir/$realname.d/$soname $libobjs $deplibs $wl-bnoentry '$compiler_flags_filtered'$wl-bE:$export_symbols$allow_undefined_flag~$AR $AR_FLAGS $output_objdir/$libname$release.a $output_objdir/$realname.d/$soname'
 	    fi
 	    if test aix != "$with_aix_soname"; then

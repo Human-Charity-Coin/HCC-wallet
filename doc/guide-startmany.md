@@ -111,20 +111,20 @@ mn01 127.0.0.1:6949 93HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 2bcd3c84
 mn02 127.0.0.2:6949 93WaAb3htPJEV8E9aQcN23Jt97bPex7YvWfgMDTUdWJvzmrMqey aa9f1034d973377a5e733272c3d0eced1de22555ad45d6b24abadff8087948d4 0 7gnwGHt17heGpG9Crfeh4KGpYNFugPhJdh:25
 ```
 
-## What about the human-charity-coin.conf file?
+## What about the hcc.conf file?
 
-If you are using a masternode.conf file you no longer need the human-charity-coin.conf file. The exception is if you need custom settings (thanks oblox).
+If you are using a masternode.conf file you no longer need the hcc.conf file. The exception is if you need custom settings (thanks oblox).
 
-## Update human-charity-coin.conf on server
+## Update hcc.conf on server
 
-If you generated a new masternode private key, you will need to update the remote human-charity-coin.conf files.
+If you generated a new masternode private key, you will need to update the remote hcc.conf files.
 
 Shut down the daemon and then edit the file.
 
-```sudo nano .human-charity-coin/human-charity-coin.conf```
+```sudo nano .hcc/hcc.conf```
 
 ### Edit the masternodeprivkey
-If you generated a new masternode private key, you will need to update the masternodeprivkey value in your remote human-charity-coin.conf file.
+If you generated a new masternode private key, you will need to update the masternodeprivkey value in your remote hcc.conf file.
 
 ## Start your MasterNodes
 
@@ -134,9 +134,9 @@ If your remote server is not running, start your remote daemon as you normally w
 
 I usually confirm that remote is on the correct block by issuing:
 
-```human-charity-coind getinfo```
+```hccd getinfo```
 OR
-```human-charity-coin-cli getinfo```
+```hcc-cli getinfo```
 
 And compare with the official explorer at http://explorer.hcc.network
 

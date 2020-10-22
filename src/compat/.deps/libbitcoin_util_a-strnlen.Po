@@ -1,9 +1,9 @@
 compat/libbitcoin_util_a-strnlen.o: compat/strnlen.cpp \
- config/human-charity-coin-config.h \
- /usr/lib/gcc/i686-w64-mingw32/7.3-posix/include/c++/cstring \
- /usr/lib/gcc/i686-w64-mingw32/7.3-posix/include/c++/i686-w64-mingw32/bits/c++config.h \
- /usr/lib/gcc/i686-w64-mingw32/7.3-posix/include/c++/i686-w64-mingw32/bits/os_defines.h \
- /usr/lib/gcc/i686-w64-mingw32/7.3-posix/include/c++/i686-w64-mingw32/bits/cpu_defines.h \
+ config/hcc-config.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/include/c++/cstring \
+ /usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
  /usr/share/mingw-w64/include/string.h \
  /usr/share/mingw-w64/include/crtdefs.h \
  /usr/share/mingw-w64/include/_mingw.h \
@@ -14,15 +14,15 @@ compat/libbitcoin_util_a-strnlen.o: compat/strnlen.cpp \
  /usr/share/mingw-w64/include/sdks/_mingw_ddk.h \
  /usr/share/mingw-w64/include/sec_api/string_s.h
 
-config/human-charity-coin-config.h:
+config/hcc-config.h:
 
-/usr/lib/gcc/i686-w64-mingw32/7.3-posix/include/c++/cstring:
+/usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/include/c++/cstring:
 
-/usr/lib/gcc/i686-w64-mingw32/7.3-posix/include/c++/i686-w64-mingw32/bits/c++config.h:
+/usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/include/c++/x86_64-w64-mingw32/bits/c++config.h:
 
-/usr/lib/gcc/i686-w64-mingw32/7.3-posix/include/c++/i686-w64-mingw32/bits/os_defines.h:
+/usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/include/c++/x86_64-w64-mingw32/bits/os_defines.h:
 
-/usr/lib/gcc/i686-w64-mingw32/7.3-posix/include/c++/i686-w64-mingw32/bits/cpu_defines.h:
+/usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h:
 
 /usr/share/mingw-w64/include/string.h:
 

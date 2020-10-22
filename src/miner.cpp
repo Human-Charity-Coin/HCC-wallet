@@ -462,7 +462,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
 {
     LogPrintf("Human-Charity-CoinMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("human-charity-coin-miner");
+    RenameThread("hcc-miner");
 
     // Each thread has its own key and counter
     CReserveKey reservekey(pwallet);

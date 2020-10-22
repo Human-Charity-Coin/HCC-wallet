@@ -13,12 +13,12 @@ The following are some helpful notes on how to run Human-Charity-Coin on your na
 
 Unpack the files into a directory and run:
 
-- bin/32/human-charity-coin-qt (GUI, 32-bit) or bin/32/human-charity-coind (headless, 32-bit)
-- bin/64/human-charity-coin-qt (GUI, 64-bit) or bin/64/human-charity-coind (headless, 64-bit)
+- bin/32/hcc-qt (GUI, 32-bit) or bin/32/hccd (headless, 32-bit)
+- bin/64/hcc-qt (GUI, 64-bit) or bin/64/hccd (headless, 64-bit)
 
 ### Windows
 
-Unpack the files into a directory, and then run human-charity-coin-qt.exe.
+Unpack the files into a directory, and then run hcc-qt.exe.
 
 ### OSX
 
@@ -38,7 +38,7 @@ The following are developer notes on how to build Human-Charity-Coin on your nat
 
 Development
 ---------------------
-The Human-Charity-Coin repo's [root README](https://github.com/human-charity-coin/human-charity-coin/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Human-Charity-Coin repo's [root README](https://github.com/hcc/hcc/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)

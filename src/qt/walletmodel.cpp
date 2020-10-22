@@ -237,7 +237,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
                 return InvalidAmount;
             }
             total += subtotal;
-        } else { // User-entered human-charity-coin address / amount:
+        } else { // User-entered hcc address / amount:
             if (!validateAddress(rcp.address)) {
                 return InvalidAddress;
             }
@@ -326,7 +326,7 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(WalletModelTransaction& tran
                 std::string value;
                 rcp.paymentRequest.SerializeToString(&value);
                 newTx->vOrderForm.push_back(make_pair(key, value));
-            } else if (!rcp.message.isEmpty()) // Message from normal human-charity-coin:URI (human-charity-coin:XyZ...?message=example)
+            } else if (!rcp.message.isEmpty()) // Message from normal hcc:URI (hcc:XyZ...?message=example)
             {
                 newTx->vOrderForm.push_back(make_pair("Message", rcp.message.toStdString()));
             }

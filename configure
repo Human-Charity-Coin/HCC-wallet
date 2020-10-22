@@ -589,7 +589,7 @@ MAKEFLAGS=
 
 # Identity of this package.
 PACKAGE_NAME='Human-Charity-Coin Core'
-PACKAGE_TARNAME='human-charity-coin'
+PACKAGE_TARNAME='hcc'
 PACKAGE_VERSION='3.3.1'
 PACKAGE_STRING='Human-Charity-Coin Core 3.3.1'
 PACKAGE_BUGREPORT='www.savebitcoin.io'
@@ -1622,7 +1622,7 @@ Fine tuning of the installation directories:
   --infodir=DIR           info documentation [DATAROOTDIR/info]
   --localedir=DIR         locale-dependent data [DATAROOTDIR/locale]
   --mandir=DIR            man documentation [DATAROOTDIR/man]
-  --docdir=DIR            documentation root [DATAROOTDIR/doc/human-charity-coin]
+  --docdir=DIR            documentation root [DATAROOTDIR/doc/hcc]
   --htmldir=DIR           html documentation [DOCDIR]
   --dvidir=DIR            dvi documentation [DOCDIR]
   --pdfdir=DIR            pdf documentation [DOCDIR]
@@ -1707,13 +1707,12 @@ Optional Packages:
   --with-system-univalue  Build with system UniValue (default is no)
   --with-protoc-bindir=BIN_DIR
                           specify protoc bin path
-  --with-utils            build human-charity-coin-cli human-charity-coin-tx (default=yes)
+  --with-utils            build hcc-cli hcc-tx (default=yes)
   --with-libs             build libraries (default=yes)
-  --with-daemon           build human-charity-coind daemon (default=yes)
+  --with-daemon           build hccd daemon (default=yes)
   --with-incompatible-bdb allow using a bdb version other than 4.8
   --with-gui[=no|qt4|qt5|auto]
-                          build human-charity-coin-qt GUI (default=auto, qt5 tried
-                          first)
+                          build hcc-qt GUI (default=auto, qt5 tried first)
   --with-qt-incdir=INC_DIR
                           specify qt include path (overridden by pkgconfig)
   --with-qt-libdir=LIB_DIR
@@ -2935,7 +2934,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 
 
 
-ac_config_headers="$ac_config_headers src/config/human-charity-coin-config.h"
+ac_config_headers="$ac_config_headers src/config/hcc-config.h"
 
 ac_aux_dir=
 for ac_dir in build-aux "$srcdir"/build-aux; do
@@ -2968,10 +2967,10 @@ ac_configure="$SHELL $ac_aux_dir/configure"  # Please don't use this var.
 
 
 
-BITCOIN_DAEMON_NAME=human-charity-coind
-BITCOIN_GUI_NAME=human-charity-coin-qt
-BITCOIN_CLI_NAME=human-charity-coin-cli
-BITCOIN_TX_NAME=human-charity-coin-tx
+BITCOIN_DAEMON_NAME=hccd
+BITCOIN_GUI_NAME=hcc-qt
+BITCOIN_CLI_NAME=hcc-cli
+BITCOIN_TX_NAME=hcc-tx
 
 # Make sure we can run config.sub.
 $SHELL "$ac_aux_dir/config.sub" sun4 >/dev/null 2>&1 ||
@@ -3536,7 +3535,7 @@ fi
 
 
 # Define the identity of the package.
- PACKAGE='human-charity-coin'
+ PACKAGE='hcc'
  VERSION='3.3.1'
 
 
@@ -14831,7 +14830,7 @@ fi
 	    compiler_flags_filtered='`func_echo_all "$compiler_flags " | $SED -e "s%-brtl\\([, ]\\)%-berok\\1%g"`'
 	    if test svr4 != "$with_aix_soname"; then
 	      # This is similar to how AIX traditionally builds its shared
-	      # libraries. Need -bhccl late, we may have -brtl in LDFLAGS.
+	      # libraries. Need -bnortl late, we may have -brtl in LDFLAGS.
 	      archive_expsym_cmds_CXX="$archive_expsym_cmds_CXX"'~$CC '$shared_flag_aix' -o $output_objdir/$realname.d/$soname $libobjs $deplibs $wl-bnoentry '$compiler_flags_filtered'$wl-bE:$export_symbols$allow_undefined_flag~$AR $AR_FLAGS $output_objdir/$libname$release.a $output_objdir/$realname.d/$soname'
 	    fi
 	    if test aix != "$with_aix_soname"; then
@@ -21154,7 +21153,7 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
 
 
 
-# The following macro will add the necessary defines to human-charity-coin-config.h, but
+# The following macro will add the necessary defines to hcc-config.h, but
 # they also need to be passed down to any subprojects. Pull the results out of
 # the cache and add them to CPPFLAGS.
 # Check whether --enable-largefile was given.
@@ -23184,8 +23183,8 @@ fi
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Qt dependencies not found; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: Qt dependencies not found; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Qt dependencies not found; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: Qt dependencies not found; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -23395,8 +23394,8 @@ else
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: QtCore headers missing; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: QtCore headers missing; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: QtCore headers missing; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: QtCore headers missing; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -23422,8 +23421,8 @@ else
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: QtGui headers missing; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: QtGui headers missing; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: QtGui headers missing; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: QtGui headers missing; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -23449,8 +23448,8 @@ else
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: QtNetwork headers missing; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: QtNetwork headers missing; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: QtNetwork headers missing; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: QtNetwork headers missing; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -23572,8 +23571,8 @@ else
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: libimm32 not found; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: libimm32 not found; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: libimm32 not found; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: libimm32 not found; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -23957,8 +23956,8 @@ else
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: lib$QT_LIB_PREFIXCore not found; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: lib$QT_LIB_PREFIXCore not found; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: lib$QT_LIB_PREFIXCore not found; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: lib$QT_LIB_PREFIXCore not found; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -24019,8 +24018,8 @@ else
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: lib$QT_LIB_PREFIXGui not found; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: lib$QT_LIB_PREFIXGui not found; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: lib$QT_LIB_PREFIXGui not found; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: lib$QT_LIB_PREFIXGui not found; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -24081,8 +24080,8 @@ else
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: lib$QT_LIB_PREFIXNetwork not found; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: lib$QT_LIB_PREFIXNetwork not found; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: lib$QT_LIB_PREFIXNetwork not found; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: lib$QT_LIB_PREFIXNetwork not found; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -24144,8 +24143,8 @@ else
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: lib$QT_LIB_PREFIXWidgets not found; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: lib$QT_LIB_PREFIXWidgets not found; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: lib$QT_LIB_PREFIXWidgets not found; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: lib$QT_LIB_PREFIXWidgets not found; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -24809,8 +24808,8 @@ else
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: lib$QT_LIB_PREFIXPlatformSupport not found; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: lib$QT_LIB_PREFIXPlatformSupport not found; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: lib$QT_LIB_PREFIXPlatformSupport not found; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: lib$QT_LIB_PREFIXPlatformSupport not found; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -24896,8 +24895,8 @@ else
 $as_echo "no" >&6; };
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Could not resolve: -lqtaccessiblewidgets; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: Could not resolve: -lqtaccessiblewidgets; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Could not resolve: -lqtaccessiblewidgets; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: Could not resolve: -lqtaccessiblewidgets; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -24939,8 +24938,8 @@ else
 $as_echo "no" >&6; };
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Could not resolve: -lqwindows; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: Could not resolve: -lqwindows; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Could not resolve: -lqwindows; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: Could not resolve: -lqwindows; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -24984,8 +24983,8 @@ else
 $as_echo "no" >&6; };
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Could not resolve: -lqxcb -lxcb-static; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: Could not resolve: -lqxcb -lxcb-static; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Could not resolve: -lqxcb -lxcb-static; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: Could not resolve: -lqxcb -lxcb-static; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -25065,8 +25064,8 @@ else
 $as_echo "no" >&6; };
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Could not resolve: -lqcocoa; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: Could not resolve: -lqcocoa; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Could not resolve: -lqcocoa; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: Could not resolve: -lqcocoa; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -25121,8 +25120,8 @@ else
 $as_echo "no" >&6; };
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Could not resolve: -lqcncodecs -lqjpcodecs -lqtwcodecs -lqkrcodecs -lqtaccessiblewidgets; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: Could not resolve: -lqcncodecs -lqjpcodecs -lqtwcodecs -lqkrcodecs -lqtaccessiblewidgets; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Could not resolve: -lqcncodecs -lqjpcodecs -lqtwcodecs -lqkrcodecs -lqtaccessiblewidgets; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: Could not resolve: -lqcncodecs -lqjpcodecs -lqtwcodecs -lqkrcodecs -lqtaccessiblewidgets; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -25339,8 +25338,8 @@ done
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: MOC not found; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: MOC not found; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: MOC not found; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: MOC not found; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -25458,8 +25457,8 @@ done
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: UIC not found; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: UIC not found; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: UIC not found; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: UIC not found; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -25577,8 +25576,8 @@ done
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: RCC not found; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: RCC not found; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: RCC not found; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: RCC not found; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -25696,8 +25695,8 @@ done
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: LRELEASE not found; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: LRELEASE not found; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: LRELEASE not found; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: LRELEASE not found; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -25815,8 +25814,8 @@ done
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: LUPDATE not found; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: LUPDATE not found; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: LUPDATE not found; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: LUPDATE not found; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -28110,8 +28109,8 @@ fi
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: libprotobuf not found; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: libprotobuf not found; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: libprotobuf not found; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: libprotobuf not found; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -28125,8 +28124,8 @@ $as_echo "no" >&6; }
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: libprotobuf not found; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: libprotobuf not found; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: libprotobuf not found; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: libprotobuf not found; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -28763,8 +28762,8 @@ else
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: libprotobuf not found; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: libprotobuf not found; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: libprotobuf not found; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: libprotobuf not found; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -29173,8 +29172,8 @@ done
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: PROTOC not found; human-charity-coin-qt frontend will not be built" >&5
-$as_echo "$as_me: WARNING: PROTOC not found; human-charity-coin-qt frontend will not be built" >&2;}
+      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: PROTOC not found; hcc-qt frontend will not be built" >&5
+$as_echo "$as_me: WARNING: PROTOC not found; hcc-qt frontend will not be built" >&2;}
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -29191,8 +29190,8 @@ $as_echo "$as_me: WARNING: PROTOC not found; human-charity-coin-qt frontend will
 
 
 
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build human-charity-coind" >&5
-$as_echo_n "checking whether to build human-charity-coind... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build hccd" >&5
+$as_echo_n "checking whether to build hccd... " >&6; }
  if test x$build_bitcoind = xyes; then
   BUILD_BITCOIND_TRUE=
   BUILD_BITCOIND_FALSE='#'
@@ -29204,8 +29203,8 @@ fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $build_bitcoind" >&5
 $as_echo "$build_bitcoind" >&6; }
 
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build utils (human-charity-coin-cli human-charity-coin-tx)" >&5
-$as_echo_n "checking whether to build utils (human-charity-coin-cli human-charity-coin-tx)... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build utils (hcc-cli hcc-tx)" >&5
+$as_echo_n "checking whether to build utils (hcc-cli hcc-tx)... " >&6; }
  if test x$build_bitcoin_utils = xyes; then
   BUILD_BITCOIN_UTILS_TRUE=
   BUILD_BITCOIN_UTILS_FALSE='#'
@@ -29388,8 +29387,8 @@ $as_echo "no" >&6; }
 $as_echo "$as_me: WARNING: \"xgettext is required to update qt translations\"" >&2;}
   fi
 
-  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build test_human-charity-coin-qt" >&5
-$as_echo_n "checking whether to build test_human-charity-coin-qt... " >&6; }
+  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build test_hcc-qt" >&5
+$as_echo_n "checking whether to build test_hcc-qt... " >&6; }
   if test x$use_tests$bitcoin_enable_qt_test = xyesyes; then
     { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 $as_echo "yes" >&6; }
@@ -29409,8 +29408,8 @@ else
 fi
 
 
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build test_human-charity-coin" >&5
-$as_echo_n "checking whether to build test_human-charity-coin... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build test_hcc" >&5
+$as_echo_n "checking whether to build test_hcc... " >&6; }
 if test x$use_tests = xyes; then
   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 $as_echo "yes" >&6; }
@@ -30840,7 +30839,7 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_write_fail=1
 for ac_config_target in $ac_config_targets
 do
   case $ac_config_target in
-    "src/config/human-charity-coin-config.h") CONFIG_HEADERS="$CONFIG_HEADERS src/config/human-charity-coin-config.h" ;;
+    "src/config/hcc-config.h") CONFIG_HEADERS="$CONFIG_HEADERS src/config/hcc-config.h" ;;
     "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
     "libtool") CONFIG_COMMANDS="$CONFIG_COMMANDS libtool" ;;
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;

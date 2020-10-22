@@ -62,7 +62,7 @@
         <file alias="default">res/css/default.css</file>
     </qresource>
     <qresource prefix="/images">
-        <file alias="human-charity-coin_logo_horizontal">res/images/human-charity-coin_logo_horizontal.png</file>
+        <file alias="hcc_logo_horizontal">res/images/hcc_logo_horizontal.png</file>
         <file alias="about">res/images/about.png</file>
         <file alias="downArrow_small">res/images/downArrow_small_dark.png</file>
         <file alias="downArrow_small_white">res/images/downArrow_small.png</file>

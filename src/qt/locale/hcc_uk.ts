@@ -67,7 +67,7 @@
     </message>
     <message>
         <source>These are your HCC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Це ваші HCC адреси для отримання платежів. Для кожної транзакції рекомендується використовувати нову адресу одержувача.</translation>
+        <translation>Це аші HCC адреси для отримання платежів. Для кожної транзакції рекомендується використовувати нову адресу одержувача.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -153,7 +153,7 @@
     </message>
     <message>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
-        <translation>Для розшифрування гаманція потрібно його кодове слово.</translation>
+        <translation>Для рошифрування гаманція потрібно його кодове слово.</translation>
     </message>
     <message>
         <source>Decrypt wallet</source>
@@ -353,10 +353,10 @@
     </message>
     <message>
         <source>Export the data in the current tab to a file</source>
-        <translation>Експортуйтувати дані поточної вкладки у файл</translation>
+        <translation>Експортуйувати дані поточної вкладки у файл</translation>
     </message>
     </context>
 <context>
-    <name>human-charity-coin-core</name>
+    <name>hcc-core</name>
     </context>
 </TS>

@@ -2,7 +2,7 @@
 
 Human-Charity-Coin Core version *version* is now available from:
 
-  <https://github.com/human-charity-coin-community/Human-Charity-Coin/releases>
+  <https://github.com/hcc-community/Human-Charity-Coin/releases>
 
 This is a new major version release, including various bug fixes and
 performance improvements, as well as updated translations.
@@ -18,7 +18,7 @@ Mandatory Update
 How to Upgrade
 ==============
 
-If you are running an older version, shut it down. Wait until it has completely shut down (which might take a few minutes for older versions), then run the installer (on Windows) or just copy over /Applications/Human-Charity-Coin-Qt (on Mac) or human-charity-coind/human-charity-coin-qt (on Linux).
+If you are running an older version, shut it down. Wait until it has completely shut down (which might take a few minutes for older versions), then run the installer (on Windows) or just copy over /Applications/Human-Charity-Coin-Qt (on Mac) or hccd/hcc-qt (on Linux).
 
 Compatibility
 ==============
@@ -50,7 +50,7 @@ overridden with the option `-rpccookiefile`.
 This is similar to Tor's CookieAuthentication: see
 https://www.torproject.org/docs/tor-manual.html.en
 
-This allows running human-charity-coind without having to do any manual configuration.
+This allows running hccd without having to do any manual configuration.
 
 
 *version* Change log

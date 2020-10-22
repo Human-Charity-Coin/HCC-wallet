@@ -1,1 +1,1 @@
-qt/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.o: qt/qrc_human-charity-coin_locale.cpp
+qt/qt_libbitcoinqt_a-qrc_hcc_locale.o: qt/qrc_hcc_locale.cpp

@@ -1,5 +1,5 @@
 crypto/crypto_libbitcoin_crypto_a-blake.o: crypto/blake.c \
- /usr/lib/gcc/i686-w64-mingw32/7.3-posix/include/stddef.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/include/stddef.h \
  /usr/share/mingw-w64/include/stddef.h \
  /usr/share/mingw-w64/include/crtdefs.h \
  /usr/share/mingw-w64/include/_mingw.h \
@@ -10,14 +10,14 @@ crypto/crypto_libbitcoin_crypto_a-blake.o: crypto/blake.c \
  /usr/share/mingw-w64/include/sdks/_mingw_ddk.h \
  /usr/share/mingw-w64/include/string.h \
  /usr/share/mingw-w64/include/sec_api/string_s.h \
- /usr/lib/gcc/i686-w64-mingw32/7.3-posix/include-fixed/limits.h \
- /usr/lib/gcc/i686-w64-mingw32/7.3-posix/include-fixed/syslimits.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/include-fixed/syslimits.h \
  /usr/share/mingw-w64/include/limits.h crypto/sph_blake.h \
  crypto/sph_types.h \
- /usr/lib/gcc/i686-w64-mingw32/7.3-posix/include/stdint.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/include/stdint.h \
  /usr/share/mingw-w64/include/stdint.h
 
-/usr/lib/gcc/i686-w64-mingw32/7.3-posix/include/stddef.h:
+/usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/include/stddef.h:
 
 /usr/share/mingw-w64/include/stddef.h:
 
@@ -39,9 +39,9 @@ crypto/crypto_libbitcoin_crypto_a-blake.o: crypto/blake.c \
 
 /usr/share/mingw-w64/include/sec_api/string_s.h:
 
-/usr/lib/gcc/i686-w64-mingw32/7.3-posix/include-fixed/limits.h:
+/usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/include-fixed/limits.h:
 
-/usr/lib/gcc/i686-w64-mingw32/7.3-posix/include-fixed/syslimits.h:
+/usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/include-fixed/syslimits.h:
 
 /usr/share/mingw-w64/include/limits.h:
 
@@ -49,6 +49,6 @@ crypto/sph_blake.h:
 
 crypto/sph_types.h:
 
-/usr/lib/gcc/i686-w64-mingw32/7.3-posix/include/stdint.h:
+/usr/lib/gcc/x86_64-w64-mingw32/7.3-posix/include/stdint.h:
 
 /usr/share/mingw-w64/include/stdint.h:

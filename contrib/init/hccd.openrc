@@ -2,24 +2,24 @@
 
 # backward compatibility for existing gentoo layout
 #
-if [ -d "/var/lib/human-charity-coin/.human-charity-coin" ]; then
-	BITCOIND_DEFAULT_DATADIR="/var/lib/human-charity-coin/.human-charity-coin"
+if [ -d "/var/lib/hcc/.hcc" ]; then
+	BITCOIND_DEFAULT_DATADIR="/var/lib/hcc/.hcc"
 else
-	BITCOIND_DEFAULT_DATADIR="/var/lib/human-charity-coind"
+	BITCOIND_DEFAULT_DATADIR="/var/lib/hccd"
 fi
 
-BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/human-charity-coin/human-charity-coin.conf}
-BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/human-charity-coind}
-BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/human-charity-coind.pid}
+BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/hcc/hcc.conf}
+BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/hccd}
+BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/hccd.pid}
 BITCOIND_DATADIR=${BITCOIND_DATADIR:-${BITCOIND_DEFAULT_DATADIR}}
-BITCOIND_USER=${BITCOIND_USER:-human-charity-coin}
-BITCOIND_GROUP=${BITCOIND_GROUP:-human-charity-coin}
-BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/human-charity-coind}
+BITCOIND_USER=${BITCOIND_USER:-hcc}
+BITCOIND_GROUP=${BITCOIND_GROUP:-hcc}
+BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/hccd}
 
 name="Human-Charity-Coin Core Daemon"
 description="Human-Charity-Coin crypto-currency p2p network daemon"
 
-command="/usr/bin/human-charity-coind"
+command="/usr/bin/hccd"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
 		-conf=\"${BITCOIND_CONFIGFILE}\" \
 		-datadir=\"${BITCOIND_DATADIR}\" \
@@ -65,7 +65,7 @@ checkconfig()
 {
 	if ! grep -qs '^rpcpassword=' "${BITCOIND_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a secure rpcpassword to run human-charity-coind."
+		eerror "ERROR: You must set a secure rpcpassword to run hccd."
 		eerror "The setting must appear in ${BITCOIND_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "

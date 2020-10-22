@@ -2,10 +2,10 @@
 Encoding=UTF-8
 Name=Human-Charity-Coin
 Comment=Human-Charity-Coin P2P Cryptocurrency
-Exec=human-charity-coin-qt %u
+Exec=hcc-qt %u
 Terminal=false
 Type=Application
-Icon=human-charity-coin128
-MimeType=x-scheme-handler/human-charity-coin;
+Icon=hcc128
+MimeType=x-scheme-handler/hcc;
 Categories=Office;Finance;
-Name[en_US]=human-charity-coin-qt.desktop
+Name[en_US]=hcc-qt.desktop

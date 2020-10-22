@@ -16,7 +16,7 @@ more scalable blockchain that is better suited for daily transactional use.
 
 Setup
 -----
-Unpack the files into a directory and run human-charity-coin-qt.exe.
+Unpack the files into a directory and run hcc-qt.exe.
 
 Human-Charity-Coin Core is the original Human-Charity-Coin client and it builds the backbone of the network.
 However, it downloads and stores the entire history of Human-Charity-Coin transactions;

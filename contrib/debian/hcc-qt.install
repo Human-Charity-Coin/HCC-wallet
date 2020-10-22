@@ -1,6 +1,6 @@
-usr/local/bin/human-charity-coin-qt usr/bin
+usr/local/bin/hcc-qt usr/bin
 share/pixmaps/bitcoin32.xpm usr/share/pixmaps
 share/pixmaps/bitcoin16.xpm usr/share/pixmaps
 share/pixmaps/bitcoin128.png usr/share/pixmaps
-debian/human-charity-coin-qt.desktop usr/share/applications
-debian/human-charity-coin-qt.protocol usr/share/kde4/services/
+debian/hcc-qt.desktop usr/share/applications
+debian/hcc-qt.protocol usr/share/kde4/services/

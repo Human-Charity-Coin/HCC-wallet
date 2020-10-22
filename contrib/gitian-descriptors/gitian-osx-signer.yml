@@ -1,5 +1,5 @@
 ---
-name: "human-charity-coin-dmg-signer"
+name: "hcc-dmg-signer"
 suites:
 - "trusty"
 architectures:
@@ -7,10 +7,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/human-charity-coin/human-charity-coin-detached-sigs.git"
+- "url": "https://github.com/hcc/hcc-detached-sigs.git"
   "dir": "signature"
 files:
-- "human-charity-coin-osx-unsigned.tar.gz"
+- "hcc-osx-unsigned.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   mkdir -p ${WRAP_DIR}
@@ -27,8 +27,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=human-charity-coin-osx-unsigned.tar.gz
-  SIGNED=human-charity-coin-osx-signed.dmg
+  UNSIGNED=hcc-osx-unsigned.tar.gz
+  SIGNED=hcc-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"

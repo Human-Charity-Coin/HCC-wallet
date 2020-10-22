@@ -257,6 +257,6 @@
     </message>
     </context>
 <context>
-    <name>human-charity-coin-core</name>
+    <name>hcc-core</name>
     </context>
 </TS>

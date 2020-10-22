@@ -133,7 +133,7 @@
     </message>
     <message>
         <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
-        <translation>운영체제 계정이 손상되었을 때 일반적인 송금을 비활성화 합니다. 실질적인 보안을 제공하지 않습니다.</translation>
+        <translation>운영체제 계정이 상되었을 때 일반적인 송금을 비활성화 합니다. 실질적인 보안을 제공하지 않습니다.</translation>
     </message>
     <message>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
@@ -197,7 +197,7 @@
     </message>
     <message>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
-        <translation>내부 오류로 인해 지갑 암호화에 실패했습니다. 지갑이 암호화되지 않았습니다.</translation>
+        <translation>내부 오류로 인해 지갑 암호화에 실패했습니다. 지갑이 암호화되지 않았습니.</translation>
     </message>
     <message>
         <source>The supplied passphrases do not match.</source>
@@ -296,7 +296,7 @@
     </message>
     <message>
         <source>Enter the BIP 38 encrypted private key. Enter the passphrase in the middle box. Click Decrypt Key to compute the private key. After the key is decrypted, clicking 'Import Address' will add this private key to the wallet.</source>
-        <translation>BIP 38 암호화 된 개인 키를 입력하십시오. 중간 입력창에 암호를 입력하십시오. 키를 암호해제 후 '주소 가져오기'를 클릭하면 개인 키가 지갑에 추가됩니다.</translation>
+        <translation>BIP 38 암호 된 개인 키를 입력하십시오. 중간 입력창에 암호를 입력하십시오. 키를 암호해제 후 '주소 가져오기'를 클릭하면 개인 키가 지갑에 추가됩니다.</translation>
     </message>
     <message>
         <source>The HCC address the message was signed with</source>
@@ -602,8 +602,8 @@
         <translation>HCC 주소로 전송하기</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and human-charity-coin: URIs)</source>
-        <translation>결제 요청 (QR 코드 및 human-charity-coin: URI 생성)</translation>
+        <source>Request payments (generates QR codes and hcc: URIs)</source>
+        <translation>결제 요청 (QR 코드 및 hcc: URI 생성)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -662,8 +662,8 @@
         <translation>마스터노드 구성 파일 열기</translation>
     </message>
     <message>
-        <source>Open a human-charity-coin: URI or payment request</source>
-        <translation>human-charity-coin: URI 또는 ​​결제 요청 열기</translation>
+        <source>Open a hcc: URI or payment request</source>
+        <translation>hcc: URI 또는 ​​결제 요청 열기</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -775,7 +775,7 @@ Address: %4
         <source>Staking is not active
  MultiSend: %1</source>
         <translation>스테이킹이 활성화 되지 않음
-다중전송: %1</translation>
+중전송: %1</translation>
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
@@ -805,8 +805,8 @@ Address: %4
         <translation>텍스트라벨</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (human-charity-coin.conf).</source>
-        <translation>모든 트랜잭션이 표시되지는 않습니다. 모든 트랜잭션을 보려면 구성 파일 (human-charity-coin.conf)에 txindex = 1을 설정해야합니다.</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (hcc.conf).</source>
+        <translation>모든 트랜잭션이 표시되지는 않습니다. 모든 트랜잭션을 보려면 구성 파일 (hcc.conf)에 txindex = 1을 설정해야합니다.</translation>
     </message>
 </context>
 <context>
@@ -1000,7 +1000,7 @@ Address: %4
     </message>
     <message>
         <source>lowest</source>
-        <translation>최저</translation>
+        <translation>저</translation>
     </message>
     <message>
         <source>(%1 locked)</source>
@@ -1103,7 +1103,7 @@ Address: %4
     </message>
     <message>
         <source>Could not unlock wallet.</source>
-        <translation>지갑의 잠금을 해제할 수 없습니다.</translation>
+        <translation>지갑의 잠금을 제할 수 없습니다.</translation>
     </message>
     <message>
         <source>New key generation failed.</source>
@@ -1185,7 +1185,7 @@ Address: %4
     </message>
     <message>
         <source>Set SSL root certificates for payment request (default: -system-)</source>
-        <translation>결제 요청에 대한 SSL 루트 인증서 설정 (기본값: -system-)</translation>
+        <translation>결제 요청에 대한 SSL 트 인증서 설정 (기본값: -system-)</translation>
     </message>
 </context>
 <context>
@@ -1315,7 +1315,7 @@ Address: %4
     </message>
     <message>
         <source>Confirm all masternodes start</source>
-        <translation>모든 마스터노드 시작 확인</translation>
+        <translation>모든 마스터드 시작 확인</translation>
     </message>
     <message>
         <source>Are you sure you want to start ALL masternodes?</source>
@@ -1532,7 +1532,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>If you disable the spending of unconfirmed change, the change from a transaction&lt;br/&gt;cannot be used until that transaction has at least one confirmation.&lt;br/&gt;This also affects how your balance is computed.</source>
-        <translation>확인되지 않은 변경사항을 사용하지 않도록 설정하면 해당 트랜잭션에 하나 이상의 컨펌이 진행되야&lt;br/&gt;트랜잭션에 변경사항을 적용할 수 있습니다.&lt;br/&gt;또한 이것은 잔액 계산 방식에도 영향을 줍니다.</translation>
+        <translation>확인되지 않은 변경사항을 사용하지 않도록 설정하면 해당 트랜잭션에 하나 이상의 컨펌이 진행되야&lt;br/&gt;트랜잭션에 변경사항을 적용할 수 있습니다.&lt;br/&gt;한 이것은 잔액 계산 방식에도 영향을 줍니다.</translation>
     </message>
     <message>
         <source>Automatically open the Human-Charity-Coin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
@@ -1704,7 +1704,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>This change would require a client restart.</source>
-        <translation>이 변경은 클라이언트가 재시작 되야 적용됩니다.</translation>
+        <translation>이 변경은 클라이언트 재시작 되야 적용됩니다.</translation>
     </message>
     <message>
         <source>The supplied proxy address is invalid.</source>
@@ -1809,8 +1809,8 @@ Please check the address and try again.</source>
         <translation>잘못된 결제 주소 %1</translation>
     </message>
     <message>
-        <source>Cannot start human-charity-coin: click-to-pay handler</source>
-        <translation>human-charity-coin을 시작할 수 없습니다: 결제하기 위한 클릭 처리</translation>
+        <source>Cannot start hcc: click-to-pay handler</source>
+        <translation>hcc을 시작할 수 없습니다: 결제하기 위한 클릭 처리</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid HCC address or malformed URI parameters.</source>
@@ -1900,7 +1900,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Enter a HCC address (e.g. %1)</source>
-        <translation>HCC 주소를 입력하세요 (예 %1)</translation>
+        <translation>HCC 소를 입력하세요 (예 %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2162,7 +2162,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Recover transactions from blockchain (keep meta-data, e.g. account owner).</source>
-        <translation>블록체인에서 거래내역 복구 (메타 데이터 저장 예: 사용자 주소)
+        <translation>블록체인에서 거래내역 복구 (메타 데이터 저장 예: 사용 주소)
 </translation>
     </message>
     <message>
@@ -2183,7 +2183,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>The buttons below will restart the wallet with command-line options to repair the wallet, fix issues with corrupt blockhain files or missing/obsolete transactions.</source>
-        <translation>아래 버튼들은 지갑을 고치기 위한 명령어 옵션들로 실행시 지갑을 재시작합니다, 손상된 블록체인 파일 또는 누락되었거나 오래된 트랜잭션들에 대한 문제를 해결합니다.</translation>
+        <translation>아래 버튼들은 지갑을 고치기 위한 명령어 옵션로 실행시 지갑을 재시작합니다, 손상된 블록체인 파일 또는 누락되었거나 오래된 트랜잭션들에 대한 문제를 해결합니다.</translation>
     </message>
     <message>
         <source>Wallet repair options.</source>
@@ -2314,7 +2314,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Requested payments history</source>
-        <translation>요청된 결제 내역</translation>
+        <translation>요청된 제 내역</translation>
     </message>
     <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
@@ -2623,7 +2623,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Copy fee</source>
-        <translation>수수료 복사</translation>
+        <translation>수료 복사</translation>
     </message>
     <message>
         <source>Copy after fee</source>
@@ -2719,7 +2719,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Duplicate address found, can only send to each address once per send operation.</source>
-        <translation>중복된 주소를 발견했습니다. 각 주소는 전송 작업당 한 번씩만 보낼 수 있습니다.</translation>
+        <translation>중복된 주소를 발견했습니다. 각 주소는 전송 작업 한 번씩만 보낼 수 있습니다.</translation>
     </message>
     <message>
         <source>Transaction creation failed!</source>
@@ -2766,7 +2766,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Paste address from clipboard</source>
-        <translation>클립보드에서 주소 붙여 넣기</translation>
+        <translation>립보드에서 주소 붙여 넣기</translation>
     </message>
     <message>
         <source>Alt+P</source>
@@ -2793,8 +2793,8 @@ Please check the address and try again.</source>
         <translation>메세지:</translation>
     </message>
     <message>
-        <source>A message that was attached to the human-charity-coin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Human-Charity-Coin network.</source>
-        <translation>참조용으로 트랜잭션과 함께 기록되는 human-charity-coin: URI에 첨부된 메세지입니다. 참고: 이 메세지는 Human-Charity-Coin 네트워크를 통해 전송되지 않습니다.</translation>
+        <source>A message that was attached to the hcc: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Human-Charity-Coin network.</source>
+        <translation>참조용으로 트랜잭션과 함께 기록되는 hcc: URI에 첨부된 메세지입니다. 참고: 이 메세지는 Human-Charity-Coin 네트워크를 통해 전송되지 않습니다.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -3154,7 +3154,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>생성된 코인은 사용되기 전 %1 블록이 완료되야 합니다. 이 블록을 생성하면 네트워크에 브로드캐스팅되어 블록체인에 추가 됩니다. 체인이 실패한 경우 "승인되지 않음"으로 바뀌어 사용할 수 없습니다. 다른 노드가 당신과 겹쳐서 몇 초 이내 블록을 생성하면 때때로 이런 일이 발생할 수 있습니다.</translation>
+        <translation>생성된 코인은 사용되기 전 %1 블록이 완료되야 합니다. 이 블록을 생성하면 네트워크에 브로드캐스팅되어 블록체인에 추가 됩니다. 체인이 실패 경우 "승인되지 않음"으로 바뀌어 사용할 수 없습니다. 다른 노드가 당신과 겹쳐서 몇 초 이내 블록을 생성하면 때때로 이런 일이 발생할 수 있습니다.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -3185,7 +3185,7 @@ Please check the address and try again.</source>
     <name>TransactionDescDialog</name>
     <message>
         <source>Transaction details</source>
-        <translation>트랜잭션 세부 정보</translation>
+        <translation>트잭션 세부 정보</translation>
     </message>
     <message>
         <source>This pane shows a detailed description of the transaction</source>
@@ -3296,7 +3296,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Destination address of transaction.</source>
-        <translation>트랜잭션 목적지 주소.</translation>
+        <translation>트랜잭션 목적지 소.</translation>
     </message>
     <message>
         <source>Amount removed from or added to balance.</source>
@@ -3491,7 +3491,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Export the data in the current tab to a file</source>
-        <translation>현재 선택된 탭의 데이터를 파일로 내보내기</translation>
+        <translation>현재 선택된 탭의 데이터를 일로 내보내기</translation>
     </message>
     <message>
         <source>Selected amount:</source>
@@ -3523,7 +3523,7 @@ Please check the address and try again.</source>
     </message>
 </context>
 <context>
-    <name>human-charity-coin-core</name>
+    <name>hcc-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = tx 메타 데이터 유지 예 : 계정 소유자 및 지불 요청 정보, 2 = tx 메타 데이터 삭제)</translation>
@@ -3554,7 +3554,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Change automatic finalized budget voting behavior. mode=auto: Vote for only exact finalized budget match to my generated budget. (string, default: auto)</source>
-        <translation>최종 budget 투표 자동 작동 값을 변경합니다. mode=auto: 오직 내가 생성한 budget과 최종 budget이 정확히 일치할때 투표합니다. (string, 기본값: 자동)</translation>
+        <translation>최종 budget 투표 자동 작동 값을 변경합니다. mode=auto: 오직 내가 생성한 budget과 최종 budget이 정확히 일치할때 투표합니다. (string, 기값: 자동)</translation>
     </message>
     <message>
         <source>Continuously rate-limit free transactions to &lt;n&gt;*1000 bytes per minute (default:%u)</source>
@@ -3634,7 +3634,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s' (must be at least the minrelay fee of %s to prevent stuck transactions)</source>
-        <translation>-maxtxfee=&lt;amount&gt;에 대한 잘못된 금액: '%s' (트랜잭션 정지를 막을려면 적어도 %s의 minrelay 수수료가 있어야 합니다)</translation>
+        <translation>-maxtxfee=&lt;amount&gt;에 대한 잘못된 금액: '%s' (트랜잭션 지를 막을려면 적어도 %s의 minrelay 수수료가 있어야 합니다)</translation>
     </message>
     <message>
         <source>Keep the specified amount available for spending at all times (default: 0)</source>
@@ -3678,7 +3678,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: %d)</source>
-        <translation>최우선/낮은 수수료 트랜잭션의 최대 크기를 바이트 단위로 설정합니다 (기본값: %d)</translation>
+        <translation>최우/낮은 수수료 트랜잭션의 최대 크기를 바이트 단위로 설정합니다 (기본값: %d)</translation>
     </message>
     <message>
         <source>Set the number of script verification threads (%u to %d, 0 = auto, &lt;0 = leave that many cores free, default: %d)</source>
@@ -3702,13 +3702,13 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit &lt;https://www.openssl.org/&gt; and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</source>
-        <translation>이 제품은 OpenSSL이 개발한 Open SSL 툴킷 &lt;https://www.openssl.org/&gt; 에서 사용하기 위한 프로젝트 소프트웨어, Eric Young이 개발한 암호화 소프트웨어, Thomas Bernard가 개발한 UPnP 소프트웨어가 포함되어 있습니다.</translation>
+        <translation>이 제품은 OpenSSL이 개발한 Open SSL 툴킷 &lt;https://www.openssl.org/&gt; 에서 사용하기 위한 프로젝트 소프트웨어, Eric Young이 발한 암호화 소프트웨어, Thomas Bernard가 개발한 UPnP 소프트웨어가 포함되어 있습니다.</translation>
     </message>
     <message>
-        <source>To use human-charity-coind, or the -server option to human-charity-coin-qt, you must set an rpcpassword in the configuration file:
+        <source>To use hccd, or the -server option to hcc-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=human-charity-coinrpc
+rpcuser=hccrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3716,10 +3716,10 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s "Human-Charity-Coin Alert" admin@foo.com
 </source>
-        <translation>human-charity-coind 또는 human-charity-coin-qt에 대한 -server 옵션 파일을 사용하려면 configuration 파일에서 rpcpassword를 설정해야 합니다:
+        <translation>hccd 또는 hcc-qt에 대한 -server 옵션 파일을 사용하려면 configuration 파일에서 rpcpassword를 설정해야 합니다:
 %s
 다음 무작위 암호를 사용하는 것을 추천합니다:
-rpcuser=human-charity-coinrpc
+rpcuser=hccrpc
 rpcpassword=%s
 (이 비밀번호는 기억할 필요가 없습니다)
 유저 이름과 비밀번호는 반드시 달라야 합니다.
@@ -4038,7 +4038,7 @@ rpcpassword=%s
     </message>
     <message>
         <source>If &lt;category&gt; is not supplied, output all debugging information.</source>
-        <translation>&lt;category&gt;가 제공되지 않으면, 모든 디버깅 정보를 출력합니다.</translation>
+        <translation>&lt;category&gt;가 제공되지 않으면, 모든 디버깅 정보를 출력합다.</translation>
     </message>
     <message>
         <source>Importing...</source>
@@ -4062,7 +4062,7 @@ rpcpassword=%s
     </message>
     <message>
         <source>Incorrect or no genesis block found. Wrong datadir for network?</source>
-        <translation>잘못되었거나 블록을 찾지 못하였습니다. 네트워크에 대한 잘못된 데이터 디렉토리 문제?</translation>
+        <translation>잘못되었거나 블록을 찾지 못하였습니다. 네트크에 대한 잘못된 데이터 디렉토리 문제?</translation>
     </message>
     <message>
         <source>Information</source>
@@ -4382,7 +4382,7 @@ rpcpassword=%s
     </message>
     <message>
         <source>Server certificate file (default: %s)</source>
-        <translation>서버 인증서 파일 (기본값: %s)</translation>
+        <translation>서버 인증서 파일 (기값: %s)</translation>
     </message>
     <message>
         <source>Server private key (default: %s)</source>
@@ -4490,7 +4490,7 @@ rpcpassword=%s
     </message>
     <message>
         <source>Submitted following entries to masternode: %u / %d</source>
-        <translation>마스터노드에 다음 항목들을 제출했습니다: %u / %d</translation>
+        <translation>마스터노드에 다음 항목들을 제출습니다: %u / %d</translation>
     </message>
     <message>
         <source>Submitted to masternode, waiting for more entries ( %u / %d ) %s</source>
@@ -4562,7 +4562,7 @@ rpcpassword=%s
     </message>
     <message>
         <source>Transaction created successfully.</source>
-        <translation>트랜잭션이 성공적으로 생성되었습니다.</translation>
+        <translation>트랜잭션이 성공적으로 생성되었습다.</translation>
     </message>
     <message>
         <source>Transaction fees are too high.</source>
@@ -4586,7 +4586,7 @@ rpcpassword=%s
     </message>
     <message>
         <source>Unable to bind to %s on this computer (bind returned error %s)</source>
-        <translation>이 컴퓨터에서 %s 로 바인드할 수 없습니다 (바인드 리턴 오류 %s)</translation>
+        <translation>이 컴퓨터에서 %s 로 바인드할 수 습니다 (바인드 리턴 오류 %s)</translation>
     </message>
     <message>
         <source>Unable to sign spork message, wrong key?</source>
