@@ -782,180 +782,309 @@
                         <font>
                          <weight>75</weight>
                          <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string notr="true">&lt;a href=&quot;https://127.0.0.1/&lt;/a&gt&quot;&gt;https://127.0.0.1/&lt;/a&gt;</string>
-                       </property>
-                       <property name="textFormat">
-                        <enum>Qt::RichText</enum>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                       <property name="openExternalLinks">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="3" column="0">
-                      <widget class="QLabel" name="labelLinks2">
-                       <property name="styleSheet">
-                        <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
-                       </property>
-                       <property name="text">
-                        <string>Discord:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="3" column="1">
-                      <widget class="QLabel" name="labelLinksUrl2">
-                       <property name="font">
-                        <font>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string notr="true">&lt;a href=&quot;https://discord.gg/rwcpyy2&quot;&gt;https://discord.gg/rwcpyy2&lt;/a&gt;</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                       <property name="openExternalLinks">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="4" column="0">
-                      <widget class="QLabel" name="labelLinks3">
-                       <property name="styleSheet">
-                        <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
-                       </property>
-                       <property name="text">
-                        <string>GitHub:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="4" column="1">
-                      <widget class="QLabel" name="labelLinksUrl3">
-                       <property name="font">
-                        <font>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string notr="true">&lt;a href=&quot;https://github.com/Human-Charity-Coin/HCC-wallet&quot;&gt;https://github.com/Human-Charity-Coin/HCC-wallet&lt;/a&gt;</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                       <property name="openExternalLinks">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="5" column="0">
-                      <widget class="QLabel" name="labelLinks4">
-                       <property name="styleSheet">
-                        <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
-                       </property>
-                       <property name="text">
-                        <string>Explorer:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="5" column="1">
-                      <widget class="QLabel" name="labelLinksUrl4">
-                       <property name="font">
-                        <font>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string notr="true">&lt;a href=&quot;https://127.0.0.1/&lt;/a&gt&quot &quot;&gt;http://127.0.0.1/ &lt;/a&gt;</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                       <property name="openExternalLinks">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="5" column="3">
-                      <spacer name="horizontalSpacer_Links_2">
-                       <property name="orientation">
-                        <enum>Qt::Horizontal</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>22</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                      </spacer>
-                     </item>
-                     <item row="6" column="0">
-                      <widget class="QLabel" name="labelLinks5">
-                       <property name="styleSheet">
-                        <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
-                       </property>
-                       <property name="text">
-                        <string>Exchange:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="6" column="1">
-                      <widget class="QLabel" name="labelLinksUrl5">
-                       <property name="font">
-                        <font>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string notr="true">&lt;a href=&quot;https://northernexchange.com/&quot;&gt;https://northernexchange.com/&lt;/a&gt;</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                       <property name="openExternalLinks">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="7" column="0">
-                      <widget class="QLabel" name="labelLinks6">
-                       <property name="styleSheet">
-                        <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
-                       </property>
-                       <property name="text">
-                        <string>Contact:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="7" column="1">
-                      <widget class="QLabel" name="labelLinksUrl6">
-                       <property name="font">
-                        <font>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string notr="true">&lt;a href=&quot;northerncommunity1@gmail.com&quot;&gt; northerncommunity1@gmail.com&lt;/a&gt;</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                       <property name="openExternalLinks">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                     </item>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string notr="true">&lt;a href=&quot;https://127.0.0.1/&quot;&gt;https://127.0.0.1/&lt;/a&gt;</string>
+                      </property>
+                      <property name="textFormat">
+                       <enum>Qt::RichText</enum>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="openExternalLinks">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="0">
+                     <widget class="QLabel" name="labelLinks2">
+                      <property name="styleSheet">
+                       <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>Discord:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="1">
+                     <widget class="QLabel" name="labelLinksUrl2">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string notr="true">&lt;a href=&quot;https://discord.gg/rwcpyy2&quot;&gt;https://discord.gg/rwcpyy2&lt;/a&gt;</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="openExternalLinks">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="0">
+                     <widget class="QLabel" name="labelLinks3">
+                      <property name="styleSheet">
+                       <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>GitHub:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="1">
+                     <widget class="QLabel" name="labelLinksUrl3">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string notr="true">&lt;a href=&quot;https://github.com/Human-Charity-Coin/HCC-wallet&quot;&gt;https://github.com/Human-Charity-Coin/HCC-wallet&lt;/a&gt;</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="openExternalLinks">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="5" column="0">
+                     <widget class="QLabel" name="labelLinks4">
+                      <property name="styleSheet">
+                       <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>Explorer:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="5" column="1">
+                     <widget class="QLabel" name="labelLinksUrl4">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string notr="true">&lt;a href=&quot;http://127.0.0.1/ &quot;&gt;http://127.0.0.1/ &lt;/a&gt;</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="openExternalLinks">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="5" column="3">
+                     <spacer name="horizontalSpacer_Links_2">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>22</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="6" column="0">
+                     <widget class="QLabel" name="labelLinks5">
+                      <property name="styleSheet">
+                       <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>Exchange:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="6" column="1">
+                     <widget class="QLabel" name="labelLinksUrl5">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string notr="true">&lt;a href=&quot;https://nortexchange.com/&quot;&gt;https://nortexchange.com/&lt;/a&gt;</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="openExternalLinks">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="7" column="0">
+                     <widget class="QLabel" name="labelLinks6">
+                      <property name="styleSheet">
+                       <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>Contact:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="7" column="1">
+                     <widget class="QLabel" name="labelLinksUrl6">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string notr="true">&lt;a href=&quot;northerncommunity1@gmail.com&quot;&gt;northerncommunity1@gmail.com&lt;/a&gt;</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="openExternalLinks">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="8" column="0">
+                     <widget class="QLabel" name="labelLinks7">
+                      <property name="styleSheet">
+                       <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>ROI:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="8" column="1">
+                     <widget class="QLabel" name="labelLinksUrl7">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://127.0.0.1&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://127.0.0.1&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="openExternalLinks">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="9" column="0">
+                     <widget class="QLabel" name="labelLinks8">
+                      <property name="styleSheet">
+                       <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>MN Vs Staking:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="9" column="1" colspan="2">
+                     <widget class="QLabel" name="labelLinksUrl8">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://127.0.0.1&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://127.0.0.1&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="openExternalLinks">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="10" column="0">
+                     <widget class="QLabel" name="labelLinks8_2">
+                      <property name="styleSheet">
+                       <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>Market Place:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="10" column="1">
+                     <widget class="QLabel" name="labelLinksUrl9">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;http://127.0.0.1&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://127.0.0.1&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="openExternalLinks">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="11" column="1">
+                     <widget class="QLabel" name="labelLinksUrl9_2">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://127.0.0.1&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://127.0.0.1&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="openExternalLinks">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="12" column="2">
+                     <spacer name="verticalSpacer_5">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>18</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="11" column="0">
+                     <widget class="QLabel" name="labelLinks1_2">
+                      <property name="styleSheet">
+                       <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>Advertising:</string>
+                      </property>
+                     </widget>
+                    </item>               </item>
                     </layout>
                    </widget>
                   </item>
