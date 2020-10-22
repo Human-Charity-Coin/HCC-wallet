@@ -785,7 +785,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;a href=&quot;https://hcccrypto.com/&quot;&gt;https://hcccrypto.com/&lt;/a&gt;</string>
+                        <string notr="true">&lt;a href=&quot;https://127.0.0.1/&lt;/a&gt&quot;&gt;https://127.0.0.1/&lt;/a&gt;</string>
                        </property>
                        <property name="textFormat">
                         <enum>Qt::RichText</enum>
@@ -817,7 +817,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;a href=&quot;https://discord.gg/X7NHTyh&quot;&gt;https://discord.gg/X7NHTyh&lt;/a&gt;</string>
+                        <string notr="true">&lt;a href=&quot;https://discord.gg/rwcpyy2&quot;&gt;https://discord.gg/rwcpyy2&lt;/a&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -846,7 +846,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;a href=&quot;https://github.com/human-charity-coin-community&quot;&gt;https://github.com/human-charity-coin-community&lt;/a&gt;</string>
+                        <string notr="true">&lt;a href=&quot;https://github.com/Human-Charity-Coin/HCC-wallet&quot;&gt;https://github.com/Human-Charity-Coin/HCC-wallet&lt;/a&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -875,7 +875,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;a href=&quot;http://155.138.211.132:3001/ &quot;&gt;http://155.138.211.132:3001/ &lt;/a&gt;</string>
+                        <string notr="true">&lt;a href=&quot;https://127.0.0.1/&lt;/a&gt&quot &quot;&gt;http://127.0.0.1/ &lt;/a&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -917,7 +917,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;a href=&quot;https://hccexchange.com/&quot;&gt;https://hccexchange.com/&lt;/a&gt;</string>
+                        <string notr="true">&lt;a href=&quot;https://northernexchange.com/&quot;&gt;https://northernexchange.com/&lt;/a&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -946,142 +946,13 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;a href=&quot;human-charity-coincommunity1@gmail.com&quot;&gt;human-charity-coincommunity1@gmail.com&lt;/a&gt;</string>
+                        <string notr="true">&lt;a href=&quot;northerncommunity1@gmail.com&quot;&gt; northerncommunity1@gmail.com&lt;/a&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                        </property>
                        <property name="openExternalLinks">
                         <bool>true</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="8" column="0">
-                      <widget class="QLabel" name="labelLinks7">
-                       <property name="styleSheet">
-                        <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
-                       </property>
-                       <property name="text">
-                        <string>ROI:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="8" column="1">
-                      <widget class="QLabel" name="labelLinksUrl7">
-                       <property name="font">
-                        <font>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.vaultwatch.eu/apiresult.php?mode=mninfo&amp;amp;coin=hcc&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://www.vaultwatch.eu/apiresult.php?mode=mninfo&amp;amp;coin=hcc&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                       <property name="openExternalLinks">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="9" column="0">
-                      <widget class="QLabel" name="labelLinks8">
-                       <property name="styleSheet">
-                        <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
-                       </property>
-                       <property name="text">
-                        <string>MN Vs Staking:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="9" column="1" colspan="2">
-                      <widget class="QLabel" name="labelLinksUrl8">
-                       <property name="font">
-                        <font>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.vaultwatch.eu/apiresult.php?mode=recommend&amp;amp;coin=hcc&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://www.vaultwatch.eu/apiresult.php?mode=recommend&amp;amp;coin=hcc&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                       <property name="openExternalLinks">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="10" column="0">
-                      <widget class="QLabel" name="labelLinks8_2">
-                       <property name="styleSheet">
-                        <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
-                       </property>
-                       <property name="text">
-                        <string>Market Place:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="10" column="1">
-                      <widget class="QLabel" name="labelLinksUrl9">
-                       <property name="font">
-                        <font>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;http://human-charity-coinexchanges.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://human-charity-coinexchanges.com/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                       <property name="openExternalLinks">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="11" column="1">
-                      <widget class="QLabel" name="labelLinksUrl9_2">
-                       <property name="font">
-                        <font>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.vaultwatch.eu/index.php&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://www.vaultwatch.eu/index.php&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                       <property name="openExternalLinks">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="12" column="2">
-                      <spacer name="verticalSpacer_5">
-                       <property name="orientation">
-                        <enum>Qt::Vertical</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>20</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                      </spacer>
-                     </item>
-                     <item row="11" column="0">
-                      <widget class="QLabel" name="labelLinks1_2">
-                       <property name="styleSheet">
-                        <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
-                       </property>
-                       <property name="text">
-                        <string>Advertising:</string>
                        </property>
                       </widget>
                      </item>

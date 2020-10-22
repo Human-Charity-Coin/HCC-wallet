@@ -145,8 +145,8 @@ public:
 
         nPoolMaxTransactions = 3;
         strSporkKey = "047ceda0f06dc16cf7be8a4e42b0b7a4c1a7cd1dcc95e2c570b5b27bccd7be1293e4f635e9979ce2fd13d01396ab01be06c19440316ce528cdd36cf0832e47593f";
-        strMasternodePoolDummyAddress = "NSJVWUkt6HtSCY2SaJ2akeyJUg8bg1hW3S";
-        nStartMasternodePayments = 1603305828;
+        strMasternodePoolDummyAddress = "HBaVbFNbFB9Cgwquvjyor6Niay6GPS1wT5";
+        nStartMasternodePayments = 1603304760;
 
         nBudget_Fee_Confirmations = 6; // Number of confirmations for the finalization fee
     }
@@ -220,7 +220,7 @@ public:
 
         nPoolMaxTransactions = 2;
         strSporkKey = "047ceda0f06dc16cf7be8a4e42b0b7a4c1a7cd1dcc95e2c570b5b27bccd7be1293e4f635e9979ce2fd13d01396ab01be06c19440316ce528cdd36cf0832e47593f";
-        strMasternodePoolDummyAddress = "gbJ4Qad4xc77PpLzMx6rUegAs6aUPWkcUq";
+        strMasternodePoolDummyAddress = "HBaVbFNbFB9Cgwquvjyor6Niay6GPS1wT5";
         nStartMasternodePayments = genesis.nTime + 86400; // 24 hours after genesis
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
                                        // here because we only have a 8 block finalization window on testnet
