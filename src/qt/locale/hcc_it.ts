@@ -594,8 +594,8 @@
         <translation>Invia monete all'indirizzo HCC</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and human-charity-coin: URIs)</source>
-        <translation>Richiedi pagamenti (genera codici QR e human-charity-coin: URIs)</translation>
+        <source>Request payments (generates QR codes and hcc: URIs)</source>
+        <translation>Richiedi pagamenti (genera codici QR e hcc: URIs)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -634,8 +634,8 @@
         <translation>Impostazioni MultiSend</translation>
     </message>
     <message>
-        <source>Open a human-charity-coin: URI or payment request</source>
-        <translation>Apri un human-charity-coin: URI o richiesta di pagamento</translation>
+        <source>Open a hcc: URI or payment request</source>
+        <translation>Apri un hcc: URI o richiesta di pagamento</translation>
     </message>
     <message>
         <source>Block explorer window</source>
@@ -745,8 +745,8 @@ MultiSend: %1</translation>
         <translation>Cerca</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (human-charity-coin.conf).</source>
-        <translation>Non tutte le transazioni verranno visualizzate. Per vedere tutte le transazioni è necessario aggiungere txindex=1 nel file di configurazione (human-charity-coin.conf)</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (hcc.conf).</source>
+        <translation>Non tutte le transazioni verranno visualizzate. Per vedere tutte le transazioni è necessario aggiungere txindex=1 nel file di configurazione (hcc.conf)</translation>
     </message>
 </context>
 <context>
@@ -1249,7 +1249,7 @@ MultiSend: %1</translation>
     </message>
     </context>
 <context>
-    <name>human-charity-coin-core</name>
+    <name>hcc-core</name>
     <message>
         <source>Error</source>
         <translation>Errore</translation>

@@ -1,12 +1,12 @@
-# bash programmable completion for human-charity-coind(1) and human-charity-coin-cli(1)
+# bash programmable completion for hccd(1) and hcc-cli(1)
 # Copyright (c) 2012,2014 Christian von Roques <roques@mti.ag>
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-have human-charity-coind && {
+have hccd && {
 
-# call $human-charity-coind for RPC
-_human-charity-coin_rpc() {
+# call $hccd for RPC
+_hcc_rpc() {
     # determine already specified args necessary for RPC
     local rpcargs=()
     for i in ${COMP_LINE}; do
@@ -16,23 +16,23 @@ _human-charity-coin_rpc() {
                 ;;
         esac
     done
-    $human-charity-coind "${rpcargs[@]}" "$@"
+    $hccd "${rpcargs[@]}" "$@"
 }
 
-# Add human-charity-coin accounts to COMPREPLY
-_human-charity-coin_accounts() {
+# Add hcc accounts to COMPREPLY
+_hcc_accounts() {
     local accounts
-    accounts=$(_human-charity-coin_rpc listaccounts | awk '/".*"/ { a=$1; gsub(/"/, "", a); print a}')
+    accounts=$(_hcc_rpc listaccounts | awk '/".*"/ { a=$1; gsub(/"/, "", a); print a}')
     COMPREPLY=( "${COMPREPLY[@]}" $( compgen -W "$accounts" -- "$cur" ) )
 }
 
-_human-charity-coind() {
+_hccd() {
     local cur prev words=() cword
-    local human-charity-coind
+    local hccd
 
-    # save and use original argument to invoke human-charity-coind
-    # human-charity-coind might not be in $PATH
-    human-charity-coind="$1"
+    # save and use original argument to invoke hccd
+    # hccd might not be in $PATH
+    hccd="$1"
 
     COMPREPLY=()
     _get_comp_words_by_ref -n = cur prev words cword
@@ -53,7 +53,7 @@ _human-charity-coind() {
     if ((cword > 3)); then
         case ${words[cword-3]} in
             addmultisigaddress)
-                _human-charity-coin_accounts
+                _hcc_accounts
                 return 0
                 ;;
             getbalance|gettxout|importaddress|importprivkey|listreceivedbyaccount|listreceivedbyaddress|listsinceblock)
@@ -74,7 +74,7 @@ _human-charity-coind() {
                 return 0
                 ;;
             move|setaccount)
-                _human-charity-coin_accounts
+                _hcc_accounts
                 return 0
                 ;;
         esac
@@ -90,7 +90,7 @@ _human-charity-coind() {
             return 0
             ;;
         getaccountaddress|getaddressesbyaccount|getbalance|getnewaddress|getreceivedbyaccount|listtransactions|move|sendfrom|sendmany)
-            _human-charity-coin_accounts
+            _hcc_accounts
             return 0
             ;;
     esac
@@ -114,12 +114,12 @@ _human-charity-coind() {
 
             # only parse --help if senseful
             if [[ -z "$cur" || "$cur" =~ ^- ]]; then
-                helpopts=$($human-charity-coind --help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
+                helpopts=$($hccd --help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
             fi
 
             # only parse help if senseful
             if [[ -z "$cur" || "$cur" =~ ^[a-z] ]]; then
-                commands=$(_human-charity-coin_rpc help 2>/dev/null | awk '$1 ~ /^[a-z]/ { print $1; }')
+                commands=$(_hcc_rpc help 2>/dev/null | awk '$1 ~ /^[a-z]/ { print $1; }')
             fi
 
             COMPREPLY=( $( compgen -W "$helpopts $commands" -- "$cur" ) )
@@ -133,7 +133,7 @@ _human-charity-coind() {
     esac
 }
 
-complete -F _human-charity-coind human-charity-coind human-charity-coin-cli
+complete -F _hccd hccd hcc-cli
 }
 
 # Local variables:

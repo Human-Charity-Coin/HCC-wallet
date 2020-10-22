@@ -1,19 +1,19 @@
-.TH BITCOINGREEND "1" "February 2017" "human-charity-coind 2.1.4.1"
+.TH BITCOINGREEND "1" "February 2017" "hccd 2.1.4.1"
 .SH NAME
 Human-Charity-Coin \- peer-to-peer network based digital currency
 .SH SYNOPSIS
-human-charity-coind [options] <command> [params]
+hccd [options] <command> [params]
 .TP
-human-charity-coind [options] help <command> \- Get help for a command
+hccd [options] help <command> \- Get help for a command
 .SH DESCRIPTION
-This  manual page documents the human-charity-coind program. Human-Charity-Coin is a peer-to-peer digital currency. Peer-to-peer (P2P) means that there is no central authority to issue new money or keep track of transactions. Instead, these tasks are managed collectively by the nodes of the network. Advantages:
+This  manual page documents the hccd program. Human-Charity-Coin is a peer-to-peer digital currency. Peer-to-peer (P2P) means that there is no central authority to issue new money or keep track of transactions. Instead, these tasks are managed collectively by the nodes of the network. Advantages:
 
 Human-Charity-Coin can be sent easily through the Internet, without having to trust middlemen. Transactions are designed to be irreversible. Be safe from instability caused by fractional reserve banking and central banks. The limited inflation of the Human-Charity-Coin system’s money supply is distributed evenly (by CPU power) throughout the network, not monopolized by banks.
 
 .SH OPTIONS
 .TP
 \fB\-conf=\fR<file>
-Specify configuration file (default: human-charity-coin.conf)
+Specify configuration file (default: hcc.conf)
 .TP
 \fB\-gen\fR
 Generate coins
@@ -177,7 +177,7 @@ Returns a list of the last ['count'] transactions for 'account' \- for all accou
     "message"       : message associated with transaction (only for send).
     "to"            : message-to associated with transaction (only for send).
 
-    *note: requires human-charity-coin 1.0.0.1 or later.
+    *note: requires hcc 1.0.0.1 or later.
 .TP
 \fBmove <'fromaccount'> <'toaccount'> <'amount'> ['minconf=1'] ['comment']\fR
 Moves funds between accounts.
@@ -189,7 +189,7 @@ Sends amount from account's balance to 'hccaddress'. This method will fail if th
 Sends amount from the server's available balance to 'hccaddress'. amount is a real and is rounded to the nearest 0.01. Returns transaction id on success.
 .TP
 \fBstop\fR
-Stops the human-charity-coin server.
+Stops the hcc server.
 .TP
 \fBvalidateaddress 'hccaddress'\fR
 Checks that 'hccaddress' looks like a proper hcc address. Returns an object containing:
@@ -201,7 +201,7 @@ Checks that 'hccaddress' looks like a proper hcc address. Returns an object cont
     *note: ismine and address are only returned if the address is valid.
 
 .SH "SEE ALSO"
-human-charity-coin.conf(5)
+hcc.conf(5)
 .SH AUTHOR
 This manual page was written by Micah Anderson <micah@debian.org> for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 3 or any later version published by the Free Software Foundation.
 

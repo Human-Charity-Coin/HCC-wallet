@@ -47,7 +47,7 @@
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Изберете адрес, в който да получавате монети</translation>
+        <translation>Изберете адрес, в койо да получавате монети</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -133,7 +133,7 @@
     </message>
     <message>
         <source>Encrypt wallet</source>
-        <translation>Криптиране на портфейла</translation>
+        <translation>Криптиран на портфейла</translation>
     </message>
     <message>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
@@ -153,7 +153,7 @@
     </message>
     <message>
         <source>Change passphrase</source>
-        <translation>Смени паролата</translation>
+        <translation>Смни паролата</translation>
     </message>
     <message>
         <source>Enter the old and new passphrase to the wallet.</source>
@@ -493,6 +493,6 @@
     </message>
 </context>
 <context>
-    <name>human-charity-coin-core</name>
+    <name>hcc-core</name>
 </context>
 </TS>

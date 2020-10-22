@@ -590,8 +590,8 @@
         <translation>送出錢幣到 HCC 地址</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and human-charity-coin: URIs)</source>
-        <translation>請求付款 (會產生 QR Code跟 human-charity-coin 位址)</translation>
+        <source>Request payments (generates QR codes and hcc: URIs)</source>
+        <translation>請求付款 (會產生 QR Code跟 hcc 位址)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -650,8 +650,8 @@
         <translation>打開Masternode設定檔</translation>
     </message>
     <message>
-        <source>Open a human-charity-coin: URI or payment request</source>
-        <translation>打開human-charity-coin: 位址或付款請求 </translation>
+        <source>Open a hcc: URI or payment request</source>
+        <translation>打開hcc: 位址或付款請求 </translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -847,7 +847,7 @@
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified HCC address</source>
-        <translation>驗證訊息以確保該  HCC 位址已被簽章</translation>
+        <translation>證訊息以確保該  HCC 位址已被簽章</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -949,6 +949,6 @@
     </message>
     </context>
 <context>
-    <name>human-charity-coin-core</name>
+    <name>hcc-core</name>
     </context>
 </TS>

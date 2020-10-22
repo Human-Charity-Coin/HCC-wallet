@@ -1,25 +1,25 @@
-# /etc/conf.d/human-charity-coind: config file for /etc/init.d/human-charity-coind
+# /etc/conf.d/hccd: config file for /etc/init.d/hccd
 
 # Config file location
-#BITCOIND_CONFIGFILE="/etc/human-charity-coin/human-charity-coin.conf"
+#BITCOIND_CONFIGFILE="/etc/hcc/hcc.conf"
 
 # What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
-#BITCOIND_PIDDIR="/var/run/human-charity-coind"
+#BITCOIND_PIDDIR="/var/run/hccd"
 
 # What filename to give the pidfile
-#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/human-charity-coind.pid"
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/hccd.pid"
 
-# Where to write human-charity-coind data (be mindful that the blockchain is large)
-#BITCOIND_DATADIR="/var/lib/human-charity-coind"
+# Where to write hccd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/hccd"
 
-# User and group to own human-charity-coind process
-#BITCOIND_USER="human-charity-coin"
-#BITCOIND_GROUP="human-charity-coin"
+# User and group to own hccd process
+#BITCOIND_USER="hcc"
+#BITCOIND_GROUP="hcc"
 
-# Path to human-charity-coind executable
-#BITCOIND_BIN="/usr/bin/human-charity-coind"
+# Path to hccd executable
+#BITCOIND_BIN="/usr/bin/hccd"
 
-# Nice value to run human-charity-coind under
+# Nice value to run hccd under
 #BITCOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)

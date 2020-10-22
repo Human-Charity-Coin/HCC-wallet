@@ -3,17 +3,17 @@ Description=Human-Charity-Coin's distributed currency daemon
 After=network.target
 
 [Service]
-User=human-charity-coin
-Group=human-charity-coin
+User=hcc
+Group=hcc
 
 Type=forking
-PIDFile=/var/lib/human-charity-coind/human-charity-coind.pid
+PIDFile=/var/lib/hccd/hccd.pid
 
-ExecStart=/usr/bin/human-charity-coind -daemon -pid=/var/lib/human-charity-coind/human-charity-coind.pid \
-          -conf=/etc/human-charity-coin/human-charity-coin.conf -datadir=/var/lib/human-charity-coind
+ExecStart=/usr/bin/hccd -daemon -pid=/var/lib/hccd/hccd.pid \
+          -conf=/etc/hcc/hcc.conf -datadir=/var/lib/hccd
 
-ExecStop=-/usr/bin/human-charity-coin-cli -conf=/etc/human-charity-coin/human-charity-coin.conf \
-         -datadir=/var/lib/human-charity-coind stop
+ExecStop=-/usr/bin/hcc-cli -conf=/etc/hcc/hcc.conf \
+         -datadir=/var/lib/hccd stop
 
 Restart=always
 PrivateTmp=true

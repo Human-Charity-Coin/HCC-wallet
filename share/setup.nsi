@@ -1,4 +1,4 @@
-Name "Human-Charity-Coin Core (32-bit)"
+Name "Human-Charity-Coin Core (64-bit)"
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
@@ -10,25 +10,25 @@ SetCompressor /SOLID lzma
 !define URL https://www.savebitcoin.io
 
 # MUI Symbol Definitions
-!define MUI_ICON "/root/Human-Charity-Coin/share/pixmaps/bitcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/root/Human-Charity-Coin/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/home/dad/Downloads/HCC-wallet/share/pixmaps/bitcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/dad/Downloads/HCC-wallet/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/root/Human-Charity-Coin/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/home/dad/Downloads/HCC-wallet/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER "Human-Charity-Coin Core"
-!define MUI_FINISHPAGE_RUN $INSTDIR\human-charity-coin-qt.exe
+!define MUI_FINISHPAGE_RUN $INSTDIR\hcc-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/root/Human-Charity-Coin/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/dad/Downloads/HCC-wallet/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
 !include Sections.nsh
 !include MUI2.nsh
-!if "32" == "64"
+!if "64" == "64"
 !include x64.nsh
 !endif
 
@@ -48,8 +48,8 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /root/Human-Charity-Coin/human-charity-coin-${VERSION}-win32-setup.exe
-!if "32" == "64"
+OutFile /home/dad/Downloads/HCC-wallet/hcc-${VERSION}-win64-setup.exe
+!if "64" == "64"
 InstallDir $PROGRAMFILES64\Human-Charity-Coin
 !else
 InstallDir $PROGRAMFILES\Human-Charity-Coin
@@ -73,14 +73,14 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /root/Human-Charity-Coin/release/human-charity-coin-qt.exe
-    File /oname=COPYING.txt /root/Human-Charity-Coin/COPYING
-    File /oname=readme.txt /root/Human-Charity-Coin/doc/README_windows.txt
+    File /home/dad/Downloads/HCC-wallet/release/hcc-qt.exe
+    File /oname=COPYING.txt /home/dad/Downloads/HCC-wallet/COPYING
+    File /oname=readme.txt /home/dad/Downloads/HCC-wallet/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /root/Human-Charity-Coin/release/human-charity-coind.exe
-    File /root/Human-Charity-Coin/release/human-charity-coin-cli.exe
+    File /home/dad/Downloads/HCC-wallet/release/hccd.exe
+    File /home/dad/Downloads/HCC-wallet/release/hcc-cli.exe
     SetOutPath $INSTDIR\doc
-    File /r /root/Human-Charity-Coin/doc\*.*
+    File /r /home/dad/Downloads/HCC-wallet/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 SectionEnd
@@ -91,8 +91,8 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk" $INSTDIR\human-charity-coin-qt.exe
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Human-Charity-Coin Core (testnet, 32-bit).lnk" "$INSTDIR\human-charity-coin-qt.exe" "-testnet" "$INSTDIR\human-charity-coin-qt.exe" 1
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk" $INSTDIR\hcc-qt.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Human-Charity-Coin Core (testnet, 64-bit).lnk" "$INSTDIR\hcc-qt.exe" "-testnet" "$INSTDIR\hcc-qt.exe" 1
     CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
@@ -103,10 +103,10 @@ Section -post SEC0001
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" UninstallString $INSTDIR\uninstall.exe
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
-    WriteRegStr HKCR "human-charity-coin" "URL Protocol" ""
-    WriteRegStr HKCR "human-charity-coin" "" "URL:BitcoiGreen"
-    WriteRegStr HKCR "human-charity-coin\DefaultIcon" "" $INSTDIR\human-charity-coin-qt.exe
-    WriteRegStr HKCR "human-charity-coin\shell\open\command" "" '"$INSTDIR\human-charity-coin-qt.exe" "%1"'
+    WriteRegStr HKCR "hcc" "URL Protocol" ""
+    WriteRegStr HKCR "hcc" "" "URL:BitcoiGreen"
+    WriteRegStr HKCR "hcc\DefaultIcon" "" $INSTDIR\hcc-qt.exe
+    WriteRegStr HKCR "hcc\shell\open\command" "" '"$INSTDIR\hcc-qt.exe" "%1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections
@@ -124,7 +124,7 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    Delete /REBOOTOK $INSTDIR\human-charity-coin-qt.exe
+    Delete /REBOOTOK $INSTDIR\hcc-qt.exe
     Delete /REBOOTOK $INSTDIR\COPYING.txt
     Delete /REBOOTOK $INSTDIR\readme.txt
     RMDir /r /REBOOTOK $INSTDIR\daemon
@@ -136,7 +136,7 @@ Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Human-Charity-Coin Core (testnet, 32-bit).lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Human-Charity-Coin Core (testnet, 64-bit).lnk"
     Delete /REBOOTOK "$SMSTARTUP\Human-Charity-Coin.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
@@ -145,7 +145,7 @@ Section -un.post UNSEC0001
     DeleteRegValue HKCU "${REGKEY}" Path
     DeleteRegKey /IfEmpty HKCU "${REGKEY}\Components"
     DeleteRegKey /IfEmpty HKCU "${REGKEY}"
-    DeleteRegKey HKCR "human-charity-coin"
+    DeleteRegKey HKCR "hcc"
     RmDir /REBOOTOK $SMPROGRAMS\$StartMenuGroup
     RmDir /REBOOTOK $INSTDIR
     Push $R0
@@ -158,7 +158,7 @@ SectionEnd
 # Installer functions
 Function .onInit
     InitPluginsDir
-!if "32" == "64"
+!if "64" == "64"
     ${If} ${RunningX64}
       ; disable registry redirection (enable access to 64-bit portion of registry)
       SetRegView 64

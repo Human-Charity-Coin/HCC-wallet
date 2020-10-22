@@ -72,10 +72,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/human-charity-coin
-pkgincludedir = $(includedir)/human-charity-coin
-pkglibdir = $(libdir)/human-charity-coin
-pkglibexecdir = $(libexecdir)/human-charity-coin
+pkgdatadir = $(datadir)/hcc
+pkgincludedir = $(includedir)/hcc
+pkglibdir = $(libdir)/hcc
+pkglibexecdir = $(libexecdir)/hcc
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -89,7 +89,7 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
-host_triplet = i686-w64-mingw32
+host_triplet = x86_64-w64-mingw32
 am__append_1 = -I$(srcdir)/leveldb/include \
 	-I$(srcdir)/leveldb/helpers/memenv
 am__append_2 = $(builddir)/leveldb/libleveldb.a
@@ -100,20 +100,20 @@ am__append_6 = libbitcoin_zmq.a
 bin_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2) $(am__EXEEXT_3) \
 	$(am__EXEEXT_4) $(am__EXEEXT_5)
 TESTS = $(am__EXEEXT_6) $(am__EXEEXT_5)
-am__append_7 = human-charity-coind
-am__append_8 = human-charity-coin-cli human-charity-coin-tx
+am__append_7 = hccd
+am__append_8 = hcc-cli hcc-tx
 #am__append_9 = compat/glibc_compat.cpp \
 #	compat/glibcxx_compat.cpp
 am__append_10 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_11 = libbitcoin_wallet.a
 #
-am__append_12 = human-charity-coind-res.rc
-am__append_13 = human-charity-coin-cli-res.rc
+am__append_12 = hccd-res.rc
+am__append_13 = hcc-cli-res.rc
 ##am__append_14 = compat/glibc_compat.cpp \
 ##	compat/glibcxx_compat.cpp
 ##am__append_15 = secp256k1/libsecp256k1.la
-am__append_16 = test/test_human-charity-coin test/bitcoin-util-test.py
-am__append_17 = test/test_human-charity-coin
+am__append_16 = test/test_hcc test/bitcoin-util-test.py
+am__append_17 = test/test_hcc
 am__append_18 = \
 	test/bctest.py \
 	test/bitcoin-util-test.py \
@@ -135,7 +135,7 @@ am__append_19 = \
 am__append_20 = $(LIBBITCOIN_WALLET)
 am__append_21 = $(ZMQ_LIBS)
 am__append_22 = $(CLEAN_BITCOIN_TEST)
-am__append_23 = qt/human-charity-coin-qt
+am__append_23 = qt/hcc-qt
 am__append_24 = qt/libbitcoinqt.a
 am__append_25 = \
   qt/addressbookpage.cpp \
@@ -175,8 +175,8 @@ am__append_27 = $(BITCOIN_RC)
 am__append_28 = $(LIBBITCOIN_WALLET)
 am__append_29 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_30 = $(CLEAN_QT)
-am__append_31 = qt/test/test_human-charity-coin-qt
-am__append_32 = qt/test/test_human-charity-coin-qt
+am__append_31 = qt/test/test_hcc-qt
+am__append_32 = qt/test/test_hcc-qt
 am__append_33 = qt/test/moc_paymentservertests.cpp
 am__append_34 = \
   qt/test/paymentservertests.cpp
@@ -214,7 +214,7 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 DIST_COMMON = $(srcdir)/Makefile.am $(am__include_HEADERS_DIST) \
 	$(am__DIST_COMMON)
 mkinstalldirs = $(install_sh) -d
-CONFIG_HEADER = $(top_builddir)/src/config/human-charity-coin-config.h
+CONFIG_HEADER = $(top_builddir)/src/config/hcc-config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 ARFLAGS = cru
@@ -453,20 +453,16 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bitcoinaddressvalidator.cpp \
 	qt/forms/receiverequestdialog.ui qt/forms/rpcconsole.ui \
 	qt/forms/sendcoinsdialog.ui qt/forms/sendcoinsentry.ui \
 	qt/forms/signverifymessagedialog.ui \
-	qt/forms/transactiondescdialog.ui qt/human-charity-coin.qrc \
-	qt/human-charity-coin_locale.qrc qt/locale/human-charity-coin_bg.ts \
-	qt/locale/human-charity-coin_ca.ts qt/locale/human-charity-coin_cs.ts \
-	qt/locale/human-charity-coin_da.ts qt/locale/human-charity-coin_de.ts \
-	qt/locale/human-charity-coin_en.ts qt/locale/human-charity-coin_en_US.ts \
-	qt/locale/human-charity-coin_es.ts qt/locale/human-charity-coin_fi.ts \
-	qt/locale/human-charity-coin_fr_FR.ts qt/locale/human-charity-coin_it.ts \
-	qt/locale/human-charity-coin_ja.ts qt/locale/human-charity-coin_ko_KR.ts \
-	qt/locale/human-charity-coin_nl.ts qt/locale/human-charity-coin_pl.ts \
-	qt/locale/human-charity-coin_pt.ts qt/locale/human-charity-coin_pt_BR.ts \
-	qt/locale/human-charity-coin_ro_RO.ts qt/locale/human-charity-coin_ru.ts \
-	qt/locale/human-charity-coin_sk.ts qt/locale/human-charity-coin_sv.ts \
-	qt/locale/human-charity-coin_tr.ts qt/locale/human-charity-coin_uk.ts \
-	qt/locale/human-charity-coin_zh_CN.ts qt/locale/human-charity-coin_zh_TW.ts \
+	qt/forms/transactiondescdialog.ui qt/hcc.qrc qt/hcc_locale.qrc \
+	qt/locale/hcc_bg.ts qt/locale/hcc_ca.ts qt/locale/hcc_cs.ts \
+	qt/locale/hcc_da.ts qt/locale/hcc_de.ts qt/locale/hcc_en.ts \
+	qt/locale/hcc_en_US.ts qt/locale/hcc_es.ts qt/locale/hcc_fi.ts \
+	qt/locale/hcc_fr_FR.ts qt/locale/hcc_it.ts qt/locale/hcc_ja.ts \
+	qt/locale/hcc_ko_KR.ts qt/locale/hcc_nl.ts qt/locale/hcc_pl.ts \
+	qt/locale/hcc_pt.ts qt/locale/hcc_pt_BR.ts \
+	qt/locale/hcc_ro_RO.ts qt/locale/hcc_ru.ts qt/locale/hcc_sk.ts \
+	qt/locale/hcc_sv.ts qt/locale/hcc_tr.ts qt/locale/hcc_uk.ts \
+	qt/locale/hcc_zh_CN.ts qt/locale/hcc_zh_TW.ts \
 	qt/paymentrequest.proto qt/res/icons/add.png \
 	qt/res/icons/address-book.png qt/res/icons/bitcoin.ico \
 	qt/res/icons/bitcoin.png qt/res/icons/bitcoin_testnet.ico \
@@ -499,9 +495,8 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bitcoinaddressvalidator.cpp \
 	qt/res/icons/unit_hcc.png qt/res/icons/unit_mhcc.png \
 	qt/res/icons/unit_uhcc.png qt/res/icons/unit_thcc.png \
 	qt/res/icons/unit_tmhcc.png qt/res/icons/unit_tuhcc.png \
-	qt/res/images/human-charity-coin_logo_horizontal.png \
-	qt/res/images/about.png qt/res/images/splash.png \
-	qt/res/images/splash_testnet.png \
+	qt/res/images/hcc_logo_horizontal.png qt/res/images/about.png \
+	qt/res/images/splash.png qt/res/images/splash_testnet.png \
 	qt/res/images/downArrow_small_dark.png \
 	qt/res/images/downArrow_small.png \
 	qt/res/images/upArrow_small_dark.png \
@@ -622,8 +617,9 @@ am__objects_5 = qt/qt_libbitcoinqt_a-moc_addressbookpage.$(OBJEXT) \
 	qt/qt_libbitcoinqt_a-moc_walletview.$(OBJEXT)
 am__objects_6 = qt/qt_libbitcoinqt_a-paymentrequest.pb.$(OBJEXT)
 am__objects_7 =  \
-	qt/qt_libbitcoinqt_a-qrc_human-charity-coin.$(OBJEXT)
-am__objects_8 = qt/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.$(OBJEXT)
+	qt/qt_libbitcoinqt_a-qrc_hcc.$(OBJEXT)
+am__objects_8 =  \
+	qt/qt_libbitcoinqt_a-qrc_hcc_locale.$(OBJEXT)
 nodist_qt_libbitcoinqt_a_OBJECTS = $(am__objects_5) \
 	$(am__objects_1) $(am__objects_6) \
 	$(am__objects_1) $(am__objects_7) \
@@ -705,71 +701,68 @@ libbitcoinconsensus_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(LDFLAGS) -o $@
 #am_libbitcoinconsensus_la_rpath = -rpath \
 #	$(libdir)
-am__EXEEXT_1 = human-charity-coind$(EXEEXT)
-am__EXEEXT_2 = human-charity-coin-cli$(EXEEXT) \
-	human-charity-coin-tx$(EXEEXT)
-am__EXEEXT_3 = test/test_human-charity-coin$(EXEEXT)
-am__EXEEXT_4 = qt/human-charity-coin-qt$(EXEEXT)
-am__EXEEXT_5 =  \
-	qt/test/test_human-charity-coin-qt$(EXEEXT)
+am__EXEEXT_1 = hccd$(EXEEXT)
+am__EXEEXT_2 = hcc-cli$(EXEEXT) \
+	hcc-tx$(EXEEXT)
+am__EXEEXT_3 = test/test_hcc$(EXEEXT)
+am__EXEEXT_4 = qt/hcc-qt$(EXEEXT)
+am__EXEEXT_5 = qt/test/test_hcc-qt$(EXEEXT)
 PROGRAMS = $(bin_PROGRAMS)
-am__human-charity-coin_cli_SOURCES_DIST = human-charity-coin-cli.cpp human-charity-coin-cli-res.rc
-am__objects_10 = human-charity-coin-cli-res.$(OBJEXT)
-am_human-charity-coin_cli_OBJECTS = human-charity-coin_cli-human-charity-coin-cli.$(OBJEXT) \
-	$(am__objects_10)
-human-charity-coin_cli_OBJECTS = $(am_human-charity-coin_cli_OBJECTS)
+am__hcc_cli_SOURCES_DIST = hcc-cli.cpp hcc-cli-res.rc
+am__objects_10 = hcc-cli-res.$(OBJEXT)
+am_hcc_cli_OBJECTS = hcc_cli-hcc-cli.$(OBJEXT) $(am__objects_10)
+hcc_cli_OBJECTS = $(am_hcc_cli_OBJECTS)
 #am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1)
 am__DEPENDENCIES_2 = univalue/libunivalue.la
-human-charity-coin_cli_DEPENDENCIES = $(LIBBITCOIN_CLI) $(am__DEPENDENCIES_2) \
+hcc_cli_DEPENDENCIES = $(LIBBITCOIN_CLI) $(am__DEPENDENCIES_2) \
 	$(LIBBITCOIN_UTIL) $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
-human-charity-coin_cli_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+hcc_cli_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
-	$(CXXFLAGS) $(human-charity-coin_cli_LDFLAGS) $(LDFLAGS) -o $@
-am_human-charity-coin_tx_OBJECTS = human-charity-coin_tx-human-charity-coin-tx.$(OBJEXT)
-human-charity-coin_tx_OBJECTS = $(am_human-charity-coin_tx_OBJECTS)
-human-charity-coin_tx_DEPENDENCIES = $(am__DEPENDENCIES_2) $(LIBBITCOIN_COMMON) \
+	$(CXXFLAGS) $(hcc_cli_LDFLAGS) $(LDFLAGS) -o $@
+am_hcc_tx_OBJECTS = hcc_tx-hcc-tx.$(OBJEXT)
+hcc_tx_OBJECTS = $(am_hcc_tx_OBJECTS)
+hcc_tx_DEPENDENCIES = $(am__DEPENDENCIES_2) $(LIBBITCOIN_COMMON) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBSECP256K1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
-human-charity-coin_tx_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+hcc_tx_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
-	$(CXXFLAGS) $(human-charity-coin_tx_LDFLAGS) $(LDFLAGS) -o $@
-am__human-charity-coind_SOURCES_DIST = human-charity-coind.cpp human-charity-coind-res.rc
-am__objects_11 = human-charity-coind-res.$(OBJEXT)
-am_human-charity-coind_OBJECTS = human-charity-coind-human-charity-coind.$(OBJEXT) $(am__objects_11)
-human-charity-coind_OBJECTS = $(am_human-charity-coind_OBJECTS)
+	$(CXXFLAGS) $(hcc_tx_LDFLAGS) $(LDFLAGS) -o $@
+am__hccd_SOURCES_DIST = hccd.cpp hccd-res.rc
+am__objects_11 = hccd-res.$(OBJEXT)
+am_hccd_OBJECTS = hccd-hccd.$(OBJEXT) $(am__objects_11)
+hccd_OBJECTS = $(am_hccd_OBJECTS)
 am__DEPENDENCIES_3 = $(am__append_2)
 am__DEPENDENCIES_4 = $(am__append_3)
 am__DEPENDENCIES_5 = $(LIBBITCOIN_ZMQ) \
 	$(am__DEPENDENCIES_1)
-human-charity-coind_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
+hccd_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(am__DEPENDENCIES_2) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
 	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_4) $(LIBSECP256K1) \
 	$(am__DEPENDENCIES_5) $(am__append_11) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
-human-charity-coind_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+hccd_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
-	$(CXXFLAGS) $(human-charity-coind_LDFLAGS) $(LDFLAGS) -o $@
-am__qt_human-charity-coin_qt_SOURCES_DIST = qt/human-charity-coin.cpp \
-	qt/macdockiconhandler.mm qt/macnotificationhandler.mm \
-	qt/res/human-charity-coin-qt-res.rc
-am__objects_12 = qt/qt_human-charity-coin_qt-macdockiconhandler.$(OBJEXT) \
-	qt/qt_human-charity-coin_qt-macnotificationhandler.$(OBJEXT)
+	$(CXXFLAGS) $(hccd_LDFLAGS) $(LDFLAGS) -o $@
+am__qt_hcc_qt_SOURCES_DIST = qt/hcc.cpp qt/macdockiconhandler.mm \
+	qt/macnotificationhandler.mm qt/res/hcc-qt-res.rc
+am__objects_12 =  \
+	qt/qt_hcc_qt-macdockiconhandler.$(OBJEXT) \
+	qt/qt_hcc_qt-macnotificationhandler.$(OBJEXT)
 #am__objects_13 =  \
 #	$(am__objects_12)
-am__objects_14 = qt/res/human-charity-coin-qt-res.$(OBJEXT)
+am__objects_14 = qt/res/hcc-qt-res.$(OBJEXT)
 am__objects_15 =  \
 	$(am__objects_14)
-am_qt_human-charity-coin_qt_OBJECTS =  \
-	qt/qt_human-charity-coin_qt-human-charity-coin.$(OBJEXT) \
+am_qt_hcc_qt_OBJECTS = qt/qt_hcc_qt-hcc.$(OBJEXT) \
 	$(am__objects_13) $(am__objects_15)
-qt_human-charity-coin_qt_OBJECTS = $(am_qt_human-charity-coin_qt_OBJECTS)
+qt_hcc_qt_OBJECTS = $(am_qt_hcc_qt_OBJECTS)
 am__DEPENDENCIES_6 =  \
 	$(LIBBITCOIN_ZMQ) \
 	$(am__DEPENDENCIES_1)
-qt_human-charity-coin_qt_DEPENDENCIES = qt/libbitcoinqt.a \
+qt_hcc_qt_DEPENDENCIES = qt/libbitcoinqt.a \
 	$(LIBBITCOIN_SERVER) $(am__append_28) \
 	$(am__DEPENDENCIES_6) $(LIBBITCOIN_CLI) \
 	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
@@ -781,30 +774,28 @@ qt_human-charity-coin_qt_DEPENDENCIES = qt/libbitcoinqt.a \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(LIBSECP256K1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
-qt_human-charity-coin_qt_LINK = $(LIBTOOL) $(AM_V_lt) \
-	$(qt_human-charity-coin_qt_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link \
-	$(OBJCXXLD) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) \
-	$(qt_human-charity-coin_qt_LDFLAGS) $(LDFLAGS) -o $@
-am__qt_test_test_human-charity-coin_qt_SOURCES_DIST = qt/test/test_main.cpp \
+qt_hcc_qt_LINK = $(LIBTOOL) $(AM_V_lt) $(qt_hcc_qt_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(OBJCXXLD) $(AM_OBJCXXFLAGS) \
+	$(OBJCXXFLAGS) $(qt_hcc_qt_LDFLAGS) $(LDFLAGS) -o $@
+am__qt_test_test_hcc_qt_SOURCES_DIST = qt/test/test_main.cpp \
 	qt/test/uritests.cpp qt/test/uritests.h \
 	qt/test/paymentrequestdata.h qt/test/paymentservertests.h \
 	qt/test/paymentservertests.cpp
-am__objects_16 = qt/test/qt_test_test_human-charity-coin_qt-paymentservertests.$(OBJEXT)
-am_qt_test_test_human-charity-coin_qt_OBJECTS = qt/test/qt_test_test_human-charity-coin_qt-test_main.$(OBJEXT) \
-	qt/test/qt_test_test_human-charity-coin_qt-uritests.$(OBJEXT) \
+am__objects_16 = qt/test/qt_test_test_hcc_qt-paymentservertests.$(OBJEXT)
+am_qt_test_test_hcc_qt_OBJECTS = qt/test/qt_test_test_hcc_qt-test_main.$(OBJEXT) \
+	qt/test/qt_test_test_hcc_qt-uritests.$(OBJEXT) \
 	$(am__objects_1) $(am__objects_16)
-am__objects_17 = qt/test/qt_test_test_human-charity-coin_qt-moc_paymentservertests.$(OBJEXT)
-am__objects_18 = qt/test/qt_test_test_human-charity-coin_qt-moc_uritests.$(OBJEXT) \
+am__objects_17 = qt/test/qt_test_test_hcc_qt-moc_paymentservertests.$(OBJEXT)
+am__objects_18 = qt/test/qt_test_test_hcc_qt-moc_uritests.$(OBJEXT) \
 	$(am__objects_17)
-nodist_qt_test_test_human-charity-coin_qt_OBJECTS =  \
+nodist_qt_test_test_hcc_qt_OBJECTS =  \
 	$(am__objects_18)
-qt_test_test_human-charity-coin_qt_OBJECTS =  \
-	$(am_qt_test_test_human-charity-coin_qt_OBJECTS) \
-	$(nodist_qt_test_test_human-charity-coin_qt_OBJECTS)
+qt_test_test_hcc_qt_OBJECTS = $(am_qt_test_test_hcc_qt_OBJECTS) \
+	$(nodist_qt_test_test_hcc_qt_OBJECTS)
 am__DEPENDENCIES_7 =  \
 	$(LIBBITCOIN_ZMQ) \
 	$(am__DEPENDENCIES_1)
-qt_test_test_human-charity-coin_qt_DEPENDENCIES =  \
+qt_test_test_hcc_qt_DEPENDENCIES =  \
 	$(LIBBITCOINQT) $(LIBBITCOIN_SERVER) \
 	$(am__append_35) $(am__DEPENDENCIES_7) \
 	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
@@ -824,11 +815,11 @@ qt_test_test_human-charity-coin_qt_DEPENDENCIES =  \
 	$(am__DEPENDENCIES_1) $(LIBSECP256K1) \
 	$(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
-qt_test_test_human-charity-coin_qt_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+qt_test_test_hcc_qt_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(AM_CXXFLAGS) $(CXXFLAGS) $(qt_test_test_human-charity-coin_qt_LDFLAGS) \
+	$(AM_CXXFLAGS) $(CXXFLAGS) $(qt_test_test_hcc_qt_LDFLAGS) \
 	$(LDFLAGS) -o $@
-am__test_test_human-charity-coin_SOURCES_DIST = test/allocator_tests.cpp \
+am__test_test_hcc_SOURCES_DIST = test/allocator_tests.cpp \
 	test/base32_tests.cpp test/base58_tests.cpp \
 	test/base64_tests.cpp test/checkblock_tests.cpp \
 	test/Checkpoints_tests.cpp test/coins_tests.cpp \
@@ -842,7 +833,7 @@ am__test_test_human-charity-coin_SOURCES_DIST = test/allocator_tests.cpp \
 	test/script_P2SH_tests.cpp test/script_tests.cpp \
 	test/scriptnum_tests.cpp test/serialize_tests.cpp \
 	test/sighash_tests.cpp test/sigopcount_tests.cpp \
-	test/skiplist_tests.cpp test/test_human-charity-coin.cpp \
+	test/skiplist_tests.cpp test/test_hcc.cpp \
 	test/timedata_tests.cpp test/torcontrol_tests.cpp \
 	test/transaction_tests.cpp test/uint256_tests.cpp \
 	test/univalue_tests.cpp test/util_tests.cpp \
@@ -855,72 +846,71 @@ am__test_test_human-charity-coin_SOURCES_DIST = test/allocator_tests.cpp \
 	test/data/script_invalid.json test/data/tx_invalid.json \
 	test/data/tx_valid.json test/data/sighash.json \
 	test/data/alertTests.raw
-am__objects_19 = test/test_test_human-charity-coin-accounting_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-wallet_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-rpc_wallet_tests.$(OBJEXT)
-am__objects_20 = test/test_test_human-charity-coin-allocator_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-base32_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-base58_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-base64_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-checkblock_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-Checkpoints_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-coins_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-compress_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-crypto_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-DoS_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-getarg_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-hash_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-key_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-main_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-mempool_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-mruset_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-multisig_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-netbase_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-pmt_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-reverselock_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-rpc_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-sanity_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-scheduler_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-script_P2SH_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-script_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-scriptnum_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-serialize_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-sighash_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-sigopcount_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-skiplist_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-test_human-charity-coin.$(OBJEXT) \
-	test/test_test_human-charity-coin-timedata_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-torcontrol_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-transaction_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-uint256_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-univalue_tests.$(OBJEXT) \
-	test/test_test_human-charity-coin-util_tests.$(OBJEXT) \
+am__objects_19 = test/test_test_hcc-accounting_tests.$(OBJEXT) \
+	test/test_test_hcc-wallet_tests.$(OBJEXT) \
+	test/test_test_hcc-rpc_wallet_tests.$(OBJEXT)
+am__objects_20 = test/test_test_hcc-allocator_tests.$(OBJEXT) \
+	test/test_test_hcc-base32_tests.$(OBJEXT) \
+	test/test_test_hcc-base58_tests.$(OBJEXT) \
+	test/test_test_hcc-base64_tests.$(OBJEXT) \
+	test/test_test_hcc-checkblock_tests.$(OBJEXT) \
+	test/test_test_hcc-Checkpoints_tests.$(OBJEXT) \
+	test/test_test_hcc-coins_tests.$(OBJEXT) \
+	test/test_test_hcc-compress_tests.$(OBJEXT) \
+	test/test_test_hcc-crypto_tests.$(OBJEXT) \
+	test/test_test_hcc-DoS_tests.$(OBJEXT) \
+	test/test_test_hcc-getarg_tests.$(OBJEXT) \
+	test/test_test_hcc-hash_tests.$(OBJEXT) \
+	test/test_test_hcc-key_tests.$(OBJEXT) \
+	test/test_test_hcc-main_tests.$(OBJEXT) \
+	test/test_test_hcc-mempool_tests.$(OBJEXT) \
+	test/test_test_hcc-mruset_tests.$(OBJEXT) \
+	test/test_test_hcc-multisig_tests.$(OBJEXT) \
+	test/test_test_hcc-netbase_tests.$(OBJEXT) \
+	test/test_test_hcc-pmt_tests.$(OBJEXT) \
+	test/test_test_hcc-reverselock_tests.$(OBJEXT) \
+	test/test_test_hcc-rpc_tests.$(OBJEXT) \
+	test/test_test_hcc-sanity_tests.$(OBJEXT) \
+	test/test_test_hcc-scheduler_tests.$(OBJEXT) \
+	test/test_test_hcc-script_P2SH_tests.$(OBJEXT) \
+	test/test_test_hcc-script_tests.$(OBJEXT) \
+	test/test_test_hcc-scriptnum_tests.$(OBJEXT) \
+	test/test_test_hcc-serialize_tests.$(OBJEXT) \
+	test/test_test_hcc-sighash_tests.$(OBJEXT) \
+	test/test_test_hcc-sigopcount_tests.$(OBJEXT) \
+	test/test_test_hcc-skiplist_tests.$(OBJEXT) \
+	test/test_test_hcc-test_hcc.$(OBJEXT) \
+	test/test_test_hcc-timedata_tests.$(OBJEXT) \
+	test/test_test_hcc-torcontrol_tests.$(OBJEXT) \
+	test/test_test_hcc-transaction_tests.$(OBJEXT) \
+	test/test_test_hcc-uint256_tests.$(OBJEXT) \
+	test/test_test_hcc-univalue_tests.$(OBJEXT) \
+	test/test_test_hcc-util_tests.$(OBJEXT) \
 	$(am__objects_19)
-am_test_test_human-charity-coin_OBJECTS = $(am__objects_20) \
+am_test_test_hcc_OBJECTS = $(am__objects_20) \
 	$(am__objects_1) $(am__objects_1)
 am__objects_21 = $(am__objects_1) $(am__objects_1)
-nodist_test_test_human-charity-coin_OBJECTS =  \
-	$(am__objects_21)
-test_test_human-charity-coin_OBJECTS = $(am_test_test_human-charity-coin_OBJECTS) \
-	$(nodist_test_test_human-charity-coin_OBJECTS)
+nodist_test_test_hcc_OBJECTS = $(am__objects_21)
+test_test_hcc_OBJECTS = $(am_test_test_hcc_OBJECTS) \
+	$(nodist_test_test_hcc_OBJECTS)
 #am__DEPENDENCIES_8 = libbitcoinconsensus.la
 am__DEPENDENCIES_9 =  \
 	$(am__DEPENDENCIES_1)
-test_test_human-charity-coin_DEPENDENCIES =  \
-	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) \
-	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
-	$(LIBBITCOIN_CRYPTO) $(am__DEPENDENCIES_2) \
-	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_4) \
+test_test_hcc_DEPENDENCIES = $(LIBBITCOIN_SERVER) \
+	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
+	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
+	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_3) \
+	$(am__DEPENDENCIES_4) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(LIBSECP256K1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(LIBSECP256K1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__append_20) \
-	$(am__DEPENDENCIES_8) $(am__DEPENDENCIES_1) \
+	$(am__append_20) $(am__DEPENDENCIES_8) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_9)
-test_test_human-charity-coin_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_9)
+test_test_hcc_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(AM_CXXFLAGS) $(CXXFLAGS) $(test_test_human-charity-coin_LDFLAGS) \
-	$(LDFLAGS) -o $@
+	$(AM_CXXFLAGS) $(CXXFLAGS) $(test_test_hcc_LDFLAGS) $(LDFLAGS) \
+	-o $@
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -998,12 +988,11 @@ SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(libbitcoin_wallet_a_SOURCES) $(libbitcoin_zmq_a_SOURCES) \
 	$(qt_libbitcoinqt_a_SOURCES) \
 	$(nodist_qt_libbitcoinqt_a_SOURCES) \
-	$(libbitcoinconsensus_la_SOURCES) $(human-charity-coin_cli_SOURCES) \
-	$(human-charity-coin_tx_SOURCES) $(human-charity-coind_SOURCES) \
-	$(qt_human-charity-coin_qt_SOURCES) $(qt_test_test_human-charity-coin_qt_SOURCES) \
-	$(nodist_qt_test_test_human-charity-coin_qt_SOURCES) \
-	$(test_test_human-charity-coin_SOURCES) \
-	$(nodist_test_test_human-charity-coin_SOURCES)
+	$(libbitcoinconsensus_la_SOURCES) $(hcc_cli_SOURCES) \
+	$(hcc_tx_SOURCES) $(hccd_SOURCES) $(qt_hcc_qt_SOURCES) \
+	$(qt_test_test_hcc_qt_SOURCES) \
+	$(nodist_qt_test_test_hcc_qt_SOURCES) $(test_test_hcc_SOURCES) \
+	$(nodist_test_test_hcc_SOURCES)
 DIST_SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(libbitcoin_cli_a_SOURCES) $(libbitcoin_common_a_SOURCES) \
 	$(libbitcoin_server_a_SOURCES) \
@@ -1012,11 +1001,10 @@ DIST_SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(am__libbitcoin_zmq_a_SOURCES_DIST) \
 	$(am__qt_libbitcoinqt_a_SOURCES_DIST) \
 	$(am__libbitcoinconsensus_la_SOURCES_DIST) \
-	$(am__human-charity-coin_cli_SOURCES_DIST) $(human-charity-coin_tx_SOURCES) \
-	$(am__human-charity-coind_SOURCES_DIST) \
-	$(am__qt_human-charity-coin_qt_SOURCES_DIST) \
-	$(am__qt_test_test_human-charity-coin_qt_SOURCES_DIST) \
-	$(am__test_test_human-charity-coin_SOURCES_DIST)
+	$(am__hcc_cli_SOURCES_DIST) $(hcc_tx_SOURCES) \
+	$(am__hccd_SOURCES_DIST) $(am__qt_hcc_qt_SOURCES_DIST) \
+	$(am__qt_test_test_hcc_qt_SOURCES_DIST) \
+	$(am__test_test_hcc_SOURCES_DIST)
 RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
 	ctags-recursive dvi-recursive html-recursive info-recursive \
 	install-data-recursive install-dvi-recursive \
@@ -1215,7 +1203,7 @@ am__set_TESTS_bases = \
   bases=`for i in $$bases; do echo $$i; done | sed 's/\.log$$//'`; \
   bases=`echo $$bases`
 RECHECK_LOGS = $(TEST_LOGS)
-am__EXEEXT_6 = test/test_human-charity-coin$(EXEEXT) \
+am__EXEEXT_6 = test/test_hcc$(EXEEXT) \
 	test/bitcoin-util-test.py
 TEST_SUITE_LOG = test-suite.log
 TEST_EXTENSIONS = .exe .test
@@ -1268,25 +1256,25 @@ am__relativize = \
     dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
   done; \
   reldir="$$dir2"
-ACLOCAL = ${SHELL} /root/Human-Charity-Coin/build-aux/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/dad/Downloads/HCC-wallet/build-aux/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
-AR = /usr/bin/i686-w64-mingw32-ar
-AUTOCONF = ${SHELL} /root/Human-Charity-Coin/build-aux/missing autoconf
-AUTOHEADER = ${SHELL} /root/Human-Charity-Coin/build-aux/missing autoheader
-AUTOMAKE = ${SHELL} /root/Human-Charity-Coin/build-aux/missing automake-1.15
-AWK = gawk
+AR = /usr/bin/x86_64-w64-mingw32-ar
+AUTOCONF = ${SHELL} /home/dad/Downloads/HCC-wallet/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /home/dad/Downloads/HCC-wallet/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /home/dad/Downloads/HCC-wallet/build-aux/missing automake-1.15
+AWK = mawk
 BDB_CPPFLAGS = 
 BDB_LIBS = -ldb_cxx-4.8
-BITCOIN_CLI_NAME = human-charity-coin-cli
-BITCOIN_DAEMON_NAME = human-charity-coind
-BITCOIN_GUI_NAME = human-charity-coin-qt
-BITCOIN_TX_NAME = human-charity-coin-tx
+BITCOIN_CLI_NAME = hcc-cli
+BITCOIN_DAEMON_NAME = hccd
+BITCOIN_GUI_NAME = hcc-qt
+BITCOIN_TX_NAME = hcc-tx
 BOOST_CHRONO_LIB = -lboost_chrono-mt-s
-BOOST_CPPFLAGS = -mthreads -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include
+BOOST_CPPFLAGS = -mthreads -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include
 BOOST_FILESYSTEM_LIB = -lboost_filesystem-mt-s
-BOOST_LDFLAGS = -L/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../lib
-BOOST_LIBS = -L/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../lib -lboost_system-mt-s -lboost_filesystem-mt-s -lboost_program_options-mt-s -lboost_thread_win32-mt-s -lboost_chrono-mt-s
+BOOST_LDFLAGS = -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib
+BOOST_LIBS = -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib -lboost_system-mt-s -lboost_filesystem-mt-s -lboost_program_options-mt-s -lboost_thread_win32-mt-s -lboost_chrono-mt-s
 BOOST_PROGRAM_OPTIONS_LIB = -lboost_program_options-mt-s
 BOOST_SYSTEM_LIB = -lboost_system-mt-s
 BOOST_THREAD_LIB = -lboost_thread_win32-mt-s
@@ -1295,8 +1283,8 @@ BREW =
 BUILD_QT = qt
 BUILD_TEST = test
 BUILD_TEST_QT = test
-CC = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/bin/ccache i686-w64-mingw32-gcc
-CCACHE = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/bin/ccache
+CC = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-gcc
+CCACHE = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/bin/ccache
 CCDEPMODE = depmode=gcc3
 CFLAGS = -pipe -O2 
 CLIENT_VERSION_BUILD = 0
@@ -1306,19 +1294,19 @@ CLIENT_VERSION_MINOR = 3
 CLIENT_VERSION_REVISION = 1
 COMPARISON_TOOL_REORG_TESTS = 0
 COPYRIGHT_YEAR = 2020
-CPP = i686-w64-mingw32-gcc -E
-CPPFILT = /usr/bin/i686-w64-mingw32-c++filt
-CPPFLAGS = -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include/  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -DHAVE_QT5
+CPP = x86_64-w64-mingw32-gcc -E
+CPPFILT = /usr/bin/x86_64-w64-mingw32-c++filt
+CPPFLAGS = -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -DHAVE_QT5
 CRYPTO_CFLAGS = 
 CRYPTO_LIBS = -lcrypto
-CXX = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/bin/ccache i686-w64-mingw32-g++
-CXXCPP = i686-w64-mingw32-g++ -E
+CXX = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-g++
+CXXCPP = x86_64-w64-mingw32-g++ -E
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -pipe -O2   -Wstack-protector -fstack-protector-all -fvisibility=hidden
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
-DLLTOOL = i686-w64-mingw32-dlltool
+DLLTOOL = x86_64-w64-mingw32-dlltool
 DSYMUTIL = 
 DUMPBIN = 
 ECHO_C = 
@@ -1331,7 +1319,7 @@ EVENT_PTHREADS_CFLAGS =
 EVENT_PTHREADS_LIBS = 
 EXEEXT = .exe
 FGREP = /bin/grep -F
-GCOV = /usr/bin/i686-w64-mingw32-gcov
+GCOV = /usr/bin/x86_64-w64-mingw32-gcov
 GENHTML = 
 GENISOIMAGE = 
 GIT = /usr/bin/git
@@ -1345,11 +1333,11 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-JAVA = /usr/bin/java
+JAVA = 
 JAVA_COMPARISON_TOOL = 
 LCOV = 
-LD = /usr/bin/i686-w64-mingw32-ld
-LDFLAGS = -L/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../lib  -Wl,--large-address-aware  -Wl,--dynamicbase -Wl,--nxcompat
+LD = /usr/bin/x86_64-w64-mingw32-ld
+LDFLAGS = -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib   -Wl,--dynamicbase -Wl,--nxcompat
 LEVELDB_CPPFLAGS =  $(am__append_1)
 LEVELDB_TARGET_FLAGS = TARGET_OS=OS_WINDOWS_CROSSCOMPILE
 LIBLEVELDB =  $(am__append_2)
@@ -1360,49 +1348,49 @@ LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIBTOOL_APP_LDFLAGS =  -all-static
 LIPO = 
 LN_S = ln -s
-LRELEASE = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/bin/lrelease
+LRELEASE = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/bin/lrelease
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
 LUPDATE = 
 MAINT = 
-MAKEINFO = ${SHELL} /root/Human-Charity-Coin/build-aux/missing makeinfo
+MAKEINFO = ${SHELL} /home/dad/Downloads/HCC-wallet/build-aux/missing makeinfo
 MAKENSIS = /usr/bin/makensis
 MANIFEST_TOOL = :
 MINIUPNPC_CPPFLAGS = -DSTATICLIB -DMINIUPNP_STATICLIB
 MINIUPNPC_LIBS = -lminiupnpc
 MKDIR_P = /bin/mkdir -p
-MOC = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/bin/moc
+MOC = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/bin/moc
 MOC_DEFS = -DHAVE_CONFIG_H -I$(srcdir)
-NM = i686-w64-mingw32-nm
+NM = x86_64-w64-mingw32-nm
 NMEDIT = 
-OBJCOPY = /usr/bin/i686-w64-mingw32-objcopy
-OBJCXX = i686-w64-mingw32-g++
+OBJCOPY = /usr/bin/x86_64-w64-mingw32-objcopy
+OBJCXX = x86_64-w64-mingw32-g++
 OBJCXXDEPMODE = depmode=gcc3
 OBJCXXFLAGS = -pipe -O2   -Wstack-protector -fstack-protector-all
-OBJDUMP = i686-w64-mingw32-objdump
+OBJDUMP = x86_64-w64-mingw32-objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = human-charity-coin
+PACKAGE = hcc
 PACKAGE_BUGREPORT = www.savebitcoin.io
 PACKAGE_NAME = Human-Charity-Coin Core
 PACKAGE_STRING = Human-Charity-Coin Core 3.3.1
-PACKAGE_TARNAME = human-charity-coin
+PACKAGE_TARNAME = hcc
 PACKAGE_URL = 
 PACKAGE_VERSION = 3.3.1
 PATH_SEPARATOR = :
 PKG_CONFIG = /usr/bin/pkg-config --static
-PKG_CONFIG_LIBDIR = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../lib/pkgconfig
-PKG_CONFIG_PATH = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../share/pkgconfig
+PKG_CONFIG_LIBDIR = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib/pkgconfig
+PKG_CONFIG_PATH = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../share/pkgconfig
 PORT = 
 PROTOBUF_CFLAGS = 
 PROTOBUF_LIBS = -lprotobuf
-PROTOC = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/bin/protoc
-PTHREAD_CC = i686-w64-mingw32-gcc
+PROTOC = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/bin/protoc
+PTHREAD_CC = x86_64-w64-mingw32-gcc
 PTHREAD_CFLAGS = 
 PTHREAD_LIBS = 
-PYTHON = /usr/local/bin/python3
-PYTHONPATH = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/lib/python/dist-packages:
+PYTHON = /usr/bin/python3
+PYTHONPATH = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/lib/python/dist-packages:
 QR_CFLAGS = 
 QR_LIBS = -lqrencode
 QTPLATFORM_CFLAGS = 
@@ -1414,19 +1402,19 @@ QTXCBQPA_LIBS =
 QT_CFLAGS = 
 QT_DBUS_CFLAGS = 
 QT_DBUS_INCLUDES = 
-QT_DBUS_LIBS = -lQt5DBus -L/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../lib
-QT_INCLUDES = -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include/QtCore -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include/QtGui -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include/QtWidgets -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include/QtNetwork -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include/QtTest -I/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../include/QtDBus
+QT_DBUS_LIBS = -lQt5DBus -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib
+QT_INCLUDES = -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtCore -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtGui -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtTest -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtDBus
 QT_LDFLAGS =  -mwindows
-QT_LIBS = -lqwindows -lQt5Widgets -lQt5Network -lQt5Gui     -lQt5Core    -lqtharfbuzzng -lqtpcre -lqtpng -lz  -limm32  -L/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../lib -L/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../plugins/platforms
+QT_LIBS = -lqwindows -lQt5Widgets -lQt5Network -lQt5Gui     -lQt5Core    -lqtharfbuzzng -lqtpcre -lqtpng -lz  -limm32  -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../plugins/platforms
 QT_PIE_FLAGS = 
 QT_SELECT = qt5
 QT_TEST_CFLAGS = 
 QT_TEST_INCLUDES = 
-QT_TEST_LIBS = -lQt5Test -L/root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../lib
-QT_TRANSLATION_DIR = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../translations
-RANLIB = /usr/bin/i686-w64-mingw32-ranlib
-RCC = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/bin/rcc
-READELF = /usr/bin/i686-w64-mingw32-readelf
+QT_TEST_LIBS = -lQt5Test -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib
+QT_TRANSLATION_DIR = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../translations
+RANLIB = /usr/bin/x86_64-w64-mingw32-ranlib
+RCC = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/bin/rcc
+READELF = /usr/bin/x86_64-w64-mingw32-readelf
 RELDFLAGS = -Wl,--exclude-libs,ALL
 RSVG_CONVERT = 
 SED = /bin/sed
@@ -1434,26 +1422,26 @@ SET_MAKE =
 SHELL = /bin/bash
 SSL_CFLAGS = 
 SSL_LIBS = -lssl
-STRIP = /usr/bin/i686-w64-mingw32-strip
+STRIP = /usr/bin/x86_64-w64-mingw32-strip
 TESTDEFS = 
 TIFFCP = 
-UIC = /root/Human-Charity-Coin/depends/i686-w64-mingw32/share/../native/bin/uic
+UIC = /home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../native/bin/uic
 UNIVALUE_CFLAGS = -I$(srcdir)/univalue/include
 UNIVALUE_LIBS = univalue/libunivalue.la
 USE_QRCODE = 
 USE_UPNP = 
 VERSION = 3.3.1
-WINDOWS_BITS = 32
-WINDRES = /usr/bin/i686-w64-mingw32-windres
+WINDOWS_BITS = 64
+WINDRES = /usr/bin/x86_64-w64-mingw32-windres
 X11XCB_CFLAGS = 
 X11XCB_LIBS = 
 XGETTEXT = /usr/bin/xgettext
 ZMQ_CFLAGS =  -DZMQ_STATIC
 ZMQ_LIBS = -lzmq
-abs_builddir = /root/Human-Charity-Coin/src
-abs_srcdir = /root/Human-Charity-Coin/src
-abs_top_builddir = /root/Human-Charity-Coin
-abs_top_srcdir = /root/Human-Charity-Coin
+abs_builddir = /home/dad/Downloads/HCC-wallet/src
+abs_srcdir = /home/dad/Downloads/HCC-wallet/src
+abs_top_builddir = /home/dad/Downloads/HCC-wallet
+abs_top_srcdir = /home/dad/Downloads/HCC-wallet
 ac_ct_AR = 
 ac_ct_CC = 
 ac_ct_CXX = 
@@ -1477,15 +1465,15 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = i686-w64-mingw32
-host_alias = i686-w64-mingw32
-host_cpu = i686
+host = x86_64-w64-mingw32
+host_alias = x86_64-w64-mingw32
+host_cpu = x86_64
 host_os = mingw32
 host_vendor = w64
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /root/Human-Charity-Coin/build-aux/install-sh
+install_sh = ${SHELL} /home/dad/Downloads/HCC-wallet/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -1534,7 +1522,7 @@ EXTRA_LIBRARIES = crypto/libbitcoin_crypto.a libbitcoin_util.a \
 #lib_LTLIBRARIES = libbitcoinconsensus.la
 LIBBITCOIN_CONSENSUS = 
 #LIBBITCOIN_CONSENSUS = libbitcoinconsensus.la
-# human-charity-coin core #
+# hcc core #
 BITCOIN_CORE_H = \
   bignum.h \
   activemasternode.h \
@@ -1632,7 +1620,7 @@ BITCOIN_CORE_H = \
   compat/sanity.h
 
 
-# server: shared between human-charity-coind and human-charity-coin-qt
+# server: shared between hccd and hcc-qt
 libbitcoin_server_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_SOURCES = \
   addrman.cpp \
@@ -1675,7 +1663,7 @@ libbitcoin_zmq_a_SOURCES = \
   zmq/zmqpublishnotifier.cpp
 
 
-# wallet: shared between human-charity-coind and human-charity-coin-qt, but only linked
+# wallet: shared between hccd and hcc-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CFLAGS = -fPIC
 libbitcoin_wallet_a_CPPFLAGS = $(BITCOIN_INCLUDES)
@@ -1738,7 +1726,7 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/sph_types.h
 
 
-# common: shared between human-charity-coind, and human-charity-coin-qt and non-server tools
+# common: shared between hccd, and hcc-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_common_a_SOURCES = \
   allocators.cpp \
@@ -1782,7 +1770,7 @@ libbitcoin_util_a_SOURCES = allocators.cpp compat/strnlen.cpp \
 	utilstrencodings.cpp utilmoneystr.cpp utiltime.cpp \
 	$(BITCOIN_CORE_H) $(am__append_9)
 
-# cli: shared between human-charity-coin-cli and human-charity-coin-qt
+# cli: shared between hcc-cli and hcc-qt
 libbitcoin_cli_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_SOURCES = \
   rpcclient.cpp \
@@ -1792,18 +1780,17 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-human-charity-coind_LDADD = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
-	$(LIBUNIVALUE) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
-	$(LIBLEVELDB) $(LIBMEMENV) $(LIBSECP256K1) $(am__append_10) \
-	$(am__append_11) $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) \
-	$(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) \
-	$(EVENT_LIBS)
-human-charity-coind_SOURCES = human-charity-coind.cpp $(am__append_12)
-human-charity-coind_CPPFLAGS = $(BITCOIN_INCLUDES)
-human-charity-coind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+hccd_LDADD = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) $(LIBUNIVALUE) \
+	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBLEVELDB) \
+	$(LIBMEMENV) $(LIBSECP256K1) $(am__append_10) $(am__append_11) \
+	$(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) \
+	$(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+hccd_SOURCES = hccd.cpp $(am__append_12)
+hccd_CPPFLAGS = $(BITCOIN_INCLUDES)
+hccd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
-# human-charity-coin-cli binary #
-human-charity-coin_cli_LDADD = \
+# hcc-cli binary #
+hcc_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
@@ -1812,12 +1799,12 @@ human-charity-coin_cli_LDADD = \
   $(CRYPTO_LIBS) \
   $(EVENT_LIBS)
 
-human-charity-coin_cli_SOURCES = human-charity-coin-cli.cpp $(am__append_13)
-human-charity-coin_cli_CPPFLAGS = $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+hcc_cli_SOURCES = hcc-cli.cpp $(am__append_13)
+hcc_cli_CPPFLAGS = $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
 #
 
-# human-charity-coin-tx binary #
-human-charity-coin_tx_LDADD = \
+# hcc-tx binary #
+hcc_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -1826,11 +1813,11 @@ human-charity-coin_tx_LDADD = \
   $(BOOST_LIBS) \
   $(CRYPTO_LIBS)
 
-human-charity-coin_tx_SOURCES = human-charity-coin-tx.cpp
-human-charity-coin_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
+hcc_tx_SOURCES = hcc-tx.cpp
+hcc_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
 #
-human-charity-coin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-human-charity-coin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+hcc_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+hcc_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 #include_HEADERS = script/bitcoinconsensus.h
 #libbitcoinconsensus_la_SOURCES =  \
 #	allocators.cpp \
@@ -1858,7 +1845,7 @@ CLEANFILES = leveldb/libleveldb.a leveldb/libmemenv.a *.gcda *.gcno \
 DISTCLEANFILES = obj/build.h
 EXTRA_DIST = leveldb $(am__append_18)
 TEST_SRCDIR = test
-TEST_BINARY = test/test_human-charity-coin$(EXEEXT)
+TEST_BINARY = test/test_hcc$(EXEEXT)
 JSON_TEST_FILES = \
   test/data/script_valid.json \
   test/data/base58_keys_valid.json \
@@ -1896,17 +1883,16 @@ BITCOIN_TESTS = test/allocator_tests.cpp \
 	test/serialize_tests.cpp \
 	test/sighash_tests.cpp \
 	test/sigopcount_tests.cpp \
-	test/skiplist_tests.cpp \
-	test/test_human-charity-coin.cpp \
+	test/skiplist_tests.cpp test/test_hcc.cpp \
 	test/timedata_tests.cpp \
 	test/torcontrol_tests.cpp \
 	test/transaction_tests.cpp \
 	test/uint256_tests.cpp \
 	test/univalue_tests.cpp test/util_tests.cpp \
 	$(am__append_19)
-test_test_human-charity-coin_SOURCES = $(BITCOIN_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
-test_test_human-charity-coin_CPPFLAGS = $(BITCOIN_INCLUDES) -I$(builddir)/test/ $(TESTDEFS)
-test_test_human-charity-coin_LDADD = $(LIBBITCOIN_SERVER) \
+test_test_hcc_SOURCES = $(BITCOIN_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
+test_test_hcc_CPPFLAGS = $(BITCOIN_INCLUDES) -I$(builddir)/test/ $(TESTDEFS)
+test_test_hcc_LDADD = $(LIBBITCOIN_SERVER) \
 	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
 	$(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
@@ -1917,37 +1903,37 @@ test_test_human-charity-coin_LDADD = $(LIBBITCOIN_SERVER) \
 	$(LIBBITCOIN_CONSENSUS) $(BDB_LIBS) \
 	$(SSL_LIBS) $(CRYPTO_LIBS) \
 	$(MINIUPNPC_LIBS) $(am__append_21)
-test_test_human-charity-coin_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
-nodist_test_test_human-charity-coin_SOURCES = $(GENERATED_TEST_FILES)
+test_test_hcc_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
+nodist_test_test_hcc_SOURCES = $(GENERATED_TEST_FILES)
 CLEAN_BITCOIN_TEST = test/*.gcda test/*.gcno $(GENERATED_TEST_FILES)
 
-# human-charity-coin qt core #
+# hcc qt core #
 QT_TS = \
-  qt/locale/human-charity-coin_bg.ts \
-  qt/locale/human-charity-coin_ca.ts \
-  qt/locale/human-charity-coin_cs.ts \
-  qt/locale/human-charity-coin_da.ts \
-  qt/locale/human-charity-coin_de.ts \
-  qt/locale/human-charity-coin_en.ts \
-  qt/locale/human-charity-coin_en_US.ts \
-  qt/locale/human-charity-coin_es.ts \
-  qt/locale/human-charity-coin_fi.ts \
-  qt/locale/human-charity-coin_fr_FR.ts \
-  qt/locale/human-charity-coin_it.ts \
-  qt/locale/human-charity-coin_ja.ts \
-  qt/locale/human-charity-coin_ko_KR.ts \
-  qt/locale/human-charity-coin_nl.ts \
-  qt/locale/human-charity-coin_pl.ts \
-  qt/locale/human-charity-coin_pt.ts \
-  qt/locale/human-charity-coin_pt_BR.ts \
-  qt/locale/human-charity-coin_ro_RO.ts \
-  qt/locale/human-charity-coin_ru.ts \
-  qt/locale/human-charity-coin_sk.ts \
-  qt/locale/human-charity-coin_sv.ts \
-  qt/locale/human-charity-coin_tr.ts \
-  qt/locale/human-charity-coin_uk.ts \
-  qt/locale/human-charity-coin_zh_CN.ts \
-  qt/locale/human-charity-coin_zh_TW.ts
+  qt/locale/hcc_bg.ts \
+  qt/locale/hcc_ca.ts \
+  qt/locale/hcc_cs.ts \
+  qt/locale/hcc_da.ts \
+  qt/locale/hcc_de.ts \
+  qt/locale/hcc_en.ts \
+  qt/locale/hcc_en_US.ts \
+  qt/locale/hcc_es.ts \
+  qt/locale/hcc_fi.ts \
+  qt/locale/hcc_fr_FR.ts \
+  qt/locale/hcc_it.ts \
+  qt/locale/hcc_ja.ts \
+  qt/locale/hcc_ko_KR.ts \
+  qt/locale/hcc_nl.ts \
+  qt/locale/hcc_pl.ts \
+  qt/locale/hcc_pt.ts \
+  qt/locale/hcc_pt_BR.ts \
+  qt/locale/hcc_ro_RO.ts \
+  qt/locale/hcc_ru.ts \
+  qt/locale/hcc_sk.ts \
+  qt/locale/hcc_sv.ts \
+  qt/locale/hcc_tr.ts \
+  qt/locale/hcc_uk.ts \
+  qt/locale/hcc_zh_CN.ts \
+  qt/locale/hcc_zh_TW.ts
 
 QT_FORMS_UI = \
   qt/forms/addressbookpage.ui \
@@ -2027,16 +2013,16 @@ BITCOIN_MM = \
   qt/macnotificationhandler.mm
 
 QT_MOC = \
-  qt/human-charity-coin.moc \
+  qt/hcc.moc \
   qt/bitcoinamountfield.moc \
   qt/intro.moc \
   qt/overviewpage.moc \
   qt/rpcconsole.moc
 
-QT_QRC_CPP = qt/qrc_human-charity-coin.cpp
-QT_QRC = qt/human-charity-coin.qrc
-QT_QRC_LOCALE_CPP = qt/qrc_human-charity-coin_locale.cpp
-QT_QRC_LOCALE = qt/human-charity-coin_locale.qrc
+QT_QRC_CPP = qt/qrc_hcc.cpp
+QT_QRC = qt/hcc.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_hcc_locale.cpp
+QT_QRC_LOCALE = qt/hcc_locale.qrc
 PROTOBUF_CC = qt/paymentrequest.pb.cc
 PROTOBUF_H = qt/paymentrequest.pb.h
 PROTOBUF_PROTO = qt/paymentrequest.proto
@@ -2173,7 +2159,7 @@ BITCOIN_QT_CPP = qt/bitcoinaddressvalidator.cpp \
 	qt/utilitydialog.cpp qt/winshutdownmonitor.cpp \
 	$(am__append_25)
 RES_IMAGES = \
-  qt/res/images/human-charity-coin_logo_horizontal.png \
+  qt/res/images/hcc_logo_horizontal.png \
   qt/res/images/about.png \
   qt/res/images/splash.png \
   qt/res/images/splash_testnet.png \
@@ -2190,7 +2176,7 @@ RES_CSS = \
   qt/res/css/default.css
 
 RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
-BITCOIN_RC = qt/res/human-charity-coin-qt-res.rc
+BITCOIN_RC = qt/res/hcc-qt-res.rc
 BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
   -I$(builddir)/qt/forms
 
@@ -2207,13 +2193,13 @@ nodist_qt_libbitcoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
 # forms/foo.h -> forms/ui_foo.h
 QT_FORMS_H = $(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
 
-# human-charity-coin-qt binary #
-qt_human-charity-coin_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+# hcc-qt binary #
+qt_hcc_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
-qt_human-charity-coin_qt_SOURCES = qt/human-charity-coin.cpp \
-	$(am__append_26) $(am__append_27)
-qt_human-charity-coin_qt_LDADD = qt/libbitcoinqt.a \
+qt_hcc_qt_SOURCES = qt/hcc.cpp $(am__append_26) \
+	$(am__append_27)
+qt_hcc_qt_LDADD = qt/libbitcoinqt.a \
 	$(LIBBITCOIN_SERVER) $(am__append_28) \
 	$(am__append_29) $(LIBBITCOIN_CLI) \
 	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
@@ -2224,8 +2210,8 @@ qt_human-charity-coin_qt_LDADD = qt/libbitcoinqt.a \
 	$(CRYPTO_LIBS) $(MINIUPNPC_LIBS) \
 	$(LIBSECP256K1) $(EVENT_PTHREADS_LIBS) \
 	$(EVENT_LIBS)
-qt_human-charity-coin_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_human-charity-coin_qt_LIBTOOLFLAGS = --tag CXX
+qt_hcc_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_hcc_qt_LIBTOOLFLAGS = --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM = $(QT_TS:.ts=.qm)
@@ -2237,27 +2223,26 @@ TEST_QT_H = \
   qt/test/paymentrequestdata.h \
   qt/test/paymentservertests.h
 
-qt_test_test_human-charity-coin_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+qt_test_test_hcc_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(QT_TEST_INCLUDES) $(PROTOBUF_CFLAGS)
 
-qt_test_test_human-charity-coin_qt_SOURCES =  \
+qt_test_test_hcc_qt_SOURCES =  \
 	qt/test/test_main.cpp \
 	qt/test/uritests.cpp $(TEST_QT_H) \
 	$(am__append_34)
-nodist_qt_test_test_human-charity-coin_qt_SOURCES = $(TEST_QT_MOC_CPP)
-qt_test_test_human-charity-coin_qt_LDADD =  \
-	$(LIBBITCOINQT) $(LIBBITCOIN_SERVER) \
-	$(am__append_35) $(am__append_36) \
-	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
-	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
-	$(LIBUNIVALUE) $(LIBLEVELDB) \
-	$(LIBMEMENV) $(BOOST_LIBS) \
+nodist_qt_test_test_hcc_qt_SOURCES = $(TEST_QT_MOC_CPP)
+qt_test_test_hcc_qt_LDADD = $(LIBBITCOINQT) \
+	$(LIBBITCOIN_SERVER) $(am__append_35) \
+	$(am__append_36) $(LIBBITCOIN_CLI) \
+	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
+	$(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) \
+	$(LIBLEVELDB) $(LIBMEMENV) $(BOOST_LIBS) \
 	$(QT_DBUS_LIBS) $(QT_TEST_LIBS) \
 	$(QT_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) \
 	$(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) \
 	$(MINIUPNPC_LIBS) $(LIBSECP256K1) \
 	$(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-qt_test_test_human-charity-coin_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_test_test_hcc_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 CLEAN_BITCOIN_QT_TEST = $(TEST_QT_MOC_CPP) qt/test/*.gcda qt/test/*.gcno
 all: all-recursive
 
@@ -2630,10 +2615,10 @@ qt/qt_libbitcoinqt_a-moc_walletview.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
 qt/qt_libbitcoinqt_a-paymentrequest.pb.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_libbitcoinqt_a-qrc_human-charity-coin.$(OBJEXT): qt/$(am__dirstamp) \
+qt/qt_libbitcoinqt_a-qrc_hcc.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.$(OBJEXT):  \
-	qt/$(am__dirstamp) qt/$(DEPDIR)/$(am__dirstamp)
+qt/qt_libbitcoinqt_a-qrc_hcc_locale.$(OBJEXT): qt/$(am__dirstamp) \
+	qt/$(DEPDIR)/$(am__dirstamp)
 
 qt/libbitcoinqt.a: $(qt_libbitcoinqt_a_OBJECTS) $(qt_libbitcoinqt_a_DEPENDENCIES) $(EXTRA_qt_libbitcoinqt_a_DEPENDENCIES) qt/$(am__dirstamp)
 	$(AM_V_at)-rm -f qt/libbitcoinqt.a
@@ -2752,145 +2737,145 @@ clean-binPROGRAMS:
 	echo " rm -f" $$list; \
 	rm -f $$list
 
-human-charity-coin-cli$(EXEEXT): $(human-charity-coin_cli_OBJECTS) $(human-charity-coin_cli_DEPENDENCIES) $(EXTRA_human-charity-coin_cli_DEPENDENCIES) 
-	@rm -f human-charity-coin-cli$(EXEEXT)
-	$(AM_V_CXXLD)$(human-charity-coin_cli_LINK) $(human-charity-coin_cli_OBJECTS) $(human-charity-coin_cli_LDADD) $(LIBS)
+hcc-cli$(EXEEXT): $(hcc_cli_OBJECTS) $(hcc_cli_DEPENDENCIES) $(EXTRA_hcc_cli_DEPENDENCIES) 
+	@rm -f hcc-cli$(EXEEXT)
+	$(AM_V_CXXLD)$(hcc_cli_LINK) $(hcc_cli_OBJECTS) $(hcc_cli_LDADD) $(LIBS)
 
-human-charity-coin-tx$(EXEEXT): $(human-charity-coin_tx_OBJECTS) $(human-charity-coin_tx_DEPENDENCIES) $(EXTRA_human-charity-coin_tx_DEPENDENCIES) 
-	@rm -f human-charity-coin-tx$(EXEEXT)
-	$(AM_V_CXXLD)$(human-charity-coin_tx_LINK) $(human-charity-coin_tx_OBJECTS) $(human-charity-coin_tx_LDADD) $(LIBS)
+hcc-tx$(EXEEXT): $(hcc_tx_OBJECTS) $(hcc_tx_DEPENDENCIES) $(EXTRA_hcc_tx_DEPENDENCIES) 
+	@rm -f hcc-tx$(EXEEXT)
+	$(AM_V_CXXLD)$(hcc_tx_LINK) $(hcc_tx_OBJECTS) $(hcc_tx_LDADD) $(LIBS)
 
-human-charity-coind$(EXEEXT): $(human-charity-coind_OBJECTS) $(human-charity-coind_DEPENDENCIES) $(EXTRA_human-charity-coind_DEPENDENCIES) 
-	@rm -f human-charity-coind$(EXEEXT)
-	$(AM_V_CXXLD)$(human-charity-coind_LINK) $(human-charity-coind_OBJECTS) $(human-charity-coind_LDADD) $(LIBS)
-qt/qt_human-charity-coin_qt-human-charity-coin.$(OBJEXT): qt/$(am__dirstamp) \
+hccd$(EXEEXT): $(hccd_OBJECTS) $(hccd_DEPENDENCIES) $(EXTRA_hccd_DEPENDENCIES) 
+	@rm -f hccd$(EXEEXT)
+	$(AM_V_CXXLD)$(hccd_LINK) $(hccd_OBJECTS) $(hccd_LDADD) $(LIBS)
+qt/qt_hcc_qt-hcc.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_human-charity-coin_qt-macdockiconhandler.$(OBJEXT): qt/$(am__dirstamp) \
+qt/qt_hcc_qt-macdockiconhandler.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_human-charity-coin_qt-macnotificationhandler.$(OBJEXT):  \
-	qt/$(am__dirstamp) qt/$(DEPDIR)/$(am__dirstamp)
+qt/qt_hcc_qt-macnotificationhandler.$(OBJEXT): qt/$(am__dirstamp) \
+	qt/$(DEPDIR)/$(am__dirstamp)
 qt/res/$(am__dirstamp):
 	@$(MKDIR_P) qt/res
 	@: > qt/res/$(am__dirstamp)
 qt/res/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) qt/res/$(DEPDIR)
 	@: > qt/res/$(DEPDIR)/$(am__dirstamp)
-qt/res/human-charity-coin-qt-res.$(OBJEXT): qt/res/$(am__dirstamp) \
+qt/res/hcc-qt-res.$(OBJEXT): qt/res/$(am__dirstamp) \
 	qt/res/$(DEPDIR)/$(am__dirstamp)
 
-qt/human-charity-coin-qt$(EXEEXT): $(qt_human-charity-coin_qt_OBJECTS) $(qt_human-charity-coin_qt_DEPENDENCIES) $(EXTRA_qt_human-charity-coin_qt_DEPENDENCIES) qt/$(am__dirstamp)
-	@rm -f qt/human-charity-coin-qt$(EXEEXT)
-	$(AM_V_OBJCXXLD)$(qt_human-charity-coin_qt_LINK) $(qt_human-charity-coin_qt_OBJECTS) $(qt_human-charity-coin_qt_LDADD) $(LIBS)
+qt/hcc-qt$(EXEEXT): $(qt_hcc_qt_OBJECTS) $(qt_hcc_qt_DEPENDENCIES) $(EXTRA_qt_hcc_qt_DEPENDENCIES) qt/$(am__dirstamp)
+	@rm -f qt/hcc-qt$(EXEEXT)
+	$(AM_V_OBJCXXLD)$(qt_hcc_qt_LINK) $(qt_hcc_qt_OBJECTS) $(qt_hcc_qt_LDADD) $(LIBS)
 qt/test/$(am__dirstamp):
 	@$(MKDIR_P) qt/test
 	@: > qt/test/$(am__dirstamp)
 qt/test/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) qt/test/$(DEPDIR)
 	@: > qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_human-charity-coin_qt-test_main.$(OBJEXT):  \
+qt/test/qt_test_test_hcc_qt-test_main.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_human-charity-coin_qt-uritests.$(OBJEXT):  \
+qt/test/qt_test_test_hcc_qt-uritests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_human-charity-coin_qt-paymentservertests.$(OBJEXT):  \
+qt/test/qt_test_test_hcc_qt-paymentservertests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_human-charity-coin_qt-moc_uritests.$(OBJEXT):  \
+qt/test/qt_test_test_hcc_qt-moc_uritests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_human-charity-coin_qt-moc_paymentservertests.$(OBJEXT):  \
+qt/test/qt_test_test_hcc_qt-moc_paymentservertests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
 
-qt/test/test_human-charity-coin-qt$(EXEEXT): $(qt_test_test_human-charity-coin_qt_OBJECTS) $(qt_test_test_human-charity-coin_qt_DEPENDENCIES) $(EXTRA_qt_test_test_human-charity-coin_qt_DEPENDENCIES) qt/test/$(am__dirstamp)
-	@rm -f qt/test/test_human-charity-coin-qt$(EXEEXT)
-	$(AM_V_CXXLD)$(qt_test_test_human-charity-coin_qt_LINK) $(qt_test_test_human-charity-coin_qt_OBJECTS) $(qt_test_test_human-charity-coin_qt_LDADD) $(LIBS)
+qt/test/test_hcc-qt$(EXEEXT): $(qt_test_test_hcc_qt_OBJECTS) $(qt_test_test_hcc_qt_DEPENDENCIES) $(EXTRA_qt_test_test_hcc_qt_DEPENDENCIES) qt/test/$(am__dirstamp)
+	@rm -f qt/test/test_hcc-qt$(EXEEXT)
+	$(AM_V_CXXLD)$(qt_test_test_hcc_qt_LINK) $(qt_test_test_hcc_qt_OBJECTS) $(qt_test_test_hcc_qt_LDADD) $(LIBS)
 test/$(am__dirstamp):
 	@$(MKDIR_P) test
 	@: > test/$(am__dirstamp)
 test/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) test/$(DEPDIR)
 	@: > test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-allocator_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-base32_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-allocator_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-base58_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-base32_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-base64_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-base58_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-checkblock_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-Checkpoints_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-coins_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-base64_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-compress_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-crypto_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-checkblock_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-DoS_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-Checkpoints_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-getarg_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-coins_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-hash_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-compress_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-key_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-crypto_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-main_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-DoS_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-mempool_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-getarg_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-mruset_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-hash_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-multisig_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-netbase_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-key_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-pmt_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-main_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-reverselock_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-rpc_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-mempool_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-sanity_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-mruset_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-scheduler_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-script_P2SH_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-script_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-multisig_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-scriptnum_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-serialize_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-sighash_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-netbase_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-sigopcount_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-skiplist_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-test_human-charity-coin.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-pmt_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-timedata_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-torcontrol_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-transaction_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-uint256_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-reverselock_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-univalue_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-util_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-rpc_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-accounting_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-wallet_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_hcc-sanity_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_human-charity-coin-rpc_wallet_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-scheduler_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-script_P2SH_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-script_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-scriptnum_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-serialize_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-sighash_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-sigopcount_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-skiplist_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-test_hcc.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-timedata_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-torcontrol_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-transaction_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-uint256_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-univalue_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-util_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-accounting_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-wallet_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_hcc-rpc_wallet_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
 
-test/test_human-charity-coin$(EXEEXT): $(test_test_human-charity-coin_OBJECTS) $(test_test_human-charity-coin_DEPENDENCIES) $(EXTRA_test_test_human-charity-coin_DEPENDENCIES) test/$(am__dirstamp)
-	@rm -f test/test_human-charity-coin$(EXEEXT)
-	$(AM_V_CXXLD)$(test_test_human-charity-coin_LINK) $(test_test_human-charity-coin_OBJECTS) $(test_test_human-charity-coin_LDADD) $(LIBS)
+test/test_hcc$(EXEEXT): $(test_test_hcc_OBJECTS) $(test_test_hcc_DEPENDENCIES) $(EXTRA_test_test_hcc_DEPENDENCIES) test/$(am__dirstamp)
+	@rm -f test/test_hcc$(EXEEXT)
+	$(AM_V_CXXLD)$(test_test_hcc_LINK) $(test_test_hcc_OBJECTS) $(test_test_hcc_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -2911,6 +2896,9 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+include ./$(DEPDIR)/hcc_cli-hcc-cli.Po
+include ./$(DEPDIR)/hcc_tx-hcc-tx.Po
+include ./$(DEPDIR)/hccd-hccd.Po
 include ./$(DEPDIR)/libbitcoin_cli_a-rpcclient.Po
 include ./$(DEPDIR)/libbitcoin_common_a-allocators.Po
 include ./$(DEPDIR)/libbitcoin_common_a-amount.Po
@@ -2996,9 +2984,6 @@ include ./$(DEPDIR)/libbitcoinconsensus_la-hash.Plo
 include ./$(DEPDIR)/libbitcoinconsensus_la-pubkey.Plo
 include ./$(DEPDIR)/libbitcoinconsensus_la-uint256.Plo
 include ./$(DEPDIR)/libbitcoinconsensus_la-utilstrencodings.Plo
-include ./$(DEPDIR)/human-charity-coin_cli-human-charity-coin-cli.Po
-include ./$(DEPDIR)/human-charity-coin_tx-human-charity-coin-tx.Po
-include ./$(DEPDIR)/human-charity-coind-human-charity-coind.Po
 include compat/$(DEPDIR)/libbitcoin_util_a-glibc_compat.Po
 include compat/$(DEPDIR)/libbitcoin_util_a-glibc_sanity.Po
 include compat/$(DEPDIR)/libbitcoin_util_a-glibcxx_compat.Po
@@ -3030,6 +3015,9 @@ include crypto/$(DEPDIR)/libbitcoinconsensus_la-sha512.Plo
 include primitives/$(DEPDIR)/libbitcoin_common_a-block.Po
 include primitives/$(DEPDIR)/libbitcoin_common_a-transaction.Po
 include primitives/$(DEPDIR)/libbitcoinconsensus_la-transaction.Plo
+include qt/$(DEPDIR)/qt_hcc_qt-hcc.Po
+include qt/$(DEPDIR)/qt_hcc_qt-macdockiconhandler.Po
+include qt/$(DEPDIR)/qt_hcc_qt-macnotificationhandler.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-addressbookpage.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-addresstablemodel.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-askpassphrasedialog.Po
@@ -3108,8 +3096,8 @@ include qt/$(DEPDIR)/qt_libbitcoinqt_a-paymentrequestplus.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-paymentserver.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-peertablemodel.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-platformstyle.Po
-include qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_human-charity-coin.Po
-include qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.Po
+include qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_hcc.Po
+include qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_hcc_locale.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-qvalidatedlineedit.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-qvaluecombobox.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-receivecoinsdialog.Po
@@ -3133,14 +3121,11 @@ include qt/$(DEPDIR)/qt_libbitcoinqt_a-walletmodel.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-walletmodeltransaction.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-walletview.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-winshutdownmonitor.Po
-include qt/$(DEPDIR)/qt_human-charity-coin_qt-macdockiconhandler.Po
-include qt/$(DEPDIR)/qt_human-charity-coin_qt-macnotificationhandler.Po
-include qt/$(DEPDIR)/qt_human-charity-coin_qt-human-charity-coin.Po
-include qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-moc_paymentservertests.Po
-include qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-moc_uritests.Po
-include qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-paymentservertests.Po
-include qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-test_main.Po
-include qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-uritests.Po
+include qt/test/$(DEPDIR)/qt_test_test_hcc_qt-moc_paymentservertests.Po
+include qt/test/$(DEPDIR)/qt_test_test_hcc_qt-moc_uritests.Po
+include qt/test/$(DEPDIR)/qt_test_test_hcc_qt-paymentservertests.Po
+include qt/test/$(DEPDIR)/qt_test_test_hcc_qt-test_main.Po
+include qt/test/$(DEPDIR)/qt_test_test_hcc_qt-uritests.Po
 include script/$(DEPDIR)/libbitcoin_common_a-interpreter.Po
 include script/$(DEPDIR)/libbitcoin_common_a-script.Po
 include script/$(DEPDIR)/libbitcoin_common_a-script_error.Po
@@ -3150,46 +3135,46 @@ include script/$(DEPDIR)/libbitcoin_server_a-sigcache.Po
 include script/$(DEPDIR)/libbitcoinconsensus_la-bitcoinconsensus.Plo
 include script/$(DEPDIR)/libbitcoinconsensus_la-interpreter.Plo
 include script/$(DEPDIR)/libbitcoinconsensus_la-script.Plo
-include test/$(DEPDIR)/test_test_human-charity-coin-Checkpoints_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-DoS_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-accounting_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-allocator_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-base32_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-base58_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-base64_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-checkblock_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-coins_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-compress_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-crypto_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-getarg_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-hash_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-key_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-main_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-mempool_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-mruset_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-multisig_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-netbase_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-pmt_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-reverselock_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-rpc_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-rpc_wallet_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-sanity_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-scheduler_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-script_P2SH_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-script_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-scriptnum_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-serialize_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-sighash_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-sigopcount_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-skiplist_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-test_human-charity-coin.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-timedata_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-torcontrol_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-transaction_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-uint256_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-univalue_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-util_tests.Po
-include test/$(DEPDIR)/test_test_human-charity-coin-wallet_tests.Po
+include test/$(DEPDIR)/test_test_hcc-Checkpoints_tests.Po
+include test/$(DEPDIR)/test_test_hcc-DoS_tests.Po
+include test/$(DEPDIR)/test_test_hcc-accounting_tests.Po
+include test/$(DEPDIR)/test_test_hcc-allocator_tests.Po
+include test/$(DEPDIR)/test_test_hcc-base32_tests.Po
+include test/$(DEPDIR)/test_test_hcc-base58_tests.Po
+include test/$(DEPDIR)/test_test_hcc-base64_tests.Po
+include test/$(DEPDIR)/test_test_hcc-checkblock_tests.Po
+include test/$(DEPDIR)/test_test_hcc-coins_tests.Po
+include test/$(DEPDIR)/test_test_hcc-compress_tests.Po
+include test/$(DEPDIR)/test_test_hcc-crypto_tests.Po
+include test/$(DEPDIR)/test_test_hcc-getarg_tests.Po
+include test/$(DEPDIR)/test_test_hcc-hash_tests.Po
+include test/$(DEPDIR)/test_test_hcc-key_tests.Po
+include test/$(DEPDIR)/test_test_hcc-main_tests.Po
+include test/$(DEPDIR)/test_test_hcc-mempool_tests.Po
+include test/$(DEPDIR)/test_test_hcc-mruset_tests.Po
+include test/$(DEPDIR)/test_test_hcc-multisig_tests.Po
+include test/$(DEPDIR)/test_test_hcc-netbase_tests.Po
+include test/$(DEPDIR)/test_test_hcc-pmt_tests.Po
+include test/$(DEPDIR)/test_test_hcc-reverselock_tests.Po
+include test/$(DEPDIR)/test_test_hcc-rpc_tests.Po
+include test/$(DEPDIR)/test_test_hcc-rpc_wallet_tests.Po
+include test/$(DEPDIR)/test_test_hcc-sanity_tests.Po
+include test/$(DEPDIR)/test_test_hcc-scheduler_tests.Po
+include test/$(DEPDIR)/test_test_hcc-script_P2SH_tests.Po
+include test/$(DEPDIR)/test_test_hcc-script_tests.Po
+include test/$(DEPDIR)/test_test_hcc-scriptnum_tests.Po
+include test/$(DEPDIR)/test_test_hcc-serialize_tests.Po
+include test/$(DEPDIR)/test_test_hcc-sighash_tests.Po
+include test/$(DEPDIR)/test_test_hcc-sigopcount_tests.Po
+include test/$(DEPDIR)/test_test_hcc-skiplist_tests.Po
+include test/$(DEPDIR)/test_test_hcc-test_hcc.Po
+include test/$(DEPDIR)/test_test_hcc-timedata_tests.Po
+include test/$(DEPDIR)/test_test_hcc-torcontrol_tests.Po
+include test/$(DEPDIR)/test_test_hcc-transaction_tests.Po
+include test/$(DEPDIR)/test_test_hcc-uint256_tests.Po
+include test/$(DEPDIR)/test_test_hcc-univalue_tests.Po
+include test/$(DEPDIR)/test_test_hcc-util_tests.Po
+include test/$(DEPDIR)/test_test_hcc-wallet_tests.Po
 include zmq/$(DEPDIR)/libbitcoin_zmq_a-zmqabstractnotifier.Po
 include zmq/$(DEPDIR)/libbitcoin_zmq_a-zmqnotificationinterface.Po
 include zmq/$(DEPDIR)/libbitcoin_zmq_a-zmqpublishnotifier.Po
@@ -6182,33 +6167,33 @@ qt/qt_libbitcoinqt_a-paymentrequest.pb.obj: qt/paymentrequest.pb.cc
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-paymentrequest.pb.obj `if test -f 'qt/paymentrequest.pb.cc'; then $(CYGPATH_W) 'qt/paymentrequest.pb.cc'; else $(CYGPATH_W) '$(srcdir)/qt/paymentrequest.pb.cc'; fi`
 
-qt/qt_libbitcoinqt_a-qrc_human-charity-coin.o: qt/qrc_human-charity-coin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_human-charity-coin.o -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_human-charity-coin.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_human-charity-coin.o `test -f 'qt/qrc_human-charity-coin.cpp' || echo '$(srcdir)/'`qt/qrc_human-charity-coin.cpp
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_human-charity-coin.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_human-charity-coin.Po
-#	$(AM_V_CXX)source='qt/qrc_human-charity-coin.cpp' object='qt/qt_libbitcoinqt_a-qrc_human-charity-coin.o' libtool=no \
+qt/qt_libbitcoinqt_a-qrc_hcc.o: qt/qrc_hcc.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_hcc.o -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_hcc.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_hcc.o `test -f 'qt/qrc_hcc.cpp' || echo '$(srcdir)/'`qt/qrc_hcc.cpp
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_hcc.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_hcc.Po
+#	$(AM_V_CXX)source='qt/qrc_hcc.cpp' object='qt/qt_libbitcoinqt_a-qrc_hcc.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_human-charity-coin.o `test -f 'qt/qrc_human-charity-coin.cpp' || echo '$(srcdir)/'`qt/qrc_human-charity-coin.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_hcc.o `test -f 'qt/qrc_hcc.cpp' || echo '$(srcdir)/'`qt/qrc_hcc.cpp
 
-qt/qt_libbitcoinqt_a-qrc_human-charity-coin.obj: qt/qrc_human-charity-coin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_human-charity-coin.obj -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_human-charity-coin.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_human-charity-coin.obj `if test -f 'qt/qrc_human-charity-coin.cpp'; then $(CYGPATH_W) 'qt/qrc_human-charity-coin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_human-charity-coin.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_human-charity-coin.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_human-charity-coin.Po
-#	$(AM_V_CXX)source='qt/qrc_human-charity-coin.cpp' object='qt/qt_libbitcoinqt_a-qrc_human-charity-coin.obj' libtool=no \
+qt/qt_libbitcoinqt_a-qrc_hcc.obj: qt/qrc_hcc.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_hcc.obj -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_hcc.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_hcc.obj `if test -f 'qt/qrc_hcc.cpp'; then $(CYGPATH_W) 'qt/qrc_hcc.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_hcc.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_hcc.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_hcc.Po
+#	$(AM_V_CXX)source='qt/qrc_hcc.cpp' object='qt/qt_libbitcoinqt_a-qrc_hcc.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_human-charity-coin.obj `if test -f 'qt/qrc_human-charity-coin.cpp'; then $(CYGPATH_W) 'qt/qrc_human-charity-coin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_human-charity-coin.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_hcc.obj `if test -f 'qt/qrc_hcc.cpp'; then $(CYGPATH_W) 'qt/qrc_hcc.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_hcc.cpp'; fi`
 
-qt/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.o: qt/qrc_human-charity-coin_locale.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.o -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.o `test -f 'qt/qrc_human-charity-coin_locale.cpp' || echo '$(srcdir)/'`qt/qrc_human-charity-coin_locale.cpp
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.Po
-#	$(AM_V_CXX)source='qt/qrc_human-charity-coin_locale.cpp' object='qt/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.o' libtool=no \
+qt/qt_libbitcoinqt_a-qrc_hcc_locale.o: qt/qrc_hcc_locale.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_hcc_locale.o -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_hcc_locale.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_hcc_locale.o `test -f 'qt/qrc_hcc_locale.cpp' || echo '$(srcdir)/'`qt/qrc_hcc_locale.cpp
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_hcc_locale.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_hcc_locale.Po
+#	$(AM_V_CXX)source='qt/qrc_hcc_locale.cpp' object='qt/qt_libbitcoinqt_a-qrc_hcc_locale.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.o `test -f 'qt/qrc_human-charity-coin_locale.cpp' || echo '$(srcdir)/'`qt/qrc_human-charity-coin_locale.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_hcc_locale.o `test -f 'qt/qrc_hcc_locale.cpp' || echo '$(srcdir)/'`qt/qrc_hcc_locale.cpp
 
-qt/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.obj: qt/qrc_human-charity-coin_locale.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.obj -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.obj `if test -f 'qt/qrc_human-charity-coin_locale.cpp'; then $(CYGPATH_W) 'qt/qrc_human-charity-coin_locale.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_human-charity-coin_locale.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.Po
-#	$(AM_V_CXX)source='qt/qrc_human-charity-coin_locale.cpp' object='qt/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.obj' libtool=no \
+qt/qt_libbitcoinqt_a-qrc_hcc_locale.obj: qt/qrc_hcc_locale.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_hcc_locale.obj -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_hcc_locale.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_hcc_locale.obj `if test -f 'qt/qrc_hcc_locale.cpp'; then $(CYGPATH_W) 'qt/qrc_hcc_locale.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_hcc_locale.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_hcc_locale.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_hcc_locale.Po
+#	$(AM_V_CXX)source='qt/qrc_hcc_locale.cpp' object='qt/qt_libbitcoinqt_a-qrc_hcc_locale.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_human-charity-coin_locale.obj `if test -f 'qt/qrc_human-charity-coin_locale.cpp'; then $(CYGPATH_W) 'qt/qrc_human-charity-coin_locale.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_human-charity-coin_locale.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_hcc_locale.obj `if test -f 'qt/qrc_hcc_locale.cpp'; then $(CYGPATH_W) 'qt/qrc_hcc_locale.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_hcc_locale.cpp'; fi`
 
 libbitcoinconsensus_la-allocators.lo: allocators.cpp
 	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libbitcoinconsensus_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT libbitcoinconsensus_la-allocators.lo -MD -MP -MF $(DEPDIR)/libbitcoinconsensus_la-allocators.Tpo -c -o libbitcoinconsensus_la-allocators.lo `test -f 'allocators.cpp' || echo '$(srcdir)/'`allocators.cpp
@@ -6343,691 +6328,691 @@ compat/libbitcoinconsensus_la-glibcxx_compat.lo: compat/glibcxx_compat.cpp
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libbitcoinconsensus_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o compat/libbitcoinconsensus_la-glibcxx_compat.lo `test -f 'compat/glibcxx_compat.cpp' || echo '$(srcdir)/'`compat/glibcxx_compat.cpp
 
-human-charity-coin_cli-human-charity-coin-cli.o: human-charity-coin-cli.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(human-charity-coin_cli_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT human-charity-coin_cli-human-charity-coin-cli.o -MD -MP -MF $(DEPDIR)/human-charity-coin_cli-human-charity-coin-cli.Tpo -c -o human-charity-coin_cli-human-charity-coin-cli.o `test -f 'human-charity-coin-cli.cpp' || echo '$(srcdir)/'`human-charity-coin-cli.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/human-charity-coin_cli-human-charity-coin-cli.Tpo $(DEPDIR)/human-charity-coin_cli-human-charity-coin-cli.Po
-#	$(AM_V_CXX)source='human-charity-coin-cli.cpp' object='human-charity-coin_cli-human-charity-coin-cli.o' libtool=no \
+hcc_cli-hcc-cli.o: hcc-cli.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(hcc_cli_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT hcc_cli-hcc-cli.o -MD -MP -MF $(DEPDIR)/hcc_cli-hcc-cli.Tpo -c -o hcc_cli-hcc-cli.o `test -f 'hcc-cli.cpp' || echo '$(srcdir)/'`hcc-cli.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/hcc_cli-hcc-cli.Tpo $(DEPDIR)/hcc_cli-hcc-cli.Po
+#	$(AM_V_CXX)source='hcc-cli.cpp' object='hcc_cli-hcc-cli.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(human-charity-coin_cli_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o human-charity-coin_cli-human-charity-coin-cli.o `test -f 'human-charity-coin-cli.cpp' || echo '$(srcdir)/'`human-charity-coin-cli.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(hcc_cli_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o hcc_cli-hcc-cli.o `test -f 'hcc-cli.cpp' || echo '$(srcdir)/'`hcc-cli.cpp
 
-human-charity-coin_cli-human-charity-coin-cli.obj: human-charity-coin-cli.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(human-charity-coin_cli_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT human-charity-coin_cli-human-charity-coin-cli.obj -MD -MP -MF $(DEPDIR)/human-charity-coin_cli-human-charity-coin-cli.Tpo -c -o human-charity-coin_cli-human-charity-coin-cli.obj `if test -f 'human-charity-coin-cli.cpp'; then $(CYGPATH_W) 'human-charity-coin-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/human-charity-coin-cli.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/human-charity-coin_cli-human-charity-coin-cli.Tpo $(DEPDIR)/human-charity-coin_cli-human-charity-coin-cli.Po
-#	$(AM_V_CXX)source='human-charity-coin-cli.cpp' object='human-charity-coin_cli-human-charity-coin-cli.obj' libtool=no \
+hcc_cli-hcc-cli.obj: hcc-cli.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(hcc_cli_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT hcc_cli-hcc-cli.obj -MD -MP -MF $(DEPDIR)/hcc_cli-hcc-cli.Tpo -c -o hcc_cli-hcc-cli.obj `if test -f 'hcc-cli.cpp'; then $(CYGPATH_W) 'hcc-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/hcc-cli.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/hcc_cli-hcc-cli.Tpo $(DEPDIR)/hcc_cli-hcc-cli.Po
+#	$(AM_V_CXX)source='hcc-cli.cpp' object='hcc_cli-hcc-cli.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(human-charity-coin_cli_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o human-charity-coin_cli-human-charity-coin-cli.obj `if test -f 'human-charity-coin-cli.cpp'; then $(CYGPATH_W) 'human-charity-coin-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/human-charity-coin-cli.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(hcc_cli_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o hcc_cli-hcc-cli.obj `if test -f 'hcc-cli.cpp'; then $(CYGPATH_W) 'hcc-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/hcc-cli.cpp'; fi`
 
-human-charity-coin_tx-human-charity-coin-tx.o: human-charity-coin-tx.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(human-charity-coin_tx_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT human-charity-coin_tx-human-charity-coin-tx.o -MD -MP -MF $(DEPDIR)/human-charity-coin_tx-human-charity-coin-tx.Tpo -c -o human-charity-coin_tx-human-charity-coin-tx.o `test -f 'human-charity-coin-tx.cpp' || echo '$(srcdir)/'`human-charity-coin-tx.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/human-charity-coin_tx-human-charity-coin-tx.Tpo $(DEPDIR)/human-charity-coin_tx-human-charity-coin-tx.Po
-#	$(AM_V_CXX)source='human-charity-coin-tx.cpp' object='human-charity-coin_tx-human-charity-coin-tx.o' libtool=no \
+hcc_tx-hcc-tx.o: hcc-tx.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(hcc_tx_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT hcc_tx-hcc-tx.o -MD -MP -MF $(DEPDIR)/hcc_tx-hcc-tx.Tpo -c -o hcc_tx-hcc-tx.o `test -f 'hcc-tx.cpp' || echo '$(srcdir)/'`hcc-tx.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/hcc_tx-hcc-tx.Tpo $(DEPDIR)/hcc_tx-hcc-tx.Po
+#	$(AM_V_CXX)source='hcc-tx.cpp' object='hcc_tx-hcc-tx.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(human-charity-coin_tx_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o human-charity-coin_tx-human-charity-coin-tx.o `test -f 'human-charity-coin-tx.cpp' || echo '$(srcdir)/'`human-charity-coin-tx.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(hcc_tx_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o hcc_tx-hcc-tx.o `test -f 'hcc-tx.cpp' || echo '$(srcdir)/'`hcc-tx.cpp
 
-human-charity-coin_tx-human-charity-coin-tx.obj: human-charity-coin-tx.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(human-charity-coin_tx_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT human-charity-coin_tx-human-charity-coin-tx.obj -MD -MP -MF $(DEPDIR)/human-charity-coin_tx-human-charity-coin-tx.Tpo -c -o human-charity-coin_tx-human-charity-coin-tx.obj `if test -f 'human-charity-coin-tx.cpp'; then $(CYGPATH_W) 'human-charity-coin-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/human-charity-coin-tx.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/human-charity-coin_tx-human-charity-coin-tx.Tpo $(DEPDIR)/human-charity-coin_tx-human-charity-coin-tx.Po
-#	$(AM_V_CXX)source='human-charity-coin-tx.cpp' object='human-charity-coin_tx-human-charity-coin-tx.obj' libtool=no \
+hcc_tx-hcc-tx.obj: hcc-tx.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(hcc_tx_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT hcc_tx-hcc-tx.obj -MD -MP -MF $(DEPDIR)/hcc_tx-hcc-tx.Tpo -c -o hcc_tx-hcc-tx.obj `if test -f 'hcc-tx.cpp'; then $(CYGPATH_W) 'hcc-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/hcc-tx.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/hcc_tx-hcc-tx.Tpo $(DEPDIR)/hcc_tx-hcc-tx.Po
+#	$(AM_V_CXX)source='hcc-tx.cpp' object='hcc_tx-hcc-tx.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(human-charity-coin_tx_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o human-charity-coin_tx-human-charity-coin-tx.obj `if test -f 'human-charity-coin-tx.cpp'; then $(CYGPATH_W) 'human-charity-coin-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/human-charity-coin-tx.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(hcc_tx_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o hcc_tx-hcc-tx.obj `if test -f 'hcc-tx.cpp'; then $(CYGPATH_W) 'hcc-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/hcc-tx.cpp'; fi`
 
-human-charity-coind-human-charity-coind.o: human-charity-coind.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(human-charity-coind_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT human-charity-coind-human-charity-coind.o -MD -MP -MF $(DEPDIR)/human-charity-coind-human-charity-coind.Tpo -c -o human-charity-coind-human-charity-coind.o `test -f 'human-charity-coind.cpp' || echo '$(srcdir)/'`human-charity-coind.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/human-charity-coind-human-charity-coind.Tpo $(DEPDIR)/human-charity-coind-human-charity-coind.Po
-#	$(AM_V_CXX)source='human-charity-coind.cpp' object='human-charity-coind-human-charity-coind.o' libtool=no \
+hccd-hccd.o: hccd.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(hccd_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT hccd-hccd.o -MD -MP -MF $(DEPDIR)/hccd-hccd.Tpo -c -o hccd-hccd.o `test -f 'hccd.cpp' || echo '$(srcdir)/'`hccd.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/hccd-hccd.Tpo $(DEPDIR)/hccd-hccd.Po
+#	$(AM_V_CXX)source='hccd.cpp' object='hccd-hccd.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(human-charity-coind_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o human-charity-coind-human-charity-coind.o `test -f 'human-charity-coind.cpp' || echo '$(srcdir)/'`human-charity-coind.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(hccd_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o hccd-hccd.o `test -f 'hccd.cpp' || echo '$(srcdir)/'`hccd.cpp
 
-human-charity-coind-human-charity-coind.obj: human-charity-coind.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(human-charity-coind_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT human-charity-coind-human-charity-coind.obj -MD -MP -MF $(DEPDIR)/human-charity-coind-human-charity-coind.Tpo -c -o human-charity-coind-human-charity-coind.obj `if test -f 'human-charity-coind.cpp'; then $(CYGPATH_W) 'human-charity-coind.cpp'; else $(CYGPATH_W) '$(srcdir)/human-charity-coind.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/human-charity-coind-human-charity-coind.Tpo $(DEPDIR)/human-charity-coind-human-charity-coind.Po
-#	$(AM_V_CXX)source='human-charity-coind.cpp' object='human-charity-coind-human-charity-coind.obj' libtool=no \
+hccd-hccd.obj: hccd.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(hccd_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT hccd-hccd.obj -MD -MP -MF $(DEPDIR)/hccd-hccd.Tpo -c -o hccd-hccd.obj `if test -f 'hccd.cpp'; then $(CYGPATH_W) 'hccd.cpp'; else $(CYGPATH_W) '$(srcdir)/hccd.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/hccd-hccd.Tpo $(DEPDIR)/hccd-hccd.Po
+#	$(AM_V_CXX)source='hccd.cpp' object='hccd-hccd.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(human-charity-coind_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o human-charity-coind-human-charity-coind.obj `if test -f 'human-charity-coind.cpp'; then $(CYGPATH_W) 'human-charity-coind.cpp'; else $(CYGPATH_W) '$(srcdir)/human-charity-coind.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(hccd_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o hccd-hccd.obj `if test -f 'hccd.cpp'; then $(CYGPATH_W) 'hccd.cpp'; else $(CYGPATH_W) '$(srcdir)/hccd.cpp'; fi`
 
-qt/qt_human-charity-coin_qt-human-charity-coin.o: qt/human-charity-coin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_human-charity-coin_qt-human-charity-coin.o -MD -MP -MF qt/$(DEPDIR)/qt_human-charity-coin_qt-human-charity-coin.Tpo -c -o qt/qt_human-charity-coin_qt-human-charity-coin.o `test -f 'qt/human-charity-coin.cpp' || echo '$(srcdir)/'`qt/human-charity-coin.cpp
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_human-charity-coin_qt-human-charity-coin.Tpo qt/$(DEPDIR)/qt_human-charity-coin_qt-human-charity-coin.Po
-#	$(AM_V_CXX)source='qt/human-charity-coin.cpp' object='qt/qt_human-charity-coin_qt-human-charity-coin.o' libtool=no \
+qt/qt_hcc_qt-hcc.o: qt/hcc.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_hcc_qt-hcc.o -MD -MP -MF qt/$(DEPDIR)/qt_hcc_qt-hcc.Tpo -c -o qt/qt_hcc_qt-hcc.o `test -f 'qt/hcc.cpp' || echo '$(srcdir)/'`qt/hcc.cpp
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_hcc_qt-hcc.Tpo qt/$(DEPDIR)/qt_hcc_qt-hcc.Po
+#	$(AM_V_CXX)source='qt/hcc.cpp' object='qt/qt_hcc_qt-hcc.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_human-charity-coin_qt-human-charity-coin.o `test -f 'qt/human-charity-coin.cpp' || echo '$(srcdir)/'`qt/human-charity-coin.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_hcc_qt-hcc.o `test -f 'qt/hcc.cpp' || echo '$(srcdir)/'`qt/hcc.cpp
 
-qt/qt_human-charity-coin_qt-human-charity-coin.obj: qt/human-charity-coin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_human-charity-coin_qt-human-charity-coin.obj -MD -MP -MF qt/$(DEPDIR)/qt_human-charity-coin_qt-human-charity-coin.Tpo -c -o qt/qt_human-charity-coin_qt-human-charity-coin.obj `if test -f 'qt/human-charity-coin.cpp'; then $(CYGPATH_W) 'qt/human-charity-coin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/human-charity-coin.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_human-charity-coin_qt-human-charity-coin.Tpo qt/$(DEPDIR)/qt_human-charity-coin_qt-human-charity-coin.Po
-#	$(AM_V_CXX)source='qt/human-charity-coin.cpp' object='qt/qt_human-charity-coin_qt-human-charity-coin.obj' libtool=no \
+qt/qt_hcc_qt-hcc.obj: qt/hcc.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_hcc_qt-hcc.obj -MD -MP -MF qt/$(DEPDIR)/qt_hcc_qt-hcc.Tpo -c -o qt/qt_hcc_qt-hcc.obj `if test -f 'qt/hcc.cpp'; then $(CYGPATH_W) 'qt/hcc.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/hcc.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_hcc_qt-hcc.Tpo qt/$(DEPDIR)/qt_hcc_qt-hcc.Po
+#	$(AM_V_CXX)source='qt/hcc.cpp' object='qt/qt_hcc_qt-hcc.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_human-charity-coin_qt-human-charity-coin.obj `if test -f 'qt/human-charity-coin.cpp'; then $(CYGPATH_W) 'qt/human-charity-coin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/human-charity-coin.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_hcc_qt-hcc.obj `if test -f 'qt/hcc.cpp'; then $(CYGPATH_W) 'qt/hcc.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/hcc.cpp'; fi`
 
-qt/test/qt_test_test_human-charity-coin_qt-test_main.o: qt/test/test_main.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_human-charity-coin_qt-test_main.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-test_main.Tpo -c -o qt/test/qt_test_test_human-charity-coin_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-test_main.Tpo qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-test_main.Po
-#	$(AM_V_CXX)source='qt/test/test_main.cpp' object='qt/test/qt_test_test_human-charity-coin_qt-test_main.o' libtool=no \
+qt/test/qt_test_test_hcc_qt-test_main.o: qt/test/test_main.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_hcc_qt-test_main.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_hcc_qt-test_main.Tpo -c -o qt/test/qt_test_test_hcc_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_hcc_qt-test_main.Tpo qt/test/$(DEPDIR)/qt_test_test_hcc_qt-test_main.Po
+#	$(AM_V_CXX)source='qt/test/test_main.cpp' object='qt/test/qt_test_test_hcc_qt-test_main.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_human-charity-coin_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_hcc_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
 
-qt/test/qt_test_test_human-charity-coin_qt-test_main.obj: qt/test/test_main.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_human-charity-coin_qt-test_main.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-test_main.Tpo -c -o qt/test/qt_test_test_human-charity-coin_qt-test_main.obj `if test -f 'qt/test/test_main.cpp'; then $(CYGPATH_W) 'qt/test/test_main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/test_main.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-test_main.Tpo qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-test_main.Po
-#	$(AM_V_CXX)source='qt/test/test_main.cpp' object='qt/test/qt_test_test_human-charity-coin_qt-test_main.obj' libtool=no \
+qt/test/qt_test_test_hcc_qt-test_main.obj: qt/test/test_main.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_hcc_qt-test_main.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_hcc_qt-test_main.Tpo -c -o qt/test/qt_test_test_hcc_qt-test_main.obj `if test -f 'qt/test/test_main.cpp'; then $(CYGPATH_W) 'qt/test/test_main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/test_main.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_hcc_qt-test_main.Tpo qt/test/$(DEPDIR)/qt_test_test_hcc_qt-test_main.Po
+#	$(AM_V_CXX)source='qt/test/test_main.cpp' object='qt/test/qt_test_test_hcc_qt-test_main.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_human-charity-coin_qt-test_main.obj `if test -f 'qt/test/test_main.cpp'; then $(CYGPATH_W) 'qt/test/test_main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/test_main.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_hcc_qt-test_main.obj `if test -f 'qt/test/test_main.cpp'; then $(CYGPATH_W) 'qt/test/test_main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/test_main.cpp'; fi`
 
-qt/test/qt_test_test_human-charity-coin_qt-uritests.o: qt/test/uritests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_human-charity-coin_qt-uritests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-uritests.Tpo -c -o qt/test/qt_test_test_human-charity-coin_qt-uritests.o `test -f 'qt/test/uritests.cpp' || echo '$(srcdir)/'`qt/test/uritests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-uritests.Po
-#	$(AM_V_CXX)source='qt/test/uritests.cpp' object='qt/test/qt_test_test_human-charity-coin_qt-uritests.o' libtool=no \
+qt/test/qt_test_test_hcc_qt-uritests.o: qt/test/uritests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_hcc_qt-uritests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_hcc_qt-uritests.Tpo -c -o qt/test/qt_test_test_hcc_qt-uritests.o `test -f 'qt/test/uritests.cpp' || echo '$(srcdir)/'`qt/test/uritests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_hcc_qt-uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_hcc_qt-uritests.Po
+#	$(AM_V_CXX)source='qt/test/uritests.cpp' object='qt/test/qt_test_test_hcc_qt-uritests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_human-charity-coin_qt-uritests.o `test -f 'qt/test/uritests.cpp' || echo '$(srcdir)/'`qt/test/uritests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_hcc_qt-uritests.o `test -f 'qt/test/uritests.cpp' || echo '$(srcdir)/'`qt/test/uritests.cpp
 
-qt/test/qt_test_test_human-charity-coin_qt-uritests.obj: qt/test/uritests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_human-charity-coin_qt-uritests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-uritests.Tpo -c -o qt/test/qt_test_test_human-charity-coin_qt-uritests.obj `if test -f 'qt/test/uritests.cpp'; then $(CYGPATH_W) 'qt/test/uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/uritests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-uritests.Po
-#	$(AM_V_CXX)source='qt/test/uritests.cpp' object='qt/test/qt_test_test_human-charity-coin_qt-uritests.obj' libtool=no \
+qt/test/qt_test_test_hcc_qt-uritests.obj: qt/test/uritests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_hcc_qt-uritests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_hcc_qt-uritests.Tpo -c -o qt/test/qt_test_test_hcc_qt-uritests.obj `if test -f 'qt/test/uritests.cpp'; then $(CYGPATH_W) 'qt/test/uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/uritests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_hcc_qt-uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_hcc_qt-uritests.Po
+#	$(AM_V_CXX)source='qt/test/uritests.cpp' object='qt/test/qt_test_test_hcc_qt-uritests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_human-charity-coin_qt-uritests.obj `if test -f 'qt/test/uritests.cpp'; then $(CYGPATH_W) 'qt/test/uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/uritests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_hcc_qt-uritests.obj `if test -f 'qt/test/uritests.cpp'; then $(CYGPATH_W) 'qt/test/uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/uritests.cpp'; fi`
 
-qt/test/qt_test_test_human-charity-coin_qt-paymentservertests.o: qt/test/paymentservertests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_human-charity-coin_qt-paymentservertests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-paymentservertests.Tpo -c -o qt/test/qt_test_test_human-charity-coin_qt-paymentservertests.o `test -f 'qt/test/paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/paymentservertests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-paymentservertests.Po
-#	$(AM_V_CXX)source='qt/test/paymentservertests.cpp' object='qt/test/qt_test_test_human-charity-coin_qt-paymentservertests.o' libtool=no \
+qt/test/qt_test_test_hcc_qt-paymentservertests.o: qt/test/paymentservertests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_hcc_qt-paymentservertests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_hcc_qt-paymentservertests.Tpo -c -o qt/test/qt_test_test_hcc_qt-paymentservertests.o `test -f 'qt/test/paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/paymentservertests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_hcc_qt-paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_hcc_qt-paymentservertests.Po
+#	$(AM_V_CXX)source='qt/test/paymentservertests.cpp' object='qt/test/qt_test_test_hcc_qt-paymentservertests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_human-charity-coin_qt-paymentservertests.o `test -f 'qt/test/paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/paymentservertests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_hcc_qt-paymentservertests.o `test -f 'qt/test/paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/paymentservertests.cpp
 
-qt/test/qt_test_test_human-charity-coin_qt-paymentservertests.obj: qt/test/paymentservertests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_human-charity-coin_qt-paymentservertests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-paymentservertests.Tpo -c -o qt/test/qt_test_test_human-charity-coin_qt-paymentservertests.obj `if test -f 'qt/test/paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/paymentservertests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-paymentservertests.Po
-#	$(AM_V_CXX)source='qt/test/paymentservertests.cpp' object='qt/test/qt_test_test_human-charity-coin_qt-paymentservertests.obj' libtool=no \
+qt/test/qt_test_test_hcc_qt-paymentservertests.obj: qt/test/paymentservertests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_hcc_qt-paymentservertests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_hcc_qt-paymentservertests.Tpo -c -o qt/test/qt_test_test_hcc_qt-paymentservertests.obj `if test -f 'qt/test/paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/paymentservertests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_hcc_qt-paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_hcc_qt-paymentservertests.Po
+#	$(AM_V_CXX)source='qt/test/paymentservertests.cpp' object='qt/test/qt_test_test_hcc_qt-paymentservertests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_human-charity-coin_qt-paymentservertests.obj `if test -f 'qt/test/paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/paymentservertests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_hcc_qt-paymentservertests.obj `if test -f 'qt/test/paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/paymentservertests.cpp'; fi`
 
-qt/test/qt_test_test_human-charity-coin_qt-moc_uritests.o: qt/test/moc_uritests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_human-charity-coin_qt-moc_uritests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-moc_uritests.Tpo -c -o qt/test/qt_test_test_human-charity-coin_qt-moc_uritests.o `test -f 'qt/test/moc_uritests.cpp' || echo '$(srcdir)/'`qt/test/moc_uritests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-moc_uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-moc_uritests.Po
-#	$(AM_V_CXX)source='qt/test/moc_uritests.cpp' object='qt/test/qt_test_test_human-charity-coin_qt-moc_uritests.o' libtool=no \
+qt/test/qt_test_test_hcc_qt-moc_uritests.o: qt/test/moc_uritests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_hcc_qt-moc_uritests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_hcc_qt-moc_uritests.Tpo -c -o qt/test/qt_test_test_hcc_qt-moc_uritests.o `test -f 'qt/test/moc_uritests.cpp' || echo '$(srcdir)/'`qt/test/moc_uritests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_hcc_qt-moc_uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_hcc_qt-moc_uritests.Po
+#	$(AM_V_CXX)source='qt/test/moc_uritests.cpp' object='qt/test/qt_test_test_hcc_qt-moc_uritests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_human-charity-coin_qt-moc_uritests.o `test -f 'qt/test/moc_uritests.cpp' || echo '$(srcdir)/'`qt/test/moc_uritests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_hcc_qt-moc_uritests.o `test -f 'qt/test/moc_uritests.cpp' || echo '$(srcdir)/'`qt/test/moc_uritests.cpp
 
-qt/test/qt_test_test_human-charity-coin_qt-moc_uritests.obj: qt/test/moc_uritests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_human-charity-coin_qt-moc_uritests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-moc_uritests.Tpo -c -o qt/test/qt_test_test_human-charity-coin_qt-moc_uritests.obj `if test -f 'qt/test/moc_uritests.cpp'; then $(CYGPATH_W) 'qt/test/moc_uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_uritests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-moc_uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-moc_uritests.Po
-#	$(AM_V_CXX)source='qt/test/moc_uritests.cpp' object='qt/test/qt_test_test_human-charity-coin_qt-moc_uritests.obj' libtool=no \
+qt/test/qt_test_test_hcc_qt-moc_uritests.obj: qt/test/moc_uritests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_hcc_qt-moc_uritests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_hcc_qt-moc_uritests.Tpo -c -o qt/test/qt_test_test_hcc_qt-moc_uritests.obj `if test -f 'qt/test/moc_uritests.cpp'; then $(CYGPATH_W) 'qt/test/moc_uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_uritests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_hcc_qt-moc_uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_hcc_qt-moc_uritests.Po
+#	$(AM_V_CXX)source='qt/test/moc_uritests.cpp' object='qt/test/qt_test_test_hcc_qt-moc_uritests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_human-charity-coin_qt-moc_uritests.obj `if test -f 'qt/test/moc_uritests.cpp'; then $(CYGPATH_W) 'qt/test/moc_uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_uritests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_hcc_qt-moc_uritests.obj `if test -f 'qt/test/moc_uritests.cpp'; then $(CYGPATH_W) 'qt/test/moc_uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_uritests.cpp'; fi`
 
-qt/test/qt_test_test_human-charity-coin_qt-moc_paymentservertests.o: qt/test/moc_paymentservertests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_human-charity-coin_qt-moc_paymentservertests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-moc_paymentservertests.Tpo -c -o qt/test/qt_test_test_human-charity-coin_qt-moc_paymentservertests.o `test -f 'qt/test/moc_paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/moc_paymentservertests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-moc_paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-moc_paymentservertests.Po
-#	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_human-charity-coin_qt-moc_paymentservertests.o' libtool=no \
+qt/test/qt_test_test_hcc_qt-moc_paymentservertests.o: qt/test/moc_paymentservertests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_hcc_qt-moc_paymentservertests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_hcc_qt-moc_paymentservertests.Tpo -c -o qt/test/qt_test_test_hcc_qt-moc_paymentservertests.o `test -f 'qt/test/moc_paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/moc_paymentservertests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_hcc_qt-moc_paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_hcc_qt-moc_paymentservertests.Po
+#	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_hcc_qt-moc_paymentservertests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_human-charity-coin_qt-moc_paymentservertests.o `test -f 'qt/test/moc_paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/moc_paymentservertests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_hcc_qt-moc_paymentservertests.o `test -f 'qt/test/moc_paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/moc_paymentservertests.cpp
 
-qt/test/qt_test_test_human-charity-coin_qt-moc_paymentservertests.obj: qt/test/moc_paymentservertests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_human-charity-coin_qt-moc_paymentservertests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-moc_paymentservertests.Tpo -c -o qt/test/qt_test_test_human-charity-coin_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-moc_paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_human-charity-coin_qt-moc_paymentservertests.Po
-#	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_human-charity-coin_qt-moc_paymentservertests.obj' libtool=no \
+qt/test/qt_test_test_hcc_qt-moc_paymentservertests.obj: qt/test/moc_paymentservertests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_hcc_qt-moc_paymentservertests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_hcc_qt-moc_paymentservertests.Tpo -c -o qt/test/qt_test_test_hcc_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_hcc_qt-moc_paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_hcc_qt-moc_paymentservertests.Po
+#	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_hcc_qt-moc_paymentservertests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_human-charity-coin_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_hcc_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
 
-test/test_test_human-charity-coin-allocator_tests.o: test/allocator_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-allocator_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-allocator_tests.Tpo -c -o test/test_test_human-charity-coin-allocator_tests.o `test -f 'test/allocator_tests.cpp' || echo '$(srcdir)/'`test/allocator_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-allocator_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-allocator_tests.Po
-#	$(AM_V_CXX)source='test/allocator_tests.cpp' object='test/test_test_human-charity-coin-allocator_tests.o' libtool=no \
+test/test_test_hcc-allocator_tests.o: test/allocator_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-allocator_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-allocator_tests.Tpo -c -o test/test_test_hcc-allocator_tests.o `test -f 'test/allocator_tests.cpp' || echo '$(srcdir)/'`test/allocator_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-allocator_tests.Tpo test/$(DEPDIR)/test_test_hcc-allocator_tests.Po
+#	$(AM_V_CXX)source='test/allocator_tests.cpp' object='test/test_test_hcc-allocator_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-allocator_tests.o `test -f 'test/allocator_tests.cpp' || echo '$(srcdir)/'`test/allocator_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-allocator_tests.o `test -f 'test/allocator_tests.cpp' || echo '$(srcdir)/'`test/allocator_tests.cpp
 
-test/test_test_human-charity-coin-allocator_tests.obj: test/allocator_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-allocator_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-allocator_tests.Tpo -c -o test/test_test_human-charity-coin-allocator_tests.obj `if test -f 'test/allocator_tests.cpp'; then $(CYGPATH_W) 'test/allocator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/allocator_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-allocator_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-allocator_tests.Po
-#	$(AM_V_CXX)source='test/allocator_tests.cpp' object='test/test_test_human-charity-coin-allocator_tests.obj' libtool=no \
+test/test_test_hcc-allocator_tests.obj: test/allocator_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-allocator_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-allocator_tests.Tpo -c -o test/test_test_hcc-allocator_tests.obj `if test -f 'test/allocator_tests.cpp'; then $(CYGPATH_W) 'test/allocator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/allocator_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-allocator_tests.Tpo test/$(DEPDIR)/test_test_hcc-allocator_tests.Po
+#	$(AM_V_CXX)source='test/allocator_tests.cpp' object='test/test_test_hcc-allocator_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-allocator_tests.obj `if test -f 'test/allocator_tests.cpp'; then $(CYGPATH_W) 'test/allocator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/allocator_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-allocator_tests.obj `if test -f 'test/allocator_tests.cpp'; then $(CYGPATH_W) 'test/allocator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/allocator_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-base32_tests.o: test/base32_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-base32_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-base32_tests.Tpo -c -o test/test_test_human-charity-coin-base32_tests.o `test -f 'test/base32_tests.cpp' || echo '$(srcdir)/'`test/base32_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-base32_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-base32_tests.Po
-#	$(AM_V_CXX)source='test/base32_tests.cpp' object='test/test_test_human-charity-coin-base32_tests.o' libtool=no \
+test/test_test_hcc-base32_tests.o: test/base32_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-base32_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-base32_tests.Tpo -c -o test/test_test_hcc-base32_tests.o `test -f 'test/base32_tests.cpp' || echo '$(srcdir)/'`test/base32_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-base32_tests.Tpo test/$(DEPDIR)/test_test_hcc-base32_tests.Po
+#	$(AM_V_CXX)source='test/base32_tests.cpp' object='test/test_test_hcc-base32_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-base32_tests.o `test -f 'test/base32_tests.cpp' || echo '$(srcdir)/'`test/base32_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-base32_tests.o `test -f 'test/base32_tests.cpp' || echo '$(srcdir)/'`test/base32_tests.cpp
 
-test/test_test_human-charity-coin-base32_tests.obj: test/base32_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-base32_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-base32_tests.Tpo -c -o test/test_test_human-charity-coin-base32_tests.obj `if test -f 'test/base32_tests.cpp'; then $(CYGPATH_W) 'test/base32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base32_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-base32_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-base32_tests.Po
-#	$(AM_V_CXX)source='test/base32_tests.cpp' object='test/test_test_human-charity-coin-base32_tests.obj' libtool=no \
+test/test_test_hcc-base32_tests.obj: test/base32_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-base32_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-base32_tests.Tpo -c -o test/test_test_hcc-base32_tests.obj `if test -f 'test/base32_tests.cpp'; then $(CYGPATH_W) 'test/base32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base32_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-base32_tests.Tpo test/$(DEPDIR)/test_test_hcc-base32_tests.Po
+#	$(AM_V_CXX)source='test/base32_tests.cpp' object='test/test_test_hcc-base32_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-base32_tests.obj `if test -f 'test/base32_tests.cpp'; then $(CYGPATH_W) 'test/base32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base32_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-base32_tests.obj `if test -f 'test/base32_tests.cpp'; then $(CYGPATH_W) 'test/base32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base32_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-base58_tests.o: test/base58_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-base58_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-base58_tests.Tpo -c -o test/test_test_human-charity-coin-base58_tests.o `test -f 'test/base58_tests.cpp' || echo '$(srcdir)/'`test/base58_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-base58_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-base58_tests.Po
-#	$(AM_V_CXX)source='test/base58_tests.cpp' object='test/test_test_human-charity-coin-base58_tests.o' libtool=no \
+test/test_test_hcc-base58_tests.o: test/base58_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-base58_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-base58_tests.Tpo -c -o test/test_test_hcc-base58_tests.o `test -f 'test/base58_tests.cpp' || echo '$(srcdir)/'`test/base58_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-base58_tests.Tpo test/$(DEPDIR)/test_test_hcc-base58_tests.Po
+#	$(AM_V_CXX)source='test/base58_tests.cpp' object='test/test_test_hcc-base58_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-base58_tests.o `test -f 'test/base58_tests.cpp' || echo '$(srcdir)/'`test/base58_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-base58_tests.o `test -f 'test/base58_tests.cpp' || echo '$(srcdir)/'`test/base58_tests.cpp
 
-test/test_test_human-charity-coin-base58_tests.obj: test/base58_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-base58_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-base58_tests.Tpo -c -o test/test_test_human-charity-coin-base58_tests.obj `if test -f 'test/base58_tests.cpp'; then $(CYGPATH_W) 'test/base58_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base58_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-base58_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-base58_tests.Po
-#	$(AM_V_CXX)source='test/base58_tests.cpp' object='test/test_test_human-charity-coin-base58_tests.obj' libtool=no \
+test/test_test_hcc-base58_tests.obj: test/base58_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-base58_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-base58_tests.Tpo -c -o test/test_test_hcc-base58_tests.obj `if test -f 'test/base58_tests.cpp'; then $(CYGPATH_W) 'test/base58_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base58_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-base58_tests.Tpo test/$(DEPDIR)/test_test_hcc-base58_tests.Po
+#	$(AM_V_CXX)source='test/base58_tests.cpp' object='test/test_test_hcc-base58_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-base58_tests.obj `if test -f 'test/base58_tests.cpp'; then $(CYGPATH_W) 'test/base58_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base58_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-base58_tests.obj `if test -f 'test/base58_tests.cpp'; then $(CYGPATH_W) 'test/base58_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base58_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-base64_tests.o: test/base64_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-base64_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-base64_tests.Tpo -c -o test/test_test_human-charity-coin-base64_tests.o `test -f 'test/base64_tests.cpp' || echo '$(srcdir)/'`test/base64_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-base64_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-base64_tests.Po
-#	$(AM_V_CXX)source='test/base64_tests.cpp' object='test/test_test_human-charity-coin-base64_tests.o' libtool=no \
+test/test_test_hcc-base64_tests.o: test/base64_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-base64_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-base64_tests.Tpo -c -o test/test_test_hcc-base64_tests.o `test -f 'test/base64_tests.cpp' || echo '$(srcdir)/'`test/base64_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-base64_tests.Tpo test/$(DEPDIR)/test_test_hcc-base64_tests.Po
+#	$(AM_V_CXX)source='test/base64_tests.cpp' object='test/test_test_hcc-base64_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-base64_tests.o `test -f 'test/base64_tests.cpp' || echo '$(srcdir)/'`test/base64_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-base64_tests.o `test -f 'test/base64_tests.cpp' || echo '$(srcdir)/'`test/base64_tests.cpp
 
-test/test_test_human-charity-coin-base64_tests.obj: test/base64_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-base64_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-base64_tests.Tpo -c -o test/test_test_human-charity-coin-base64_tests.obj `if test -f 'test/base64_tests.cpp'; then $(CYGPATH_W) 'test/base64_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base64_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-base64_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-base64_tests.Po
-#	$(AM_V_CXX)source='test/base64_tests.cpp' object='test/test_test_human-charity-coin-base64_tests.obj' libtool=no \
+test/test_test_hcc-base64_tests.obj: test/base64_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-base64_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-base64_tests.Tpo -c -o test/test_test_hcc-base64_tests.obj `if test -f 'test/base64_tests.cpp'; then $(CYGPATH_W) 'test/base64_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base64_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-base64_tests.Tpo test/$(DEPDIR)/test_test_hcc-base64_tests.Po
+#	$(AM_V_CXX)source='test/base64_tests.cpp' object='test/test_test_hcc-base64_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-base64_tests.obj `if test -f 'test/base64_tests.cpp'; then $(CYGPATH_W) 'test/base64_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base64_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-base64_tests.obj `if test -f 'test/base64_tests.cpp'; then $(CYGPATH_W) 'test/base64_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base64_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-checkblock_tests.o: test/checkblock_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-checkblock_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-checkblock_tests.Tpo -c -o test/test_test_human-charity-coin-checkblock_tests.o `test -f 'test/checkblock_tests.cpp' || echo '$(srcdir)/'`test/checkblock_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-checkblock_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-checkblock_tests.Po
-#	$(AM_V_CXX)source='test/checkblock_tests.cpp' object='test/test_test_human-charity-coin-checkblock_tests.o' libtool=no \
+test/test_test_hcc-checkblock_tests.o: test/checkblock_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-checkblock_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-checkblock_tests.Tpo -c -o test/test_test_hcc-checkblock_tests.o `test -f 'test/checkblock_tests.cpp' || echo '$(srcdir)/'`test/checkblock_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-checkblock_tests.Tpo test/$(DEPDIR)/test_test_hcc-checkblock_tests.Po
+#	$(AM_V_CXX)source='test/checkblock_tests.cpp' object='test/test_test_hcc-checkblock_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-checkblock_tests.o `test -f 'test/checkblock_tests.cpp' || echo '$(srcdir)/'`test/checkblock_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-checkblock_tests.o `test -f 'test/checkblock_tests.cpp' || echo '$(srcdir)/'`test/checkblock_tests.cpp
 
-test/test_test_human-charity-coin-checkblock_tests.obj: test/checkblock_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-checkblock_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-checkblock_tests.Tpo -c -o test/test_test_human-charity-coin-checkblock_tests.obj `if test -f 'test/checkblock_tests.cpp'; then $(CYGPATH_W) 'test/checkblock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/checkblock_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-checkblock_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-checkblock_tests.Po
-#	$(AM_V_CXX)source='test/checkblock_tests.cpp' object='test/test_test_human-charity-coin-checkblock_tests.obj' libtool=no \
+test/test_test_hcc-checkblock_tests.obj: test/checkblock_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-checkblock_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-checkblock_tests.Tpo -c -o test/test_test_hcc-checkblock_tests.obj `if test -f 'test/checkblock_tests.cpp'; then $(CYGPATH_W) 'test/checkblock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/checkblock_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-checkblock_tests.Tpo test/$(DEPDIR)/test_test_hcc-checkblock_tests.Po
+#	$(AM_V_CXX)source='test/checkblock_tests.cpp' object='test/test_test_hcc-checkblock_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-checkblock_tests.obj `if test -f 'test/checkblock_tests.cpp'; then $(CYGPATH_W) 'test/checkblock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/checkblock_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-checkblock_tests.obj `if test -f 'test/checkblock_tests.cpp'; then $(CYGPATH_W) 'test/checkblock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/checkblock_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-Checkpoints_tests.o: test/Checkpoints_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-Checkpoints_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-Checkpoints_tests.Tpo -c -o test/test_test_human-charity-coin-Checkpoints_tests.o `test -f 'test/Checkpoints_tests.cpp' || echo '$(srcdir)/'`test/Checkpoints_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-Checkpoints_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-Checkpoints_tests.Po
-#	$(AM_V_CXX)source='test/Checkpoints_tests.cpp' object='test/test_test_human-charity-coin-Checkpoints_tests.o' libtool=no \
+test/test_test_hcc-Checkpoints_tests.o: test/Checkpoints_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-Checkpoints_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-Checkpoints_tests.Tpo -c -o test/test_test_hcc-Checkpoints_tests.o `test -f 'test/Checkpoints_tests.cpp' || echo '$(srcdir)/'`test/Checkpoints_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-Checkpoints_tests.Tpo test/$(DEPDIR)/test_test_hcc-Checkpoints_tests.Po
+#	$(AM_V_CXX)source='test/Checkpoints_tests.cpp' object='test/test_test_hcc-Checkpoints_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-Checkpoints_tests.o `test -f 'test/Checkpoints_tests.cpp' || echo '$(srcdir)/'`test/Checkpoints_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-Checkpoints_tests.o `test -f 'test/Checkpoints_tests.cpp' || echo '$(srcdir)/'`test/Checkpoints_tests.cpp
 
-test/test_test_human-charity-coin-Checkpoints_tests.obj: test/Checkpoints_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-Checkpoints_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-Checkpoints_tests.Tpo -c -o test/test_test_human-charity-coin-Checkpoints_tests.obj `if test -f 'test/Checkpoints_tests.cpp'; then $(CYGPATH_W) 'test/Checkpoints_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/Checkpoints_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-Checkpoints_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-Checkpoints_tests.Po
-#	$(AM_V_CXX)source='test/Checkpoints_tests.cpp' object='test/test_test_human-charity-coin-Checkpoints_tests.obj' libtool=no \
+test/test_test_hcc-Checkpoints_tests.obj: test/Checkpoints_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-Checkpoints_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-Checkpoints_tests.Tpo -c -o test/test_test_hcc-Checkpoints_tests.obj `if test -f 'test/Checkpoints_tests.cpp'; then $(CYGPATH_W) 'test/Checkpoints_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/Checkpoints_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-Checkpoints_tests.Tpo test/$(DEPDIR)/test_test_hcc-Checkpoints_tests.Po
+#	$(AM_V_CXX)source='test/Checkpoints_tests.cpp' object='test/test_test_hcc-Checkpoints_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-Checkpoints_tests.obj `if test -f 'test/Checkpoints_tests.cpp'; then $(CYGPATH_W) 'test/Checkpoints_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/Checkpoints_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-Checkpoints_tests.obj `if test -f 'test/Checkpoints_tests.cpp'; then $(CYGPATH_W) 'test/Checkpoints_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/Checkpoints_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-coins_tests.o: test/coins_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-coins_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-coins_tests.Tpo -c -o test/test_test_human-charity-coin-coins_tests.o `test -f 'test/coins_tests.cpp' || echo '$(srcdir)/'`test/coins_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-coins_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-coins_tests.Po
-#	$(AM_V_CXX)source='test/coins_tests.cpp' object='test/test_test_human-charity-coin-coins_tests.o' libtool=no \
+test/test_test_hcc-coins_tests.o: test/coins_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-coins_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-coins_tests.Tpo -c -o test/test_test_hcc-coins_tests.o `test -f 'test/coins_tests.cpp' || echo '$(srcdir)/'`test/coins_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-coins_tests.Tpo test/$(DEPDIR)/test_test_hcc-coins_tests.Po
+#	$(AM_V_CXX)source='test/coins_tests.cpp' object='test/test_test_hcc-coins_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-coins_tests.o `test -f 'test/coins_tests.cpp' || echo '$(srcdir)/'`test/coins_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-coins_tests.o `test -f 'test/coins_tests.cpp' || echo '$(srcdir)/'`test/coins_tests.cpp
 
-test/test_test_human-charity-coin-coins_tests.obj: test/coins_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-coins_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-coins_tests.Tpo -c -o test/test_test_human-charity-coin-coins_tests.obj `if test -f 'test/coins_tests.cpp'; then $(CYGPATH_W) 'test/coins_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/coins_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-coins_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-coins_tests.Po
-#	$(AM_V_CXX)source='test/coins_tests.cpp' object='test/test_test_human-charity-coin-coins_tests.obj' libtool=no \
+test/test_test_hcc-coins_tests.obj: test/coins_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-coins_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-coins_tests.Tpo -c -o test/test_test_hcc-coins_tests.obj `if test -f 'test/coins_tests.cpp'; then $(CYGPATH_W) 'test/coins_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/coins_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-coins_tests.Tpo test/$(DEPDIR)/test_test_hcc-coins_tests.Po
+#	$(AM_V_CXX)source='test/coins_tests.cpp' object='test/test_test_hcc-coins_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-coins_tests.obj `if test -f 'test/coins_tests.cpp'; then $(CYGPATH_W) 'test/coins_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/coins_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-coins_tests.obj `if test -f 'test/coins_tests.cpp'; then $(CYGPATH_W) 'test/coins_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/coins_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-compress_tests.o: test/compress_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-compress_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-compress_tests.Tpo -c -o test/test_test_human-charity-coin-compress_tests.o `test -f 'test/compress_tests.cpp' || echo '$(srcdir)/'`test/compress_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-compress_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-compress_tests.Po
-#	$(AM_V_CXX)source='test/compress_tests.cpp' object='test/test_test_human-charity-coin-compress_tests.o' libtool=no \
+test/test_test_hcc-compress_tests.o: test/compress_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-compress_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-compress_tests.Tpo -c -o test/test_test_hcc-compress_tests.o `test -f 'test/compress_tests.cpp' || echo '$(srcdir)/'`test/compress_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-compress_tests.Tpo test/$(DEPDIR)/test_test_hcc-compress_tests.Po
+#	$(AM_V_CXX)source='test/compress_tests.cpp' object='test/test_test_hcc-compress_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-compress_tests.o `test -f 'test/compress_tests.cpp' || echo '$(srcdir)/'`test/compress_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-compress_tests.o `test -f 'test/compress_tests.cpp' || echo '$(srcdir)/'`test/compress_tests.cpp
 
-test/test_test_human-charity-coin-compress_tests.obj: test/compress_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-compress_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-compress_tests.Tpo -c -o test/test_test_human-charity-coin-compress_tests.obj `if test -f 'test/compress_tests.cpp'; then $(CYGPATH_W) 'test/compress_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/compress_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-compress_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-compress_tests.Po
-#	$(AM_V_CXX)source='test/compress_tests.cpp' object='test/test_test_human-charity-coin-compress_tests.obj' libtool=no \
+test/test_test_hcc-compress_tests.obj: test/compress_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-compress_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-compress_tests.Tpo -c -o test/test_test_hcc-compress_tests.obj `if test -f 'test/compress_tests.cpp'; then $(CYGPATH_W) 'test/compress_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/compress_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-compress_tests.Tpo test/$(DEPDIR)/test_test_hcc-compress_tests.Po
+#	$(AM_V_CXX)source='test/compress_tests.cpp' object='test/test_test_hcc-compress_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-compress_tests.obj `if test -f 'test/compress_tests.cpp'; then $(CYGPATH_W) 'test/compress_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/compress_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-compress_tests.obj `if test -f 'test/compress_tests.cpp'; then $(CYGPATH_W) 'test/compress_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/compress_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-crypto_tests.o: test/crypto_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-crypto_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-crypto_tests.Tpo -c -o test/test_test_human-charity-coin-crypto_tests.o `test -f 'test/crypto_tests.cpp' || echo '$(srcdir)/'`test/crypto_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-crypto_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-crypto_tests.Po
-#	$(AM_V_CXX)source='test/crypto_tests.cpp' object='test/test_test_human-charity-coin-crypto_tests.o' libtool=no \
+test/test_test_hcc-crypto_tests.o: test/crypto_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-crypto_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-crypto_tests.Tpo -c -o test/test_test_hcc-crypto_tests.o `test -f 'test/crypto_tests.cpp' || echo '$(srcdir)/'`test/crypto_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-crypto_tests.Tpo test/$(DEPDIR)/test_test_hcc-crypto_tests.Po
+#	$(AM_V_CXX)source='test/crypto_tests.cpp' object='test/test_test_hcc-crypto_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-crypto_tests.o `test -f 'test/crypto_tests.cpp' || echo '$(srcdir)/'`test/crypto_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-crypto_tests.o `test -f 'test/crypto_tests.cpp' || echo '$(srcdir)/'`test/crypto_tests.cpp
 
-test/test_test_human-charity-coin-crypto_tests.obj: test/crypto_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-crypto_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-crypto_tests.Tpo -c -o test/test_test_human-charity-coin-crypto_tests.obj `if test -f 'test/crypto_tests.cpp'; then $(CYGPATH_W) 'test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/crypto_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-crypto_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-crypto_tests.Po
-#	$(AM_V_CXX)source='test/crypto_tests.cpp' object='test/test_test_human-charity-coin-crypto_tests.obj' libtool=no \
+test/test_test_hcc-crypto_tests.obj: test/crypto_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-crypto_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-crypto_tests.Tpo -c -o test/test_test_hcc-crypto_tests.obj `if test -f 'test/crypto_tests.cpp'; then $(CYGPATH_W) 'test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/crypto_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-crypto_tests.Tpo test/$(DEPDIR)/test_test_hcc-crypto_tests.Po
+#	$(AM_V_CXX)source='test/crypto_tests.cpp' object='test/test_test_hcc-crypto_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-crypto_tests.obj `if test -f 'test/crypto_tests.cpp'; then $(CYGPATH_W) 'test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/crypto_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-crypto_tests.obj `if test -f 'test/crypto_tests.cpp'; then $(CYGPATH_W) 'test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/crypto_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-DoS_tests.o: test/DoS_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-DoS_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-DoS_tests.Tpo -c -o test/test_test_human-charity-coin-DoS_tests.o `test -f 'test/DoS_tests.cpp' || echo '$(srcdir)/'`test/DoS_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-DoS_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-DoS_tests.Po
-#	$(AM_V_CXX)source='test/DoS_tests.cpp' object='test/test_test_human-charity-coin-DoS_tests.o' libtool=no \
+test/test_test_hcc-DoS_tests.o: test/DoS_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-DoS_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-DoS_tests.Tpo -c -o test/test_test_hcc-DoS_tests.o `test -f 'test/DoS_tests.cpp' || echo '$(srcdir)/'`test/DoS_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-DoS_tests.Tpo test/$(DEPDIR)/test_test_hcc-DoS_tests.Po
+#	$(AM_V_CXX)source='test/DoS_tests.cpp' object='test/test_test_hcc-DoS_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-DoS_tests.o `test -f 'test/DoS_tests.cpp' || echo '$(srcdir)/'`test/DoS_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-DoS_tests.o `test -f 'test/DoS_tests.cpp' || echo '$(srcdir)/'`test/DoS_tests.cpp
 
-test/test_test_human-charity-coin-DoS_tests.obj: test/DoS_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-DoS_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-DoS_tests.Tpo -c -o test/test_test_human-charity-coin-DoS_tests.obj `if test -f 'test/DoS_tests.cpp'; then $(CYGPATH_W) 'test/DoS_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/DoS_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-DoS_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-DoS_tests.Po
-#	$(AM_V_CXX)source='test/DoS_tests.cpp' object='test/test_test_human-charity-coin-DoS_tests.obj' libtool=no \
+test/test_test_hcc-DoS_tests.obj: test/DoS_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-DoS_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-DoS_tests.Tpo -c -o test/test_test_hcc-DoS_tests.obj `if test -f 'test/DoS_tests.cpp'; then $(CYGPATH_W) 'test/DoS_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/DoS_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-DoS_tests.Tpo test/$(DEPDIR)/test_test_hcc-DoS_tests.Po
+#	$(AM_V_CXX)source='test/DoS_tests.cpp' object='test/test_test_hcc-DoS_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-DoS_tests.obj `if test -f 'test/DoS_tests.cpp'; then $(CYGPATH_W) 'test/DoS_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/DoS_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-DoS_tests.obj `if test -f 'test/DoS_tests.cpp'; then $(CYGPATH_W) 'test/DoS_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/DoS_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-getarg_tests.o: test/getarg_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-getarg_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-getarg_tests.Tpo -c -o test/test_test_human-charity-coin-getarg_tests.o `test -f 'test/getarg_tests.cpp' || echo '$(srcdir)/'`test/getarg_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-getarg_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-getarg_tests.Po
-#	$(AM_V_CXX)source='test/getarg_tests.cpp' object='test/test_test_human-charity-coin-getarg_tests.o' libtool=no \
+test/test_test_hcc-getarg_tests.o: test/getarg_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-getarg_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-getarg_tests.Tpo -c -o test/test_test_hcc-getarg_tests.o `test -f 'test/getarg_tests.cpp' || echo '$(srcdir)/'`test/getarg_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-getarg_tests.Tpo test/$(DEPDIR)/test_test_hcc-getarg_tests.Po
+#	$(AM_V_CXX)source='test/getarg_tests.cpp' object='test/test_test_hcc-getarg_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-getarg_tests.o `test -f 'test/getarg_tests.cpp' || echo '$(srcdir)/'`test/getarg_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-getarg_tests.o `test -f 'test/getarg_tests.cpp' || echo '$(srcdir)/'`test/getarg_tests.cpp
 
-test/test_test_human-charity-coin-getarg_tests.obj: test/getarg_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-getarg_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-getarg_tests.Tpo -c -o test/test_test_human-charity-coin-getarg_tests.obj `if test -f 'test/getarg_tests.cpp'; then $(CYGPATH_W) 'test/getarg_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/getarg_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-getarg_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-getarg_tests.Po
-#	$(AM_V_CXX)source='test/getarg_tests.cpp' object='test/test_test_human-charity-coin-getarg_tests.obj' libtool=no \
+test/test_test_hcc-getarg_tests.obj: test/getarg_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-getarg_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-getarg_tests.Tpo -c -o test/test_test_hcc-getarg_tests.obj `if test -f 'test/getarg_tests.cpp'; then $(CYGPATH_W) 'test/getarg_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/getarg_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-getarg_tests.Tpo test/$(DEPDIR)/test_test_hcc-getarg_tests.Po
+#	$(AM_V_CXX)source='test/getarg_tests.cpp' object='test/test_test_hcc-getarg_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-getarg_tests.obj `if test -f 'test/getarg_tests.cpp'; then $(CYGPATH_W) 'test/getarg_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/getarg_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-getarg_tests.obj `if test -f 'test/getarg_tests.cpp'; then $(CYGPATH_W) 'test/getarg_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/getarg_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-hash_tests.o: test/hash_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-hash_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-hash_tests.Tpo -c -o test/test_test_human-charity-coin-hash_tests.o `test -f 'test/hash_tests.cpp' || echo '$(srcdir)/'`test/hash_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-hash_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-hash_tests.Po
-#	$(AM_V_CXX)source='test/hash_tests.cpp' object='test/test_test_human-charity-coin-hash_tests.o' libtool=no \
+test/test_test_hcc-hash_tests.o: test/hash_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-hash_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-hash_tests.Tpo -c -o test/test_test_hcc-hash_tests.o `test -f 'test/hash_tests.cpp' || echo '$(srcdir)/'`test/hash_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-hash_tests.Tpo test/$(DEPDIR)/test_test_hcc-hash_tests.Po
+#	$(AM_V_CXX)source='test/hash_tests.cpp' object='test/test_test_hcc-hash_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-hash_tests.o `test -f 'test/hash_tests.cpp' || echo '$(srcdir)/'`test/hash_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-hash_tests.o `test -f 'test/hash_tests.cpp' || echo '$(srcdir)/'`test/hash_tests.cpp
 
-test/test_test_human-charity-coin-hash_tests.obj: test/hash_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-hash_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-hash_tests.Tpo -c -o test/test_test_human-charity-coin-hash_tests.obj `if test -f 'test/hash_tests.cpp'; then $(CYGPATH_W) 'test/hash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/hash_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-hash_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-hash_tests.Po
-#	$(AM_V_CXX)source='test/hash_tests.cpp' object='test/test_test_human-charity-coin-hash_tests.obj' libtool=no \
+test/test_test_hcc-hash_tests.obj: test/hash_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-hash_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-hash_tests.Tpo -c -o test/test_test_hcc-hash_tests.obj `if test -f 'test/hash_tests.cpp'; then $(CYGPATH_W) 'test/hash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/hash_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-hash_tests.Tpo test/$(DEPDIR)/test_test_hcc-hash_tests.Po
+#	$(AM_V_CXX)source='test/hash_tests.cpp' object='test/test_test_hcc-hash_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-hash_tests.obj `if test -f 'test/hash_tests.cpp'; then $(CYGPATH_W) 'test/hash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/hash_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-hash_tests.obj `if test -f 'test/hash_tests.cpp'; then $(CYGPATH_W) 'test/hash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/hash_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-key_tests.o: test/key_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-key_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-key_tests.Tpo -c -o test/test_test_human-charity-coin-key_tests.o `test -f 'test/key_tests.cpp' || echo '$(srcdir)/'`test/key_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-key_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-key_tests.Po
-#	$(AM_V_CXX)source='test/key_tests.cpp' object='test/test_test_human-charity-coin-key_tests.o' libtool=no \
+test/test_test_hcc-key_tests.o: test/key_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-key_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-key_tests.Tpo -c -o test/test_test_hcc-key_tests.o `test -f 'test/key_tests.cpp' || echo '$(srcdir)/'`test/key_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-key_tests.Tpo test/$(DEPDIR)/test_test_hcc-key_tests.Po
+#	$(AM_V_CXX)source='test/key_tests.cpp' object='test/test_test_hcc-key_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-key_tests.o `test -f 'test/key_tests.cpp' || echo '$(srcdir)/'`test/key_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-key_tests.o `test -f 'test/key_tests.cpp' || echo '$(srcdir)/'`test/key_tests.cpp
 
-test/test_test_human-charity-coin-key_tests.obj: test/key_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-key_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-key_tests.Tpo -c -o test/test_test_human-charity-coin-key_tests.obj `if test -f 'test/key_tests.cpp'; then $(CYGPATH_W) 'test/key_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/key_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-key_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-key_tests.Po
-#	$(AM_V_CXX)source='test/key_tests.cpp' object='test/test_test_human-charity-coin-key_tests.obj' libtool=no \
+test/test_test_hcc-key_tests.obj: test/key_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-key_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-key_tests.Tpo -c -o test/test_test_hcc-key_tests.obj `if test -f 'test/key_tests.cpp'; then $(CYGPATH_W) 'test/key_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/key_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-key_tests.Tpo test/$(DEPDIR)/test_test_hcc-key_tests.Po
+#	$(AM_V_CXX)source='test/key_tests.cpp' object='test/test_test_hcc-key_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-key_tests.obj `if test -f 'test/key_tests.cpp'; then $(CYGPATH_W) 'test/key_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/key_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-key_tests.obj `if test -f 'test/key_tests.cpp'; then $(CYGPATH_W) 'test/key_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/key_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-main_tests.o: test/main_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-main_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-main_tests.Tpo -c -o test/test_test_human-charity-coin-main_tests.o `test -f 'test/main_tests.cpp' || echo '$(srcdir)/'`test/main_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-main_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-main_tests.Po
-#	$(AM_V_CXX)source='test/main_tests.cpp' object='test/test_test_human-charity-coin-main_tests.o' libtool=no \
+test/test_test_hcc-main_tests.o: test/main_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-main_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-main_tests.Tpo -c -o test/test_test_hcc-main_tests.o `test -f 'test/main_tests.cpp' || echo '$(srcdir)/'`test/main_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-main_tests.Tpo test/$(DEPDIR)/test_test_hcc-main_tests.Po
+#	$(AM_V_CXX)source='test/main_tests.cpp' object='test/test_test_hcc-main_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-main_tests.o `test -f 'test/main_tests.cpp' || echo '$(srcdir)/'`test/main_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-main_tests.o `test -f 'test/main_tests.cpp' || echo '$(srcdir)/'`test/main_tests.cpp
 
-test/test_test_human-charity-coin-main_tests.obj: test/main_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-main_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-main_tests.Tpo -c -o test/test_test_human-charity-coin-main_tests.obj `if test -f 'test/main_tests.cpp'; then $(CYGPATH_W) 'test/main_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/main_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-main_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-main_tests.Po
-#	$(AM_V_CXX)source='test/main_tests.cpp' object='test/test_test_human-charity-coin-main_tests.obj' libtool=no \
+test/test_test_hcc-main_tests.obj: test/main_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-main_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-main_tests.Tpo -c -o test/test_test_hcc-main_tests.obj `if test -f 'test/main_tests.cpp'; then $(CYGPATH_W) 'test/main_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/main_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-main_tests.Tpo test/$(DEPDIR)/test_test_hcc-main_tests.Po
+#	$(AM_V_CXX)source='test/main_tests.cpp' object='test/test_test_hcc-main_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-main_tests.obj `if test -f 'test/main_tests.cpp'; then $(CYGPATH_W) 'test/main_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/main_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-main_tests.obj `if test -f 'test/main_tests.cpp'; then $(CYGPATH_W) 'test/main_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/main_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-mempool_tests.o: test/mempool_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-mempool_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-mempool_tests.Tpo -c -o test/test_test_human-charity-coin-mempool_tests.o `test -f 'test/mempool_tests.cpp' || echo '$(srcdir)/'`test/mempool_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-mempool_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-mempool_tests.Po
-#	$(AM_V_CXX)source='test/mempool_tests.cpp' object='test/test_test_human-charity-coin-mempool_tests.o' libtool=no \
+test/test_test_hcc-mempool_tests.o: test/mempool_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-mempool_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-mempool_tests.Tpo -c -o test/test_test_hcc-mempool_tests.o `test -f 'test/mempool_tests.cpp' || echo '$(srcdir)/'`test/mempool_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-mempool_tests.Tpo test/$(DEPDIR)/test_test_hcc-mempool_tests.Po
+#	$(AM_V_CXX)source='test/mempool_tests.cpp' object='test/test_test_hcc-mempool_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-mempool_tests.o `test -f 'test/mempool_tests.cpp' || echo '$(srcdir)/'`test/mempool_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-mempool_tests.o `test -f 'test/mempool_tests.cpp' || echo '$(srcdir)/'`test/mempool_tests.cpp
 
-test/test_test_human-charity-coin-mempool_tests.obj: test/mempool_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-mempool_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-mempool_tests.Tpo -c -o test/test_test_human-charity-coin-mempool_tests.obj `if test -f 'test/mempool_tests.cpp'; then $(CYGPATH_W) 'test/mempool_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mempool_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-mempool_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-mempool_tests.Po
-#	$(AM_V_CXX)source='test/mempool_tests.cpp' object='test/test_test_human-charity-coin-mempool_tests.obj' libtool=no \
+test/test_test_hcc-mempool_tests.obj: test/mempool_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-mempool_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-mempool_tests.Tpo -c -o test/test_test_hcc-mempool_tests.obj `if test -f 'test/mempool_tests.cpp'; then $(CYGPATH_W) 'test/mempool_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mempool_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-mempool_tests.Tpo test/$(DEPDIR)/test_test_hcc-mempool_tests.Po
+#	$(AM_V_CXX)source='test/mempool_tests.cpp' object='test/test_test_hcc-mempool_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-mempool_tests.obj `if test -f 'test/mempool_tests.cpp'; then $(CYGPATH_W) 'test/mempool_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mempool_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-mempool_tests.obj `if test -f 'test/mempool_tests.cpp'; then $(CYGPATH_W) 'test/mempool_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mempool_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-mruset_tests.o: test/mruset_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-mruset_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-mruset_tests.Tpo -c -o test/test_test_human-charity-coin-mruset_tests.o `test -f 'test/mruset_tests.cpp' || echo '$(srcdir)/'`test/mruset_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-mruset_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-mruset_tests.Po
-#	$(AM_V_CXX)source='test/mruset_tests.cpp' object='test/test_test_human-charity-coin-mruset_tests.o' libtool=no \
+test/test_test_hcc-mruset_tests.o: test/mruset_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-mruset_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-mruset_tests.Tpo -c -o test/test_test_hcc-mruset_tests.o `test -f 'test/mruset_tests.cpp' || echo '$(srcdir)/'`test/mruset_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-mruset_tests.Tpo test/$(DEPDIR)/test_test_hcc-mruset_tests.Po
+#	$(AM_V_CXX)source='test/mruset_tests.cpp' object='test/test_test_hcc-mruset_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-mruset_tests.o `test -f 'test/mruset_tests.cpp' || echo '$(srcdir)/'`test/mruset_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-mruset_tests.o `test -f 'test/mruset_tests.cpp' || echo '$(srcdir)/'`test/mruset_tests.cpp
 
-test/test_test_human-charity-coin-mruset_tests.obj: test/mruset_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-mruset_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-mruset_tests.Tpo -c -o test/test_test_human-charity-coin-mruset_tests.obj `if test -f 'test/mruset_tests.cpp'; then $(CYGPATH_W) 'test/mruset_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mruset_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-mruset_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-mruset_tests.Po
-#	$(AM_V_CXX)source='test/mruset_tests.cpp' object='test/test_test_human-charity-coin-mruset_tests.obj' libtool=no \
+test/test_test_hcc-mruset_tests.obj: test/mruset_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-mruset_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-mruset_tests.Tpo -c -o test/test_test_hcc-mruset_tests.obj `if test -f 'test/mruset_tests.cpp'; then $(CYGPATH_W) 'test/mruset_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mruset_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-mruset_tests.Tpo test/$(DEPDIR)/test_test_hcc-mruset_tests.Po
+#	$(AM_V_CXX)source='test/mruset_tests.cpp' object='test/test_test_hcc-mruset_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-mruset_tests.obj `if test -f 'test/mruset_tests.cpp'; then $(CYGPATH_W) 'test/mruset_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mruset_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-mruset_tests.obj `if test -f 'test/mruset_tests.cpp'; then $(CYGPATH_W) 'test/mruset_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mruset_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-multisig_tests.o: test/multisig_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-multisig_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-multisig_tests.Tpo -c -o test/test_test_human-charity-coin-multisig_tests.o `test -f 'test/multisig_tests.cpp' || echo '$(srcdir)/'`test/multisig_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-multisig_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-multisig_tests.Po
-#	$(AM_V_CXX)source='test/multisig_tests.cpp' object='test/test_test_human-charity-coin-multisig_tests.o' libtool=no \
+test/test_test_hcc-multisig_tests.o: test/multisig_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-multisig_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-multisig_tests.Tpo -c -o test/test_test_hcc-multisig_tests.o `test -f 'test/multisig_tests.cpp' || echo '$(srcdir)/'`test/multisig_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-multisig_tests.Tpo test/$(DEPDIR)/test_test_hcc-multisig_tests.Po
+#	$(AM_V_CXX)source='test/multisig_tests.cpp' object='test/test_test_hcc-multisig_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-multisig_tests.o `test -f 'test/multisig_tests.cpp' || echo '$(srcdir)/'`test/multisig_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-multisig_tests.o `test -f 'test/multisig_tests.cpp' || echo '$(srcdir)/'`test/multisig_tests.cpp
 
-test/test_test_human-charity-coin-multisig_tests.obj: test/multisig_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-multisig_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-multisig_tests.Tpo -c -o test/test_test_human-charity-coin-multisig_tests.obj `if test -f 'test/multisig_tests.cpp'; then $(CYGPATH_W) 'test/multisig_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/multisig_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-multisig_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-multisig_tests.Po
-#	$(AM_V_CXX)source='test/multisig_tests.cpp' object='test/test_test_human-charity-coin-multisig_tests.obj' libtool=no \
+test/test_test_hcc-multisig_tests.obj: test/multisig_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-multisig_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-multisig_tests.Tpo -c -o test/test_test_hcc-multisig_tests.obj `if test -f 'test/multisig_tests.cpp'; then $(CYGPATH_W) 'test/multisig_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/multisig_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-multisig_tests.Tpo test/$(DEPDIR)/test_test_hcc-multisig_tests.Po
+#	$(AM_V_CXX)source='test/multisig_tests.cpp' object='test/test_test_hcc-multisig_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-multisig_tests.obj `if test -f 'test/multisig_tests.cpp'; then $(CYGPATH_W) 'test/multisig_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/multisig_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-multisig_tests.obj `if test -f 'test/multisig_tests.cpp'; then $(CYGPATH_W) 'test/multisig_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/multisig_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-netbase_tests.o: test/netbase_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-netbase_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-netbase_tests.Tpo -c -o test/test_test_human-charity-coin-netbase_tests.o `test -f 'test/netbase_tests.cpp' || echo '$(srcdir)/'`test/netbase_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-netbase_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-netbase_tests.Po
-#	$(AM_V_CXX)source='test/netbase_tests.cpp' object='test/test_test_human-charity-coin-netbase_tests.o' libtool=no \
+test/test_test_hcc-netbase_tests.o: test/netbase_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-netbase_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-netbase_tests.Tpo -c -o test/test_test_hcc-netbase_tests.o `test -f 'test/netbase_tests.cpp' || echo '$(srcdir)/'`test/netbase_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-netbase_tests.Tpo test/$(DEPDIR)/test_test_hcc-netbase_tests.Po
+#	$(AM_V_CXX)source='test/netbase_tests.cpp' object='test/test_test_hcc-netbase_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-netbase_tests.o `test -f 'test/netbase_tests.cpp' || echo '$(srcdir)/'`test/netbase_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-netbase_tests.o `test -f 'test/netbase_tests.cpp' || echo '$(srcdir)/'`test/netbase_tests.cpp
 
-test/test_test_human-charity-coin-netbase_tests.obj: test/netbase_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-netbase_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-netbase_tests.Tpo -c -o test/test_test_human-charity-coin-netbase_tests.obj `if test -f 'test/netbase_tests.cpp'; then $(CYGPATH_W) 'test/netbase_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/netbase_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-netbase_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-netbase_tests.Po
-#	$(AM_V_CXX)source='test/netbase_tests.cpp' object='test/test_test_human-charity-coin-netbase_tests.obj' libtool=no \
+test/test_test_hcc-netbase_tests.obj: test/netbase_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-netbase_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-netbase_tests.Tpo -c -o test/test_test_hcc-netbase_tests.obj `if test -f 'test/netbase_tests.cpp'; then $(CYGPATH_W) 'test/netbase_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/netbase_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-netbase_tests.Tpo test/$(DEPDIR)/test_test_hcc-netbase_tests.Po
+#	$(AM_V_CXX)source='test/netbase_tests.cpp' object='test/test_test_hcc-netbase_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-netbase_tests.obj `if test -f 'test/netbase_tests.cpp'; then $(CYGPATH_W) 'test/netbase_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/netbase_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-netbase_tests.obj `if test -f 'test/netbase_tests.cpp'; then $(CYGPATH_W) 'test/netbase_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/netbase_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-pmt_tests.o: test/pmt_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-pmt_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-pmt_tests.Tpo -c -o test/test_test_human-charity-coin-pmt_tests.o `test -f 'test/pmt_tests.cpp' || echo '$(srcdir)/'`test/pmt_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-pmt_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-pmt_tests.Po
-#	$(AM_V_CXX)source='test/pmt_tests.cpp' object='test/test_test_human-charity-coin-pmt_tests.o' libtool=no \
+test/test_test_hcc-pmt_tests.o: test/pmt_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-pmt_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-pmt_tests.Tpo -c -o test/test_test_hcc-pmt_tests.o `test -f 'test/pmt_tests.cpp' || echo '$(srcdir)/'`test/pmt_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-pmt_tests.Tpo test/$(DEPDIR)/test_test_hcc-pmt_tests.Po
+#	$(AM_V_CXX)source='test/pmt_tests.cpp' object='test/test_test_hcc-pmt_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-pmt_tests.o `test -f 'test/pmt_tests.cpp' || echo '$(srcdir)/'`test/pmt_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-pmt_tests.o `test -f 'test/pmt_tests.cpp' || echo '$(srcdir)/'`test/pmt_tests.cpp
 
-test/test_test_human-charity-coin-pmt_tests.obj: test/pmt_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-pmt_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-pmt_tests.Tpo -c -o test/test_test_human-charity-coin-pmt_tests.obj `if test -f 'test/pmt_tests.cpp'; then $(CYGPATH_W) 'test/pmt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pmt_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-pmt_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-pmt_tests.Po
-#	$(AM_V_CXX)source='test/pmt_tests.cpp' object='test/test_test_human-charity-coin-pmt_tests.obj' libtool=no \
+test/test_test_hcc-pmt_tests.obj: test/pmt_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-pmt_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-pmt_tests.Tpo -c -o test/test_test_hcc-pmt_tests.obj `if test -f 'test/pmt_tests.cpp'; then $(CYGPATH_W) 'test/pmt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pmt_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-pmt_tests.Tpo test/$(DEPDIR)/test_test_hcc-pmt_tests.Po
+#	$(AM_V_CXX)source='test/pmt_tests.cpp' object='test/test_test_hcc-pmt_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-pmt_tests.obj `if test -f 'test/pmt_tests.cpp'; then $(CYGPATH_W) 'test/pmt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pmt_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-pmt_tests.obj `if test -f 'test/pmt_tests.cpp'; then $(CYGPATH_W) 'test/pmt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pmt_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-reverselock_tests.o: test/reverselock_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-reverselock_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-reverselock_tests.Tpo -c -o test/test_test_human-charity-coin-reverselock_tests.o `test -f 'test/reverselock_tests.cpp' || echo '$(srcdir)/'`test/reverselock_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-reverselock_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-reverselock_tests.Po
-#	$(AM_V_CXX)source='test/reverselock_tests.cpp' object='test/test_test_human-charity-coin-reverselock_tests.o' libtool=no \
+test/test_test_hcc-reverselock_tests.o: test/reverselock_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-reverselock_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-reverselock_tests.Tpo -c -o test/test_test_hcc-reverselock_tests.o `test -f 'test/reverselock_tests.cpp' || echo '$(srcdir)/'`test/reverselock_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-reverselock_tests.Tpo test/$(DEPDIR)/test_test_hcc-reverselock_tests.Po
+#	$(AM_V_CXX)source='test/reverselock_tests.cpp' object='test/test_test_hcc-reverselock_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-reverselock_tests.o `test -f 'test/reverselock_tests.cpp' || echo '$(srcdir)/'`test/reverselock_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-reverselock_tests.o `test -f 'test/reverselock_tests.cpp' || echo '$(srcdir)/'`test/reverselock_tests.cpp
 
-test/test_test_human-charity-coin-reverselock_tests.obj: test/reverselock_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-reverselock_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-reverselock_tests.Tpo -c -o test/test_test_human-charity-coin-reverselock_tests.obj `if test -f 'test/reverselock_tests.cpp'; then $(CYGPATH_W) 'test/reverselock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/reverselock_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-reverselock_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-reverselock_tests.Po
-#	$(AM_V_CXX)source='test/reverselock_tests.cpp' object='test/test_test_human-charity-coin-reverselock_tests.obj' libtool=no \
+test/test_test_hcc-reverselock_tests.obj: test/reverselock_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-reverselock_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-reverselock_tests.Tpo -c -o test/test_test_hcc-reverselock_tests.obj `if test -f 'test/reverselock_tests.cpp'; then $(CYGPATH_W) 'test/reverselock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/reverselock_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-reverselock_tests.Tpo test/$(DEPDIR)/test_test_hcc-reverselock_tests.Po
+#	$(AM_V_CXX)source='test/reverselock_tests.cpp' object='test/test_test_hcc-reverselock_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-reverselock_tests.obj `if test -f 'test/reverselock_tests.cpp'; then $(CYGPATH_W) 'test/reverselock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/reverselock_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-reverselock_tests.obj `if test -f 'test/reverselock_tests.cpp'; then $(CYGPATH_W) 'test/reverselock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/reverselock_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-rpc_tests.o: test/rpc_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-rpc_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-rpc_tests.Tpo -c -o test/test_test_human-charity-coin-rpc_tests.o `test -f 'test/rpc_tests.cpp' || echo '$(srcdir)/'`test/rpc_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-rpc_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-rpc_tests.Po
-#	$(AM_V_CXX)source='test/rpc_tests.cpp' object='test/test_test_human-charity-coin-rpc_tests.o' libtool=no \
+test/test_test_hcc-rpc_tests.o: test/rpc_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-rpc_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-rpc_tests.Tpo -c -o test/test_test_hcc-rpc_tests.o `test -f 'test/rpc_tests.cpp' || echo '$(srcdir)/'`test/rpc_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-rpc_tests.Tpo test/$(DEPDIR)/test_test_hcc-rpc_tests.Po
+#	$(AM_V_CXX)source='test/rpc_tests.cpp' object='test/test_test_hcc-rpc_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-rpc_tests.o `test -f 'test/rpc_tests.cpp' || echo '$(srcdir)/'`test/rpc_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-rpc_tests.o `test -f 'test/rpc_tests.cpp' || echo '$(srcdir)/'`test/rpc_tests.cpp
 
-test/test_test_human-charity-coin-rpc_tests.obj: test/rpc_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-rpc_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-rpc_tests.Tpo -c -o test/test_test_human-charity-coin-rpc_tests.obj `if test -f 'test/rpc_tests.cpp'; then $(CYGPATH_W) 'test/rpc_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-rpc_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-rpc_tests.Po
-#	$(AM_V_CXX)source='test/rpc_tests.cpp' object='test/test_test_human-charity-coin-rpc_tests.obj' libtool=no \
+test/test_test_hcc-rpc_tests.obj: test/rpc_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-rpc_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-rpc_tests.Tpo -c -o test/test_test_hcc-rpc_tests.obj `if test -f 'test/rpc_tests.cpp'; then $(CYGPATH_W) 'test/rpc_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-rpc_tests.Tpo test/$(DEPDIR)/test_test_hcc-rpc_tests.Po
+#	$(AM_V_CXX)source='test/rpc_tests.cpp' object='test/test_test_hcc-rpc_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-rpc_tests.obj `if test -f 'test/rpc_tests.cpp'; then $(CYGPATH_W) 'test/rpc_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-rpc_tests.obj `if test -f 'test/rpc_tests.cpp'; then $(CYGPATH_W) 'test/rpc_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-sanity_tests.o: test/sanity_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-sanity_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-sanity_tests.Tpo -c -o test/test_test_human-charity-coin-sanity_tests.o `test -f 'test/sanity_tests.cpp' || echo '$(srcdir)/'`test/sanity_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-sanity_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-sanity_tests.Po
-#	$(AM_V_CXX)source='test/sanity_tests.cpp' object='test/test_test_human-charity-coin-sanity_tests.o' libtool=no \
+test/test_test_hcc-sanity_tests.o: test/sanity_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-sanity_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-sanity_tests.Tpo -c -o test/test_test_hcc-sanity_tests.o `test -f 'test/sanity_tests.cpp' || echo '$(srcdir)/'`test/sanity_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-sanity_tests.Tpo test/$(DEPDIR)/test_test_hcc-sanity_tests.Po
+#	$(AM_V_CXX)source='test/sanity_tests.cpp' object='test/test_test_hcc-sanity_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-sanity_tests.o `test -f 'test/sanity_tests.cpp' || echo '$(srcdir)/'`test/sanity_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-sanity_tests.o `test -f 'test/sanity_tests.cpp' || echo '$(srcdir)/'`test/sanity_tests.cpp
 
-test/test_test_human-charity-coin-sanity_tests.obj: test/sanity_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-sanity_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-sanity_tests.Tpo -c -o test/test_test_human-charity-coin-sanity_tests.obj `if test -f 'test/sanity_tests.cpp'; then $(CYGPATH_W) 'test/sanity_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sanity_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-sanity_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-sanity_tests.Po
-#	$(AM_V_CXX)source='test/sanity_tests.cpp' object='test/test_test_human-charity-coin-sanity_tests.obj' libtool=no \
+test/test_test_hcc-sanity_tests.obj: test/sanity_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-sanity_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-sanity_tests.Tpo -c -o test/test_test_hcc-sanity_tests.obj `if test -f 'test/sanity_tests.cpp'; then $(CYGPATH_W) 'test/sanity_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sanity_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-sanity_tests.Tpo test/$(DEPDIR)/test_test_hcc-sanity_tests.Po
+#	$(AM_V_CXX)source='test/sanity_tests.cpp' object='test/test_test_hcc-sanity_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-sanity_tests.obj `if test -f 'test/sanity_tests.cpp'; then $(CYGPATH_W) 'test/sanity_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sanity_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-sanity_tests.obj `if test -f 'test/sanity_tests.cpp'; then $(CYGPATH_W) 'test/sanity_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sanity_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-scheduler_tests.o: test/scheduler_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-scheduler_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-scheduler_tests.Tpo -c -o test/test_test_human-charity-coin-scheduler_tests.o `test -f 'test/scheduler_tests.cpp' || echo '$(srcdir)/'`test/scheduler_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-scheduler_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-scheduler_tests.Po
-#	$(AM_V_CXX)source='test/scheduler_tests.cpp' object='test/test_test_human-charity-coin-scheduler_tests.o' libtool=no \
+test/test_test_hcc-scheduler_tests.o: test/scheduler_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-scheduler_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-scheduler_tests.Tpo -c -o test/test_test_hcc-scheduler_tests.o `test -f 'test/scheduler_tests.cpp' || echo '$(srcdir)/'`test/scheduler_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-scheduler_tests.Tpo test/$(DEPDIR)/test_test_hcc-scheduler_tests.Po
+#	$(AM_V_CXX)source='test/scheduler_tests.cpp' object='test/test_test_hcc-scheduler_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-scheduler_tests.o `test -f 'test/scheduler_tests.cpp' || echo '$(srcdir)/'`test/scheduler_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-scheduler_tests.o `test -f 'test/scheduler_tests.cpp' || echo '$(srcdir)/'`test/scheduler_tests.cpp
 
-test/test_test_human-charity-coin-scheduler_tests.obj: test/scheduler_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-scheduler_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-scheduler_tests.Tpo -c -o test/test_test_human-charity-coin-scheduler_tests.obj `if test -f 'test/scheduler_tests.cpp'; then $(CYGPATH_W) 'test/scheduler_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scheduler_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-scheduler_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-scheduler_tests.Po
-#	$(AM_V_CXX)source='test/scheduler_tests.cpp' object='test/test_test_human-charity-coin-scheduler_tests.obj' libtool=no \
+test/test_test_hcc-scheduler_tests.obj: test/scheduler_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-scheduler_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-scheduler_tests.Tpo -c -o test/test_test_hcc-scheduler_tests.obj `if test -f 'test/scheduler_tests.cpp'; then $(CYGPATH_W) 'test/scheduler_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scheduler_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-scheduler_tests.Tpo test/$(DEPDIR)/test_test_hcc-scheduler_tests.Po
+#	$(AM_V_CXX)source='test/scheduler_tests.cpp' object='test/test_test_hcc-scheduler_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-scheduler_tests.obj `if test -f 'test/scheduler_tests.cpp'; then $(CYGPATH_W) 'test/scheduler_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scheduler_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-scheduler_tests.obj `if test -f 'test/scheduler_tests.cpp'; then $(CYGPATH_W) 'test/scheduler_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scheduler_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-script_P2SH_tests.o: test/script_P2SH_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-script_P2SH_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-script_P2SH_tests.Tpo -c -o test/test_test_human-charity-coin-script_P2SH_tests.o `test -f 'test/script_P2SH_tests.cpp' || echo '$(srcdir)/'`test/script_P2SH_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-script_P2SH_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-script_P2SH_tests.Po
-#	$(AM_V_CXX)source='test/script_P2SH_tests.cpp' object='test/test_test_human-charity-coin-script_P2SH_tests.o' libtool=no \
+test/test_test_hcc-script_P2SH_tests.o: test/script_P2SH_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-script_P2SH_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-script_P2SH_tests.Tpo -c -o test/test_test_hcc-script_P2SH_tests.o `test -f 'test/script_P2SH_tests.cpp' || echo '$(srcdir)/'`test/script_P2SH_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-script_P2SH_tests.Tpo test/$(DEPDIR)/test_test_hcc-script_P2SH_tests.Po
+#	$(AM_V_CXX)source='test/script_P2SH_tests.cpp' object='test/test_test_hcc-script_P2SH_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-script_P2SH_tests.o `test -f 'test/script_P2SH_tests.cpp' || echo '$(srcdir)/'`test/script_P2SH_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-script_P2SH_tests.o `test -f 'test/script_P2SH_tests.cpp' || echo '$(srcdir)/'`test/script_P2SH_tests.cpp
 
-test/test_test_human-charity-coin-script_P2SH_tests.obj: test/script_P2SH_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-script_P2SH_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-script_P2SH_tests.Tpo -c -o test/test_test_human-charity-coin-script_P2SH_tests.obj `if test -f 'test/script_P2SH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2SH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2SH_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-script_P2SH_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-script_P2SH_tests.Po
-#	$(AM_V_CXX)source='test/script_P2SH_tests.cpp' object='test/test_test_human-charity-coin-script_P2SH_tests.obj' libtool=no \
+test/test_test_hcc-script_P2SH_tests.obj: test/script_P2SH_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-script_P2SH_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-script_P2SH_tests.Tpo -c -o test/test_test_hcc-script_P2SH_tests.obj `if test -f 'test/script_P2SH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2SH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2SH_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-script_P2SH_tests.Tpo test/$(DEPDIR)/test_test_hcc-script_P2SH_tests.Po
+#	$(AM_V_CXX)source='test/script_P2SH_tests.cpp' object='test/test_test_hcc-script_P2SH_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-script_P2SH_tests.obj `if test -f 'test/script_P2SH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2SH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2SH_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-script_P2SH_tests.obj `if test -f 'test/script_P2SH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2SH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2SH_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-script_tests.o: test/script_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-script_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-script_tests.Tpo -c -o test/test_test_human-charity-coin-script_tests.o `test -f 'test/script_tests.cpp' || echo '$(srcdir)/'`test/script_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-script_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-script_tests.Po
-#	$(AM_V_CXX)source='test/script_tests.cpp' object='test/test_test_human-charity-coin-script_tests.o' libtool=no \
+test/test_test_hcc-script_tests.o: test/script_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-script_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-script_tests.Tpo -c -o test/test_test_hcc-script_tests.o `test -f 'test/script_tests.cpp' || echo '$(srcdir)/'`test/script_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-script_tests.Tpo test/$(DEPDIR)/test_test_hcc-script_tests.Po
+#	$(AM_V_CXX)source='test/script_tests.cpp' object='test/test_test_hcc-script_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-script_tests.o `test -f 'test/script_tests.cpp' || echo '$(srcdir)/'`test/script_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-script_tests.o `test -f 'test/script_tests.cpp' || echo '$(srcdir)/'`test/script_tests.cpp
 
-test/test_test_human-charity-coin-script_tests.obj: test/script_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-script_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-script_tests.Tpo -c -o test/test_test_human-charity-coin-script_tests.obj `if test -f 'test/script_tests.cpp'; then $(CYGPATH_W) 'test/script_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-script_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-script_tests.Po
-#	$(AM_V_CXX)source='test/script_tests.cpp' object='test/test_test_human-charity-coin-script_tests.obj' libtool=no \
+test/test_test_hcc-script_tests.obj: test/script_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-script_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-script_tests.Tpo -c -o test/test_test_hcc-script_tests.obj `if test -f 'test/script_tests.cpp'; then $(CYGPATH_W) 'test/script_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-script_tests.Tpo test/$(DEPDIR)/test_test_hcc-script_tests.Po
+#	$(AM_V_CXX)source='test/script_tests.cpp' object='test/test_test_hcc-script_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-script_tests.obj `if test -f 'test/script_tests.cpp'; then $(CYGPATH_W) 'test/script_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-script_tests.obj `if test -f 'test/script_tests.cpp'; then $(CYGPATH_W) 'test/script_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-scriptnum_tests.o: test/scriptnum_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-scriptnum_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-scriptnum_tests.Tpo -c -o test/test_test_human-charity-coin-scriptnum_tests.o `test -f 'test/scriptnum_tests.cpp' || echo '$(srcdir)/'`test/scriptnum_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-scriptnum_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-scriptnum_tests.Po
-#	$(AM_V_CXX)source='test/scriptnum_tests.cpp' object='test/test_test_human-charity-coin-scriptnum_tests.o' libtool=no \
+test/test_test_hcc-scriptnum_tests.o: test/scriptnum_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-scriptnum_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-scriptnum_tests.Tpo -c -o test/test_test_hcc-scriptnum_tests.o `test -f 'test/scriptnum_tests.cpp' || echo '$(srcdir)/'`test/scriptnum_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-scriptnum_tests.Tpo test/$(DEPDIR)/test_test_hcc-scriptnum_tests.Po
+#	$(AM_V_CXX)source='test/scriptnum_tests.cpp' object='test/test_test_hcc-scriptnum_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-scriptnum_tests.o `test -f 'test/scriptnum_tests.cpp' || echo '$(srcdir)/'`test/scriptnum_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-scriptnum_tests.o `test -f 'test/scriptnum_tests.cpp' || echo '$(srcdir)/'`test/scriptnum_tests.cpp
 
-test/test_test_human-charity-coin-scriptnum_tests.obj: test/scriptnum_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-scriptnum_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-scriptnum_tests.Tpo -c -o test/test_test_human-charity-coin-scriptnum_tests.obj `if test -f 'test/scriptnum_tests.cpp'; then $(CYGPATH_W) 'test/scriptnum_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scriptnum_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-scriptnum_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-scriptnum_tests.Po
-#	$(AM_V_CXX)source='test/scriptnum_tests.cpp' object='test/test_test_human-charity-coin-scriptnum_tests.obj' libtool=no \
+test/test_test_hcc-scriptnum_tests.obj: test/scriptnum_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-scriptnum_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-scriptnum_tests.Tpo -c -o test/test_test_hcc-scriptnum_tests.obj `if test -f 'test/scriptnum_tests.cpp'; then $(CYGPATH_W) 'test/scriptnum_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scriptnum_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-scriptnum_tests.Tpo test/$(DEPDIR)/test_test_hcc-scriptnum_tests.Po
+#	$(AM_V_CXX)source='test/scriptnum_tests.cpp' object='test/test_test_hcc-scriptnum_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-scriptnum_tests.obj `if test -f 'test/scriptnum_tests.cpp'; then $(CYGPATH_W) 'test/scriptnum_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scriptnum_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-scriptnum_tests.obj `if test -f 'test/scriptnum_tests.cpp'; then $(CYGPATH_W) 'test/scriptnum_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scriptnum_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-serialize_tests.o: test/serialize_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-serialize_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-serialize_tests.Tpo -c -o test/test_test_human-charity-coin-serialize_tests.o `test -f 'test/serialize_tests.cpp' || echo '$(srcdir)/'`test/serialize_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-serialize_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-serialize_tests.Po
-#	$(AM_V_CXX)source='test/serialize_tests.cpp' object='test/test_test_human-charity-coin-serialize_tests.o' libtool=no \
+test/test_test_hcc-serialize_tests.o: test/serialize_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-serialize_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-serialize_tests.Tpo -c -o test/test_test_hcc-serialize_tests.o `test -f 'test/serialize_tests.cpp' || echo '$(srcdir)/'`test/serialize_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-serialize_tests.Tpo test/$(DEPDIR)/test_test_hcc-serialize_tests.Po
+#	$(AM_V_CXX)source='test/serialize_tests.cpp' object='test/test_test_hcc-serialize_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-serialize_tests.o `test -f 'test/serialize_tests.cpp' || echo '$(srcdir)/'`test/serialize_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-serialize_tests.o `test -f 'test/serialize_tests.cpp' || echo '$(srcdir)/'`test/serialize_tests.cpp
 
-test/test_test_human-charity-coin-serialize_tests.obj: test/serialize_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-serialize_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-serialize_tests.Tpo -c -o test/test_test_human-charity-coin-serialize_tests.obj `if test -f 'test/serialize_tests.cpp'; then $(CYGPATH_W) 'test/serialize_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/serialize_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-serialize_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-serialize_tests.Po
-#	$(AM_V_CXX)source='test/serialize_tests.cpp' object='test/test_test_human-charity-coin-serialize_tests.obj' libtool=no \
+test/test_test_hcc-serialize_tests.obj: test/serialize_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-serialize_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-serialize_tests.Tpo -c -o test/test_test_hcc-serialize_tests.obj `if test -f 'test/serialize_tests.cpp'; then $(CYGPATH_W) 'test/serialize_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/serialize_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-serialize_tests.Tpo test/$(DEPDIR)/test_test_hcc-serialize_tests.Po
+#	$(AM_V_CXX)source='test/serialize_tests.cpp' object='test/test_test_hcc-serialize_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-serialize_tests.obj `if test -f 'test/serialize_tests.cpp'; then $(CYGPATH_W) 'test/serialize_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/serialize_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-serialize_tests.obj `if test -f 'test/serialize_tests.cpp'; then $(CYGPATH_W) 'test/serialize_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/serialize_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-sighash_tests.o: test/sighash_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-sighash_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-sighash_tests.Tpo -c -o test/test_test_human-charity-coin-sighash_tests.o `test -f 'test/sighash_tests.cpp' || echo '$(srcdir)/'`test/sighash_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-sighash_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-sighash_tests.Po
-#	$(AM_V_CXX)source='test/sighash_tests.cpp' object='test/test_test_human-charity-coin-sighash_tests.o' libtool=no \
+test/test_test_hcc-sighash_tests.o: test/sighash_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-sighash_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-sighash_tests.Tpo -c -o test/test_test_hcc-sighash_tests.o `test -f 'test/sighash_tests.cpp' || echo '$(srcdir)/'`test/sighash_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-sighash_tests.Tpo test/$(DEPDIR)/test_test_hcc-sighash_tests.Po
+#	$(AM_V_CXX)source='test/sighash_tests.cpp' object='test/test_test_hcc-sighash_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-sighash_tests.o `test -f 'test/sighash_tests.cpp' || echo '$(srcdir)/'`test/sighash_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-sighash_tests.o `test -f 'test/sighash_tests.cpp' || echo '$(srcdir)/'`test/sighash_tests.cpp
 
-test/test_test_human-charity-coin-sighash_tests.obj: test/sighash_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-sighash_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-sighash_tests.Tpo -c -o test/test_test_human-charity-coin-sighash_tests.obj `if test -f 'test/sighash_tests.cpp'; then $(CYGPATH_W) 'test/sighash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sighash_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-sighash_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-sighash_tests.Po
-#	$(AM_V_CXX)source='test/sighash_tests.cpp' object='test/test_test_human-charity-coin-sighash_tests.obj' libtool=no \
+test/test_test_hcc-sighash_tests.obj: test/sighash_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-sighash_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-sighash_tests.Tpo -c -o test/test_test_hcc-sighash_tests.obj `if test -f 'test/sighash_tests.cpp'; then $(CYGPATH_W) 'test/sighash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sighash_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-sighash_tests.Tpo test/$(DEPDIR)/test_test_hcc-sighash_tests.Po
+#	$(AM_V_CXX)source='test/sighash_tests.cpp' object='test/test_test_hcc-sighash_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-sighash_tests.obj `if test -f 'test/sighash_tests.cpp'; then $(CYGPATH_W) 'test/sighash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sighash_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-sighash_tests.obj `if test -f 'test/sighash_tests.cpp'; then $(CYGPATH_W) 'test/sighash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sighash_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-sigopcount_tests.o: test/sigopcount_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-sigopcount_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-sigopcount_tests.Tpo -c -o test/test_test_human-charity-coin-sigopcount_tests.o `test -f 'test/sigopcount_tests.cpp' || echo '$(srcdir)/'`test/sigopcount_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-sigopcount_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-sigopcount_tests.Po
-#	$(AM_V_CXX)source='test/sigopcount_tests.cpp' object='test/test_test_human-charity-coin-sigopcount_tests.o' libtool=no \
+test/test_test_hcc-sigopcount_tests.o: test/sigopcount_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-sigopcount_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-sigopcount_tests.Tpo -c -o test/test_test_hcc-sigopcount_tests.o `test -f 'test/sigopcount_tests.cpp' || echo '$(srcdir)/'`test/sigopcount_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-sigopcount_tests.Tpo test/$(DEPDIR)/test_test_hcc-sigopcount_tests.Po
+#	$(AM_V_CXX)source='test/sigopcount_tests.cpp' object='test/test_test_hcc-sigopcount_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-sigopcount_tests.o `test -f 'test/sigopcount_tests.cpp' || echo '$(srcdir)/'`test/sigopcount_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-sigopcount_tests.o `test -f 'test/sigopcount_tests.cpp' || echo '$(srcdir)/'`test/sigopcount_tests.cpp
 
-test/test_test_human-charity-coin-sigopcount_tests.obj: test/sigopcount_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-sigopcount_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-sigopcount_tests.Tpo -c -o test/test_test_human-charity-coin-sigopcount_tests.obj `if test -f 'test/sigopcount_tests.cpp'; then $(CYGPATH_W) 'test/sigopcount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sigopcount_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-sigopcount_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-sigopcount_tests.Po
-#	$(AM_V_CXX)source='test/sigopcount_tests.cpp' object='test/test_test_human-charity-coin-sigopcount_tests.obj' libtool=no \
+test/test_test_hcc-sigopcount_tests.obj: test/sigopcount_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-sigopcount_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-sigopcount_tests.Tpo -c -o test/test_test_hcc-sigopcount_tests.obj `if test -f 'test/sigopcount_tests.cpp'; then $(CYGPATH_W) 'test/sigopcount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sigopcount_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-sigopcount_tests.Tpo test/$(DEPDIR)/test_test_hcc-sigopcount_tests.Po
+#	$(AM_V_CXX)source='test/sigopcount_tests.cpp' object='test/test_test_hcc-sigopcount_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-sigopcount_tests.obj `if test -f 'test/sigopcount_tests.cpp'; then $(CYGPATH_W) 'test/sigopcount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sigopcount_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-sigopcount_tests.obj `if test -f 'test/sigopcount_tests.cpp'; then $(CYGPATH_W) 'test/sigopcount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sigopcount_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-skiplist_tests.o: test/skiplist_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-skiplist_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-skiplist_tests.Tpo -c -o test/test_test_human-charity-coin-skiplist_tests.o `test -f 'test/skiplist_tests.cpp' || echo '$(srcdir)/'`test/skiplist_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-skiplist_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-skiplist_tests.Po
-#	$(AM_V_CXX)source='test/skiplist_tests.cpp' object='test/test_test_human-charity-coin-skiplist_tests.o' libtool=no \
+test/test_test_hcc-skiplist_tests.o: test/skiplist_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-skiplist_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-skiplist_tests.Tpo -c -o test/test_test_hcc-skiplist_tests.o `test -f 'test/skiplist_tests.cpp' || echo '$(srcdir)/'`test/skiplist_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-skiplist_tests.Tpo test/$(DEPDIR)/test_test_hcc-skiplist_tests.Po
+#	$(AM_V_CXX)source='test/skiplist_tests.cpp' object='test/test_test_hcc-skiplist_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-skiplist_tests.o `test -f 'test/skiplist_tests.cpp' || echo '$(srcdir)/'`test/skiplist_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-skiplist_tests.o `test -f 'test/skiplist_tests.cpp' || echo '$(srcdir)/'`test/skiplist_tests.cpp
 
-test/test_test_human-charity-coin-skiplist_tests.obj: test/skiplist_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-skiplist_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-skiplist_tests.Tpo -c -o test/test_test_human-charity-coin-skiplist_tests.obj `if test -f 'test/skiplist_tests.cpp'; then $(CYGPATH_W) 'test/skiplist_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/skiplist_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-skiplist_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-skiplist_tests.Po
-#	$(AM_V_CXX)source='test/skiplist_tests.cpp' object='test/test_test_human-charity-coin-skiplist_tests.obj' libtool=no \
+test/test_test_hcc-skiplist_tests.obj: test/skiplist_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-skiplist_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-skiplist_tests.Tpo -c -o test/test_test_hcc-skiplist_tests.obj `if test -f 'test/skiplist_tests.cpp'; then $(CYGPATH_W) 'test/skiplist_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/skiplist_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-skiplist_tests.Tpo test/$(DEPDIR)/test_test_hcc-skiplist_tests.Po
+#	$(AM_V_CXX)source='test/skiplist_tests.cpp' object='test/test_test_hcc-skiplist_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-skiplist_tests.obj `if test -f 'test/skiplist_tests.cpp'; then $(CYGPATH_W) 'test/skiplist_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/skiplist_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-skiplist_tests.obj `if test -f 'test/skiplist_tests.cpp'; then $(CYGPATH_W) 'test/skiplist_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/skiplist_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-test_human-charity-coin.o: test/test_human-charity-coin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-test_human-charity-coin.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-test_human-charity-coin.Tpo -c -o test/test_test_human-charity-coin-test_human-charity-coin.o `test -f 'test/test_human-charity-coin.cpp' || echo '$(srcdir)/'`test/test_human-charity-coin.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-test_human-charity-coin.Tpo test/$(DEPDIR)/test_test_human-charity-coin-test_human-charity-coin.Po
-#	$(AM_V_CXX)source='test/test_human-charity-coin.cpp' object='test/test_test_human-charity-coin-test_human-charity-coin.o' libtool=no \
+test/test_test_hcc-test_hcc.o: test/test_hcc.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-test_hcc.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-test_hcc.Tpo -c -o test/test_test_hcc-test_hcc.o `test -f 'test/test_hcc.cpp' || echo '$(srcdir)/'`test/test_hcc.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-test_hcc.Tpo test/$(DEPDIR)/test_test_hcc-test_hcc.Po
+#	$(AM_V_CXX)source='test/test_hcc.cpp' object='test/test_test_hcc-test_hcc.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-test_human-charity-coin.o `test -f 'test/test_human-charity-coin.cpp' || echo '$(srcdir)/'`test/test_human-charity-coin.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-test_hcc.o `test -f 'test/test_hcc.cpp' || echo '$(srcdir)/'`test/test_hcc.cpp
 
-test/test_test_human-charity-coin-test_human-charity-coin.obj: test/test_human-charity-coin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-test_human-charity-coin.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-test_human-charity-coin.Tpo -c -o test/test_test_human-charity-coin-test_human-charity-coin.obj `if test -f 'test/test_human-charity-coin.cpp'; then $(CYGPATH_W) 'test/test_human-charity-coin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_human-charity-coin.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-test_human-charity-coin.Tpo test/$(DEPDIR)/test_test_human-charity-coin-test_human-charity-coin.Po
-#	$(AM_V_CXX)source='test/test_human-charity-coin.cpp' object='test/test_test_human-charity-coin-test_human-charity-coin.obj' libtool=no \
+test/test_test_hcc-test_hcc.obj: test/test_hcc.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-test_hcc.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-test_hcc.Tpo -c -o test/test_test_hcc-test_hcc.obj `if test -f 'test/test_hcc.cpp'; then $(CYGPATH_W) 'test/test_hcc.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_hcc.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-test_hcc.Tpo test/$(DEPDIR)/test_test_hcc-test_hcc.Po
+#	$(AM_V_CXX)source='test/test_hcc.cpp' object='test/test_test_hcc-test_hcc.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-test_human-charity-coin.obj `if test -f 'test/test_human-charity-coin.cpp'; then $(CYGPATH_W) 'test/test_human-charity-coin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_human-charity-coin.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-test_hcc.obj `if test -f 'test/test_hcc.cpp'; then $(CYGPATH_W) 'test/test_hcc.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_hcc.cpp'; fi`
 
-test/test_test_human-charity-coin-timedata_tests.o: test/timedata_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-timedata_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-timedata_tests.Tpo -c -o test/test_test_human-charity-coin-timedata_tests.o `test -f 'test/timedata_tests.cpp' || echo '$(srcdir)/'`test/timedata_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-timedata_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-timedata_tests.Po
-#	$(AM_V_CXX)source='test/timedata_tests.cpp' object='test/test_test_human-charity-coin-timedata_tests.o' libtool=no \
+test/test_test_hcc-timedata_tests.o: test/timedata_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-timedata_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-timedata_tests.Tpo -c -o test/test_test_hcc-timedata_tests.o `test -f 'test/timedata_tests.cpp' || echo '$(srcdir)/'`test/timedata_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-timedata_tests.Tpo test/$(DEPDIR)/test_test_hcc-timedata_tests.Po
+#	$(AM_V_CXX)source='test/timedata_tests.cpp' object='test/test_test_hcc-timedata_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-timedata_tests.o `test -f 'test/timedata_tests.cpp' || echo '$(srcdir)/'`test/timedata_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-timedata_tests.o `test -f 'test/timedata_tests.cpp' || echo '$(srcdir)/'`test/timedata_tests.cpp
 
-test/test_test_human-charity-coin-timedata_tests.obj: test/timedata_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-timedata_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-timedata_tests.Tpo -c -o test/test_test_human-charity-coin-timedata_tests.obj `if test -f 'test/timedata_tests.cpp'; then $(CYGPATH_W) 'test/timedata_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/timedata_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-timedata_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-timedata_tests.Po
-#	$(AM_V_CXX)source='test/timedata_tests.cpp' object='test/test_test_human-charity-coin-timedata_tests.obj' libtool=no \
+test/test_test_hcc-timedata_tests.obj: test/timedata_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-timedata_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-timedata_tests.Tpo -c -o test/test_test_hcc-timedata_tests.obj `if test -f 'test/timedata_tests.cpp'; then $(CYGPATH_W) 'test/timedata_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/timedata_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-timedata_tests.Tpo test/$(DEPDIR)/test_test_hcc-timedata_tests.Po
+#	$(AM_V_CXX)source='test/timedata_tests.cpp' object='test/test_test_hcc-timedata_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-timedata_tests.obj `if test -f 'test/timedata_tests.cpp'; then $(CYGPATH_W) 'test/timedata_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/timedata_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-timedata_tests.obj `if test -f 'test/timedata_tests.cpp'; then $(CYGPATH_W) 'test/timedata_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/timedata_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-torcontrol_tests.o: test/torcontrol_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-torcontrol_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-torcontrol_tests.Tpo -c -o test/test_test_human-charity-coin-torcontrol_tests.o `test -f 'test/torcontrol_tests.cpp' || echo '$(srcdir)/'`test/torcontrol_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-torcontrol_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-torcontrol_tests.Po
-#	$(AM_V_CXX)source='test/torcontrol_tests.cpp' object='test/test_test_human-charity-coin-torcontrol_tests.o' libtool=no \
+test/test_test_hcc-torcontrol_tests.o: test/torcontrol_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-torcontrol_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-torcontrol_tests.Tpo -c -o test/test_test_hcc-torcontrol_tests.o `test -f 'test/torcontrol_tests.cpp' || echo '$(srcdir)/'`test/torcontrol_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-torcontrol_tests.Tpo test/$(DEPDIR)/test_test_hcc-torcontrol_tests.Po
+#	$(AM_V_CXX)source='test/torcontrol_tests.cpp' object='test/test_test_hcc-torcontrol_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-torcontrol_tests.o `test -f 'test/torcontrol_tests.cpp' || echo '$(srcdir)/'`test/torcontrol_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-torcontrol_tests.o `test -f 'test/torcontrol_tests.cpp' || echo '$(srcdir)/'`test/torcontrol_tests.cpp
 
-test/test_test_human-charity-coin-torcontrol_tests.obj: test/torcontrol_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-torcontrol_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-torcontrol_tests.Tpo -c -o test/test_test_human-charity-coin-torcontrol_tests.obj `if test -f 'test/torcontrol_tests.cpp'; then $(CYGPATH_W) 'test/torcontrol_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/torcontrol_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-torcontrol_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-torcontrol_tests.Po
-#	$(AM_V_CXX)source='test/torcontrol_tests.cpp' object='test/test_test_human-charity-coin-torcontrol_tests.obj' libtool=no \
+test/test_test_hcc-torcontrol_tests.obj: test/torcontrol_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-torcontrol_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-torcontrol_tests.Tpo -c -o test/test_test_hcc-torcontrol_tests.obj `if test -f 'test/torcontrol_tests.cpp'; then $(CYGPATH_W) 'test/torcontrol_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/torcontrol_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-torcontrol_tests.Tpo test/$(DEPDIR)/test_test_hcc-torcontrol_tests.Po
+#	$(AM_V_CXX)source='test/torcontrol_tests.cpp' object='test/test_test_hcc-torcontrol_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-torcontrol_tests.obj `if test -f 'test/torcontrol_tests.cpp'; then $(CYGPATH_W) 'test/torcontrol_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/torcontrol_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-torcontrol_tests.obj `if test -f 'test/torcontrol_tests.cpp'; then $(CYGPATH_W) 'test/torcontrol_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/torcontrol_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-transaction_tests.o: test/transaction_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-transaction_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-transaction_tests.Tpo -c -o test/test_test_human-charity-coin-transaction_tests.o `test -f 'test/transaction_tests.cpp' || echo '$(srcdir)/'`test/transaction_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-transaction_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-transaction_tests.Po
-#	$(AM_V_CXX)source='test/transaction_tests.cpp' object='test/test_test_human-charity-coin-transaction_tests.o' libtool=no \
+test/test_test_hcc-transaction_tests.o: test/transaction_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-transaction_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-transaction_tests.Tpo -c -o test/test_test_hcc-transaction_tests.o `test -f 'test/transaction_tests.cpp' || echo '$(srcdir)/'`test/transaction_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-transaction_tests.Tpo test/$(DEPDIR)/test_test_hcc-transaction_tests.Po
+#	$(AM_V_CXX)source='test/transaction_tests.cpp' object='test/test_test_hcc-transaction_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-transaction_tests.o `test -f 'test/transaction_tests.cpp' || echo '$(srcdir)/'`test/transaction_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-transaction_tests.o `test -f 'test/transaction_tests.cpp' || echo '$(srcdir)/'`test/transaction_tests.cpp
 
-test/test_test_human-charity-coin-transaction_tests.obj: test/transaction_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-transaction_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-transaction_tests.Tpo -c -o test/test_test_human-charity-coin-transaction_tests.obj `if test -f 'test/transaction_tests.cpp'; then $(CYGPATH_W) 'test/transaction_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/transaction_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-transaction_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-transaction_tests.Po
-#	$(AM_V_CXX)source='test/transaction_tests.cpp' object='test/test_test_human-charity-coin-transaction_tests.obj' libtool=no \
+test/test_test_hcc-transaction_tests.obj: test/transaction_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-transaction_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-transaction_tests.Tpo -c -o test/test_test_hcc-transaction_tests.obj `if test -f 'test/transaction_tests.cpp'; then $(CYGPATH_W) 'test/transaction_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/transaction_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-transaction_tests.Tpo test/$(DEPDIR)/test_test_hcc-transaction_tests.Po
+#	$(AM_V_CXX)source='test/transaction_tests.cpp' object='test/test_test_hcc-transaction_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-transaction_tests.obj `if test -f 'test/transaction_tests.cpp'; then $(CYGPATH_W) 'test/transaction_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/transaction_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-transaction_tests.obj `if test -f 'test/transaction_tests.cpp'; then $(CYGPATH_W) 'test/transaction_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/transaction_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-uint256_tests.o: test/uint256_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-uint256_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-uint256_tests.Tpo -c -o test/test_test_human-charity-coin-uint256_tests.o `test -f 'test/uint256_tests.cpp' || echo '$(srcdir)/'`test/uint256_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-uint256_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-uint256_tests.Po
-#	$(AM_V_CXX)source='test/uint256_tests.cpp' object='test/test_test_human-charity-coin-uint256_tests.o' libtool=no \
+test/test_test_hcc-uint256_tests.o: test/uint256_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-uint256_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-uint256_tests.Tpo -c -o test/test_test_hcc-uint256_tests.o `test -f 'test/uint256_tests.cpp' || echo '$(srcdir)/'`test/uint256_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-uint256_tests.Tpo test/$(DEPDIR)/test_test_hcc-uint256_tests.Po
+#	$(AM_V_CXX)source='test/uint256_tests.cpp' object='test/test_test_hcc-uint256_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-uint256_tests.o `test -f 'test/uint256_tests.cpp' || echo '$(srcdir)/'`test/uint256_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-uint256_tests.o `test -f 'test/uint256_tests.cpp' || echo '$(srcdir)/'`test/uint256_tests.cpp
 
-test/test_test_human-charity-coin-uint256_tests.obj: test/uint256_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-uint256_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-uint256_tests.Tpo -c -o test/test_test_human-charity-coin-uint256_tests.obj `if test -f 'test/uint256_tests.cpp'; then $(CYGPATH_W) 'test/uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/uint256_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-uint256_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-uint256_tests.Po
-#	$(AM_V_CXX)source='test/uint256_tests.cpp' object='test/test_test_human-charity-coin-uint256_tests.obj' libtool=no \
+test/test_test_hcc-uint256_tests.obj: test/uint256_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-uint256_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-uint256_tests.Tpo -c -o test/test_test_hcc-uint256_tests.obj `if test -f 'test/uint256_tests.cpp'; then $(CYGPATH_W) 'test/uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/uint256_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-uint256_tests.Tpo test/$(DEPDIR)/test_test_hcc-uint256_tests.Po
+#	$(AM_V_CXX)source='test/uint256_tests.cpp' object='test/test_test_hcc-uint256_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-uint256_tests.obj `if test -f 'test/uint256_tests.cpp'; then $(CYGPATH_W) 'test/uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/uint256_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-uint256_tests.obj `if test -f 'test/uint256_tests.cpp'; then $(CYGPATH_W) 'test/uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/uint256_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-univalue_tests.o: test/univalue_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-univalue_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-univalue_tests.Tpo -c -o test/test_test_human-charity-coin-univalue_tests.o `test -f 'test/univalue_tests.cpp' || echo '$(srcdir)/'`test/univalue_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-univalue_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-univalue_tests.Po
-#	$(AM_V_CXX)source='test/univalue_tests.cpp' object='test/test_test_human-charity-coin-univalue_tests.o' libtool=no \
+test/test_test_hcc-univalue_tests.o: test/univalue_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-univalue_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-univalue_tests.Tpo -c -o test/test_test_hcc-univalue_tests.o `test -f 'test/univalue_tests.cpp' || echo '$(srcdir)/'`test/univalue_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-univalue_tests.Tpo test/$(DEPDIR)/test_test_hcc-univalue_tests.Po
+#	$(AM_V_CXX)source='test/univalue_tests.cpp' object='test/test_test_hcc-univalue_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-univalue_tests.o `test -f 'test/univalue_tests.cpp' || echo '$(srcdir)/'`test/univalue_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-univalue_tests.o `test -f 'test/univalue_tests.cpp' || echo '$(srcdir)/'`test/univalue_tests.cpp
 
-test/test_test_human-charity-coin-univalue_tests.obj: test/univalue_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-univalue_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-univalue_tests.Tpo -c -o test/test_test_human-charity-coin-univalue_tests.obj `if test -f 'test/univalue_tests.cpp'; then $(CYGPATH_W) 'test/univalue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/univalue_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-univalue_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-univalue_tests.Po
-#	$(AM_V_CXX)source='test/univalue_tests.cpp' object='test/test_test_human-charity-coin-univalue_tests.obj' libtool=no \
+test/test_test_hcc-univalue_tests.obj: test/univalue_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-univalue_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-univalue_tests.Tpo -c -o test/test_test_hcc-univalue_tests.obj `if test -f 'test/univalue_tests.cpp'; then $(CYGPATH_W) 'test/univalue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/univalue_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-univalue_tests.Tpo test/$(DEPDIR)/test_test_hcc-univalue_tests.Po
+#	$(AM_V_CXX)source='test/univalue_tests.cpp' object='test/test_test_hcc-univalue_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-univalue_tests.obj `if test -f 'test/univalue_tests.cpp'; then $(CYGPATH_W) 'test/univalue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/univalue_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-univalue_tests.obj `if test -f 'test/univalue_tests.cpp'; then $(CYGPATH_W) 'test/univalue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/univalue_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-util_tests.o: test/util_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-util_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-util_tests.Tpo -c -o test/test_test_human-charity-coin-util_tests.o `test -f 'test/util_tests.cpp' || echo '$(srcdir)/'`test/util_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-util_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-util_tests.Po
-#	$(AM_V_CXX)source='test/util_tests.cpp' object='test/test_test_human-charity-coin-util_tests.o' libtool=no \
+test/test_test_hcc-util_tests.o: test/util_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-util_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-util_tests.Tpo -c -o test/test_test_hcc-util_tests.o `test -f 'test/util_tests.cpp' || echo '$(srcdir)/'`test/util_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-util_tests.Tpo test/$(DEPDIR)/test_test_hcc-util_tests.Po
+#	$(AM_V_CXX)source='test/util_tests.cpp' object='test/test_test_hcc-util_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-util_tests.o `test -f 'test/util_tests.cpp' || echo '$(srcdir)/'`test/util_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-util_tests.o `test -f 'test/util_tests.cpp' || echo '$(srcdir)/'`test/util_tests.cpp
 
-test/test_test_human-charity-coin-util_tests.obj: test/util_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-util_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-util_tests.Tpo -c -o test/test_test_human-charity-coin-util_tests.obj `if test -f 'test/util_tests.cpp'; then $(CYGPATH_W) 'test/util_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/util_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-util_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-util_tests.Po
-#	$(AM_V_CXX)source='test/util_tests.cpp' object='test/test_test_human-charity-coin-util_tests.obj' libtool=no \
+test/test_test_hcc-util_tests.obj: test/util_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-util_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-util_tests.Tpo -c -o test/test_test_hcc-util_tests.obj `if test -f 'test/util_tests.cpp'; then $(CYGPATH_W) 'test/util_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/util_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-util_tests.Tpo test/$(DEPDIR)/test_test_hcc-util_tests.Po
+#	$(AM_V_CXX)source='test/util_tests.cpp' object='test/test_test_hcc-util_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-util_tests.obj `if test -f 'test/util_tests.cpp'; then $(CYGPATH_W) 'test/util_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/util_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-util_tests.obj `if test -f 'test/util_tests.cpp'; then $(CYGPATH_W) 'test/util_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/util_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-accounting_tests.o: test/accounting_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-accounting_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-accounting_tests.Tpo -c -o test/test_test_human-charity-coin-accounting_tests.o `test -f 'test/accounting_tests.cpp' || echo '$(srcdir)/'`test/accounting_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-accounting_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-accounting_tests.Po
-#	$(AM_V_CXX)source='test/accounting_tests.cpp' object='test/test_test_human-charity-coin-accounting_tests.o' libtool=no \
+test/test_test_hcc-accounting_tests.o: test/accounting_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-accounting_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-accounting_tests.Tpo -c -o test/test_test_hcc-accounting_tests.o `test -f 'test/accounting_tests.cpp' || echo '$(srcdir)/'`test/accounting_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-accounting_tests.Tpo test/$(DEPDIR)/test_test_hcc-accounting_tests.Po
+#	$(AM_V_CXX)source='test/accounting_tests.cpp' object='test/test_test_hcc-accounting_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-accounting_tests.o `test -f 'test/accounting_tests.cpp' || echo '$(srcdir)/'`test/accounting_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-accounting_tests.o `test -f 'test/accounting_tests.cpp' || echo '$(srcdir)/'`test/accounting_tests.cpp
 
-test/test_test_human-charity-coin-accounting_tests.obj: test/accounting_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-accounting_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-accounting_tests.Tpo -c -o test/test_test_human-charity-coin-accounting_tests.obj `if test -f 'test/accounting_tests.cpp'; then $(CYGPATH_W) 'test/accounting_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/accounting_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-accounting_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-accounting_tests.Po
-#	$(AM_V_CXX)source='test/accounting_tests.cpp' object='test/test_test_human-charity-coin-accounting_tests.obj' libtool=no \
+test/test_test_hcc-accounting_tests.obj: test/accounting_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-accounting_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-accounting_tests.Tpo -c -o test/test_test_hcc-accounting_tests.obj `if test -f 'test/accounting_tests.cpp'; then $(CYGPATH_W) 'test/accounting_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/accounting_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-accounting_tests.Tpo test/$(DEPDIR)/test_test_hcc-accounting_tests.Po
+#	$(AM_V_CXX)source='test/accounting_tests.cpp' object='test/test_test_hcc-accounting_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-accounting_tests.obj `if test -f 'test/accounting_tests.cpp'; then $(CYGPATH_W) 'test/accounting_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/accounting_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-accounting_tests.obj `if test -f 'test/accounting_tests.cpp'; then $(CYGPATH_W) 'test/accounting_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/accounting_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-wallet_tests.o: test/wallet_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-wallet_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-wallet_tests.Tpo -c -o test/test_test_human-charity-coin-wallet_tests.o `test -f 'test/wallet_tests.cpp' || echo '$(srcdir)/'`test/wallet_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-wallet_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-wallet_tests.Po
-#	$(AM_V_CXX)source='test/wallet_tests.cpp' object='test/test_test_human-charity-coin-wallet_tests.o' libtool=no \
+test/test_test_hcc-wallet_tests.o: test/wallet_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-wallet_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-wallet_tests.Tpo -c -o test/test_test_hcc-wallet_tests.o `test -f 'test/wallet_tests.cpp' || echo '$(srcdir)/'`test/wallet_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-wallet_tests.Tpo test/$(DEPDIR)/test_test_hcc-wallet_tests.Po
+#	$(AM_V_CXX)source='test/wallet_tests.cpp' object='test/test_test_hcc-wallet_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-wallet_tests.o `test -f 'test/wallet_tests.cpp' || echo '$(srcdir)/'`test/wallet_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-wallet_tests.o `test -f 'test/wallet_tests.cpp' || echo '$(srcdir)/'`test/wallet_tests.cpp
 
-test/test_test_human-charity-coin-wallet_tests.obj: test/wallet_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-wallet_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-wallet_tests.Tpo -c -o test/test_test_human-charity-coin-wallet_tests.obj `if test -f 'test/wallet_tests.cpp'; then $(CYGPATH_W) 'test/wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/wallet_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-wallet_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-wallet_tests.Po
-#	$(AM_V_CXX)source='test/wallet_tests.cpp' object='test/test_test_human-charity-coin-wallet_tests.obj' libtool=no \
+test/test_test_hcc-wallet_tests.obj: test/wallet_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-wallet_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-wallet_tests.Tpo -c -o test/test_test_hcc-wallet_tests.obj `if test -f 'test/wallet_tests.cpp'; then $(CYGPATH_W) 'test/wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/wallet_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-wallet_tests.Tpo test/$(DEPDIR)/test_test_hcc-wallet_tests.Po
+#	$(AM_V_CXX)source='test/wallet_tests.cpp' object='test/test_test_hcc-wallet_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-wallet_tests.obj `if test -f 'test/wallet_tests.cpp'; then $(CYGPATH_W) 'test/wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/wallet_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-wallet_tests.obj `if test -f 'test/wallet_tests.cpp'; then $(CYGPATH_W) 'test/wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/wallet_tests.cpp'; fi`
 
-test/test_test_human-charity-coin-rpc_wallet_tests.o: test/rpc_wallet_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-rpc_wallet_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-rpc_wallet_tests.Tpo -c -o test/test_test_human-charity-coin-rpc_wallet_tests.o `test -f 'test/rpc_wallet_tests.cpp' || echo '$(srcdir)/'`test/rpc_wallet_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-rpc_wallet_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-rpc_wallet_tests.Po
-#	$(AM_V_CXX)source='test/rpc_wallet_tests.cpp' object='test/test_test_human-charity-coin-rpc_wallet_tests.o' libtool=no \
+test/test_test_hcc-rpc_wallet_tests.o: test/rpc_wallet_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-rpc_wallet_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_hcc-rpc_wallet_tests.Tpo -c -o test/test_test_hcc-rpc_wallet_tests.o `test -f 'test/rpc_wallet_tests.cpp' || echo '$(srcdir)/'`test/rpc_wallet_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-rpc_wallet_tests.Tpo test/$(DEPDIR)/test_test_hcc-rpc_wallet_tests.Po
+#	$(AM_V_CXX)source='test/rpc_wallet_tests.cpp' object='test/test_test_hcc-rpc_wallet_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-rpc_wallet_tests.o `test -f 'test/rpc_wallet_tests.cpp' || echo '$(srcdir)/'`test/rpc_wallet_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-rpc_wallet_tests.o `test -f 'test/rpc_wallet_tests.cpp' || echo '$(srcdir)/'`test/rpc_wallet_tests.cpp
 
-test/test_test_human-charity-coin-rpc_wallet_tests.obj: test/rpc_wallet_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_human-charity-coin-rpc_wallet_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_human-charity-coin-rpc_wallet_tests.Tpo -c -o test/test_test_human-charity-coin-rpc_wallet_tests.obj `if test -f 'test/rpc_wallet_tests.cpp'; then $(CYGPATH_W) 'test/rpc_wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_wallet_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_human-charity-coin-rpc_wallet_tests.Tpo test/$(DEPDIR)/test_test_human-charity-coin-rpc_wallet_tests.Po
-#	$(AM_V_CXX)source='test/rpc_wallet_tests.cpp' object='test/test_test_human-charity-coin-rpc_wallet_tests.obj' libtool=no \
+test/test_test_hcc-rpc_wallet_tests.obj: test/rpc_wallet_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_hcc-rpc_wallet_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_hcc-rpc_wallet_tests.Tpo -c -o test/test_test_hcc-rpc_wallet_tests.obj `if test -f 'test/rpc_wallet_tests.cpp'; then $(CYGPATH_W) 'test/rpc_wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_wallet_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_hcc-rpc_wallet_tests.Tpo test/$(DEPDIR)/test_test_hcc-rpc_wallet_tests.Po
+#	$(AM_V_CXX)source='test/rpc_wallet_tests.cpp' object='test/test_test_hcc-rpc_wallet_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_human-charity-coin_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_human-charity-coin-rpc_wallet_tests.obj `if test -f 'test/rpc_wallet_tests.cpp'; then $(CYGPATH_W) 'test/rpc_wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_wallet_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_hcc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_hcc-rpc_wallet_tests.obj `if test -f 'test/rpc_wallet_tests.cpp'; then $(CYGPATH_W) 'test/rpc_wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_wallet_tests.cpp'; fi`
 
 .cpp.o:
 	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -7069,33 +7054,33 @@ test/test_test_human-charity-coin-rpc_wallet_tests.obj: test/rpc_wallet_tests.cp
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
 #	$(AM_V_OBJCXX_no)$(LTOBJCXXCOMPILE) -c -o $@ $<
 
-qt/qt_human-charity-coin_qt-macdockiconhandler.o: qt/macdockiconhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_human-charity-coin_qt-macdockiconhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_human-charity-coin_qt-macdockiconhandler.Tpo -c -o qt/qt_human-charity-coin_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_human-charity-coin_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_human-charity-coin_qt-macdockiconhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_human-charity-coin_qt-macdockiconhandler.o' libtool=no \
+qt/qt_hcc_qt-macdockiconhandler.o: qt/macdockiconhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_hcc_qt-macdockiconhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_hcc_qt-macdockiconhandler.Tpo -c -o qt/qt_hcc_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_hcc_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_hcc_qt-macdockiconhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_hcc_qt-macdockiconhandler.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_human-charity-coin_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_hcc_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
 
-qt/qt_human-charity-coin_qt-macdockiconhandler.obj: qt/macdockiconhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_human-charity-coin_qt-macdockiconhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_human-charity-coin_qt-macdockiconhandler.Tpo -c -o qt/qt_human-charity-coin_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_human-charity-coin_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_human-charity-coin_qt-macdockiconhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_human-charity-coin_qt-macdockiconhandler.obj' libtool=no \
+qt/qt_hcc_qt-macdockiconhandler.obj: qt/macdockiconhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_hcc_qt-macdockiconhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_hcc_qt-macdockiconhandler.Tpo -c -o qt/qt_hcc_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_hcc_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_hcc_qt-macdockiconhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_hcc_qt-macdockiconhandler.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_human-charity-coin_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_hcc_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
 
-qt/qt_human-charity-coin_qt-macnotificationhandler.o: qt/macnotificationhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_human-charity-coin_qt-macnotificationhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_human-charity-coin_qt-macnotificationhandler.Tpo -c -o qt/qt_human-charity-coin_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_human-charity-coin_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_human-charity-coin_qt-macnotificationhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_human-charity-coin_qt-macnotificationhandler.o' libtool=no \
+qt/qt_hcc_qt-macnotificationhandler.o: qt/macnotificationhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_hcc_qt-macnotificationhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_hcc_qt-macnotificationhandler.Tpo -c -o qt/qt_hcc_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_hcc_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_hcc_qt-macnotificationhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_hcc_qt-macnotificationhandler.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_human-charity-coin_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_hcc_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
 
-qt/qt_human-charity-coin_qt-macnotificationhandler.obj: qt/macnotificationhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_human-charity-coin_qt-macnotificationhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_human-charity-coin_qt-macnotificationhandler.Tpo -c -o qt/qt_human-charity-coin_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_human-charity-coin_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_human-charity-coin_qt-macnotificationhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_human-charity-coin_qt-macnotificationhandler.obj' libtool=no \
+qt/qt_hcc_qt-macnotificationhandler.obj: qt/macnotificationhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_hcc_qt-macnotificationhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_hcc_qt-macnotificationhandler.Tpo -c -o qt/qt_hcc_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_hcc_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_hcc_qt-macnotificationhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_hcc_qt-macnotificationhandler.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_human-charity-coin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_human-charity-coin_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_hcc_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_hcc_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
@@ -7371,9 +7356,9 @@ recheck: all
 	        am__force_recheck=am--force-recheck \
 	        TEST_LOGS="$$log_list"; \
 	exit $$?
-test/test_human-charity-coin.log: test/test_human-charity-coin$(EXEEXT)
-	@p='test/test_human-charity-coin$(EXEEXT)'; \
-	b='test/test_human-charity-coin'; \
+test/test_hcc.log: test/test_hcc$(EXEEXT)
+	@p='test/test_hcc$(EXEEXT)'; \
+	b='test/test_hcc'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
@@ -7385,9 +7370,9 @@ test/bitcoin-util-test.py.log: test/bitcoin-util-test.py
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-qt/test/test_human-charity-coin-qt.log: qt/test/test_human-charity-coin-qt$(EXEEXT)
-	@p='qt/test/test_human-charity-coin-qt$(EXEEXT)'; \
-	b='qt/test/test_human-charity-coin-qt'; \
+qt/test/test_hcc-qt.log: qt/test/test_hcc-qt$(EXEEXT)
+	@p='qt/test/test_hcc-qt$(EXEEXT)'; \
+	b='qt/test/test_hcc-qt'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
@@ -7665,13 +7650,13 @@ clean-local:
 
 $(BITCOIN_TESTS): $(GENERATED_TEST_FILES)
 
-human-charity-coin_test: $(TEST_BINARY)
+hcc_test: $(TEST_BINARY)
 
-human-charity-coin_test_check: $(TEST_BINARY) FORCE
+hcc_test_check: $(TEST_BINARY) FORCE
 	$(MAKE) check-TESTS TESTS=$^
 
-human-charity-coin_test_clean : FORCE
-	rm -f $(CLEAN_BITCOIN_TEST) $(test_test_human-charity-coin_OBJECTS) $(TEST_BINARY)
+hcc_test_clean : FORCE
+	rm -f $(CLEAN_BITCOIN_TEST) $(test_test_hcc_OBJECTS) $(TEST_BINARY)
 
 check-local:
 	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) -C secp256k1 check
@@ -7696,7 +7681,7 @@ check-local:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libbitcoinqt_a_OBJECTS) $(qt_human-charity-coin_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libbitcoinqt_a_OBJECTS) $(qt_hcc_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
@@ -7705,29 +7690,29 @@ $(QT_MOC_CPP): $(PROTOBUF_H)
 
 .SECONDARY: $(QT_QM)
 
-qt/human-charity-coinstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
+qt/hccstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) $(PYTHON) ../share/qt/extract_strings_qt.py $^
 
-translate: qt/human-charity-coinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: qt/hccstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/human-charity-coin_en.ts
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/hcc_en.ts
 
 $(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
 	@test -f $(RCC)
 	@test -f $(@D)/$(<F) || cp -f $< $(@D)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name human-charity-coin_locale $(@D)/$(<F) | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name hcc_locale $(@D)/$(<F) | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES) $(PROTOBUF_H)
 	@test -f $(RCC)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name human-charity-coin $< | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name hcc $< | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
-human-charity-coin_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_human-charity-coin_qt_OBJECTS) qt/human-charity-coin-qt$(EXEEXT) $(LIBBITCOINQT)
+hcc_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_hcc_qt_OBJECTS) qt/hcc-qt$(EXEEXT) $(LIBBITCOINQT)
 
-human-charity-coin_qt : qt/human-charity-coin-qt$(EXEEXT)
+hcc_qt : qt/hcc-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)
@@ -7747,13 +7732,13 @@ moc_%.cpp: %.h
 	@$(MKDIR_P) $(@D)
 	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LRELEASE) -silent $< -qm $@
 
-test_human-charity-coin_qt : qt/test/test_human-charity-coin-qt$(EXEEXT)
+test_hcc_qt : qt/test/test_hcc-qt$(EXEEXT)
 
-test_human-charity-coin_qt_check : qt/test/test_human-charity-coin-qt$(EXEEXT) FORCE
+test_hcc_qt_check : qt/test/test_hcc-qt$(EXEEXT) FORCE
 	$(MAKE) check-TESTS TESTS=$^
 
-test_human-charity-coin_qt_clean: FORCE
-	rm -f $(CLEAN_BITCOIN_QT_TEST) $(qt_test_test_human-charity-coin_qt_OBJECTS)
+test_hcc_qt_clean: FORCE
+	rm -f $(CLEAN_BITCOIN_QT_TEST) $(qt_test_test_hcc_qt_OBJECTS)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

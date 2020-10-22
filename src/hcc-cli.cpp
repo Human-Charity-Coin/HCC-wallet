@@ -28,7 +28,7 @@ std::string HelpMessageCli()
     string strUsage;
     strUsage += HelpMessageGroup(_("Options:"));
     strUsage += HelpMessageOpt("-?", _("This help message"));
-    strUsage += HelpMessageOpt("-conf=<file>", strprintf(_("Specify configuration file (default: %s)"), "human-charity-coin.conf"));
+    strUsage += HelpMessageOpt("-conf=<file>", strprintf(_("Specify configuration file (default: %s)"), "hcc.conf"));
     strUsage += HelpMessageOpt("-datadir=<dir>", _("Specify data directory"));
     strUsage += HelpMessageOpt("-testnet", _("Use the test network"));
     strUsage += HelpMessageOpt("-regtest", _("Enter regression test mode, which uses a special chain in which blocks can be "
@@ -72,9 +72,9 @@ static bool AppInitRPC(int argc, char* argv[])
         std::string strUsage = _("Human-Charity-Coin Core RPC client version") + " " + FormatFullVersion() + "\n";
         if (!mapArgs.count("-version")) {
             strUsage += "\n" + _("Usage:") + "\n" +
-                        "  human-charity-coin-cli [options] <command> [params]  " + _("Send command to Human-Charity-Coin Core") + "\n" +
-                        "  human-charity-coin-cli [options] help                " + _("List commands") + "\n" +
-                        "  human-charity-coin-cli [options] help <command>      " + _("Get help for a command") + "\n";
+                        "  hcc-cli [options] <command> [params]  " + _("Send command to Human-Charity-Coin Core") + "\n" +
+                        "  hcc-cli [options] help                " + _("List commands") + "\n" +
+                        "  hcc-cli [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessageCli();
         }

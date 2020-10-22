@@ -595,8 +595,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Lähetä kolikkoja HCC osoitteeseen</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and human-charity-coin: URIs)</source>
-        <translation>Pyydä maksuja (Generoi QR koodeja ja human-charity-coin: URIja)</translation>
+        <source>Request payments (generates QR codes and hcc: URIs)</source>
+        <translation>Pyydä maksuja (Generoi QR koodeja ja hcc: URIja)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -655,8 +655,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Avaa Masternode konfiguraatiotiedosto</translation>
     </message>
     <message>
-        <source>Open a human-charity-coin: URI or payment request</source>
-        <translation>Avaa human-charity-coin: URI tai pyydä maksua</translation>
+        <source>Open a hcc: URI or payment request</source>
+        <translation>Avaa hcc: URI tai pyydä maksua</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -1231,7 +1231,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Käytä oletus vähennysyksikköä käyttöliittymässä ja kolikoita lähettäessä.</translation>
+        <translation>Käytä oletus vähennysyksikkö käyttöliittymässä ja kolikoita lähettäessä.</translation>
     </message>
     <message>
         <source>Decimal digits</source>
@@ -1805,7 +1805,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Send to multiple recipients at once</source>
-        <translation>Lähetä useammalle vastaanottajalle kerralla</translation>
+        <translation>Lähet useammalle vastaanottajalle kerralla</translation>
     </message>
     <message>
         <source>Add &amp;Recipient</source>
@@ -2384,7 +2384,7 @@ Please check the address and try again.</source>
     </message>
     </context>
 <context>
-    <name>human-charity-coin-core</name>
+    <name>hcc-core</name>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
         <translation>Varoitus: Verkko ei näytä olevan samaa mieltä! Jotkin mainaajat saattavat kokea ongelmia.</translation>

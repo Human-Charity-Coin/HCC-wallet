@@ -602,8 +602,8 @@
         <translation>Odeslat platbuna HCC adresu</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and human-charity-coin: URIs)</source>
-        <translation>Vyžádat platbu (generování QK kódu a human-charity-coin: URIs)</translation>
+        <source>Request payments (generates QR codes and hcc: URIs)</source>
+        <translation>Vyžádat platbu (generování QK kódu a hcc: URIs)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -662,8 +662,8 @@
         <translation>Otevřít Masternodový konfigurační soubor</translation>
     </message>
     <message>
-        <source>Open a human-charity-coin: URI or payment request</source>
-        <translation>Otevřít human-charity-coin: URI nebo platební žádost</translation>
+        <source>Open a hcc: URI or payment request</source>
+        <translation>Otevřít hcc: URI nebo platební žádost</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -801,8 +801,8 @@ MultiSend: %1</translation>
         <translation>TextPopisku</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (human-charity-coin.conf).</source>
-        <translation>Ne všechny transakce budou zobrazeny. Pro zobrazení všech transackí nastavte v konfiguračním souboru (human-charity-coin.conf) txindex=1.</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (hcc.conf).</source>
+        <translation>Ne všechny transakce budou zobrazeny. Pro zobrazení všech transackí nastavte v konfiguračním souboru (hcc.conf) txindex=1.</translation>
     </message>
 </context>
 <context>
@@ -2239,7 +2239,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
     </message>
     </context>
 <context>
-    <name>human-charity-coin-core</name>
+    <name>hcc-core</name>
     <message>
         <source>Error</source>
         <translation>Chyba</translation>

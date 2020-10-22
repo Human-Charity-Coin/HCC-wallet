@@ -28,7 +28,7 @@
       </sizepolicy>
      </property>
      <property name="pixmap">
-      <pixmap resource="../human-charity-coin.qrc">:/images/about</pixmap>
+      <pixmap resource="../hcc.qrc">:/images/about</pixmap>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -100,7 +100,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../human-charity-coin.qrc"/>
+  <include location="../hcc.qrc"/>
  </resources>
  <connections>
   <connection>

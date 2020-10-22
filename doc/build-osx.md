@@ -1,6 +1,6 @@
 Mac OS X Build Instructions and Notes
 ====================================
-This guide will show you how to build human-charity-coind (headless client) for OSX.
+This guide will show you how to build hccd (headless client) for OSX.
 
 Notes
 -----
@@ -40,14 +40,14 @@ Instructions: Homebrew
 
         brew install autoconf automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf qt5 libzmq
 
-### Building `human-charity-coind`
+### Building `hccd`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://github.com/human-charity-coin/human-charity-coin.git
-        cd human-charity-coin
+        git clone https://github.com/hcc/hcc.git
+        cd hcc
 
-2.  Build human-charity-coind:
+2.  Build hccd:
 
         ./autogen.sh
         ./configure --with-gui=qt5
@@ -57,7 +57,7 @@ Instructions: Homebrew
 
         make check
 
-4.  (Optional) You can also install human-charity-coind to your path:
+4.  (Optional) You can also install hccd to your path:
 
         make install
 
@@ -69,7 +69,7 @@ Download Qt Creator from http://www.qt.io/download/. Download the "community edi
 1. Make sure you installed everything through homebrew mentioned above
 2. Do a proper ./configure --with-gui=qt5 --enable-debug
 3. In Qt Creator do "New Project" -> Import Project -> Import Existing Project
-4. Enter "human-charity-coin-qt" as project name, enter src/qt as location
+4. Enter "hcc-qt" as project name, enter src/qt as location
 5. Leave the file selection as it is
 6. Confirm the "summary page"
 7. In the "Projects" tab select "Manage Kits..."
@@ -79,11 +79,11 @@ Download Qt Creator from http://www.qt.io/download/. Download the "community edi
 
 Creating a release build
 ------------------------
-You can ignore this section if you are building `human-charity-coind` for your own use.
+You can ignore this section if you are building `hccd` for your own use.
 
-human-charity-coind/human-charity-coin-cli binaries are not included in the Human-Charity-Coin-Qt.app bundle.
+hccd/hcc-cli binaries are not included in the Human-Charity-Coin-Qt.app bundle.
 
-If you are building `human-charity-coind` or `human-charity-coin-qt` for others, your build machine should be set up
+If you are building `hccd` or `hcc-qt` for others, your build machine should be set up
 as follows for maximum compatibility:
 
 All dependencies should be compiled with these flags:
@@ -98,14 +98,14 @@ bundle is packaged and signed to create the .dmg disk image that is distributed.
 Running
 -------
 
-It's now available at `./human-charity-coind`, provided that you are still in the `src`
+It's now available at `./hccd`, provided that you are still in the `src`
 directory. We have to first create the RPC configuration file, though.
 
-Run `./human-charity-coind` to get the filename where it should be put, or just try these
+Run `./hccd` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=human-charity-coinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Human-Charity-Coin/human-charity-coin.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/Human-Charity-Coin/human-charity-coin.conf"
+    echo -e "rpcuser=hccrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Human-Charity-Coin/hcc.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Human-Charity-Coin/hcc.conf"
 
 The next time you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours;
@@ -116,6 +116,6 @@ you can monitor its process by looking at the debug.log file, like this:
 Other commands:
 -------
 
-    ./human-charity-coind -daemon # to start the human-charity-coin daemon.
-    ./human-charity-coin-cli --help  # for a list of command-line options.
-    ./human-charity-coin-cli help    # When the daemon is running, to get a list of RPC commands
+    ./hccd -daemon # to start the hcc daemon.
+    ./hcc-cli --help  # for a list of command-line options.
+    ./hcc-cli help    # When the daemon is running, to get a list of RPC commands

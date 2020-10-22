@@ -1,2 +1,2 @@
-usr/local/bin/human-charity-coind usr/bin
-usr/local/bin/human-charity-coin-cli usr/bin
+usr/local/bin/hccd usr/bin
+usr/local/bin/hcc-cli usr/bin

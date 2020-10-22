@@ -287,7 +287,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     receiveIcon.addPixmap(receiveIconActive,QIcon::Active,QIcon::Off);
 
     receiveCoinsAction = new QAction(receiveIcon, tr("&Receive"), this);
-    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and human-charity-coin: URIs)"));
+    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and hcc: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -422,7 +422,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     multisigSignAction->setStatusTip(tr("Sign with a multisignature address"));
 
     openAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_FileIcon), tr("Open &URI..."), this);
-    openAction->setStatusTip(tr("Open a human-charity-coin: URI or payment request"));
+    openAction->setStatusTip(tr("Open a hcc: URI or payment request"));
     openBlockExplorerAction = new QAction(QIcon(":/icons/explorer"), tr("&Blockchain explorer"), this);
     openBlockExplorerAction->setStatusTip(tr("Block explorer window"));
 
@@ -534,7 +534,7 @@ void BitcoinGUI::createToolBars()
         toolbar->addWidget(header);
 
         QLabel* labelLogo = new QLabel;
-        labelLogo->setPixmap(QIcon(":/images/human-charity-coin_logo_horizontal").pixmap(210, 50));
+        labelLogo->setPixmap(QIcon(":/images/hcc_logo_horizontal").pixmap(210, 50));
         labelLogo->setStyleSheet(".QLabel { text-align:center; margin: 2em 0 2em 2em; }");
         toolbar->addWidget(labelLogo);
 

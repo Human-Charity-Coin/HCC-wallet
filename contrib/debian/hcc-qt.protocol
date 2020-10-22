@@ -1,6 +1,6 @@
 [Protocol]
-exec=human-charity-coin-qt '%u'
-protocol=human-charity-coin
+exec=hcc-qt '%u'
+protocol=hcc
 input=none
 output=none
 helper=true

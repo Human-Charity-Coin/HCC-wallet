@@ -8,155 +8,155 @@
 #else
 #define UNUSED
 #endif
-static const char UNUSED *human-charity-coin_strings[] = {
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+static const char UNUSED *hcc_strings[] = {
+QT_TRANSLATE_NOOP("hcc-core", ""
 "(1 = keep tx meta data e.g. account owner and payment request information, 2 "
 "= drop tx meta data)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Allow JSON-RPC connections from specified source. Valid for <ip> are a "
 "single IP (e.g. 1.2.3.4), a network/netmask (e.g. 1.2.3.4/255.255.255.0) or "
 "a network/CIDR (e.g. 1.2.3.4/24). This option can be specified multiple times"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "An error occurred while setting up the RPC address %s port %u for listening: "
 "%s"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Bind to given address and always listen on it. Use [host]:port notation for "
 "IPv6"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Bind to given address and whitelist peers connecting to it. Use [host]:port "
 "notation for IPv6"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Bind to given address to listen for JSON-RPC connections. Use [host]:port "
 "notation for IPv6. This option can be specified multiple times (default: "
 "bind to all interfaces)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Cannot obtain a lock on data directory %s. Human-Charity-Coin Core is probably already "
 "running."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Change automatic finalized budget voting behavior. mode=auto: Vote for only "
 "exact finalized budget match to my generated budget. (string, default: auto)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Continuously rate-limit free transactions to <n>*1000 bytes per minute "
 "(default:%u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Create new files with system default permissions, instead of umask 077 (only "
 "effective with disabled wallet functionality)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Delete all wallet transactions and only recover those parts of the "
 "blockchain through -rescan on startup"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Disable all Human-Charity-Coin specific functionality (Masternodes, SwiftTX, "
 "Budgeting) (0-1, default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Distributed under the MIT software license, see the accompanying file "
 "COPYING or <http://www.opensource.org/licenses/mit-license.php>."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Enable SwiftTX, show confirmations for locked transactions (bool, default: %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Enable spork administration functionality with the appropriate private key."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Enter regression test mode, which uses a special chain in which blocks can "
 "be solved instantly."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Error: Listening for incoming connections failed (listen returned error %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Error: The transaction was rejected! This might happen if some of the coins "
 "in your wallet were already spent, such as if you used a copy of wallet.dat "
 "and coins were spent in the copy but not marked as spent here."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Error: This transaction requires a transaction fee of at least %s because of "
 "its amount, complexity, or use of recently received funds!"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Error: Unsupported argument -checklevel found. Checklevel must be level 4."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Error: Unsupported argument -socks found. Setting SOCKS version isn't "
 "possible anymore, only SOCKS5 proxies are supported."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Execute command when a relevant alert is received or we see a really long "
 "fork (%s in cmd is replaced by message)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Execute command when a wallet transaction changes (%s in cmd is replaced by "
 "TxID)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Execute command when the best block changes (%s in cmd is replaced by block "
 "hash)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Fees (in HCC/Kb) smaller than this are considered zero fee for relaying "
 "(default: %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Fees (in HCC/Kb) smaller than this are considered zero fee for transaction "
 "creation (default: %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Flush database activity from memory pool to disk log every <n> megabytes "
 "(default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "If paytxfee is not set, include enough fee so transactions begin "
 "confirmation on average within n blocks (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "In this mode -genproclimit controls how many blocks are generated "
 "immediately."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Insufficient or insufficient confirmed funds, you might need to wait a few "
 "minutes and try again."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Invalid amount for -maxtxfee=<amount>: '%s' (must be at least the minrelay "
 "fee of %s to prevent stuck transactions)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Keep the specified amount available for spending at all times (default: 0)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Log transaction priority and fee per kB when mining blocks (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Maintain a full transaction index, used by the getrawtransaction rpc call "
 "(default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Maximum size of data in data carrier transactions we relay and mine "
 "(default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Maximum total fees to use in a single wallet transaction, setting too low "
 "may abort large transactions (default: %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Number of seconds to keep misbehaving peers from reconnecting (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Output debugging information (default: %u, supplying <category> is optional)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Query for peer addresses via DNS lookup, if low on addresses (default: 1 "
 "unless -connect)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Randomize credentials for every proxy connection. This enables Tor stream "
 "isolation (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Require high priority for relaying free or low-fee transactions (default:%u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Send trace/debug info to console instead of debug.log file (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Set maximum size of high-priority/low-fee transactions in bytes (default: %d)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Set the number of script verification threads (%u to %d, 0 = auto, <0 = "
 "leave that many cores free, default: %d)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Set the number of threads for coin generation if enabled (-1 = all cores, "
 "default: %d)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Show N confirmations for a successfully locked transaction (0-9999, default: "
 "%u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Support filtering of blocks and transaction with bloom filters (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "SwiftTX requires inputs with at least 6 confirmations, you might need to wait "
 "a few minutes and try again."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "This is a pre-release test build - use at your own risk - do not use for "
 "staking or merchant applications!"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "This product includes software developed by the OpenSSL Project for use in "
 "the OpenSSL Toolkit <https://www.openssl.org/> and cryptographic software "
 "written by Eric Young and UPnP software written by Thomas Bernard."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
-"To use human-charity-coind, or the -server option to human-charity-coin-qt, you must set an rpcpassword "
+QT_TRANSLATE_NOOP("hcc-core", ""
+"To use hccd, or the -server option to hcc-qt, you must set an rpcpassword "
 "in the configuration file:\n"
 "%s\n"
 "It is recommended you use the following random password:\n"
-"rpcuser=human-charity-coinrpc\n"
+"rpcuser=hccrpc\n"
 "rpcpassword=%s\n"
 "(you do not need to remember this password)\n"
 "The username and password MUST NOT be the same.\n"
@@ -164,285 +164,285 @@ QT_TRANSLATE_NOOP("human-charity-coin-core", ""
 "permissions.\n"
 "It is also recommended to set alertnotify so you are notified of problems;\n"
 "for example: alertnotify=echo %%s | mail -s \"Human-Charity-Coin Alert\" admin@foo.com\n"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Unable to bind to %s on this computer. Human-Charity-Coin Core is probably already running."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Unable to locate enough funds for this transaction that are not equal 1000 "
 "HCC."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: "
 "%s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Warning: -maxtxfee is set very high! Fees this large could be paid on a "
 "single transaction."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Warning: -paytxfee is set very high! This is the transaction fee you will "
 "pay if you send a transaction."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Warning: Please check that your computer's date and time are correct! If "
 "your clock is wrong Human-Charity-Coin Core will not work properly."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Warning: The network does not appear to fully agree! Some miners appear to "
 "be experiencing issues."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Warning: We do not appear to fully agree with our peers! You may need to "
 "upgrade, or other nodes may need to upgrade."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Warning: error reading wallet.dat! All keys read correctly, but transaction "
 "data or address book entries might be missing or incorrect."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as "
 "wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect "
 "you should restore from a backup."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Whitelist peers connecting from the given netmask or IP address. Can be "
 "specified multiple times."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "Whitelisted peers cannot be DoS banned and their transactions are always "
 "relayed, even if they are already in the mempool, useful e.g. for a gateway"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", ""
+QT_TRANSLATE_NOOP("hcc-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "(6949 could be used only on mainnet)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "(default: %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "(must be 6949 for mainnet)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "<category> can be:"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Accept command line and JSON-RPC commands"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Accept public REST requests (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Acceptable ciphers (default: %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Add a node to connect to and attempt to keep the connection open"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Allow DNS lookups for -addnode, -seednode and -connect"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Already have that input."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Always query for peer addresses via DNS lookup (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Attempt to force blockchain corruption recovery"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Attempt to recover private keys from a corrupt wallet.dat"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Automatically create Tor hidden service (default: %d)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Block creation options:"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Can't find random Masternode."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Cannot downgrade wallet"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Cannot resolve -bind address: '%s'"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Cannot resolve -externalip address: '%s'"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Cannot resolve -whitebind address: '%s'"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Cannot write default address"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Collateral not valid."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Connect only to the specified node(s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Connect through SOCKS5 proxy"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Connect to a node to retrieve peer addresses, and disconnect"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Connection options:"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Copyright (C) 2009-%i The Bitcoin Core Developers"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Copyright (C) 2014-%i The Dash Core Developers"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Copyright (C) 2015-%i The PIVX Core Developers"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Copyright (C) 2017-%i The Human-Charity-Coin Core Developers"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Corrupted block database detected"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Could not parse -rpcbind value %s as network address"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Could not parse masternode.conf"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Debugging/Testing options:"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Delete blockchain folders and resync from scratch"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Disable OS notifications for incoming transactions (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Disable safemode, override a real safe mode event (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Discover own IP address (default: 1 when listening and no -externalip)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Display the stake modifier calculations in the debug.log file."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Display verbose coin stake messages in the debug.log file."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Do not load the wallet and disable wallet RPC calls"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Do you want to rebuild the block database now?"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Done loading"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Enable publish hash block in <address>"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Enable publish hash transaction (locked via SwiftTX) in <address>"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Enable publish hash transaction in <address>"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Enable publish raw block in <address>"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Enable publish raw transaction (locked via SwiftTX) in <address>"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Enable publish raw transaction in <address>"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Enable staking functionality (0-1, default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Enable the client to act as a masternode (0-1, default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Entries are full."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Error connecting to Masternode."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Error initializing block database"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Error initializing wallet database environment %s!"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Error loading block database"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Error loading wallet.dat"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Error loading wallet.dat: Wallet corrupted"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Error loading wallet.dat: Wallet requires newer version of Human-Charity-Coin Core"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Error opening block database"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Error reading from database, shutting down."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Error recovering public key."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Error"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Error: A fatal internal error occured, see debug.log for details"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Error: Disk space is low!"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Error: Unsupported argument -tor found, use -onion."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Error: Wallet locked, unable to create transaction!"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Failed to listen on any port. Use -listen=0 if you want this."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Failed to read block index"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Failed to read block"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Failed to write block index"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Fee (in HCC/kB) to add to transactions you send (default: %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Finalizing transaction."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Force safe mode (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Found enough users, signing ( waiting %s )"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Found enough users, signing ..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Generate coins (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "How many blocks to check at startup (default: %u, 0 = all)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "If <category> is not supplied, output all debugging information."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Importing..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Imports blocks from external blk000??.dat file"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Include IP addresses in debug output (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Incompatible mode."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Incompatible version."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Incorrect or no genesis block found. Wrong datadir for network?"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Information"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Initialization sanity check failed. Human-Charity-Coin Core is shutting down."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Input is not valid."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Insufficient funds"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Insufficient funds."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Invalid -onion address or hostname: '%s'"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Invalid -proxy address or hostname: '%s'"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Invalid amount for -maxtxfee=<amount>: '%s'"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Invalid amount for -minrelaytxfee=<amount>: '%s'"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Invalid amount for -mintxfee=<amount>: '%s'"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Invalid amount for -paytxfee=<amount>: '%s' (must be at least %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Invalid amount for -paytxfee=<amount>: '%s'"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Invalid amount for -reservebalance=<amount>"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Invalid amount"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Invalid masternodeprivkey. Please see documenation."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Invalid netmask specified in -whitelist: '%s'"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Invalid port detected in masternode.conf"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Invalid private key."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Invalid script detected."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Keep at most <n> unconnectable transactions in memory (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Limit size of signature cache to <n> entries (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Line: %d"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Listen for JSON-RPC connections on <port> (default: %u or testnet: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Listen for connections on <port> (default: %u or testnet: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Loading addresses..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Loading block index..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Loading budget cache..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Loading masternode cache..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Loading masternode payment cache..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Loading sporks..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Loading wallet... (%3.2f %%)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Loading wallet..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Lock is already in place."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Lock masternodes from masternode configuration file (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Maintain at most <n> connections to peers (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Masternode options:"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Masternode queue is full."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Masternode:"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Maximum per-connection receive buffer, <n>*1000 bytes (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Maximum per-connection send buffer, <n>*1000 bytes (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Missing input transaction information."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Need to specify a port with -whitebind: '%s'"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "No Masternodes detected."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "No compatible Masternode found."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Node relay options:"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Non-standard public key detected."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Not compatible with existing transactions."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Not enough file descriptors available."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Not in the Masternode list."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Number of automatic wallet backups (default: 10)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Only accept block chain matching built-in checkpoints (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Only connect to nodes in network <net> (ipv4, ipv6 or onion)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Options:"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Password for JSON-RPC connections"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Preparing for resync..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Prepend debug output with timestamp (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Print version and exit"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "RPC SSL options: (see the Bitcoin Wiki for SSL setup instructions)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "RPC server options:"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "RPC support for HTTP persistent connections (default: %d)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Randomly drop 1 of every <n> network messages"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Randomly fuzz 1 of every <n> network messages"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Rebuild block chain index from current blk000??.dat files"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Receive and display P2P network alerts (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Relay and mine data carrier transactions (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Relay non-P2SH multisig (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Rescan the block chain for missing wallet transactions"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Rescanning..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Run a thread to flush wallet periodically (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Run in the background as a daemon and accept commands"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Send transactions as zero-fee transactions if possible (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Server certificate file (default: %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Server private key (default: %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Session not complete!"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Session timed out."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Set database cache size in megabytes (%d to %d, default: %d)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Set external address:port to get to this masternode (example: %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Set key pool size to <n> (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Set maximum block size in bytes (default: %d)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Set minimum block size in bytes (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Set the Maximum reorg depth (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Set the masternode private key"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Set the number of threads to service RPC calls (default: %d)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Sets the DB_PRIVATE flag in the wallet db environment (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Show all debugging options (usage: --help -help-debug)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Shrink debug.log file on client startup (default: 1 when no -debug)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Signing failed."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Signing timed out."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Signing transaction failed"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Specify configuration file (default: %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Specify connection timeout in milliseconds (minimum: 1, default: %d)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Specify data directory"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Specify masternode configuration file (default: %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Specify pid file (default: %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Specify wallet file (within data directory)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Specify your own public address"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Spend unconfirmed change when sending transactions (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Staking options:"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Stop running after importing blocks from disk (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Submitted following entries to masternode: %u / %d"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Submitted to masternode, waiting for more entries ( %u / %d ) %s"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Submitted to masternode, waiting in queue %s"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "SwiftTX options:"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Synchronization failed"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Synchronization finished"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Synchronization pending..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Synchronizing budgets..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Synchronizing masternode winners..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Synchronizing masternodes..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Synchronizing sporks..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "This help message"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "This is experimental software."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "This is intended for regression testing tools and app development."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "This is not a Masternode."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Threshold for disconnecting misbehaving peers (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Tor control port password (default: empty)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Tor control port to use if onion listening enabled (default: %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Transaction amount too small"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Transaction amounts must be positive"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Transaction created successfully."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Transaction fees are too high."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Transaction not valid."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Transaction too large for fee policy"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Transaction too large"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Transmitting final transaction."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Unable to bind to %s on this computer (bind returned error %s)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Unable to sign spork message, wrong key?"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Unknown network specified in -onlynet: '%s'"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Unknown state: id = %u"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Upgrade wallet to latest format"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Use OpenSSL (https) for JSON-RPC connections"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Use UPnP to map the listening port (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Use UPnP to map the listening port (default: 1 when listening)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Use a custom max chain reorganization depth (default: %u)"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Use the test network"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Username for JSON-RPC connections"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Verifying blocks..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Verifying wallet..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Wallet %s resides outside data directory %s"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Wallet is locked."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Wallet needed to be rewritten: restart Human-Charity-Coin Core to complete"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Wallet options:"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Wallet window title"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Warning"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Warning: This version is obsolete, upgrade required!"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Warning: Unsupported argument -benchmark ignored, use -debug=bench."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Warning: Unsupported argument -debugnet ignored, use -debug=net."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Will retry..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "You need to rebuild the database using -reindex to change -txindex"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Your entries added successfully."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Your transaction was accepted into the pool!"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "Zapping all transactions from wallet..."),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "ZeroMQ notification options:"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "on startup"),
-QT_TRANSLATE_NOOP("human-charity-coin-core", "wallet.dat corrupt, salvage failed"),
+QT_TRANSLATE_NOOP("hcc-core", "(6949 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("hcc-core", "(default: %s)"),
+QT_TRANSLATE_NOOP("hcc-core", "(default: 1)"),
+QT_TRANSLATE_NOOP("hcc-core", "(must be 6949 for mainnet)"),
+QT_TRANSLATE_NOOP("hcc-core", "<category> can be:"),
+QT_TRANSLATE_NOOP("hcc-core", "Accept command line and JSON-RPC commands"),
+QT_TRANSLATE_NOOP("hcc-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
+QT_TRANSLATE_NOOP("hcc-core", "Accept public REST requests (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Acceptable ciphers (default: %s)"),
+QT_TRANSLATE_NOOP("hcc-core", "Add a node to connect to and attempt to keep the connection open"),
+QT_TRANSLATE_NOOP("hcc-core", "Allow DNS lookups for -addnode, -seednode and -connect"),
+QT_TRANSLATE_NOOP("hcc-core", "Already have that input."),
+QT_TRANSLATE_NOOP("hcc-core", "Always query for peer addresses via DNS lookup (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Attempt to force blockchain corruption recovery"),
+QT_TRANSLATE_NOOP("hcc-core", "Attempt to recover private keys from a corrupt wallet.dat"),
+QT_TRANSLATE_NOOP("hcc-core", "Automatically create Tor hidden service (default: %d)"),
+QT_TRANSLATE_NOOP("hcc-core", "Block creation options:"),
+QT_TRANSLATE_NOOP("hcc-core", "Can't find random Masternode."),
+QT_TRANSLATE_NOOP("hcc-core", "Cannot downgrade wallet"),
+QT_TRANSLATE_NOOP("hcc-core", "Cannot resolve -bind address: '%s'"),
+QT_TRANSLATE_NOOP("hcc-core", "Cannot resolve -externalip address: '%s'"),
+QT_TRANSLATE_NOOP("hcc-core", "Cannot resolve -whitebind address: '%s'"),
+QT_TRANSLATE_NOOP("hcc-core", "Cannot write default address"),
+QT_TRANSLATE_NOOP("hcc-core", "Collateral not valid."),
+QT_TRANSLATE_NOOP("hcc-core", "Connect only to the specified node(s)"),
+QT_TRANSLATE_NOOP("hcc-core", "Connect through SOCKS5 proxy"),
+QT_TRANSLATE_NOOP("hcc-core", "Connect to a node to retrieve peer addresses, and disconnect"),
+QT_TRANSLATE_NOOP("hcc-core", "Connection options:"),
+QT_TRANSLATE_NOOP("hcc-core", "Copyright (C) 2009-%i The Bitcoin Core Developers"),
+QT_TRANSLATE_NOOP("hcc-core", "Copyright (C) 2014-%i The Dash Core Developers"),
+QT_TRANSLATE_NOOP("hcc-core", "Copyright (C) 2015-%i The PIVX Core Developers"),
+QT_TRANSLATE_NOOP("hcc-core", "Copyright (C) 2017-%i The Human-Charity-Coin Core Developers"),
+QT_TRANSLATE_NOOP("hcc-core", "Corrupted block database detected"),
+QT_TRANSLATE_NOOP("hcc-core", "Could not parse -rpcbind value %s as network address"),
+QT_TRANSLATE_NOOP("hcc-core", "Could not parse masternode.conf"),
+QT_TRANSLATE_NOOP("hcc-core", "Debugging/Testing options:"),
+QT_TRANSLATE_NOOP("hcc-core", "Delete blockchain folders and resync from scratch"),
+QT_TRANSLATE_NOOP("hcc-core", "Disable OS notifications for incoming transactions (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Disable safemode, override a real safe mode event (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Discover own IP address (default: 1 when listening and no -externalip)"),
+QT_TRANSLATE_NOOP("hcc-core", "Display the stake modifier calculations in the debug.log file."),
+QT_TRANSLATE_NOOP("hcc-core", "Display verbose coin stake messages in the debug.log file."),
+QT_TRANSLATE_NOOP("hcc-core", "Do not load the wallet and disable wallet RPC calls"),
+QT_TRANSLATE_NOOP("hcc-core", "Do you want to rebuild the block database now?"),
+QT_TRANSLATE_NOOP("hcc-core", "Done loading"),
+QT_TRANSLATE_NOOP("hcc-core", "Enable publish hash block in <address>"),
+QT_TRANSLATE_NOOP("hcc-core", "Enable publish hash transaction (locked via SwiftTX) in <address>"),
+QT_TRANSLATE_NOOP("hcc-core", "Enable publish hash transaction in <address>"),
+QT_TRANSLATE_NOOP("hcc-core", "Enable publish raw block in <address>"),
+QT_TRANSLATE_NOOP("hcc-core", "Enable publish raw transaction (locked via SwiftTX) in <address>"),
+QT_TRANSLATE_NOOP("hcc-core", "Enable publish raw transaction in <address>"),
+QT_TRANSLATE_NOOP("hcc-core", "Enable staking functionality (0-1, default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Enable the client to act as a masternode (0-1, default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Entries are full."),
+QT_TRANSLATE_NOOP("hcc-core", "Error connecting to Masternode."),
+QT_TRANSLATE_NOOP("hcc-core", "Error initializing block database"),
+QT_TRANSLATE_NOOP("hcc-core", "Error initializing wallet database environment %s!"),
+QT_TRANSLATE_NOOP("hcc-core", "Error loading block database"),
+QT_TRANSLATE_NOOP("hcc-core", "Error loading wallet.dat"),
+QT_TRANSLATE_NOOP("hcc-core", "Error loading wallet.dat: Wallet corrupted"),
+QT_TRANSLATE_NOOP("hcc-core", "Error loading wallet.dat: Wallet requires newer version of Human-Charity-Coin Core"),
+QT_TRANSLATE_NOOP("hcc-core", "Error opening block database"),
+QT_TRANSLATE_NOOP("hcc-core", "Error reading from database, shutting down."),
+QT_TRANSLATE_NOOP("hcc-core", "Error recovering public key."),
+QT_TRANSLATE_NOOP("hcc-core", "Error"),
+QT_TRANSLATE_NOOP("hcc-core", "Error: A fatal internal error occured, see debug.log for details"),
+QT_TRANSLATE_NOOP("hcc-core", "Error: Disk space is low!"),
+QT_TRANSLATE_NOOP("hcc-core", "Error: Unsupported argument -tor found, use -onion."),
+QT_TRANSLATE_NOOP("hcc-core", "Error: Wallet locked, unable to create transaction!"),
+QT_TRANSLATE_NOOP("hcc-core", "Failed to listen on any port. Use -listen=0 if you want this."),
+QT_TRANSLATE_NOOP("hcc-core", "Failed to read block index"),
+QT_TRANSLATE_NOOP("hcc-core", "Failed to read block"),
+QT_TRANSLATE_NOOP("hcc-core", "Failed to write block index"),
+QT_TRANSLATE_NOOP("hcc-core", "Fee (in HCC/kB) to add to transactions you send (default: %s)"),
+QT_TRANSLATE_NOOP("hcc-core", "Finalizing transaction."),
+QT_TRANSLATE_NOOP("hcc-core", "Force safe mode (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Found enough users, signing ( waiting %s )"),
+QT_TRANSLATE_NOOP("hcc-core", "Found enough users, signing ..."),
+QT_TRANSLATE_NOOP("hcc-core", "Generate coins (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "How many blocks to check at startup (default: %u, 0 = all)"),
+QT_TRANSLATE_NOOP("hcc-core", "If <category> is not supplied, output all debugging information."),
+QT_TRANSLATE_NOOP("hcc-core", "Importing..."),
+QT_TRANSLATE_NOOP("hcc-core", "Imports blocks from external blk000??.dat file"),
+QT_TRANSLATE_NOOP("hcc-core", "Include IP addresses in debug output (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Incompatible mode."),
+QT_TRANSLATE_NOOP("hcc-core", "Incompatible version."),
+QT_TRANSLATE_NOOP("hcc-core", "Incorrect or no genesis block found. Wrong datadir for network?"),
+QT_TRANSLATE_NOOP("hcc-core", "Information"),
+QT_TRANSLATE_NOOP("hcc-core", "Initialization sanity check failed. Human-Charity-Coin Core is shutting down."),
+QT_TRANSLATE_NOOP("hcc-core", "Input is not valid."),
+QT_TRANSLATE_NOOP("hcc-core", "Insufficient funds"),
+QT_TRANSLATE_NOOP("hcc-core", "Insufficient funds."),
+QT_TRANSLATE_NOOP("hcc-core", "Invalid -onion address or hostname: '%s'"),
+QT_TRANSLATE_NOOP("hcc-core", "Invalid -proxy address or hostname: '%s'"),
+QT_TRANSLATE_NOOP("hcc-core", "Invalid amount for -maxtxfee=<amount>: '%s'"),
+QT_TRANSLATE_NOOP("hcc-core", "Invalid amount for -minrelaytxfee=<amount>: '%s'"),
+QT_TRANSLATE_NOOP("hcc-core", "Invalid amount for -mintxfee=<amount>: '%s'"),
+QT_TRANSLATE_NOOP("hcc-core", "Invalid amount for -paytxfee=<amount>: '%s' (must be at least %s)"),
+QT_TRANSLATE_NOOP("hcc-core", "Invalid amount for -paytxfee=<amount>: '%s'"),
+QT_TRANSLATE_NOOP("hcc-core", "Invalid amount for -reservebalance=<amount>"),
+QT_TRANSLATE_NOOP("hcc-core", "Invalid amount"),
+QT_TRANSLATE_NOOP("hcc-core", "Invalid masternodeprivkey. Please see documenation."),
+QT_TRANSLATE_NOOP("hcc-core", "Invalid netmask specified in -whitelist: '%s'"),
+QT_TRANSLATE_NOOP("hcc-core", "Invalid port detected in masternode.conf"),
+QT_TRANSLATE_NOOP("hcc-core", "Invalid private key."),
+QT_TRANSLATE_NOOP("hcc-core", "Invalid script detected."),
+QT_TRANSLATE_NOOP("hcc-core", "Keep at most <n> unconnectable transactions in memory (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Limit size of signature cache to <n> entries (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Line: %d"),
+QT_TRANSLATE_NOOP("hcc-core", "Listen for JSON-RPC connections on <port> (default: %u or testnet: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Listen for connections on <port> (default: %u or testnet: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Loading addresses..."),
+QT_TRANSLATE_NOOP("hcc-core", "Loading block index..."),
+QT_TRANSLATE_NOOP("hcc-core", "Loading budget cache..."),
+QT_TRANSLATE_NOOP("hcc-core", "Loading masternode cache..."),
+QT_TRANSLATE_NOOP("hcc-core", "Loading masternode payment cache..."),
+QT_TRANSLATE_NOOP("hcc-core", "Loading sporks..."),
+QT_TRANSLATE_NOOP("hcc-core", "Loading wallet... (%3.2f %%)"),
+QT_TRANSLATE_NOOP("hcc-core", "Loading wallet..."),
+QT_TRANSLATE_NOOP("hcc-core", "Lock is already in place."),
+QT_TRANSLATE_NOOP("hcc-core", "Lock masternodes from masternode configuration file (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Maintain at most <n> connections to peers (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Masternode options:"),
+QT_TRANSLATE_NOOP("hcc-core", "Masternode queue is full."),
+QT_TRANSLATE_NOOP("hcc-core", "Masternode:"),
+QT_TRANSLATE_NOOP("hcc-core", "Maximum per-connection receive buffer, <n>*1000 bytes (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Maximum per-connection send buffer, <n>*1000 bytes (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Missing input transaction information."),
+QT_TRANSLATE_NOOP("hcc-core", "Need to specify a port with -whitebind: '%s'"),
+QT_TRANSLATE_NOOP("hcc-core", "No Masternodes detected."),
+QT_TRANSLATE_NOOP("hcc-core", "No compatible Masternode found."),
+QT_TRANSLATE_NOOP("hcc-core", "Node relay options:"),
+QT_TRANSLATE_NOOP("hcc-core", "Non-standard public key detected."),
+QT_TRANSLATE_NOOP("hcc-core", "Not compatible with existing transactions."),
+QT_TRANSLATE_NOOP("hcc-core", "Not enough file descriptors available."),
+QT_TRANSLATE_NOOP("hcc-core", "Not in the Masternode list."),
+QT_TRANSLATE_NOOP("hcc-core", "Number of automatic wallet backups (default: 10)"),
+QT_TRANSLATE_NOOP("hcc-core", "Only accept block chain matching built-in checkpoints (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Only connect to nodes in network <net> (ipv4, ipv6 or onion)"),
+QT_TRANSLATE_NOOP("hcc-core", "Options:"),
+QT_TRANSLATE_NOOP("hcc-core", "Password for JSON-RPC connections"),
+QT_TRANSLATE_NOOP("hcc-core", "Preparing for resync..."),
+QT_TRANSLATE_NOOP("hcc-core", "Prepend debug output with timestamp (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Print version and exit"),
+QT_TRANSLATE_NOOP("hcc-core", "RPC SSL options: (see the Bitcoin Wiki for SSL setup instructions)"),
+QT_TRANSLATE_NOOP("hcc-core", "RPC server options:"),
+QT_TRANSLATE_NOOP("hcc-core", "RPC support for HTTP persistent connections (default: %d)"),
+QT_TRANSLATE_NOOP("hcc-core", "Randomly drop 1 of every <n> network messages"),
+QT_TRANSLATE_NOOP("hcc-core", "Randomly fuzz 1 of every <n> network messages"),
+QT_TRANSLATE_NOOP("hcc-core", "Rebuild block chain index from current blk000??.dat files"),
+QT_TRANSLATE_NOOP("hcc-core", "Receive and display P2P network alerts (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Relay and mine data carrier transactions (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Relay non-P2SH multisig (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Rescan the block chain for missing wallet transactions"),
+QT_TRANSLATE_NOOP("hcc-core", "Rescanning..."),
+QT_TRANSLATE_NOOP("hcc-core", "Run a thread to flush wallet periodically (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Run in the background as a daemon and accept commands"),
+QT_TRANSLATE_NOOP("hcc-core", "Send transactions as zero-fee transactions if possible (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Server certificate file (default: %s)"),
+QT_TRANSLATE_NOOP("hcc-core", "Server private key (default: %s)"),
+QT_TRANSLATE_NOOP("hcc-core", "Session not complete!"),
+QT_TRANSLATE_NOOP("hcc-core", "Session timed out."),
+QT_TRANSLATE_NOOP("hcc-core", "Set database cache size in megabytes (%d to %d, default: %d)"),
+QT_TRANSLATE_NOOP("hcc-core", "Set external address:port to get to this masternode (example: %s)"),
+QT_TRANSLATE_NOOP("hcc-core", "Set key pool size to <n> (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Set maximum block size in bytes (default: %d)"),
+QT_TRANSLATE_NOOP("hcc-core", "Set minimum block size in bytes (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Set the Maximum reorg depth (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Set the masternode private key"),
+QT_TRANSLATE_NOOP("hcc-core", "Set the number of threads to service RPC calls (default: %d)"),
+QT_TRANSLATE_NOOP("hcc-core", "Sets the DB_PRIVATE flag in the wallet db environment (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Show all debugging options (usage: --help -help-debug)"),
+QT_TRANSLATE_NOOP("hcc-core", "Shrink debug.log file on client startup (default: 1 when no -debug)"),
+QT_TRANSLATE_NOOP("hcc-core", "Signing failed."),
+QT_TRANSLATE_NOOP("hcc-core", "Signing timed out."),
+QT_TRANSLATE_NOOP("hcc-core", "Signing transaction failed"),
+QT_TRANSLATE_NOOP("hcc-core", "Specify configuration file (default: %s)"),
+QT_TRANSLATE_NOOP("hcc-core", "Specify connection timeout in milliseconds (minimum: 1, default: %d)"),
+QT_TRANSLATE_NOOP("hcc-core", "Specify data directory"),
+QT_TRANSLATE_NOOP("hcc-core", "Specify masternode configuration file (default: %s)"),
+QT_TRANSLATE_NOOP("hcc-core", "Specify pid file (default: %s)"),
+QT_TRANSLATE_NOOP("hcc-core", "Specify wallet file (within data directory)"),
+QT_TRANSLATE_NOOP("hcc-core", "Specify your own public address"),
+QT_TRANSLATE_NOOP("hcc-core", "Spend unconfirmed change when sending transactions (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Staking options:"),
+QT_TRANSLATE_NOOP("hcc-core", "Stop running after importing blocks from disk (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Submitted following entries to masternode: %u / %d"),
+QT_TRANSLATE_NOOP("hcc-core", "Submitted to masternode, waiting for more entries ( %u / %d ) %s"),
+QT_TRANSLATE_NOOP("hcc-core", "Submitted to masternode, waiting in queue %s"),
+QT_TRANSLATE_NOOP("hcc-core", "SwiftTX options:"),
+QT_TRANSLATE_NOOP("hcc-core", "Synchronization failed"),
+QT_TRANSLATE_NOOP("hcc-core", "Synchronization finished"),
+QT_TRANSLATE_NOOP("hcc-core", "Synchronization pending..."),
+QT_TRANSLATE_NOOP("hcc-core", "Synchronizing budgets..."),
+QT_TRANSLATE_NOOP("hcc-core", "Synchronizing masternode winners..."),
+QT_TRANSLATE_NOOP("hcc-core", "Synchronizing masternodes..."),
+QT_TRANSLATE_NOOP("hcc-core", "Synchronizing sporks..."),
+QT_TRANSLATE_NOOP("hcc-core", "This help message"),
+QT_TRANSLATE_NOOP("hcc-core", "This is experimental software."),
+QT_TRANSLATE_NOOP("hcc-core", "This is intended for regression testing tools and app development."),
+QT_TRANSLATE_NOOP("hcc-core", "This is not a Masternode."),
+QT_TRANSLATE_NOOP("hcc-core", "Threshold for disconnecting misbehaving peers (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Tor control port password (default: empty)"),
+QT_TRANSLATE_NOOP("hcc-core", "Tor control port to use if onion listening enabled (default: %s)"),
+QT_TRANSLATE_NOOP("hcc-core", "Transaction amount too small"),
+QT_TRANSLATE_NOOP("hcc-core", "Transaction amounts must be positive"),
+QT_TRANSLATE_NOOP("hcc-core", "Transaction created successfully."),
+QT_TRANSLATE_NOOP("hcc-core", "Transaction fees are too high."),
+QT_TRANSLATE_NOOP("hcc-core", "Transaction not valid."),
+QT_TRANSLATE_NOOP("hcc-core", "Transaction too large for fee policy"),
+QT_TRANSLATE_NOOP("hcc-core", "Transaction too large"),
+QT_TRANSLATE_NOOP("hcc-core", "Transmitting final transaction."),
+QT_TRANSLATE_NOOP("hcc-core", "Unable to bind to %s on this computer (bind returned error %s)"),
+QT_TRANSLATE_NOOP("hcc-core", "Unable to sign spork message, wrong key?"),
+QT_TRANSLATE_NOOP("hcc-core", "Unknown network specified in -onlynet: '%s'"),
+QT_TRANSLATE_NOOP("hcc-core", "Unknown state: id = %u"),
+QT_TRANSLATE_NOOP("hcc-core", "Upgrade wallet to latest format"),
+QT_TRANSLATE_NOOP("hcc-core", "Use OpenSSL (https) for JSON-RPC connections"),
+QT_TRANSLATE_NOOP("hcc-core", "Use UPnP to map the listening port (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Use UPnP to map the listening port (default: 1 when listening)"),
+QT_TRANSLATE_NOOP("hcc-core", "Use a custom max chain reorganization depth (default: %u)"),
+QT_TRANSLATE_NOOP("hcc-core", "Use the test network"),
+QT_TRANSLATE_NOOP("hcc-core", "Username for JSON-RPC connections"),
+QT_TRANSLATE_NOOP("hcc-core", "Verifying blocks..."),
+QT_TRANSLATE_NOOP("hcc-core", "Verifying wallet..."),
+QT_TRANSLATE_NOOP("hcc-core", "Wallet %s resides outside data directory %s"),
+QT_TRANSLATE_NOOP("hcc-core", "Wallet is locked."),
+QT_TRANSLATE_NOOP("hcc-core", "Wallet needed to be rewritten: restart Human-Charity-Coin Core to complete"),
+QT_TRANSLATE_NOOP("hcc-core", "Wallet options:"),
+QT_TRANSLATE_NOOP("hcc-core", "Wallet window title"),
+QT_TRANSLATE_NOOP("hcc-core", "Warning"),
+QT_TRANSLATE_NOOP("hcc-core", "Warning: This version is obsolete, upgrade required!"),
+QT_TRANSLATE_NOOP("hcc-core", "Warning: Unsupported argument -benchmark ignored, use -debug=bench."),
+QT_TRANSLATE_NOOP("hcc-core", "Warning: Unsupported argument -debugnet ignored, use -debug=net."),
+QT_TRANSLATE_NOOP("hcc-core", "Will retry..."),
+QT_TRANSLATE_NOOP("hcc-core", "You need to rebuild the database using -reindex to change -txindex"),
+QT_TRANSLATE_NOOP("hcc-core", "Your entries added successfully."),
+QT_TRANSLATE_NOOP("hcc-core", "Your transaction was accepted into the pool!"),
+QT_TRANSLATE_NOOP("hcc-core", "Zapping all transactions from wallet..."),
+QT_TRANSLATE_NOOP("hcc-core", "ZeroMQ notification options:"),
+QT_TRANSLATE_NOOP("hcc-core", "on startup"),
+QT_TRANSLATE_NOOP("hcc-core", "wallet.dat corrupt, salvage failed"),
 };

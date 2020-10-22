@@ -1,2 +1,2 @@
-debian/manpages/human-charity-coind.1
-debian/manpages/human-charity-coin.conf.5
+debian/manpages/hccd.1
+debian/manpages/hcc.conf.5

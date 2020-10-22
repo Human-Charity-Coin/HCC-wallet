@@ -77,7 +77,7 @@ HEADERS += src/bignum.h \
            src/compressor.h \
            src/core_io.h \
            src/crypter.h \
-           src/human-charity-coin-config.h \
+           src/hcc-config.h \
            src/db.h \
            src/eccryptoverify.h \
            src/ecwrapper.h \
@@ -131,7 +131,7 @@ HEADERS += src/bignum.h \
            src/wallet_ismine.h \
            src/walletdb.h \
            src/compat/sanity.h \
-           src/config/human-charity-coin-config.h \
+           src/config/hcc-config.h \
            src/crypto/common.h \
            src/crypto/hmac_sha256.h \
            src/crypto/hmac_sha512.h \
@@ -331,7 +331,7 @@ HEADERS += src/bignum.h \
            src/secp256k1/src/java/org_bitcoin_NativeSecp256k1.h \
            src/crypto/aes_helper.c \
            src/qt/bitcoinamountfield.moc \
-           src/qt/human-charity-coin.moc \
+           src/qt/hcc.moc \
            src/qt/intro.moc \
            src/qt/overviewpage.moc \
            src/qt/rpcconsole.moc \
@@ -369,9 +369,9 @@ SOURCES += src/activemasternode.cpp \
            src/core_read.cpp \
            src/core_write.cpp \
            src/crypter.cpp \
-           src/human-charity-coin-cli.cpp \
-           src/human-charity-coin-tx.cpp \
-           src/human-charity-coin.cpp \
+           src/hcc-cli.cpp \
+           src/hcc-tx.cpp \
+           src/hcc.cpp \
            src/db.cpp \
            src/eccryptoverify.cpp \
            src/ecwrapper.cpp \
@@ -466,8 +466,8 @@ SOURCES += src/activemasternode.cpp \
            src/qt/coincontroldialog.cpp \
            src/qt/coincontroltreewidget.cpp \
            src/qt/csvmodelwriter.cpp \
-           src/qt/human-charity-coin.cpp \
-           src/qt/human-charity-coinstrings.cpp \
+           src/qt/hcc.cpp \
+           src/qt/hccstrings.cpp \
            src/qt/editaddressdialog.cpp \
            src/qt/guiutil.cpp \
            src/qt/intro.cpp \
@@ -545,7 +545,7 @@ SOURCES += src/activemasternode.cpp \
            src/test/sighash_tests.cpp \
            src/test/sigopcount_tests.cpp \
            src/test/skiplist_tests.cpp \
-           src/test/test_human-charity-coin.cpp \
+           src/test/test_hcc.cpp \
            src/test/timedata_tests.cpp \
            src/test/transaction_tests.cpp \
            src/test/uint256_tests.cpp \
@@ -636,21 +636,21 @@ SOURCES += src/activemasternode.cpp \
            src/leveldb/helpers/memenv/memenv.cc \
            src/leveldb/helpers/memenv/memenv_test.cc \
            src/secp256k1/src/java/org_bitcoin_NativeSecp256k1.c
-RESOURCES += src/qt/human-charity-coin.qrc src/qt/human-charity-coin_locale.qrc
+RESOURCES += src/qt/hcc.qrc src/qt/hcc_locale.qrc
 
-TRANSLATIONS += src/qt/locale/human-charity-coin_bg.ts \
-                src/qt/locale/human-charity-coin_de.ts \
-                src/qt/locale/human-charity-coin_en.ts \
-                src/qt/locale/human-charity-coin_es.ts \
-                src/qt/locale/human-charity-coin_fi.ts \
-                src/qt/locale/human-charity-coin_fr.ts \
-                src/qt/locale/human-charity-coin_it.ts \
-                src/qt/locale/human-charity-coin_ja.ts \
-                src/qt/locale/human-charity-coin_pl.ts \
-                src/qt/locale/human-charity-coin_pt.ts \
-                src/qt/locale/human-charity-coin_ru.ts \
-                src/qt/locale/human-charity-coin_sk.ts \
-                src/qt/locale/human-charity-coin_sv.ts \
-                src/qt/locale/human-charity-coin_vi.ts \
-                src/qt/locale/human-charity-coin_zh_CN.ts \
-                src/qt/locale/human-charity-coin_zh_TW.ts
+TRANSLATIONS += src/qt/locale/hcc_bg.ts \
+                src/qt/locale/hcc_de.ts \
+                src/qt/locale/hcc_en.ts \
+                src/qt/locale/hcc_es.ts \
+                src/qt/locale/hcc_fi.ts \
+                src/qt/locale/hcc_fr.ts \
+                src/qt/locale/hcc_it.ts \
+                src/qt/locale/hcc_ja.ts \
+                src/qt/locale/hcc_pl.ts \
+                src/qt/locale/hcc_pt.ts \
+                src/qt/locale/hcc_ru.ts \
+                src/qt/locale/hcc_sk.ts \
+                src/qt/locale/hcc_sv.ts \
+                src/qt/locale/hcc_vi.ts \
+                src/qt/locale/hcc_zh_CN.ts \
+                src/qt/locale/hcc_zh_TW.ts

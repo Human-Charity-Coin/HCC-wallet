@@ -10,7 +10,7 @@
 #define BITCOIN_MAIN_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/human-charity-coin-config.h"
+#include "config/hcc-config.h"
 #endif
 
 #include "bignum.h"

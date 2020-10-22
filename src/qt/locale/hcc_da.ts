@@ -380,7 +380,7 @@
     </message>
     <message>
         <source>Error Adding Key To Wallet</source>
-        <translation>Fejl ved tilføjelse af nøgle</translation>
+        <translation>Fejl ved tilfjelse af nøgle</translation>
     </message>
     <message>
         <source>Successfully Added Private Key To Wallet</source>
@@ -602,7 +602,7 @@
         <translation>Send mønter til en HCC adresse</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and human-charity-coin: URIs)</source>
+        <source>Request payments (generates QR codes and hcc: URIs)</source>
         <translation>Anmod om betaling (genrerer QR kode og Human-Charity-Coin URL)</translation>
     </message>
     <message>
@@ -662,8 +662,8 @@
         <translation>ÅbnMasternode konfigurationsfil</translation>
     </message>
     <message>
-        <source>Open a human-charity-coin: URI or payment request</source>
-        <translation>Åbn en human-charity-coin URI eller betalingsanmodning</translation>
+        <source>Open a hcc: URI or payment request</source>
+        <translation>Åbn en hcc URI eller betalingsanmodning</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -805,8 +805,8 @@ Adresse: %4
         <translation>Tekstmærke</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (human-charity-coin.conf).</source>
-        <translation>Ikke alle transaktioner vil blive vist. For at vise alle transaktioner må De sætte "txindex=1" i konfigurationsfilen (human-charity-coin.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (hcc.conf).</source>
+        <translation>Ikke alle transaktioner vil blive vist. For at vise alle transaktioner må De sætte "txindex=1" i konfigurationsfilen (hcc.conf).</translation>
     </message>
 </context>
 <context>
@@ -1809,8 +1809,8 @@ Kontroller adressen og prøv igen.</translation>
         <translation>Ugyldig betalingsadresse: %1</translation>
     </message>
     <message>
-        <source>Cannot start human-charity-coin: click-to-pay handler</source>
-        <translation>Kan ikke starte human-charity-coin "klik for at betale" systemet</translation>
+        <source>Cannot start hcc: click-to-pay handler</source>
+        <translation>Kan ikke starte hcc "klik for at betale" systemet</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid HCC address or malformed URI parameters.</source>
@@ -2792,8 +2792,8 @@ Kontroller adressen og prøv igen.</translation>
         <translation>Besked</translation>
     </message>
     <message>
-        <source>A message that was attached to the human-charity-coin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Human-Charity-Coin network.</source>
-        <translation>En besked, der var vedhæftet til human-charity-coin: URl wil blive gemt sammen med transaktionen som reference. Note: Beskeden bliver medsendt transaktionen over netværket.</translation>
+        <source>A message that was attached to the hcc: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Human-Charity-Coin network.</source>
+        <translation>En besked, der var vedhæftet til hcc: URl wil blive gemt sammen med transaktionen som reference. Note: Beskeden bliver medsendt transaktionen over netværket.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -3521,7 +3521,7 @@ Kontroller adressen og prøv igen.</translation>
     </message>
 </context>
 <context>
-    <name>human-charity-coin-core</name>
+    <name>hcc-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = beholdtx metadata. For eksempel information om kontoejer og betalngsanmodninger, 2 = drop TX metadata)</translation>
@@ -3704,10 +3704,10 @@ Kontroller adressen og prøv igen.</translation>
         <translation>Dette produkt anvender software udviklet i OpenSSL projektet til brug i OpenSSL værktøjssættet &lt;https://www.openssl.org/&gt; og kryptosoftware skrevet afEric Young og UPnP software skrevet af Thomas Bernard.</translation>
     </message>
     <message>
-        <source>To use human-charity-coind, or the -server option to human-charity-coin-qt, you must set an rpcpassword in the configuration file:
+        <source>To use hccd, or the -server option to hcc-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=human-charity-coinrpc
+rpcuser=hccrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3715,10 +3715,10 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s "Human-Charity-Coin Alert" admin@foo.com
 </source>
-        <translation>For at bruge human-charity-coind eller -server muligheden sammen med human-charity-coin-qt skal der angives et rpc kodeord i konfigurationsfilen:
+        <translation>For at bruge hccd eller -server muligheden sammen med hcc-qt skal der angives et rpc kodeord i konfigurationsfilen:
 %s
 De anbefales at benytte følgende tilfældige kodeord
-Rpcuser=human-charity-coinrpc
+Rpcuser=hccrpc
 rpcpasswrd=%s
 (Det er ikke nødvendigt at huske dette kodeord)
 Brugernavn og kodeord MÅ IKKE VÆRE ENS!

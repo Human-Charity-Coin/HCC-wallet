@@ -1,33 +1,33 @@
-bin_PROGRAMS += qt/human-charity-coin-qt
+bin_PROGRAMS += qt/hcc-qt
 EXTRA_LIBRARIES += qt/libbitcoinqt.a
 
-# human-charity-coin qt core #
+# hcc qt core #
 QT_TS = \
-  qt/locale/human-charity-coin_bg.ts \
-  qt/locale/human-charity-coin_ca.ts \
-  qt/locale/human-charity-coin_cs.ts \
-  qt/locale/human-charity-coin_da.ts \
-  qt/locale/human-charity-coin_de.ts \
-  qt/locale/human-charity-coin_en.ts \
-  qt/locale/human-charity-coin_en_US.ts \
-  qt/locale/human-charity-coin_es.ts \
-  qt/locale/human-charity-coin_fi.ts \
-  qt/locale/human-charity-coin_fr_FR.ts \
-  qt/locale/human-charity-coin_it.ts \
-  qt/locale/human-charity-coin_ja.ts \
-  qt/locale/human-charity-coin_ko_KR.ts \
-  qt/locale/human-charity-coin_nl.ts \
-  qt/locale/human-charity-coin_pl.ts \
-  qt/locale/human-charity-coin_pt.ts \
-  qt/locale/human-charity-coin_pt_BR.ts \
-  qt/locale/human-charity-coin_ro_RO.ts \
-  qt/locale/human-charity-coin_ru.ts \
-  qt/locale/human-charity-coin_sk.ts \
-  qt/locale/human-charity-coin_sv.ts \
-  qt/locale/human-charity-coin_tr.ts \
-  qt/locale/human-charity-coin_uk.ts \
-  qt/locale/human-charity-coin_zh_CN.ts \
-  qt/locale/human-charity-coin_zh_TW.ts
+  qt/locale/hcc_bg.ts \
+  qt/locale/hcc_ca.ts \
+  qt/locale/hcc_cs.ts \
+  qt/locale/hcc_da.ts \
+  qt/locale/hcc_de.ts \
+  qt/locale/hcc_en.ts \
+  qt/locale/hcc_en_US.ts \
+  qt/locale/hcc_es.ts \
+  qt/locale/hcc_fi.ts \
+  qt/locale/hcc_fr_FR.ts \
+  qt/locale/hcc_it.ts \
+  qt/locale/hcc_ja.ts \
+  qt/locale/hcc_ko_KR.ts \
+  qt/locale/hcc_nl.ts \
+  qt/locale/hcc_pl.ts \
+  qt/locale/hcc_pt.ts \
+  qt/locale/hcc_pt_BR.ts \
+  qt/locale/hcc_ro_RO.ts \
+  qt/locale/hcc_ru.ts \
+  qt/locale/hcc_sk.ts \
+  qt/locale/hcc_sv.ts \
+  qt/locale/hcc_tr.ts \
+  qt/locale/hcc_uk.ts \
+  qt/locale/hcc_zh_CN.ts \
+  qt/locale/hcc_zh_TW.ts
 
 QT_FORMS_UI = \
   qt/forms/addressbookpage.ui \
@@ -107,16 +107,16 @@ BITCOIN_MM = \
   qt/macnotificationhandler.mm
 
 QT_MOC = \
-  qt/human-charity-coin.moc \
+  qt/hcc.moc \
   qt/bitcoinamountfield.moc \
   qt/intro.moc \
   qt/overviewpage.moc \
   qt/rpcconsole.moc
 
-QT_QRC_CPP = qt/qrc_human-charity-coin.cpp
-QT_QRC = qt/human-charity-coin.qrc
-QT_QRC_LOCALE_CPP = qt/qrc_human-charity-coin_locale.cpp
-QT_QRC_LOCALE = qt/human-charity-coin_locale.qrc
+QT_QRC_CPP = qt/qrc_hcc.cpp
+QT_QRC = qt/hcc.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_hcc_locale.cpp
+QT_QRC_LOCALE = qt/hcc_locale.qrc
 
 PROTOBUF_CC = qt/paymentrequest.pb.cc
 PROTOBUF_H = qt/paymentrequest.pb.h
@@ -303,7 +303,7 @@ BITCOIN_QT_CPP += \
 endif
 
 RES_IMAGES = \
-  qt/res/images/human-charity-coin_logo_horizontal.png \
+  qt/res/images/hcc_logo_horizontal.png \
   qt/res/images/about.png \
   qt/res/images/splash.png \
   qt/res/images/splash_testnet.png \
@@ -321,7 +321,7 @@ RES_CSS = \
 
 RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
 
-BITCOIN_RC = qt/res/human-charity-coin-qt-res.rc
+BITCOIN_RC = qt/res/hcc-qt-res.rc
 
 BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
   -I$(builddir)/qt/forms
@@ -341,69 +341,69 @@ QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libbitcoinqt_a_OBJECTS) $(qt_human-charity-coin_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libbitcoinqt_a_OBJECTS) $(qt_hcc_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# human-charity-coin-qt binary #
-qt_human-charity-coin_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+# hcc-qt binary #
+qt_hcc_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
-qt_human-charity-coin_qt_SOURCES = qt/human-charity-coin.cpp
+qt_hcc_qt_SOURCES = qt/hcc.cpp
 if TARGET_DARWIN
-  qt_human-charity-coin_qt_SOURCES += $(BITCOIN_MM)
+  qt_hcc_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  qt_human-charity-coin_qt_SOURCES += $(BITCOIN_RC)
+  qt_hcc_qt_SOURCES += $(BITCOIN_RC)
 endif
-qt_human-charity-coin_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
+qt_hcc_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-qt_human-charity-coin_qt_LDADD += $(LIBBITCOIN_WALLET)
+qt_hcc_qt_LDADD += $(LIBBITCOIN_WALLET)
 endif
 if ENABLE_ZMQ
-qt_human-charity-coin_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+qt_hcc_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
-qt_human-charity-coin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
+qt_hcc_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
   $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-qt_human-charity-coin_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_human-charity-coin_qt_LIBTOOLFLAGS = --tag CXX
+qt_hcc_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_hcc_qt_LIBTOOLFLAGS = --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM=$(QT_TS:.ts=.qm)
 
 .SECONDARY: $(QT_QM)
 
-qt/human-charity-coinstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
+qt/hccstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) $(PYTHON) ../share/qt/extract_strings_qt.py $^
 
-translate: qt/human-charity-coinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: qt/hccstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/human-charity-coin_en.ts
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/hcc_en.ts
 
 $(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
 	@test -f $(RCC)
 	@test -f $(@D)/$(<F) || cp -f $< $(@D)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name human-charity-coin_locale $(@D)/$(<F) | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name hcc_locale $(@D)/$(<F) | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES) $(PROTOBUF_H)
 	@test -f $(RCC)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name human-charity-coin $< | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name hcc $< | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno
 
 CLEANFILES += $(CLEAN_QT)
 
-human-charity-coin_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_human-charity-coin_qt_OBJECTS) qt/human-charity-coin-qt$(EXEEXT) $(LIBBITCOINQT)
+hcc_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_hcc_qt_OBJECTS) qt/hcc-qt$(EXEEXT) $(LIBBITCOINQT)
 
-human-charity-coin_qt : qt/human-charity-coin-qt$(EXEEXT)
+hcc_qt : qt/hcc-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)

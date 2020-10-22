@@ -72,15 +72,15 @@ bin_PROGRAMS =
 TESTS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += human-charity-coind
+  bin_PROGRAMS += hccd
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += human-charity-coin-cli human-charity-coin-tx
+  bin_PROGRAMS += hcc-cli hcc-tx
 endif
 
 .PHONY: FORCE
-# human-charity-coin core #
+# hcc core #
 BITCOIN_CORE_H = \
   bignum.h \
   activemasternode.h \
@@ -183,7 +183,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between human-charity-coind and human-charity-coin-qt
+# server: shared between hccd and hcc-qt
 libbitcoin_server_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_SOURCES = \
   addrman.cpp \
@@ -228,7 +228,7 @@ libbitcoin_zmq_a_SOURCES = \
   zmq/zmqpublishnotifier.cpp
 endif
 
-# wallet: shared between human-charity-coind and human-charity-coin-qt, but only linked
+# wallet: shared between hccd and hcc-qt, but only linked
 # when wallet enabled
 
 libbitcoin_wallet_a_CFLAGS = -fPIC
@@ -290,7 +290,7 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/sph_skein.h \
   crypto/sph_types.h
 
-# common: shared between human-charity-coind, and human-charity-coin-qt and non-server tools
+# common: shared between hccd, and hcc-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_common_a_SOURCES = \
   allocators.cpp \
@@ -348,7 +348,7 @@ libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 libbitcoin_util_a_SOURCES += compat/glibcxx_compat.cpp
 endif
 
-# cli: shared between human-charity-coin-cli and human-charity-coin-qt
+# cli: shared between hcc-cli and hcc-qt
 libbitcoin_cli_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_SOURCES = \
   rpcclient.cpp \
@@ -358,7 +358,7 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-human-charity-coind_LDADD = \
+hccd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -369,26 +369,26 @@ human-charity-coind_LDADD = \
   $(LIBSECP256K1)
 
 if ENABLE_ZMQ
-human-charity-coind_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+hccd_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_WALLET
-human-charity-coind_LDADD += libbitcoin_wallet.a
+hccd_LDADD += libbitcoin_wallet.a
 endif
-human-charity-coind_SOURCES = human-charity-coind.cpp
+hccd_SOURCES = hccd.cpp
 #
 
 if TARGET_WINDOWS
-human-charity-coind_SOURCES += human-charity-coind-res.rc
+hccd_SOURCES += hccd-res.rc
 endif
 
-human-charity-coind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-human-charity-coind_CPPFLAGS = $(BITCOIN_INCLUDES)
-human-charity-coind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+hccd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+hccd_CPPFLAGS = $(BITCOIN_INCLUDES)
+hccd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 
-# human-charity-coin-cli binary #
-human-charity-coin_cli_LDADD = \
+# hcc-cli binary #
+hcc_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
@@ -397,14 +397,14 @@ human-charity-coin_cli_LDADD = \
   $(CRYPTO_LIBS) \
   $(EVENT_LIBS)
 
-human-charity-coin_cli_SOURCES = \
-  human-charity-coin-cli.cpp
+hcc_cli_SOURCES = \
+  hcc-cli.cpp
 
-human-charity-coin_cli_CPPFLAGS = $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+hcc_cli_CPPFLAGS = $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
 #
 
-# human-charity-coin-tx binary #
-human-charity-coin_tx_LDADD = \
+# hcc-tx binary #
+hcc_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -413,15 +413,15 @@ human-charity-coin_tx_LDADD = \
   $(BOOST_LIBS) \
   $(CRYPTO_LIBS)
 
-human-charity-coin_tx_SOURCES = human-charity-coin-tx.cpp
-human-charity-coin_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
+hcc_tx_SOURCES = hcc-tx.cpp
+hcc_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
 #
-human-charity-coin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+hcc_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-human-charity-coin_cli_SOURCES += human-charity-coin-cli-res.rc
+hcc_cli_SOURCES += hcc-cli-res.rc
 endif
-human-charity-coin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+hcc_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if BUILD_BITCOIN_LIBS
 include_HEADERS = script/bitcoinconsensus.h

@@ -260,7 +260,7 @@
                           <string notr="true">font: 87 10pt &quot;Arial Black&quot;;</string>
                          </property>
                          <property name="text">
-                          <string>NORT Balance</string>
+                          <string>HCC Balance</string>
                          </property>
                         </widget>
                        </item>
@@ -379,7 +379,7 @@
                           <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
                          </property>
                          <property name="text">
-                          <string notr="true">0.000â€‰000â€‰00 NORT</string>
+                          <string notr="true">0.000â€‰000â€‰00 HCC</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -410,7 +410,7 @@
                           <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
                          </property>
                          <property name="text">
-                          <string notr="true">0.000â€‰000â€‰00 NORT</string>
+                          <string notr="true">0.000â€‰000â€‰00 HCC</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -451,7 +451,7 @@
                           <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
                          </property>
                          <property name="text">
-                          <string notr="true">0.000â€‰000â€‰00 NORT</string>
+                          <string notr="true">0.000â€‰000â€‰00 HCC</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -482,7 +482,7 @@
                           <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
                          </property>
                          <property name="text">
-                          <string notr="true">0.000â€‰000â€‰00 NORT</string>
+                          <string notr="true">0.000â€‰000â€‰00 HCC</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -523,7 +523,7 @@
                           <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
                          </property>
                          <property name="text">
-                          <string notr="true">0.000â€‰000â€‰00 NORT</string>
+                          <string notr="true">0.000â€‰000â€‰00 HCC</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -554,7 +554,7 @@
                           <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
                          </property>
                          <property name="text">
-                          <string notr="true">0.000â€‰000â€‰00 NORT</string>
+                          <string notr="true">0.000â€‰000â€‰00 HCC</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -567,7 +567,7 @@
                        <item row="4" column="0">
                         <widget class="QLabel" name="labelTotalText">
                          <property name="toolTip">
-                          <string>Your current NORT balance, unconfirmed and immature transactions included</string>
+                          <string>Your current HCC balance, unconfirmed and immature transactions included</string>
                          </property>
                          <property name="styleSheet">
                           <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
@@ -592,13 +592,13 @@
                           <cursorShape>IBeamCursor</cursorShape>
                          </property>
                          <property name="toolTip">
-                          <string>Your current NORT balance, unconfirmed and immature transactions included</string>
+                          <string>Your current HCC balance, unconfirmed and immature transactions included</string>
                          </property>
                          <property name="styleSheet">
                           <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
                          </property>
                          <property name="text">
-                          <string notr="true">0.000â€‰000â€‰00 NORT</string>
+                          <string notr="true">0.000â€‰000â€‰00 HCC</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -629,7 +629,7 @@
                           <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
                          </property>
                          <property name="text">
-                          <string notr="true">0.000â€‰000â€‰00 NORT</string>
+                          <string notr="true">0.000â€‰000â€‰00 HCC</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1144,7 +1144,7 @@ selection-color: rgb(0, 0, 0);</string>
                        <cursorShape>WhatsThisCursor</cursorShape>
                       </property>
                       <property name="toolTip">
-                       <string>The displayed information may be out of date. Your wallet automatically synchronizes with the NORT network after a connection is established, but this process has not completed yet.</string>
+                       <string>The displayed information may be out of date. Your wallet automatically synchronizes with the HCC network after a connection is established, but this process has not completed yet.</string>
                       </property>
                       <property name="styleSheet">
                        <string notr="true">QLabel { color: red; }</string>

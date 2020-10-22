@@ -1,10 +1,10 @@
 Sample configuration files for:
 
-SystemD: human-charity-coind.service
-Upstart: human-charity-coind.conf
-OpenRC:  human-charity-coind.openrc
-         human-charity-coind.openrcconf
-CentOS:  human-charity-coind.init
+SystemD: hccd.service
+Upstart: hccd.conf
+OpenRC:  hccd.openrc
+         hccd.openrcconf
+CentOS:  hccd.init
 
 have been made available to assist packagers in creating node packages here.
 

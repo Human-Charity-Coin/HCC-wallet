@@ -1,5 +1,5 @@
-/* src/config/human-charity-coin-config.h.  Generated from human-charity-coin-config.h.in by configure.  */
-/* src/config/human-charity-coin-config.h.in.  Generated from configure.ac by autoheader.  */
+/* src/config/hcc-config.h.  Generated from hcc-config.h.in by configure.  */
+/* src/config/hcc-config.h.in.  Generated from configure.ac by autoheader.  */
 
 #ifndef HCC_CONFIG_H
 
@@ -121,7 +121,7 @@
 /* #undef HAVE_GETADDRINFO_A */
 
 /* Define this symbol if you have inet_pton */
-/* #undef HAVE_INET_PTON */
+#define HAVE_INET_PTON 1
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
@@ -274,7 +274,7 @@
 #define PACKAGE_STRING "Human-Charity-Coin Core 3.3.1"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "human-charity-coin"
+#define PACKAGE_TARNAME "hcc"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL ""

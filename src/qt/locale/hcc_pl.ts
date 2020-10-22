@@ -522,8 +522,8 @@
         <translation>Wyślij monety do adresu HCC</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and human-charity-coin: URIs)</source>
-        <translation>Zarządaj płatności (generuje kod QR i human-charity-coin:URI)</translation>
+        <source>Request payments (generates QR codes and hcc: URIs)</source>
+        <translation>Zarządaj płatności (generuje kod QR i hcc:URI)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -578,8 +578,8 @@
         <translation>Otwórz &amp;Plik konfiguracji Masternode</translation>
     </message>
     <message>
-        <source>Open a human-charity-coin: URI or payment request</source>
-        <translation>Otwórz human-charity-coin: URI i żądanie zapłaty</translation>
+        <source>Open a hcc: URI or payment request</source>
+        <translation>Otwórz hcc: URI i żądanie zapłaty</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -1927,7 +1927,7 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
     </message>
     </context>
 <context>
-    <name>human-charity-coin-core</name>
+    <name>hcc-core</name>
     <message>
         <source>Error</source>
         <translation>Błąd</translation>

@@ -17,13 +17,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "Human-Charity-Coin"
-            VALUE "FileDescription",    "human-charity-coind (OSS daemon/client for Human-Charity-Coin)"
+            VALUE "FileDescription",    "hccd (OSS daemon/client for Human-Charity-Coin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "human-charity-coind"
+            VALUE "InternalName",       "hccd"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "human-charity-coind.exe"
-            VALUE "ProductName",        "human-charity-coind"
+            VALUE "OriginalFilename",   "hccd.exe"
+            VALUE "ProductName",        "hccd"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

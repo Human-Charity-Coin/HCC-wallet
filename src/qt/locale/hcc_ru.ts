@@ -117,7 +117,7 @@
     <name>AskPassphraseDialog</name>
     <message>
         <source>Passphrase Dialog</source>
-        <translation>Диалоговое окно кодовой фразы</translation>
+        <translation>Диалоговое окно кдовой фразы</translation>
     </message>
     <message>
         <source>Enter passphrase</source>
@@ -169,7 +169,7 @@
     </message>
     <message>
         <source>Human-Charity-Coin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your HCCs from being stolen by malware infecting your computer.</source>
-        <translation>Human-Charity-Coin сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши HCC от кражи с использованием вредоносного ПО.</translation>
+        <translation>Human-Charity-Coin сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностю защитить ваши HCC от кражи с использованием вредоносного ПО.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -459,7 +459,7 @@
     </message>
     <message>
         <source>Backup wallet to another location</source>
-        <translation>Сделать резервную копию кошелька в другом месте</translation>
+        <translation>Сделать резервную копию кошельк в другом месте</translation>
     </message>
     <message>
         <source>&amp;Change Passphrase...</source>
@@ -555,7 +555,7 @@
     </message>
     <message>
         <source>Show the list of used receiving addresses and labels</source>
-        <translation>Показать список использованых адресов приёма</translation>
+        <translation>Показать список использваных адресов приёма</translation>
     </message>
     <message>
         <source>Open &amp;URI...</source>
@@ -598,8 +598,8 @@
         <translation>Отправить монеты на HCC адрес</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and human-charity-coin: URIs)</source>
-        <translation>Запросить платежи (генерирует QR-код и human-charity-coin: URI)</translation>
+        <source>Request payments (generates QR codes and hcc: URIs)</source>
+        <translation>Запросить платежи (генерирует QR-код и hcc: URI)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -658,8 +658,8 @@
         <translation>Открыть файл настроек мастернод</translation>
     </message>
     <message>
-        <source>Open a human-charity-coin: URI or payment request</source>
-        <translation>Открыть human-charity-coin: URI или запрос платежа</translation>
+        <source>Open a hcc: URI or payment request</source>
+        <translation>Открыть hcc: URI или запрос платежа</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -756,7 +756,7 @@ Address: %4
     <message>
         <source>Staking is active
  MultiSend: %1</source>
-        <translation>Хранение активно
+        <translation>Ханение активно
 MultiSend: %1</translation>
     </message>
     <message>
@@ -801,8 +801,8 @@ MultiSend: %1</translation>
         <translation>Текстовая метка</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (human-charity-coin.conf).</source>
-        <translation>Будут показаны не все транзакции. Для отображения всех транзакций необходимо выставить txindex=1 в конфигурационном файле (human-charity-coin.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (hcc.conf).</source>
+        <translation>Будут показаны не все транзакции. Для отображения всех транзакций необходимо выставить txindex=1 в конфигурационном файле (hcc.conf).</translation>
     </message>
 </context>
 <context>
@@ -928,7 +928,7 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>Copy quantity</source>
-        <translation>Копировать количество</translation>
+        <translation>опировать количество</translation>
     </message>
     <message>
         <source>Copy fee</source>
@@ -1016,7 +1016,7 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>This label turns red, if the transaction size is greater than 1000 bytes.</source>
-        <translation>Этот маркер становится красным если размер транзакции превысит 1000 байт.</translation>
+        <translation>Этот маркер становится красным если размер транзакции превыст 1000 байт.</translation>
     </message>
     <message>
         <source>This means a fee of at least %1 per kB is required.</source>
@@ -1079,7 +1079,7 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>New sending address</source>
-        <translation>Новый адрес отправки</translation>
+        <translation>Новый адрес отравки</translation>
     </message>
     <message>
         <source>Edit receiving address</source>
@@ -1153,7 +1153,7 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>Usage:</source>
-        <translation>Применение:</translation>
+        <translation>Применени:</translation>
     </message>
     <message>
         <source>command-line options</source>
@@ -1173,7 +1173,7 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>Set language, for example "de_DE" (default: system locale)</source>
-        <translation>Задайте язык, например "de_DE"(по умолчанию: язык системы)</translation>
+        <translation>Задайте язык, например "de_DE"(по умолчанию: язык сстемы)</translation>
     </message>
     <message>
         <source>Start minimized</source>
@@ -1196,7 +1196,7 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>As this is the first time the program is launched, you can choose where Human-Charity-Coin Core will store its data.</source>
-        <translation>Поскольку это первый запуск программы, вы можете выбрать, где будут храниться данные Human-Charity-Coin Core.</translation>
+        <translation>Поскольу это первый запуск программы, вы можете выбрать, где будут храниться данные Human-Charity-Coin Core.</translation>
     </message>
     <message>
         <source>Human-Charity-Coin Core will download and store a copy of the Human-Charity-Coin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
@@ -1204,7 +1204,7 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
-        <translation>Использовать каталог данных по умолчанию</translation>
+        <translation>Использовать каталог данных по умолчнию</translation>
     </message>
     <message>
         <source>Use a custom data directory:</source>
@@ -1704,7 +1704,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>The supplied proxy address is invalid.</source>
-        <translation>Указан недопустимый адрес прокси-сервера.</translation>
+        <translation>Указан недопустимый адрес прокси-сервер.</translation>
     </message>
 </context>
 <context>
@@ -1743,7 +1743,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Unconfirmed transactions to watch-only addresses</source>
-        <translation>Неподтверждённые транзакции на наблюдаемые адреса</translation>
+        <translation>Неподтверждённые транзакции на нблюдаемые адреса</translation>
     </message>
     <message>
         <source>Staked or masternode rewards in watch-only addresses that has not yet matured</source>
@@ -1801,8 +1801,8 @@ Please check the address and try again.</source>
         <translation>Неверный адрес оплаты %1</translation>
     </message>
     <message>
-        <source>Cannot start human-charity-coin: click-to-pay handler</source>
-        <translation>Не удалось запустить human-charity-coin: обработчик click-to-pay </translation>
+        <source>Cannot start hcc: click-to-pay handler</source>
+        <translation>Не удалось запустить hcc: обработчик click-to-pay </translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid HCC address or malformed URI parameters.</source>
@@ -1810,7 +1810,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
-        <translation>Файл запроса оплаты нечитается! Причиной может быть неверный файл запроса оплаты.</translation>
+        <translation>Файл запроса оплаты нечтается! Причиной может быть неверный файл запроса оплаты.</translation>
     </message>
     <message>
         <source>Payment request rejected</source>
@@ -1978,7 +1978,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Number of connections</source>
-        <translation>Количество соениднений</translation>
+        <translation>Количество соеиднений</translation>
     </message>
     <message>
         <source>&amp;Open</source>
@@ -2902,7 +2902,7 @@ Please check the address and try again.</source>
     </message>
     </context>
 <context>
-    <name>human-charity-coin-core</name>
+    <name>hcc-core</name>
     <message>
         <source>SwiftTX requires inputs with at least 6 confirmations, you might need to wait a few minutes and try again.</source>
         <translation>Для SwiftTX требуется как минимум 6 подтверждений, Вам нужно подождать несколько минут и попытаться снова.</translation>
@@ -3053,7 +3053,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Invalid script detected.</source>
-        <translation>Обнаружен неверный сценарий.</translation>
+        <translation>Обнаужен неверный сценарий.</translation>
     </message>
     <message>
         <source>Loading addresses...</source>
@@ -3193,7 +3193,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>This is intended for regression testing tools and app development.</source>
-        <translation>Это предназначено для инструментов тестирования регрессии и разработки приложений.</translation>
+        <translation>Это предназначено для инструментов тесирования регрессии и разработки приложений.</translation>
     </message>
     <message>
         <source>Transaction amount too small</source>

@@ -9,7 +9,7 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between human-charity-coin-cli and human-charity-coind)
+ * CBaseChainParams defines the base parameters (shared between hcc-cli and hccd)
  * of a given instance of the Human-Charity-Coin system.
  */
 class CBaseChainParams

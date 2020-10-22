@@ -43,7 +43,7 @@
       <string>io.savebitcoin.Human-Charity-CoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>human-charity-coin</string>
+        <string>hcc</string>
       </array>
     </dict>
   </array>
@@ -62,10 +62,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-human-charity-coin-payment-request</string>
+        <string>application/x-hcc-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>human-charity-coinpaymentrequest</string>
+          <string>hccpaymentrequest</string>
         </array>
       </dict>
     </dict>

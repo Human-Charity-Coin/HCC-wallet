@@ -44,9 +44,9 @@ OSX_PACKAGING = $(OSX_DEPLOY_SCRIPT) $(OSX_FANCY_PLIST) $(OSX_INSTALLER_ICONS) \
   $(top_srcdir)/contrib/macdeploy/detached-sig-create.sh
 
 COVERAGE_INFO = baseline_filtered_combined.info baseline.info block_test.info \
-  leveldb_baseline.info test_human-charity-coin_filtered.info total_coverage.info \
+  leveldb_baseline.info test_hcc_filtered.info total_coverage.info \
   baseline_filtered.info block_test_filtered.info \
-  leveldb_baseline_filtered.info test_human-charity-coin_coverage.info test_human-charity-coin.info
+  leveldb_baseline_filtered.info test_hcc_coverage.info test_hcc.info
 
 dist-hook:
 	-$(MAKE) -C $(top_distdir)/src/leveldb clean
@@ -176,16 +176,16 @@ leveldb_baseline_filtered.info: leveldb_baseline.info
 baseline_filtered_combined.info: leveldb_baseline_filtered.info baseline_filtered.info
 	$(LCOV) -a leveldb_baseline_filtered.info -a baseline_filtered.info -o $@
 
-test_human-charity-coin.info: baseline_filtered_combined.info
+test_hcc.info: baseline_filtered_combined.info
 	$(MAKE) -C src/ check
-	$(LCOV) -c -d $(abs_builddir)/src -t test_human-charity-coin -o $@
+	$(LCOV) -c -d $(abs_builddir)/src -t test_hcc -o $@
 	$(LCOV) -z -d $(abs_builddir)/src
 	$(LCOV) -z -d $(abs_builddir)/src/leveldb
 
-test_human-charity-coin_filtered.info: test_human-charity-coin.info
+test_hcc_filtered.info: test_hcc.info
 	$(LCOV) -r $< "/usr/include/*" -o $@
 
-block_test.info: test_human-charity-coin_filtered.info
+block_test.info: test_hcc_filtered.info
 	$(MKDIR_P) qa/tmp
 	-@TIMEOUT=15 qa/pull-tester/run-bitcoind-for-test.sh $(JAVA) -jar $(JAVA_COMPARISON_TOOL) qa/tmp/compTool 0
 	$(LCOV) -c -d $(abs_builddir)/src --t BitcoinJBlockTest -o $@
@@ -195,13 +195,13 @@ block_test.info: test_human-charity-coin_filtered.info
 block_test_filtered.info: block_test.info
 	$(LCOV) -r $< "/usr/include/*" -o $@
 
-test_human-charity-coin_coverage.info: baseline_filtered_combined.info test_human-charity-coin_filtered.info
-	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_human-charity-coin_filtered.info -o $@
+test_hcc_coverage.info: baseline_filtered_combined.info test_hcc_filtered.info
+	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_hcc_filtered.info -o $@
 
-total_coverage.info:  baseline_filtered_combined.info test_human-charity-coin_filtered.info block_test_filtered.info
-	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_human-charity-coin_filtered.info -a block_test_filtered.info -o $@ | $(GREP) "\%" | $(AWK) '{ print substr($$3,2,50) "/" $$5 }' > coverage_percent.txt
+total_coverage.info:  baseline_filtered_combined.info test_hcc_filtered.info block_test_filtered.info
+	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_hcc_filtered.info -a block_test_filtered.info -o $@ | $(GREP) "\%" | $(AWK) '{ print substr($$3,2,50) "/" $$5 }' > coverage_percent.txt
 
-test_human-charity-coin.coverage/.dirstamp:  test_human-charity-coin_coverage.info
+test_hcc.coverage/.dirstamp:  test_hcc_coverage.info
 	$(GENHTML) -s $< -o $(@D)
 	@touch $@
 
@@ -209,7 +209,7 @@ total.coverage/.dirstamp: total_coverage.info
 	$(GENHTML) -s $< -o $(@D)
 	@touch $@
 
-cov: test_human-charity-coin.coverage/.dirstamp total.coverage/.dirstamp
+cov: test_hcc.coverage/.dirstamp total.coverage/.dirstamp
 
 endif
 
@@ -222,4 +222,4 @@ CLEANFILES = $(OSX_DMG) $(BITCOIN_WIN_INSTALLER)
 .INTERMEDIATE: $(COVERAGE_INFO)
 
 clean-local:
-	rm -rf test_human-charity-coin.coverage/ total.coverage/ $(OSX_APP)
+	rm -rf test_hcc.coverage/ total.coverage/ $(OSX_APP)

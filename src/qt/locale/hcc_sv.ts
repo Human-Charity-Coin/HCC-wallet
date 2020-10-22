@@ -181,7 +181,7 @@
     </message>
     <message>
         <source>Wallet encryption failed</source>
-        <translation>Plånboks kryptering misslyckad</translation>
+        <translation>Plnboks kryptering misslyckad</translation>
     </message>
     <message>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
@@ -591,8 +591,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Skicka mynt till en HCC adress</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and human-charity-coin: URIs)</source>
-        <translation>Begär betalning (genererar QR kod och human-charity-coin: URls)</translation>
+        <source>Request payments (generates QR codes and hcc: URIs)</source>
+        <translation>Begär betalning (genererar QR kod och hcc: URls)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -1354,7 +1354,7 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
     </message>
     </context>
 <context>
-    <name>human-charity-coin-core</name>
+    <name>hcc-core</name>
     <message>
         <source>Error</source>
         <translation>Fel</translation>

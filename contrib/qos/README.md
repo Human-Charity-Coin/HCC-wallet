@@ -2,4 +2,4 @@
 
 This is a Linux bash script that will set up tc to limit the outgoing bandwidth for connections to the Bitcoin network. It limits outbound TCP traffic with a source or destination port of 6949, but not if the destination IP is within a LAN (defined as 192.168.x.x).
 
-This means one can have an always-on human-charity-coind instance running, and another local human-charity-coind/human-charity-coin-qt instance which connects to this node and receives blocks from it.
+This means one can have an always-on hccd instance running, and another local hccd/hcc-qt instance which connects to this node and receives blocks from it.
