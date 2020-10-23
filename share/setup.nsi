@@ -5,7 +5,7 @@ SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 3.3.1
+!define VERSION 1.0.0
 !define COMPANY "Human-Charity-Coin Core project"
 !define URL https://www.savebitcoin.io
 
