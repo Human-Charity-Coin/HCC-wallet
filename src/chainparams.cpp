@@ -42,12 +42,12 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x00"));
+    (0, uint256("0x00000b5ffed2d1ed05c9ea10e228763bbd47f9c937fb17105928f8587d7bc2b4"));
 
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1603304760, // * UNIX timestamp of last checkpoint block
+    1603489535, // * UNIX timestamp of last checkpoint block
     0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
@@ -94,7 +94,7 @@ public:
         nTargetSpacing = 2 * 60;  // Human-Charity-Coin: 2 minute blocks during POW (block 1-200)
         nMaturity = 5; // 6 block maturity (+1 elsewhere)
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 15000000 * COIN; // 5 million max supply
+        nMaxMoneyOut = 15000000 * COIN; // 15 million max supply
         nLastPOWBlock = 20;
         nModifierUpdateBlock = 1; // we use the version 2 for HCC
 
@@ -109,39 +109,15 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1603304760;
+        genesis.nTime = 1603489535;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 22360478;
+        genesis.nNonce = 23493882;
 
         hashGenesisBlock = genesis.GetHash();
-      //  assert(hashGenesisBlock == uint256("0x000007b3b79e2e2283043d8aefe0548f037a4cea846d8ecdc32aaca583b2e7fd"));
-      //   assert(genesis.hashMerkleRoot == uint256("0xc538670d319594f00b36d09c8fb6b2dfe899d9c35b83f6660c7bbb4de108dab8"));
-      if(genesis.GetHash() != uint256("0x"))
-           {
-                 printf("MSearching for genesis block...\n");
-                 uint256 hashTarget;
-                 hashTarget.SetCompact(genesis.nBits);
-                 while(uint256(genesis.GetHash()) > uint256(hashTarget))
-                 {
-                     ++genesis.nNonce;
-                     if (genesis.nNonce == 0)
-                     {
-                         printf("Mainnet NONCE WRAPPED, incrementing time");
-                         std::cout << std::string("Mainnet NONCE WRAPPED, incrementing time:\n");
-                         ++genesis.nTime;
-                     }
-                     if (genesis.nNonce % 10000 == 0)
-                     {
-                         printf("Mainnet: nonce %08u: hash = %s \n", genesis.nNonce, genesis.GetHash().ToString().c_str());
-                     }
-                 }
-                 printf("Mainnet block.nTime = %u \n", genesis.nTime);
-                 printf("Mainnet block.nNonce = %u \n", genesis.nNonce);
-                 printf("Genesis nBits: %08x\n", genesis.nBits);
-                 printf("Genesis hashStateRoot = %s\n", genesis.hashStateRoot.ToString().c_str());
-                 printf("Mainnet block.hashMerkleRoot: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-                 printf("Mainnet block.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-           }
+        assert(hashGenesisBlock == uint256("0x00000b5ffed2d1ed05c9ea10e228763bbd47f9c937fb17105928f8587d7bc2b4"));
+         assert(genesis.hashMerkleRoot == uint256("0xc538670d319594f00b36d09c8fb6b2dfe899d9c35b83f6660c7bbb4de108dab8"));
+     
+
 
 
         // Human-Charity-Coin addresses start with 'H'
@@ -171,8 +147,8 @@ public:
 
         nPoolMaxTransactions = 3;
         strSporkKey = "047ceda0f06dc16cf7be8a4e42b0b7a4c1a7cd1dcc95e2c570b5b27bccd7be1293e4f635e9979ce2fd13d01396ab01be06c19440316ce528cdd36cf0832e47593f";
-        strMasternodePoolDummyAddress = "HBaVbFNbFB9Cgwquvjyor6Niay6GPS1wT5";
-        nStartMasternodePayments = 1603304760;
+        strMasternodePoolDummyAddress = "HR6jDFPRC4wreprriXoacaQwGYeHtv7iYZ";
+        nStartMasternodePayments = 1603489535;
 
         nBudget_Fee_Confirmations = 6; // Number of confirmations for the finalization fee
     }
