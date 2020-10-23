@@ -5,4 +5,4 @@ Utility to generate the seeds.txt list that is compiled into the client
 
     vi nodes_main.txt
     vi nodes_test.txt
-    python3 generate-seeds.py . > ../../src/chainparamsseeds.h
+    python3 generate-seeds.py . > /home/dad/Downloads/HCC-wallet/src/chainparamsseeds.h
