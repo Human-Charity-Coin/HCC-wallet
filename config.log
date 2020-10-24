@@ -1315,7 +1315,7 @@ configure: failed program was:
 configure:21360: result: no
 configure:21373: checking for strerror_r
 configure:21373: x86_64-w64-mingw32-g++ -o conftest.exe -pipe -O2  -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib  conftest.cpp -lcrypt32 -liphlpapi -lshlwapi -lmswsock -lws2_32 -ladvapi32 -lrpcrt4 -luuid -loleaut32 -lole32 -lcomctl32 -lshell32 -lwinmm -lwinspool -lcomdlg32 -lgdi32 -luser32 -lkernel32 -lmingwthrd  >&5
-/tmp/ccoS3ed9.o:conftest.cpp:(.text.startup+0xa): undefined reference to `strerror_r'
+/tmp/ccKw5ncp.o:conftest.cpp:(.text.startup+0xa): undefined reference to `strerror_r'
 collect2: error: ld returned 1 exit status
 configure:21373: $? = 1
 configure: failed program was:
@@ -2119,7 +2119,7 @@ configure:22154: checking for sys/prctl.h
 configure:22154: result: no
 configure:22164: checking for library containing getaddrinfo_a
 configure:22195: x86_64-w64-mingw32-g++ -o conftest.exe -pipe -O2   -Wstack-protector -fstack-protector-all -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib   -Wl,--dynamicbase -Wl,--nxcompat conftest.cpp -lssp -lcrypt32 -liphlpapi -lshlwapi -lmswsock -lws2_32 -ladvapi32 -lrpcrt4 -luuid -loleaut32 -lole32 -lcomctl32 -lshell32 -lwinmm -lwinspool -lcomdlg32 -lgdi32 -luser32 -lkernel32 -lmingwthrd  >&5
-/tmp/ccWAVjea.o:conftest.cpp:(.text.startup+0x1c): undefined reference to `getaddrinfo_a'
+/tmp/ccjPW9oJ.o:conftest.cpp:(.text.startup+0x1c): undefined reference to `getaddrinfo_a'
 collect2: error: ld returned 1 exit status
 configure:22195: $? = 1
 configure: failed program was:
@@ -4424,7 +4424,7 @@ configure:23616: $? = 0
 configure:23626: result: yes
 configure:23648: checking for library containing png_error 
 configure:23679: x86_64-w64-mingw32-g++ -o conftest.exe  -pipe -O2   -Wstack-protector -fstack-protector-all -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtCore -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtGui -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtTest -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtDBus -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib   -Wl,--dynamicbase -Wl,--nxcompat conftest.cpp -lz  -limm32  -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib >&5
-/tmp/ccgL5N4e.o:conftest.cpp:(.text.startup+0x1c): undefined reference to `png_error'
+/tmp/cc5Wpx4y.o:conftest.cpp:(.text.startup+0x1c): undefined reference to `png_error'
 collect2: error: ld returned 1 exit status
 configure:23679: $? = 1
 configure: failed program was:
@@ -4518,7 +4518,7 @@ configure:23679: $? = 0
 configure:23696: result: -lqtpng
 configure:23715: checking for library containing jpeg_create_decompress 
 configure:23746: x86_64-w64-mingw32-g++ -o conftest.exe  -pipe -O2   -Wstack-protector -fstack-protector-all -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtCore -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtGui -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtTest -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtDBus -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib   -Wl,--dynamicbase -Wl,--nxcompat conftest.cpp -lqtpng -lz  -limm32  -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib >&5
-/tmp/cck6nors.o:conftest.cpp:(.text.startup+0x1c): undefined reference to `jpeg_create_decompress'
+/tmp/ccZtVutL.o:conftest.cpp:(.text.startup+0x1c): undefined reference to `jpeg_create_decompress'
 collect2: error: ld returned 1 exit status
 configure:23746: $? = 1
 configure: failed program was:
@@ -4791,7 +4791,7 @@ configure:23763: result: no
 configure:23770: WARNING: libjpeg not found. Assuming qt has it built-in
 configure:23782: checking for library containing pcre16_exec
 configure:23813: x86_64-w64-mingw32-g++ -o conftest.exe  -pipe -O2   -Wstack-protector -fstack-protector-all -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtCore -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtGui -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtTest -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtDBus -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib   -Wl,--dynamicbase -Wl,--nxcompat conftest.cpp -lqtpng -lz  -limm32  -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib >&5
-/tmp/ccXydqZq.o:conftest.cpp:(.text.startup+0x1c): undefined reference to `pcre16_exec'
+/tmp/ccG056OX.o:conftest.cpp:(.text.startup+0x1c): undefined reference to `pcre16_exec'
 collect2: error: ld returned 1 exit status
 configure:23813: $? = 1
 configure: failed program was:
@@ -4885,7 +4885,7 @@ configure:23813: $? = 0
 configure:23830: result: -lqtpcre
 configure:23849: checking for library containing hb_ot_tags_from_script 
 configure:23880: x86_64-w64-mingw32-g++ -o conftest.exe  -pipe -O2   -Wstack-protector -fstack-protector-all -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtCore -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtGui -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtTest -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/QtDBus -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib   -Wl,--dynamicbase -Wl,--nxcompat conftest.cpp -lqtpcre -lqtpng -lz  -limm32  -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib >&5
-/tmp/ccrmDFEA.o:conftest.cpp:(.text.startup+0x1c): undefined reference to `hb_ot_tags_from_script'
+/tmp/ccNdCAi6.o:conftest.cpp:(.text.startup+0x1c): undefined reference to `hb_ot_tags_from_script'
 collect2: error: ld returned 1 exit status
 configure:23880: $? = 1
 configure: failed program was:
@@ -5264,8 +5264,8 @@ configure:27660: $? = 0
 configure:27674: result: yes
 configure:27786: checking for dynamic linked boost test
 configure:27801: x86_64-w64-mingw32-g++ -o conftest.exe -pipe -O2   -Wstack-protector -fstack-protector-all -fvisibility=hidden -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include/  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -DHAVE_QT5 -mthreads -I/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../include -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib   -Wl,--dynamicbase -Wl,--nxcompat conftest.cpp -lQt5PlatformSupport -lssp -lcrypt32 -liphlpapi -lshlwapi -lmswsock -lws2_32 -ladvapi32 -lrpcrt4 -luuid -loleaut32 -lole32 -lcomctl32 -lshell32 -lwinmm -lwinspool -lcomdlg32 -lgdi32 -luser32 -lkernel32 -lmingwthrd  -L/home/dad/Downloads/HCC-wallet/depends/x86_64-w64-mingw32/share/../lib -lboost_unit_test_framework-mt-s >&5
-/tmp/ccyMUcIl.o:conftest.cpp:(.text.startup+0x40): undefined reference to `__imp__ZN5boost9unit_test14unit_test_mainEPFbvEiPPc'
-/tmp/ccyMUcIl.o:conftest.cpp:(.text.startup+0x94): undefined reference to `__imp__ZTVN5boost9unit_test15unit_test_log_tE'
+/tmp/cc2dPxkj.o:conftest.cpp:(.text.startup+0x40): undefined reference to `__imp__ZN5boost9unit_test14unit_test_mainEPFbvEiPPc'
+/tmp/cc2dPxkj.o:conftest.cpp:(.text.startup+0x94): undefined reference to `__imp__ZTVN5boost9unit_test15unit_test_log_tE'
 collect2: error: ld returned 1 exit status
 configure:27801: $? = 1
 configure: failed program was:
@@ -5610,7 +5610,6 @@ config.status:1418: creating qa/pull-tester/run-bitcoind-for-test.sh
 config.status:1418: creating qa/pull-tester/tests-config.sh
 config.status:1418: creating contrib/devtools/split-debug.sh
 config.status:1418: creating src/config/hcc-config.h
-config.status:1599: src/config/hcc-config.h is unchanged
 config.status:1647: executing depfiles commands
 config.status:1647: executing libtool commands
 configure:32357: === configuring in src/univalue (/home/dad/Downloads/HCC-wallet/src/univalue)

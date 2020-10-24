@@ -43,7 +43,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
     (0, uint256("0x00000b5ffed2d1ed05c9ea10e228763bbd47f9c937fb17105928f8587d7bc2b4"))
-    (20, uint256("0x56f72848814f4307e3983e40d39bf61cedc055d0daf18e66cca3d30afe144aaa"));
+   ;
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -95,7 +95,7 @@ public:
         nMaturity = 5; // 6 block maturity (+1 elsewhere)
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 15000000 * COIN; // 15 million max supply
-        nLastPOWBlock = 20;
+        nLastPOWBlock = 30;
         nModifierUpdateBlock = 1; // we use the version 2 for HCC
 
         const char* pszTimestamp = "Human Charity Coin was born to help those in need who needs a helping hand.";
