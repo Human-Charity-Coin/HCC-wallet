@@ -6,7 +6,7 @@ Furthermore, as result of offering multiple ways for users to mint new HCC coins
 
 ### View the Human-Charity-Coin whitepaper here:
 
-#### https://cdn.discordapp.com/attachments/416697792048922636/461555510496329728/Human-Charity-Coin-Whitepaper-v1.0.0.pdf
+
 
 ## Coin Specs
 
