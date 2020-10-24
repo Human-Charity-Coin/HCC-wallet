@@ -95,7 +95,7 @@ public:
         nMaturity = 5; // 6 block maturity (+1 elsewhere)
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 15000000 * COIN; // 15 million max supply
-        nLastPOWBlock = 20;
+        nLastPOWBlock = 30;
         nModifierUpdateBlock = 1; // we use the version 2 for HCC
 
         const char* pszTimestamp = "Human Charity Coin was born to help those in need who needs a helping hand.";
