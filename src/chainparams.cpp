@@ -114,8 +114,8 @@ public:
         genesis.nNonce = 23493882;
 
         hashGenesisBlock = genesis.GetHash();
-      //  assert(hashGenesisBlock == uint256("0x00000b5ffed2d1ed05c9ea10e228763bbd47f9c937fb17105928f8587d7bc2b4"));
-      //   assert(genesis.hashMerkleRoot == uint256("0xc538670d319594f00b36d09c8fb6b2dfe899d9c35b83f6660c7bbb4de108dab8"));
+        assert(hashGenesisBlock == uint256("0x00000b5ffed2d1ed05c9ea10e228763bbd47f9c937fb17105928f8587d7bc2b4"));
+         assert(genesis.hashMerkleRoot == uint256("0xc538670d319594f00b36d09c8fb6b2dfe899d9c35b83f6660c7bbb4de108dab8"));
      
 
 
