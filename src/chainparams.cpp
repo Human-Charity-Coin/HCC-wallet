@@ -42,13 +42,12 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x00000b5ffed2d1ed05c9ea10e228763bbd47f9c937fb17105928f8587d7bc2b4"))
-    (20, uint256("0x56f72848814f4307e3983e40d39bf61cedc055d0daf18e66cca3d30afe144aaa"));
+  (0, uint256("0x00000b5ffed2d1ed05c9ea10e228763bbd47f9c937fb17105928f8587d7bc2b4"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1603489535, // * UNIX timestamp of last checkpoint block
-    20,          // * total number of transactions between genesis and last checkpoint
+    108,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -90,12 +89,12 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 2 * 60;
-        nTargetSpacing = 2 * 60;  // Human-Charity-Coin: 2 minute blocks during POW (block 1-200)
+        nTargetTimespan = 3 * 60;
+        nTargetSpacing = 3 * 60;  // Human-Charity-Coin: 2 minute blocks during POW (block 1-200)
         nMaturity = 5; // 6 block maturity (+1 elsewhere)
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 15000000 * COIN; // 15 million max supply
-        nLastPOWBlock = 30;
+        nLastPOWBlock = 1500;
         nModifierUpdateBlock = 1; // we use the version 2 for HCC
 
         const char* pszTimestamp = "Human Charity Coin was born to help those in need who needs a helping hand.";

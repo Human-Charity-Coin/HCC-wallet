@@ -1,3 +1,1 @@
-qt/qt_libbitcoinqt_a-qrc_hcc.o: qt/qrc_hcc.cpp /usr/include/stdc-predef.h
-
-/usr/include/stdc-predef.h:
+qt/qt_libbitcoinqt_a-qrc_hcc.o: qt/qrc_hcc.cpp
