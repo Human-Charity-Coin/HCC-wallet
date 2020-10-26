@@ -7,8 +7,8 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 #Checking OS
-if [[ $(lsb_release -d) != *18.04* ]]; then
-  echo -e ${RED}"The operating system is not Ubuntu 18.04. You must be running on ubuntu 18.04."${NC}
+if [[ $(lsb_release -d) != *16.04* ]]; then
+  echo -e ${RED}"The operating system is not Ubuntu 16.04. You must be running on ubuntu 18.04."${NC}
   exit 1
 fi
 
