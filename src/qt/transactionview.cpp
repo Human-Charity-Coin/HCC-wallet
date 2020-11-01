@@ -115,7 +115,8 @@ TransactionView::TransactionView(QWidget* parent) : QWidget(parent), model(0), t
     QVBoxLayout* vlayout = new QVBoxLayout(this);
     vlayout->setContentsMargins(0, 0, 0, 0);
     vlayout->setSpacing(0);
-
+    setLayout(vLayout);
+    setMinimumSize(200,200);
     QTableView* view = new QTableView(this);
     vlayout->addLayout(hlayout);
     vlayout->addWidget(createDateRangeWidget());
