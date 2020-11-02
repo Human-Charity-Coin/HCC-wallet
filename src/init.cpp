@@ -337,6 +337,9 @@ std::string HelpMessage(HelpMessageMode mode)
 #endif
     strUsage += HelpMessageOpt("-txindex", strprintf(_("Maintain a full transaction index, used by the getrawtransaction rpc call (default: %u)"), 0));
     strUsage += HelpMessageOpt("-forcestart", _("Attempt to force blockchain corruption recovery") + " " + _("on startup"));
+    strUsage += HelpMessageOpt("-addressindex", strprintf(_("Maintain a full address index, used to query for the balance, txids and unspent outputs for addresses (default: %u)"), DEFAULT_ADDRESSINDEX));
+    strUsage += HelpMessageOpt("-spentindex", strprintf(_("Maintain a full spent index, used to query the spending txid and input index for an outpoint (default: %u)"), DEFAULT_SPENTINDEX));
+    strUsage += HelpMessageOpt("-logevents", strprintf(_("Maintain a full EVM log index, used by searchlogs and gettransactionreceipt rpc calls (default: %u)"), false));
 
     strUsage += HelpMessageGroup(_("Connection options:"));
     strUsage += HelpMessageOpt("-addnode=<ip>", _("Add a node to connect to and attempt to keep the connection open"));
@@ -773,6 +776,17 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
             return false;
         }
     }
+
+    // Make sure additional indexes are recalculated correctly in VerifyDB
+      // (we must reconnect blocks whenever we disconnect them for these indexes to work)
+      bool fAdditionalIndexes =
+          GetBoolArg("-addressindex", DEFAULT_ADDRESSINDEX) ||
+          GetBoolArg("-spentindex", DEFAULT_SPENTINDEX);
+
+      if (fAdditionalIndexes && GetArg("-checklevel", DEFAULT_CHECKLEVEL) < 4) {
+          ForceSetArg("-checklevel", "4");
+          LogPrintf("%s: parameter interaction: additional indexes -> setting -checklevel=4\n", __func__);
+      }
 
     // Make sure enough file descriptors are available
     int nBind = std::max((int)mapArgs.count("-bind") + (int)mapArgs.count("-whitebind"), 1);
