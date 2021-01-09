@@ -21,7 +21,7 @@ QStatusBar {
 }
 
 QFrame {
-	background-color: transparent;
+	background-color: rgba(0,0,0,0);
 	border: 0px solid #fff;
 }
 
@@ -62,7 +62,7 @@ QToolBar {
 QToolBar > QToolButton {
 	background-color:#003046;
 	border:0px solid #112649;
-	selection-background-color:transparent;
+	selection-background-color:rgba(0,0,0,0);
 	min-height: 2.5em;
 	padding: 0em 2em;
 	font-weight: bold;
@@ -98,13 +98,13 @@ QMessageBox {
 
 QProgressBar {
 	color: #ffffff;
-	border: 1px solid transparent;
+	border: 1px solid rgba(0,0,0,0);
 	border-radius: 50px;
-	background-color: transparent;
+	background-color: rgba(0,0,0,0);
 	border-style: none;
 	font: 12px;
 	text-align: center;
-	
+
 }
 
 QProgressBar::chunk {
@@ -112,11 +112,11 @@ QProgressBar::chunk {
 	width: 12px;
 	font: 12px;
 	text-align: center;
-	
+
 }
 
 QLabel#progressBarLabel {
-	background-color: transparent;
+	background-color: rgba(0,0,0,0);
 	color: #4ec298;
 	padding-left: 5px;
 	padding-right: 5px;
@@ -278,7 +278,7 @@ QComboBox:checked {
 QComboBox:editable {
 	background:#003046;
 	color:#616161;
-	border:0px solid transparent;
+	border:0px solid rgba(0,0,0,0);
 }
 
 QComboBox::drop-down {
@@ -311,15 +311,15 @@ QComboBox::item:alternate {
 }
 
 QComboBox::item:selected {
-	border:0px solid transparent;
+	border:0px solid rgba(0,0,0,0);
 	background:#f2f2f2;
 }
 
 QComboBox::indicator {
-	background-color:transparent;
-	selection-background-color:transparent;
-	color:transparent;
-	selection-color:transparent;
+	background-color:rgba(0,0,0,0);
+	selection-background-color:rgba(0,0,0,0);
+	color:rgba(0,0,0,0);
+	selection-color:rgba(0,0,0,0);
 }
 
 QAbstractSpinBox {
@@ -382,7 +382,7 @@ QValueComboBox:!focus {
 /****************************************************************************************/
 
 QHeaderView { /* Table Header */
-	background-color:transparent;
+	background-color:rgba(0,0,0,0);
 	outline:0;
 }
 
@@ -414,12 +414,12 @@ QHeaderView::section:last {
 }
 
 .QScrollArea {
-	background:transparent;
+	background:rgba(0,0,0,0);
 	border:0;
 }
 
 .QTableView { /* Table - has to be selected as a class otherwise it throws off QCalendarWidget */
-	background:transparent;
+	background:rgba(0,0,0,0);
 	border:1px solid #333;
 }
 
@@ -441,7 +441,7 @@ QTableWidget { /* Table Background */
 
 QTableWidget:focus, QTableView, QTableView:focus { /* Remove focus outline */
 	outline:0;
-	background:transparent;
+	background:rgba(0,0,0,0);
 }
 
 QTreeWidget { /* Tree Background */
@@ -784,7 +784,7 @@ QDialog#RPCConsole QLineEdit#lineEdit { /* Console Input */
 }
 
 QDialog#RPCConsole QPushButton#clearButton { /* Console Clear Button */
-	background-color:transparent;
+	background-color:rgba(0,0,0,0);
 	padding-left:10px;
 	padding-right:10px;
 }
@@ -953,7 +953,7 @@ QWidget .QFrame#frame_RecentTransactions { /* Transactions Widget */
 QWidget .QFrame#frame_RecentTransactions .QLabel#label_4 { /* Recent Transactions Label */
 	qproperty-alignment: 'AlignVCenter | AlignLeft';
 	min-width:180px;
-	background-color:transparent;
+	background-color:rgba(0,0,0,0);
 	color:#003046;
 	font-weight:bold;
 	font-size:20px;
@@ -977,7 +977,7 @@ QWidget .QFrame#frame_RecentTransactions QListView { /* Transaction List */
 /**************************** SEND DIALOG ***********************************************/
 
 QDialog#SendCoinsDialog {
-	background-color:#transparent;
+	background-color:#rgba(0,0,0,0);
 }
 
 QDialog#SendCoinsDialog .QFrame#frameCoinControl { /* Coin Control Section */
@@ -1010,7 +1010,7 @@ QDialog#SendCoinsDialog .QFrame#frameCoinControl .QPushButton#pushButtonCoinCont
 QDialog#SendCoinsDialog .QFrame#frameCoinControl .QLabel#labelCoinControlFeatures { /* Coin Control Header */
 	qproperty-alignment: 'AlignVCenter | AlignLeft';
 	min-width:160px;
-	background-color:transparent;
+	background-color:rgba(0,0,0,0);
 	color:#333333;
 	font-weight:bold;
 	font-size:20px;
@@ -1182,16 +1182,16 @@ QDialog#CoinControlDialog .QDialogButtonBox#buttonBox QPushButton { /* Coin Cont
 
 QDialog#CoinControlDialog .QFrame#frame .QRadioButton#radioTreeMode { /* Coin Control Tree Mode Selector */
 	color:#818181;
-	background-color:transparent;
+	background-color:rgba(0,0,0,0);
 }
 
 QDialog#CoinControlDialog .QFrame#frame .QRadioButton#radioListMode { /* Coin Control List Mode Selector */
 	color:#818181;
-	background-color:transparent;
+	background-color:rgba(0,0,0,0);
 }
 
 QDialog#CoinControlDialog QHeaderView::section:first { /* Bug Fix: the number "1" displays in this table for some reason... */
-	color:transparent;
+	color:rgba(0,0,0,0);
 }
 
 QDialog#CoinControlDialog .CoinControlTreeWidget#treeWidget { /* Coin Control Widget Container */
@@ -1352,4 +1352,3 @@ QCalendarWidget QAbstractItemView:enabled { /* Calendar widget weekdays in month
 QCalendarWidget QAbstractItemView:disabled { /* Calendar widget days not in month */
 	color:#818181;
 }
-
