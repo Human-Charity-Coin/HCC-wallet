@@ -42,12 +42,13 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-  (0, uint256("0x00000b5ffed2d1ed05c9ea10e228763bbd47f9c937fb17105928f8587d7bc2b4"));
+  (0, uint256("0x00000b5ffed2d1ed05c9ea10e228763bbd47f9c937fb17105928f8587d7bc2b4"))
+  (106899, uint256("0x9a74b859e55d731f5905c41e12120647486aa2b0f3819c5c03eacdef30411662"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1603489535, // * UNIX timestamp of last checkpoint block
-    108,          // * total number of transactions between genesis and last checkpoint
+    106899,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -145,7 +146,7 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "047ceda0f06dc16cf7be8a4e42b0b7a4c1a7cd1dcc95e2c570b5b27bccd7be1293e4f635e9979ce2fd13d01396ab01be06c19440316ce528cdd36cf0832e47593f";
+        strSporkKey = "04bb12ccec479c90e0b525f9b40446a60cdd6e1e17185acb5ca5bc0b62d15247aa0cf797ee8fd60ff9fc2f7920cc8b9070558b3e7a643d502ed886e68f7e1a578e";
         strMasternodePoolDummyAddress = "HR6jDFPRC4wreprriXoacaQwGYeHtv7iYZ";
         nStartMasternodePayments = 1603489535;
 
@@ -242,7 +243,6 @@ public:
     CRegTestParams()
     {
         networkID = CBaseChainParams::REGTEST;
-        strNetworkID = "regtest";
         strNetworkID = "regtest";
         pchMessageStart[0] = 0x20;
         pchMessageStart[1] = 0xee;
