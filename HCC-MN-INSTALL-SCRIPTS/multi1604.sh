@@ -68,8 +68,8 @@ sudo echo ' /var/swap.img none swap sw 0 0 ' >> /etc/fstab
 cd ~
 sudo mkdir /root/hcc
 cd /root/hcc
-wget https://github.com/Human-Charity-Coin/HCC-wallet/releases/download/1.0.0/hcclinux.tar.gz
-tar -xzvf hcclinux.tar.gz
+wget https://github.com/Human-Charity-Coin/HCC-wallet/releases/download/1.1.0/hcclin1.1.0.tar.gz
+tar -xzvf hcclin1.1.0.tar.gz
 sudo mv /root/hcc/hccd /root/hcc/hcc-cli /root/hcc/hcc-tx /usr/local/bin
 sudo chmod 755 -R  /usr/local/bin/hcc*
 sudo mkdir /home/hcc/.hcc

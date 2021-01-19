@@ -22,10 +22,10 @@ echo "Removing binaries..."
 cd /usr/local/bin
 rm -rf hccd hcc-cli hcc-tx
 echo "Downloading latest binaries"
-wget https://github.com/Human-Charity-Coin/HCC-wallet/releases/download/1.0.0/hcclinux.tar.gz
-tar -xzf hcclinux.tar.gz
+wget https://github.com/Human-Charity-Coin/HCC-wallet/releases/download/1.1.0/hcclin1.1.0.tar.gz
+tar -xzf hcclin1.1.0.tar.gz
 sudo chmod 755 -R  /usr/local/bin/hcc*
-rm -rf hcclinux.tar.gz
+rm -rf hcclin1.1.0.tar.gz
 echo "Deleting old nodes from node config files"
 sed -i '/addnode/d' /home/hcc/.hcc/hcc.conf
 sed -i '/addnode/d' /home/hcc2/.hcc/hcc.conf
