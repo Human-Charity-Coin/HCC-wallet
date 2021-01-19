@@ -785,7 +785,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;a href=&quot;https://127.0.0.1/&quot;&gt;https://127.0.0.1/&lt;/a&gt;</string>
+                        <string notr="true">&lt;a href=&quot;https://human-charity-coin.github.io/&quot;&gt;https://human-charity-coin.github.io/&lt;/a&gt;</string>
                        </property>
                        <property name="textFormat">
                         <enum>Qt::RichText</enum>
@@ -875,7 +875,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;a href=&quot;http://127.0.0.1/ &quot;&gt;http://127.0.0.1/ &lt;/a&gt;</string>
+                        <string notr="true">&lt;a href=&quot;https://cryptoloverbots.com/explorer/HCC/#/ &quot;&gt;https://cryptoloverbots.com/explorer/HCC/#/ &lt;/a&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -904,7 +904,7 @@
                         <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
                        </property>
                        <property name="text">
-                        <string>Exchange:</string>
+                        <string>Exchange1:</string>
                        </property>
                       </widget>
                      </item>
@@ -962,7 +962,7 @@
                         <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
                        </property>
                        <property name="text">
-                        <string>ROI:</string>
+                        <string>Exchange2:</string>
                        </property>
                       </widget>
                      </item>
@@ -975,7 +975,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://127.0.0.1/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://127.0.0.1/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://stakecube.net/app/exchange/HCC_BTC&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://stakecube.net/app/exchange/HCC_BTC&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -991,7 +991,7 @@
                         <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
                        </property>
                        <property name="text">
-                        <string>MN Vs Staking:</string>
+                        <string>Developer Services:</string>
                        </property>
                       </widget>
                      </item>
@@ -1004,7 +1004,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://127.0.0.1/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://127.0.0.1/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://cryptoloverbots.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptoloverbots.com/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1020,7 +1020,7 @@
                         <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
                        </property>
                        <property name="text">
-                        <string>Market Place:</string>
+                        <string>Telegram:</string>
                        </property>
                       </widget>
                      </item>
@@ -1033,7 +1033,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;http://127.0.0.1/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://127.0.0.1/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://t.me/PENGCoin_ENG&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://t.me/PENGCoin_ENG&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1052,7 +1052,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://127.0.0.1/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://127.0.0.1/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/CryptoLover705/CryptoLover705/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/CryptoLover705/CryptoLover705&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
