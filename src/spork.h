@@ -50,8 +50,8 @@ using namespace boost;
 #define SPORK_11_RESET_BUDGET_DEFAULT 0
 #define SPORK_12_RECONSIDER_BLOCKS_DEFAULT 0
 #define SPORK_13_ENABLE_SUPERBLOCKS_DEFAULT 1610314221            //1/10/2021
-#define SPORK_14_NEW_PROTOCOL_ENFORCEMENT_DEFAULT 4070908800      //OFF
-#define SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2_DEFAULT 4070908800    //OFF
+#define SPORK_14_NEW_PROTOCOL_ENFORCEMENT_DEFAULT 1610314221      //OFF
+#define SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2_DEFAULT 1612224000    //OFF
 #define SPORK_16_MN_WINNER_MINIMUM_AGE_DEFAULT 8000               // Age in seconds. This should be > MASTERNODE_REMOVAL_SECONDS to avoid
                                                                   // misconfigured new nodes in the list.
                                                                   // Set this to zero to emulate classic behaviour
