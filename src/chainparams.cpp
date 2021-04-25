@@ -43,12 +43,13 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
   (0, uint256("0x00000b5ffed2d1ed05c9ea10e228763bbd47f9c937fb17105928f8587d7bc2b4"))
-  (106899, uint256("0x9a74b859e55d731f5905c41e12120647486aa2b0f3819c5c03eacdef30411662"));
+  (106899, uint256("0x9a74b859e55d731f5905c41e12120647486aa2b0f3819c5c03eacdef30411662"))
+  (257045, uint256("3d9490c25c09b960cdf6c6aafba23e7d685d115eb4c4ed47b4e5c33d971407c5"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1603489535, // * UNIX timestamp of last checkpoint block
-    106899,          // * total number of transactions between genesis and last checkpoint
+    257045,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -133,6 +134,11 @@ public:
         // Human-Charity-Coin BIP44 coin type is '222' (0x800000de)
         // BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0xde).convert_to_container<std::vector<unsigned char> >();
+        vSeeds.push_back(CDNSSeedData("45.76.179.95", "dnsseed.45.76.179.95"));
+        vSeeds.push_back(CDNSSeedData("144.202.101.177", "dnsseed.144.202.101.177"));
+        vSeeds.push_back(CDNSSeedData("144.202.17.44", "dnsseed.144.202.17.44"));
+        vSeeds.push_back(CDNSSeedData("155.138.213.33", "dnsseed.155.138.213.33"));
+        vSeeds.push_back(CDNSSeedData("155.138.218.214", "dnsseed.155.138.218.214"));
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
