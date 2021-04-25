@@ -29550,7 +29550,7 @@ fi
 $as_echo "#define CLIENT_VERSION_MAJOR 1" >>confdefs.h
 
 
-$as_echo "#define CLIENT_VERSION_MINOR 1" >>confdefs.h
+$as_echo "#define CLIENT_VERSION_MINOR 2" >>confdefs.h
 
 
 $as_echo "#define CLIENT_VERSION_REVISION 0" >>confdefs.h
@@ -29566,7 +29566,7 @@ $as_echo "#define COPYRIGHT_YEAR 2020" >>confdefs.h
 
 CLIENT_VERSION_MAJOR=1
 
-CLIENT_VERSION_MINOR=1
+CLIENT_VERSION_MINOR=2
 
 CLIENT_VERSION_REVISION=0
 
