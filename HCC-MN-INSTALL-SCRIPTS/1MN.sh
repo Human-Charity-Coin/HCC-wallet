@@ -80,8 +80,8 @@ set -- "${POSITIONAL[@]}" # restore positional parameters
 clear
 
 # Set these to change the version of hcc to install
-TARBALLURL="https://github.com/Human-Charity-Coin/HCC-wallet/releases/download/1.1.0/hcclin1.1.0.tar.gz"
-TARBALLNAME="hcclin1.1.0.tar.gz"
+TARBALLURL="https://github.com/Human-Charity-Coin/HCC-wallet/releases/download/1.1.0/hcclin1.2.0.tar.gz"
+TARBALLNAME="hcclin1.2.0.tar.gz"
 BOOTSTRAPURL=""
 BOOTSTRAPARCHIVE=""
 BWKVERSION="1.1.0"
