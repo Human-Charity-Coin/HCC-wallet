@@ -1,4 +1,4 @@
-#!/bin/bash
+https://github.com/Human-Charity-Coin/HCC-wallet/raw/master/bootstrap/bootstrap.tar.gz#!/bin/bash
 
 POSITIONAL=()
 while [[ $# -gt 0 ]]
@@ -82,8 +82,8 @@ clear
 # Set these to change the version of hcc to install
 TARBALLURL="https://github.com/Human-Charity-Coin/HCC-wallet/releases/download/v1.2.0/hcclin1.2.0.tar.gz"
 TARBALLNAME="hcclin1.2.0.tar.gz"
-BOOTSTRAPURL=""
-BOOTSTRAPARCHIVE=""
+BOOTSTRAPURL="https://github.com/Human-Charity-Coin/HCC-wallet/raw/master/bootstrap/bootstrap.tar.gz"
+BOOTSTRAPARCHIVE="tar.gz"
 BWKVERSION="1.1.0"
 
 #!/bin/bash
