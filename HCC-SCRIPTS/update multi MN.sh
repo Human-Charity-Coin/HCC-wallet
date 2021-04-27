@@ -22,7 +22,7 @@ echo "Removing binaries..."
 cd /usr/local/bin
 rm -rf hccd hcc-cli hcc-tx
 echo "Downloading latest binaries"
-wget https://github.com/Human-Charity-Coin/HCC-wallet/releases/download/1.1.0/hcclin1.2.0.tar.gz
+wget https://github.com/Human-Charity-Coin/HCC-wallet/releases/download/v1.2.0/hcclin1.2.0.tar.gz
 tar -xzf hcclin1.2.0.tar.gz
 sudo chmod 755 -R  /usr/local/bin/hcc*
 rm -rf hcclin1.2.0.tar.gz

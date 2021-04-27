@@ -28,7 +28,7 @@ sudo free
 sudo echo "/var/swap.img none swap sw 0 0" >> /etc/fstab
 cd
 
-wget https://github.com/Human-Charity-Coin/HCC-wallet/releases/download/1.1.0/hcclin1.2.0.tar.gz
+wget https://github.com/Human-Charity-Coin/HCC-wallet/releases/download/v1.2.0/hcclin1.2.0.tar.gz
 tar -xzf hcclin1.2.0.tar.gz
 rm -rf hcclin1.2.0.tar.gz
 
