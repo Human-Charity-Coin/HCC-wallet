@@ -221,7 +221,7 @@ ARFLAGS = cru
 AM_V_AR = $(am__v_AR_$(V))
 am__v_AR_ = $(am__v_AR_$(AM_DEFAULT_VERBOSITY))
 am__v_AR_0 = @echo "  AR      " $@;
-am__v_AR_1 = 
+am__v_AR_1 =
 crypto_libbitcoin_crypto_a_AR = $(AR) $(ARFLAGS)
 crypto_libbitcoin_crypto_a_LIBADD =
 am__dirstamp = $(am__leading_dot)dirstamp
@@ -694,7 +694,7 @@ libbitcoinconsensus_la_OBJECTS = $(am_libbitcoinconsensus_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
-am__v_lt_1 = 
+am__v_lt_1 =
 libbitcoinconsensus_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(AM_CXXFLAGS) $(CXXFLAGS) $(libbitcoinconsensus_la_LDFLAGS) \
@@ -918,11 +918,11 @@ am__v_P_1 = :
 AM_V_GEN = $(am__v_GEN_$(V))
 am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))
 am__v_GEN_0 = @echo "  GEN     " $@;
-am__v_GEN_1 = 
+am__v_GEN_1 =
 AM_V_at = $(am__v_at_$(V))
 am__v_at_ = $(am__v_at_$(AM_DEFAULT_VERBOSITY))
 am__v_at_0 = @
-am__v_at_1 = 
+am__v_at_1 =
 DEFAULT_INCLUDES = -I. -I$(top_builddir)/src/config
 depcomp = $(SHELL) $(top_srcdir)/build-aux/depcomp
 am__depfiles_maybe = depfiles
@@ -936,7 +936,7 @@ LTCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 AM_V_CC = $(am__v_CC_$(V))
 am__v_CC_ = $(am__v_CC_$(AM_DEFAULT_VERBOSITY))
 am__v_CC_0 = @echo "  CC      " $@;
-am__v_CC_1 = 
+am__v_CC_1 =
 CCLD = $(CC)
 LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
@@ -944,7 +944,7 @@ LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 AM_V_CCLD = $(am__v_CCLD_$(V))
 am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CCLD_0 = @echo "  CCLD    " $@;
-am__v_CCLD_1 = 
+am__v_CCLD_1 =
 CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
 LTCXXCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
@@ -954,7 +954,7 @@ LTCXXCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 AM_V_CXX = $(am__v_CXX_$(V))
 am__v_CXX_ = $(am__v_CXX_$(AM_DEFAULT_VERBOSITY))
 am__v_CXX_0 = @echo "  CXX     " $@;
-am__v_CXX_1 = 
+am__v_CXX_1 =
 CXXLD = $(CXX)
 CXXLINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
@@ -962,7 +962,7 @@ CXXLINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 AM_V_CXXLD = $(am__v_CXXLD_$(V))
 am__v_CXXLD_ = $(am__v_CXXLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
-am__v_CXXLD_1 = 
+am__v_CXXLD_1 =
 OBJCXXCOMPILE = $(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS)
 LTOBJCXXCOMPILE = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) \
@@ -972,7 +972,7 @@ LTOBJCXXCOMPILE = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) \
 AM_V_OBJCXX = $(am__v_OBJCXX_$(V))
 am__v_OBJCXX_ = $(am__v_OBJCXX_$(AM_DEFAULT_VERBOSITY))
 am__v_OBJCXX_0 = @echo "  OBJCXX  " $@;
-am__v_OBJCXX_1 = 
+am__v_OBJCXX_1 =
 OBJCXXLD = $(OBJCXX)
 OBJCXXLINK = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=link $(OBJCXXLD) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) \
@@ -980,7 +980,7 @@ OBJCXXLINK = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 AM_V_OBJCXXLD = $(am__v_OBJCXXLD_$(V))
 am__v_OBJCXXLD_ = $(am__v_OBJCXXLD_$(AM_DEFAULT_VERBOSITY))
 am__v_OBJCXXLD_0 = @echo "  OBJCXXLD" $@;
-am__v_OBJCXXLD_1 = 
+am__v_OBJCXXLD_1 =
 SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(libbitcoin_cli_a_SOURCES) $(libbitcoin_common_a_SOURCES) \
 	$(libbitcoin_server_a_SOURCES) $(libbitcoin_util_a_SOURCES) \
@@ -1264,7 +1264,7 @@ AUTOCONF = ${SHELL} /home/dad/Downloads/HCC-wallet/build-aux/missing autoconf
 AUTOHEADER = ${SHELL} /home/dad/Downloads/HCC-wallet/build-aux/missing autoheader
 AUTOMAKE = ${SHELL} /home/dad/Downloads/HCC-wallet/build-aux/missing automake-1.15
 AWK = gawk
-BDB_CPPFLAGS = 
+BDB_CPPFLAGS =
 BDB_LIBS = -ldb_cxx-4.8
 BITCOIN_CLI_NAME = hcc-cli
 BITCOIN_DAEMON_NAME = hccd
@@ -1279,19 +1279,19 @@ BOOST_PROGRAM_OPTIONS_LIB = -lboost_program_options-mt
 BOOST_SYSTEM_LIB = -lboost_system-mt
 BOOST_THREAD_LIB = -lboost_thread-mt
 BOOST_UNIT_TEST_FRAMEWORK_LIB = -lboost_unit_test_framework-mt
-BREW = 
+BREW =
 BUILD_QT = qt
 BUILD_TEST = test
 BUILD_TEST_QT = test
 CC = /home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/share/../native/bin/ccache gcc -m64
 CCACHE = /home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/share/../native/bin/ccache
 CCDEPMODE = depmode=gcc3
-CFLAGS = -pipe -O2 
+CFLAGS = -pipe -O2
 CLIENT_VERSION_BUILD = 0
 CLIENT_VERSION_IS_RELEASE = true
 CLIENT_VERSION_MAJOR = 1
 CLIENT_VERSION_MINOR = 2
-CLIENT_VERSION_REVISION = 0
+CLIENT_VERSION_REVISION = 1
 COMPARISON_TOOL_REORG_TESTS = 0
 COPYRIGHT_YEAR = 2020
 CPP = gcc -m64 -E
@@ -1307,96 +1307,96 @@ CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = false
-DSYMUTIL = 
-DUMPBIN = 
-ECHO_C = 
+DSYMUTIL =
+DUMPBIN =
+ECHO_C =
 ECHO_N = -n
-ECHO_T = 
+ECHO_T =
 EGREP = /bin/grep -E
 EVENT_CFLAGS = -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include
 EVENT_LIBS = -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -levent
 EVENT_PTHREADS_CFLAGS = -pthread -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include
 EVENT_PTHREADS_LIBS = -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -levent_pthreads -levent
-EXEEXT = 
+EXEEXT =
 FGREP = /bin/grep -F
 GCOV = /usr/bin/gcov
-GENHTML = 
-GENISOIMAGE = 
+GENHTML =
+GENISOIMAGE =
 GIT = /usr/bin/git
 GREP = /bin/grep
 HAVE_CXX11 = 1
 HEXDUMP = /usr/bin/hexdump
-IMAGEMAGICK_CONVERT = 
+IMAGEMAGICK_CONVERT =
 INSTALL = /usr/bin/install -c
-INSTALLNAMETOOL = 
+INSTALLNAMETOOL =
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 JAVA = /usr/bin/java
-JAVA_COMPARISON_TOOL = 
-LCOV = 
+JAVA_COMPARISON_TOOL =
+LCOV =
 LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/share/../lib   -Wl,-z,relro -Wl,-z,now
 LEVELDB_CPPFLAGS =  $(am__append_1)
-LEVELDB_TARGET_FLAGS = 
+LEVELDB_TARGET_FLAGS =
 LIBLEVELDB =  $(am__append_2)
 LIBMEMENV =  $(am__append_3)
-LIBOBJS = 
-LIBS = -lcrypto -lanl 
+LIBOBJS =
+LIBS = -lcrypto -lanl
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
-LIBTOOL_APP_LDFLAGS = 
-LIPO = 
+LIBTOOL_APP_LDFLAGS =
+LIPO =
 LN_S = ln -s
 LRELEASE = /home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/share/../native/bin/lrelease
-LTLIBOBJS = 
-LT_SYS_LIBRARY_PATH = 
-LUPDATE = 
-MAINT = 
+LTLIBOBJS =
+LT_SYS_LIBRARY_PATH =
+LUPDATE =
+MAINT =
 MAKEINFO = ${SHELL} /home/dad/Downloads/HCC-wallet/build-aux/missing makeinfo
-MAKENSIS = 
+MAKENSIS =
 MANIFEST_TOOL = :
-MINIUPNPC_CPPFLAGS = 
+MINIUPNPC_CPPFLAGS =
 MINIUPNPC_LIBS = -lminiupnpc
 MKDIR_P = /bin/mkdir -p
 MOC = /home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/share/../native/bin/moc
 MOC_DEFS = -DHAVE_CONFIG_H -I$(srcdir)
 NM = nm
-NMEDIT = 
+NMEDIT =
 OBJCOPY = /usr/bin/objcopy
 OBJCXX = g++ -m64
 OBJCXXDEPMODE = depmode=gcc3
 OBJCXXFLAGS = -pipe -O2   -Wstack-protector -fstack-protector-all -fPIC
 OBJDUMP = objdump
 OBJEXT = o
-OTOOL = 
-OTOOL64 = 
+OTOOL =
+OTOOL64 =
 PACKAGE = hcc
 PACKAGE_BUGREPORT = www.savebitcoin.io
 PACKAGE_NAME = Human-Charity-Coin Core
 PACKAGE_STRING = Human-Charity-Coin Core 1.2.0
 PACKAGE_TARNAME = hcc
-PACKAGE_URL = 
+PACKAGE_URL =
 PACKAGE_VERSION = 1.2.0
 PATH_SEPARATOR = :
 PKG_CONFIG = /usr/bin/pkg-config --static
 PKG_CONFIG_LIBDIR = /home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/share/../lib/pkgconfig
 PKG_CONFIG_PATH = /home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/share/../share/pkgconfig
-PORT = 
+PORT =
 PROTOBUF_CFLAGS = -pthread -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include
 PROTOBUF_LIBS = -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -lprotobuf -pthread -lpthread -lz
 PROTOC = /home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/share/../native/bin/protoc
 PTHREAD_CC = gcc -m64
 PTHREAD_CFLAGS = -pthread
-PTHREAD_LIBS = 
+PTHREAD_LIBS =
 PYTHON = /usr/bin/python3
 PYTHONPATH = /home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/share/../native/lib/python/dist-packages:
 QR_CFLAGS = -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include
 QR_LIBS = -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -lqrencode -lpthread
 QTPLATFORM_CFLAGS = -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtPlatformSupport -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtGui -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtCore
 QTPLATFORM_LIBS = -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -lQt5PlatformSupport -lQt5Gui -lqtpng -lharfbuzz -lQt5DBus -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lfontconfig -lfreetype -lQt5Gui -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lqtpng -lharfbuzz -lz -lQt5Core -lpthread -lz -lqtpcre -lm -ldl -lrt
-QTPRINT_CFLAGS = 
-QTPRINT_LIBS = 
+QTPRINT_CFLAGS =
+QTPRINT_LIBS =
 QTXCBQPA_CFLAGS = -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtXcbQpa -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtPlatformSupport -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtGui -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtCore
 QTXCBQPA_LIBS = -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -L//home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -lQt5XcbQpa -lX11 -lX11-xcb -lxcb -lxcb-static -lQt5PlatformSupport -lQt5DBus -lfontconfig -lfreetype -lQt5Gui -lqtpng -lharfbuzz -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lfontconfig -lfreetype -lQt5PlatformSupport -lQt5Gui -lqtpng -lharfbuzz -lQt5DBus -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lfontconfig -lfreetype -lQt5Gui -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lqtpng -lharfbuzz -lz -lQt5Core -lpthread -lz -lqtpcre -lm -ldl -lrt
 QT_CFLAGS = -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtNetwork -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtWidgets -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtGui -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtCore
@@ -1404,9 +1404,9 @@ QT_DBUS_CFLAGS = -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/in
 QT_DBUS_INCLUDES = -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtDBus -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtCore
 QT_DBUS_LIBS = -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -lQt5DBus -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lQt5Core -lpthread -lz -lqtpcre -lm -ldl -lrt
 QT_INCLUDES = -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtNetwork -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtWidgets -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtGui -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtCore
-QT_LDFLAGS = 
+QT_LDFLAGS =
 QT_LIBS = -lqxcb -lxcb-static -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -L//home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -lQt5XcbQpa -lX11 -lX11-xcb -lxcb -lxcb-static -lQt5PlatformSupport -lQt5DBus -lfontconfig -lfreetype -lQt5Gui -lqtpng -lharfbuzz -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lfontconfig -lfreetype -lQt5PlatformSupport -lQt5Gui -lqtpng -lharfbuzz -lQt5DBus -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lfontconfig -lfreetype -lQt5Gui -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lqtpng -lharfbuzz -lz -lQt5Core -lpthread -lz -lqtpcre -lm -ldl -lrt -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -lX11-xcb -lX11 -lpthread -lxcb -lXau -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -lQt5PlatformSupport -lQt5Gui -lqtpng -lharfbuzz -lQt5DBus -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lfontconfig -lfreetype -lQt5Gui -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lqtpng -lharfbuzz -lz -lQt5Core -lpthread -lz -lqtpcre -lm -ldl -lrt -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -lQt5Network -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lz -lssl -lcrypto -lQt5Widgets -lQt5Gui -lqtpng -lharfbuzz -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lQt5Gui -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lqtpng -lharfbuzz -lz -lQt5Core -lpthread -lz -lqtpcre -lm -ldl -lrt -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/share/../plugins/platforms
-QT_PIE_FLAGS = 
+QT_PIE_FLAGS =
 QT_SELECT = qt5
 QT_TEST_CFLAGS = -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtTest -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtCore
 QT_TEST_INCLUDES = -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtTest -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/QtCore
@@ -1416,23 +1416,23 @@ RANLIB = ranlib
 RCC = /home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/share/../native/bin/rcc
 READELF = /usr/bin/readelf
 RELDFLAGS = -Wl,--exclude-libs,ALL
-RSVG_CONVERT = 
+RSVG_CONVERT =
 SED = /bin/sed
-SET_MAKE = 
+SET_MAKE =
 SHELL = /bin/bash
 SSL_CFLAGS = -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include
 SSL_LIBS = -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -lssl -lcrypto -ldl
 STRIP = /usr/bin/strip
-TESTDEFS = 
-TIFFCP = 
+TESTDEFS =
+TIFFCP =
 UIC = /home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/share/../native/bin/uic
 UNIVALUE_CFLAGS = -I$(srcdir)/univalue/include
 UNIVALUE_LIBS = univalue/libunivalue.la
-USE_QRCODE = 
-USE_UPNP = 
+USE_QRCODE =
+USE_UPNP =
 VERSION = 1.2.0
-WINDOWS_BITS = 
-WINDRES = 
+WINDOWS_BITS =
+WINDRES =
 X11XCB_CFLAGS = -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include/xcb-shared -I/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/include
 X11XCB_LIBS = -L/home/dad/Downloads/HCC-wallet/depends/x86_64-pc-linux-gnu/lib -lX11-xcb -lX11 -lpthread -lxcb -lXau
 XGETTEXT = /usr/bin/xgettext
@@ -1442,20 +1442,20 @@ abs_builddir = /home/dad/Downloads/HCC-wallet/src
 abs_srcdir = /home/dad/Downloads/HCC-wallet/src
 abs_top_builddir = /home/dad/Downloads/HCC-wallet
 abs_top_srcdir = /home/dad/Downloads/HCC-wallet
-ac_ct_AR = 
-ac_ct_CC = 
-ac_ct_CXX = 
-ac_ct_DUMPBIN = 
-ac_ct_OBJCXX = 
+ac_ct_AR =
+ac_ct_CC =
+ac_ct_CXX =
+ac_ct_DUMPBIN =
+ac_ct_OBJCXX =
 am__include = include
 am__leading_dot = .
-am__quote = 
+am__quote =
 am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
-ax_pthread_config = 
+ax_pthread_config =
 bindir = ${exec_prefix}/bin
 build = x86_64-pc-linux-gnu
-build_alias = 
+build_alias =
 build_cpu = x86_64
 build_os = linux-gnu
 build_vendor = pc
@@ -1491,7 +1491,7 @@ sharedstatedir = ${prefix}/com
 srcdir = .
 subdirs =  src/univalue src/secp256k1
 sysconfdir = ${prefix}/etc
-target_alias = 
+target_alias =
 top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
@@ -1520,7 +1520,7 @@ EXTRA_LIBRARIES = crypto/libbitcoin_crypto.a libbitcoin_util.a \
 	libbitcoin_common.a libbitcoin_server.a libbitcoin_cli.a \
 	$(am__append_5) $(am__append_6) $(am__append_24)
 #lib_LTLIBRARIES = libbitcoinconsensus.la
-LIBBITCOIN_CONSENSUS = 
+LIBBITCOIN_CONSENSUS =
 #LIBBITCOIN_CONSENSUS = libbitcoinconsensus.la
 # hcc core #
 BITCOIN_CORE_H = \
@@ -2320,7 +2320,7 @@ crypto/libbitcoin_crypto.a: $(crypto_libbitcoin_crypto_a_OBJECTS) $(crypto_libbi
 	$(AM_V_AR)$(crypto_libbitcoin_crypto_a_AR) crypto/libbitcoin_crypto.a $(crypto_libbitcoin_crypto_a_OBJECTS) $(crypto_libbitcoin_crypto_a_LIBADD)
 	$(AM_V_at)$(RANLIB) crypto/libbitcoin_crypto.a
 
-libbitcoin_cli.a: $(libbitcoin_cli_a_OBJECTS) $(libbitcoin_cli_a_DEPENDENCIES) $(EXTRA_libbitcoin_cli_a_DEPENDENCIES) 
+libbitcoin_cli.a: $(libbitcoin_cli_a_OBJECTS) $(libbitcoin_cli_a_DEPENDENCIES) $(EXTRA_libbitcoin_cli_a_DEPENDENCIES)
 	$(AM_V_at)-rm -f libbitcoin_cli.a
 	$(AM_V_AR)$(libbitcoin_cli_a_AR) libbitcoin_cli.a $(libbitcoin_cli_a_OBJECTS) $(libbitcoin_cli_a_LIBADD)
 	$(AM_V_at)$(RANLIB) libbitcoin_cli.a
@@ -2353,14 +2353,14 @@ script/libbitcoin_common_a-standard.$(OBJEXT): script/$(am__dirstamp) \
 script/libbitcoin_common_a-script_error.$(OBJEXT):  \
 	script/$(am__dirstamp) script/$(DEPDIR)/$(am__dirstamp)
 
-libbitcoin_common.a: $(libbitcoin_common_a_OBJECTS) $(libbitcoin_common_a_DEPENDENCIES) $(EXTRA_libbitcoin_common_a_DEPENDENCIES) 
+libbitcoin_common.a: $(libbitcoin_common_a_OBJECTS) $(libbitcoin_common_a_DEPENDENCIES) $(EXTRA_libbitcoin_common_a_DEPENDENCIES)
 	$(AM_V_at)-rm -f libbitcoin_common.a
 	$(AM_V_AR)$(libbitcoin_common_a_AR) libbitcoin_common.a $(libbitcoin_common_a_OBJECTS) $(libbitcoin_common_a_LIBADD)
 	$(AM_V_at)$(RANLIB) libbitcoin_common.a
 script/libbitcoin_server_a-sigcache.$(OBJEXT): script/$(am__dirstamp) \
 	script/$(DEPDIR)/$(am__dirstamp)
 
-libbitcoin_server.a: $(libbitcoin_server_a_OBJECTS) $(libbitcoin_server_a_DEPENDENCIES) $(EXTRA_libbitcoin_server_a_DEPENDENCIES) 
+libbitcoin_server.a: $(libbitcoin_server_a_OBJECTS) $(libbitcoin_server_a_DEPENDENCIES) $(EXTRA_libbitcoin_server_a_DEPENDENCIES)
 	$(AM_V_at)-rm -f libbitcoin_server.a
 	$(AM_V_AR)$(libbitcoin_server_a_AR) libbitcoin_server.a $(libbitcoin_server_a_OBJECTS) $(libbitcoin_server_a_LIBADD)
 	$(AM_V_at)$(RANLIB) libbitcoin_server.a
@@ -2381,12 +2381,12 @@ compat/libbitcoin_util_a-glibc_compat.$(OBJEXT):  \
 compat/libbitcoin_util_a-glibcxx_compat.$(OBJEXT):  \
 	compat/$(am__dirstamp) compat/$(DEPDIR)/$(am__dirstamp)
 
-libbitcoin_util.a: $(libbitcoin_util_a_OBJECTS) $(libbitcoin_util_a_DEPENDENCIES) $(EXTRA_libbitcoin_util_a_DEPENDENCIES) 
+libbitcoin_util.a: $(libbitcoin_util_a_OBJECTS) $(libbitcoin_util_a_DEPENDENCIES) $(EXTRA_libbitcoin_util_a_DEPENDENCIES)
 	$(AM_V_at)-rm -f libbitcoin_util.a
 	$(AM_V_AR)$(libbitcoin_util_a_AR) libbitcoin_util.a $(libbitcoin_util_a_OBJECTS) $(libbitcoin_util_a_LIBADD)
 	$(AM_V_at)$(RANLIB) libbitcoin_util.a
 
-libbitcoin_wallet.a: $(libbitcoin_wallet_a_OBJECTS) $(libbitcoin_wallet_a_DEPENDENCIES) $(EXTRA_libbitcoin_wallet_a_DEPENDENCIES) 
+libbitcoin_wallet.a: $(libbitcoin_wallet_a_OBJECTS) $(libbitcoin_wallet_a_DEPENDENCIES) $(EXTRA_libbitcoin_wallet_a_DEPENDENCIES)
 	$(AM_V_at)-rm -f libbitcoin_wallet.a
 	$(AM_V_AR)$(libbitcoin_wallet_a_AR) libbitcoin_wallet.a $(libbitcoin_wallet_a_OBJECTS) $(libbitcoin_wallet_a_LIBADD)
 	$(AM_V_at)$(RANLIB) libbitcoin_wallet.a
@@ -2403,7 +2403,7 @@ zmq/libbitcoin_zmq_a-zmqnotificationinterface.$(OBJEXT):  \
 zmq/libbitcoin_zmq_a-zmqpublishnotifier.$(OBJEXT):  \
 	zmq/$(am__dirstamp) zmq/$(DEPDIR)/$(am__dirstamp)
 
-libbitcoin_zmq.a: $(libbitcoin_zmq_a_OBJECTS) $(libbitcoin_zmq_a_DEPENDENCIES) $(EXTRA_libbitcoin_zmq_a_DEPENDENCIES) 
+libbitcoin_zmq.a: $(libbitcoin_zmq_a_OBJECTS) $(libbitcoin_zmq_a_DEPENDENCIES) $(EXTRA_libbitcoin_zmq_a_DEPENDENCIES)
 	$(AM_V_at)-rm -f libbitcoin_zmq.a
 	$(AM_V_AR)$(libbitcoin_zmq_a_AR) libbitcoin_zmq.a $(libbitcoin_zmq_a_OBJECTS) $(libbitcoin_zmq_a_LIBADD)
 	$(AM_V_at)$(RANLIB) libbitcoin_zmq.a
@@ -2685,7 +2685,7 @@ compat/libbitcoinconsensus_la-glibc_compat.lo: compat/$(am__dirstamp) \
 compat/libbitcoinconsensus_la-glibcxx_compat.lo:  \
 	compat/$(am__dirstamp) compat/$(DEPDIR)/$(am__dirstamp)
 
-libbitcoinconsensus.la: $(libbitcoinconsensus_la_OBJECTS) $(libbitcoinconsensus_la_DEPENDENCIES) $(EXTRA_libbitcoinconsensus_la_DEPENDENCIES) 
+libbitcoinconsensus.la: $(libbitcoinconsensus_la_OBJECTS) $(libbitcoinconsensus_la_DEPENDENCIES) $(EXTRA_libbitcoinconsensus_la_DEPENDENCIES)
 	$(AM_V_CXXLD)$(libbitcoinconsensus_la_LINK) $(am_libbitcoinconsensus_la_rpath) $(libbitcoinconsensus_la_OBJECTS) $(libbitcoinconsensus_la_LIBADD) $(LIBS)
 install-binPROGRAMS: $(bin_PROGRAMS)
 	@$(NORMAL_INSTALL)
@@ -2737,15 +2737,15 @@ clean-binPROGRAMS:
 	echo " rm -f" $$list; \
 	rm -f $$list
 
-hcc-cli$(EXEEXT): $(hcc_cli_OBJECTS) $(hcc_cli_DEPENDENCIES) $(EXTRA_hcc_cli_DEPENDENCIES) 
+hcc-cli$(EXEEXT): $(hcc_cli_OBJECTS) $(hcc_cli_DEPENDENCIES) $(EXTRA_hcc_cli_DEPENDENCIES)
 	@rm -f hcc-cli$(EXEEXT)
 	$(AM_V_CXXLD)$(hcc_cli_LINK) $(hcc_cli_OBJECTS) $(hcc_cli_LDADD) $(LIBS)
 
-hcc-tx$(EXEEXT): $(hcc_tx_OBJECTS) $(hcc_tx_DEPENDENCIES) $(EXTRA_hcc_tx_DEPENDENCIES) 
+hcc-tx$(EXEEXT): $(hcc_tx_OBJECTS) $(hcc_tx_DEPENDENCIES) $(EXTRA_hcc_tx_DEPENDENCIES)
 	@rm -f hcc-tx$(EXEEXT)
 	$(AM_V_CXXLD)$(hcc_tx_LINK) $(hcc_tx_OBJECTS) $(hcc_tx_LDADD) $(LIBS)
 
-hccd$(EXEEXT): $(hccd_OBJECTS) $(hccd_DEPENDENCIES) $(EXTRA_hccd_DEPENDENCIES) 
+hccd$(EXEEXT): $(hccd_OBJECTS) $(hccd_DEPENDENCIES) $(EXTRA_hccd_DEPENDENCIES)
 	@rm -f hccd$(EXEEXT)
 	$(AM_V_CXXLD)$(hccd_LINK) $(hccd_OBJECTS) $(hccd_LDADD) $(LIBS)
 qt/qt_hcc_qt-hcc.$(OBJEXT): qt/$(am__dirstamp) \
@@ -7345,7 +7345,7 @@ check-TESTS:
 	log_list=`echo $$log_list`; trs_list=`echo $$trs_list`; \
 	$(MAKE) $(AM_MAKEFLAGS) $(TEST_SUITE_LOG) TEST_LOGS="$$log_list"; \
 	exit $$?;
-recheck: all 
+recheck: all
 	@test -z "$(TEST_SUITE_LOG)" || rm -f $(TEST_SUITE_LOG)
 	@set +e; $(am__set_TESTS_bases); \
 	bases=`for i in $$bases; do echo $$i; done \
