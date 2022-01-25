@@ -6,7 +6,7 @@ YELLOW='\033[0;93m'
 RED='\033[0;31m'
 NC='\033[0m'
 
-echo -e ${YELLOW}"Welcome to the Human Charity Coin Automated Update 1.2.1 (4in1)."${NC}
+echo -e ${YELLOW}"Welcome to the Human Charity Coin Automated Update 1.3.0 (4in1)."${NC}
 echo "Please wait while updates are performed..."
 sleep 5
 echo "Stopping first node, please wait...";
@@ -22,10 +22,10 @@ echo "Removing binaries..."
 cd /usr/local/bin
 rm -rf hccd hcc-cli hcc-tx
 echo "Downloading latest binaries"
-wget https://github.com/Human-Charity-Coin/HCC-wallet/releases/download/v1.2.1/hcclin1.2.1.tar.gz
-tar -xzf hcclin1.2.1.tar.gz
+wget https://github.com/Human-Charity-Coin/HCC-wallet/releases/download/v1.3.0/hcclin1.3.0.tar.gz
+tar -xzf hcclin1.3.0.tar.gz
 sudo chmod 755 -R  /usr/local/bin/hcc*
-rm -rf hcclin1.2.1.tar.gz
+rm -rf hcclin1.3.0.tar.gz
 echo "Deleting old nodes from node config files"
 sed -i '/addnode/d' /home/hcc/.hcc/hcc.conf
 sed -i '/addnode/d' /home/hcc2/.hcc/hcc.conf
@@ -189,22 +189,22 @@ echo "14.234.123.68:6949" >> /home/hcc4/.hcc/hcc.conf
 echo "144.202.101.177:6949" >> /home/hcc4/.hcc/hcc.conf
 
 echo "Syncing first node, please wait...";
-hccd -datadir=/home/hcc/.hcc -daemon -resync
+hccd -datadir=/home/hcc/.hcc -daemon -reindex
 until hcc-cli -datadir=/home/hcc/.hcc mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"First node is fully synced. Your masternode is running!"${NC}
 sleep 5
 echo "Syncing second node, please wait...";
-hccd -datadir=/home/hcc2/.hcc -daemon -resync
+hccd -datadir=/home/hcc2/.hcc -daemon -reindex
 until hcc-cli -datadir=/home/hcc2/.hcc mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"Second node is fully synced. Your masternode is running!"${NC}
 sleep 5
 echo "Syncing third node, please wait...";
-hccd -datadir=/home/hcc3/.hcc -daemon -resync
+hccd -datadir=/home/hcc3/.hcc -daemon -reindex
 until hcc-cli -datadir=/home/hcc3/.hcc mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"Third node is fully synced. Your masternode is running!"${NC}
 sleep 5
 echo "Syncing fourth node, please wait...";
-hccd -datadir=/home/hcc4/.hcc -daemon -resync
+hccd -datadir=/home/hcc4/.hcc -daemon -reindex
 until hcc-cli -datadir=/home/hcc4/.hcc mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"Fourth node is fully synced. Your masternode is running!"${NC}
 sleep 5
